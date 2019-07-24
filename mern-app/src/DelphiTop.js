@@ -30,9 +30,8 @@ class DelphiTop extends Component {
         </p>
     </div>
     
-    <div class="tree-container" id="treeContainer" height={this.state.treeVisibleHeight}>
-        <DelphiTree />
-    </div>
+    <DelphiTree />
+    
 </div>
 
         )
