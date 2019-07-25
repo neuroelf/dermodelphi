@@ -1,6 +1,6 @@
 {
 	"meta": {
-    	"authors": ["Dr. Konstantinos Liopyris", "Dr. Alon Scope"],
+		"authors": ["Dr. Konstantinos Liopyris", "Dr. Alon Scope"],
 		"source": "diagnoses list from Diagnosis_mapper_7.15.19v1.xlsx"
 	},
 	"data": {
@@ -1538,7 +1538,7 @@
 				"index": 149,
 				"label": "Lipoma, NOS",
 				"modifiers": [],
-				"parent": ["benign", "Soft tissue proliferations - Myofibroblastic or muscle tissue"],
+				"parent": ["benign", "Soft tissue proliferations - Adipocytic"],
 				"synonyms": []
 			},
 			{
@@ -1546,7 +1546,7 @@
 				"index": 150,
 				"label": "Lipoma, Spindle cell / pleomorphic",
 				"modifiers": [],
-				"parent": ["benign", "Soft tissue proliferations - Myofibroblastic or muscle tissue"],
+				"parent": ["benign", "Soft tissue proliferations - Adipocytic"],
 				"synonyms": []
 			},
 			{
@@ -1554,7 +1554,7 @@
 				"index": 151,
 				"label": "Angiolipoma",
 				"modifiers": [],
-				"parent": ["benign", "Soft tissue proliferations - Myofibroblastic or muscle tissue"],
+				"parent": ["benign", "Soft tissue proliferations - Adipocytic"],
 				"synonyms": []
 			},
 			{
@@ -1562,7 +1562,7 @@
 				"index": 152,
 				"label": "Lipomatous nevus",
 				"modifiers": [],
-				"parent": ["benign", "Soft tissue proliferations - Myofibroblastic or muscle tissue"],
+				"parent": ["benign", "Soft tissue proliferations - Adipocytic"],
 				"synonyms": []
 			},
 			{
@@ -1570,212 +1570,1699 @@
 				"index": 153,
 				"label": "Benign Soft tissue proliferations - adipocytic, Other (specify!)",
 				"modifiers": [],
-				"parent": ["benign", "Soft tissue proliferations - Myofibroblastic or muscle tissue"],
+				"parent": ["benign", "Soft tissue proliferations - Adipocytic"],
 				"synonyms": []
 			},
-Neuroma, NOS
-Neuroma, traumatic
-Neuroma, palisaded and encapsulated
-Neurofibroma, NOS
-Neurofibroma, plexiform
-Granular cell tumor
-Schwannoma
-Nerve sheath myxoma
-Perineurioma
-Benign Soft tissue proliferations -neural, Other, specify:___________
-Accessory tragus
-Extraskeletal chondroma, 
-Subungual osteochodroma (syn: subungual exostosis)
-Osteoma cutis
-Benign Soft tissue proliferations - Cartilagenous and ossifying, Other, specify:____
-Myoepithelioma
-Mastocytosis, NOS
-Mastocytoma, solitary / unifocal 
-Maculopapular Mastocytoma (syn: Urticaria pigmentosa)
-Mastocytosis,  diffuse / multifocal  (Subtype: Telangiectasia mcularis eruptiva perstans, diffuse cutaenous, other, specify_____)
-Mast cell proliferation, Other, Specify______
-Langerhans cell histiocytosis, NOS
-Langerhans cell histiocytosis, solitary / unifocal 
-Langerhans cell histiocytosis, diffuse / multifocal
-Langerhans cell histiocytosis, Other, Specify:___________
-Indeterminate cell histiocytosis, NOS
-Erdheim Chester Disease
-Mixed Langerhans cell histiocytosis and Erdheim Chester Disease
-Cyst, NOS
-Milium
-Comedo
-Infundibular / Epidermal cyst (Syn: Epidermoid-includion/Sebaceous/Keratin Cyst)
-Trichilemmal  / isthmic-catagen / pilar cyst
-Dilated pore (syn: dilated port of Winer)
-Steatocystoma
-Digital mucous cyst (Syn: Ganglion / Digital Myxoid cyst)
-Benign Cysts, Other, Specify:___________
-Psoriasis
-Lichen planus 
-Folliculitis
-Dermatitis, NOS
-Dermatitis, atopic 
-Dermatitis, allergic contact 
-Dermatitis, irritant contact 
-Dermatitis, numular 
-Dermatitis, dyshidrotic 
-Schamberg disease
-Purpura annularis telangiectasia (Syn: Majocchi disease)
-Eczematoid purpura (Syn: Doucas-Kapenatakis disease)
-Lichenoid purpura (Syn: Gougerot-Blum disease)
-Lichen aureus
-Inflammatory diseases, Other, Specify:___________
-Tinea corporis
-Pityriasis versicolor
-Verruca, NOS
-Verruca vulgaris (common wart)
-Verruca plantaris (palmo-plantar wart)
-Verruca plana (flat wart)
-Molluscum Contagiosum
-Tungiasis
-Furuncular myiasis
-Scabies
-Larva migrans
-Infectious diseases, Other, specify:___________
-Tattoo
-Foreign body granuloma
-Exogenous, other, Specify:________
-Collision, two benign proliferations
-Benign, Other, Specify: 
-Melanoma in situ, NOS
-Melanoma in situ, Lentigo maligna type / Melanoma in situ on chronically sun-exposed skin
-Melanoma in situ, Acral / Acral-lentiginous 
-Melanoma in situ, Mucosal (Specify site: Lip, Oral mucosa, Genital, other:_____)
-Melanoma in situ, Superficial spreading 
-Melanoma in situ, recurrent / persistent
-Melanoma in situ, Other, Specify:__________
-Melanoma Invasive, NOS
-Melanoma Invasive, Superficial spreading 
-Melanoma Invasive, on chronically sun-exposed skin / Lentigo maligna melanoma 
-Melanoma Invasive, Acral / Acral-lentiginous 
-Melanoma Invasive, Nodular 
-Melanoma Invasive, Desmoplastic (indicate if associated with lentigo maligna)
-Melanoma Invasive, Nevoid
-Melanoma Invasive, Spitzoid (melanoma predominantly resembling Spitz nevus / tumor)
-Melanoma Invasive, Pigmented Spindle cell nevus like (melanoma predominantly resembling Reed's nevus)
-Melanoma Invasive, Blue nevus-like
-Melanoma Invasive, Recurrent / persistent 
-Melanoma Invasive, Mucosal (Specify site: Lip, Oral mucosa, Genital, other:_____)
-Melanoma Invasive, Heavily pigmented melanoma (resembling epithelioid blue nevus or melanoma in animals)
-Melanoma Invasive, Other, Specify:__________
-Melanoma metastasis (Modifier: Epidermotropic Y/N)
-Solar (actinic) keratosis, NOS
-Solar (actinic) keratosis, Hypertrophic (syn: hyperplastic)
-Solar (actinic) keratosis, Atrophic
-Solar (actinic) keratosis, Acantholytic
-Solar (actinic) keratosis, Bowenoid
-Solar (actinic) keratosis, Other, Specify_______
-Solar cheilitis (solar keratosis of lip)
-Puva-associated keratosis
-Arsenical-associated keratosis
-Squamous cell carcinoma in situ, NOS 
-Squamous cell carcinoma in situ, Solar keratotic type
-Squamous cell carcinoma in situ, Bowens disease
-Digitated squamous cell carcinoma in situ
-Verrucous carcinoma, oral florid papilomatosis type
-Verrucous carcinoma, carcinoma cuniculatum type
-Verrucous carcinoma, giant condyloma type (Syn: Buschke-Lowestein tumor)
-Bowenoid papulosis
-Squamous cell carcinoma in situ, Other, Specify:__________
-Keratoacanthoma
-Squamous cell carcinoma, invasive, NOS
-Squamous cell carcinoma, invasive, Keratoacanthoma-type (syn: SCC with Keratoacanthoma-features) 
-Squamous cell carcinoma, invasive, Acantholytic
-Squamous cell carcinoma, invasive, Spindle cell
-Squamous cell carcinoma, invasive, Verrucous
-Squamous cell carcinoma, invasive, Adeno-squamous
-Squamous cell carcinoma, invasive, Clear cell
-Squamous cell carcinoma, invasive, Other, Specify:__________
-Basal cell carcinoma, NOS
-Basal cell carcinoma, Superficial
-Basal cell carcinoma, Nodular
-Basal cell carcinoma, Micronodular
-Basal cell carcinoma, Infiltrating 
-Basal cell carcinoma, Sclerosing / Morpheaform (morphoeic)
-Baso-squamous carcinoma
-Basal cell carcinoma with adnexal differentiation
-Basal cell carcinoma with sarcomatoid differentiation
-Basal cell carcinoma, Fibroeipthelial (Pinkus)
-Basal cell carcinoma, Combined subtypes (specify details of all components)
-Basal cell carcinoma, Other, Specify:__________
-Matrical / pilomatrical carcinoma
-Proliferating trichilemmal carcinoma (syn: proliferating isthmic-catagen carcinoma)
-Malignant Adnexal epithelial proliferations, Follicular, Other, Specify:__________
-Paget disease, mammary
-Paget disease, extra-mammary
-Microcystic adnexal carcinoma
-Apocrine carcinoma, NOS
-Tubular carcinoma
-Malignant mixed tumor
-Porocarcinoma
-Hidradenocarcinoma
-Mucinous carcinoma
-Digital papillary carcinoma
-Adenoid cystic carcinoma
-Adnexal adenocarcinoma arising in association with spiradenoma / cylindroma /spiradenocylindroma
-Malignant Adnexal epithelial proliferations, Apocrine or Eccrine, Other, Specify:__________
-Sebaceous carcinoma
-Malignant Adnexal epithelial proliferations, Sebaceous, Other, Specify:____
-Kaposi sarcoma
-Angiosarcoma cutaneous, face and scalp of elderly patients
-Angiosarcoma cutaneous, NOS
-Angiosarcoma cutaneous, with associated lymphedema
-Angiosarcoma cutaneous, post-irradiation
-Angiosarcoma cutaneous, epithelioid
-Malignant glomus tumor (syn: glomangiosarcoma)
-Hemangioendothelioma, NOS
-Hemangioendothelioma, Kaposiform 
-Hemangioendothelioma, Other, specify:____
-Malignant Soft tissue proliferations - vascular, Other, specify:____
-Atypical fibroxanthoma
-Pleomorphic undifferntiated sarcoma (syn: malignant fibrous histiocytoma)
-Dermatofibrosarcoma protuberans (DFSP)
-Fibrosarcoma
-Epithelioid sarcoma
-Malignant Soft tissue proliferations - fibro-histiocytic, Other, Specify:__________
-Leiomyosarcoma, cutaneous
-Rhabdomyoscaroma, cutaneous
-Malignant Soft tissue proliferations - muscle tissue, Other, Specify:__________
-Malignant peripheral nerve sheath tumor (syn: peripheral nerve sheath sarcoma)
-Malignant granular cell tumor (syn: pgranular cell sarcoma)
-Malignant Soft tissue proliferations - Neural, Other, Specify:___________
-Liposarcoma, well differentiated 
-Liposarcoma, undifferentiated (syn: atypical lipomatous tumor)
-Malignant Soft tissue proliferations - Adipocytic, Other, Specify:___________ 
-Extraskeletal osteosarcoma
-Malignant Soft tissue proliferations - Cartilagenous and ossifying, Other, Specify:__________
-Myoepithelial Sarcoma
-Ewing sarcoma, primary cutaenous
-Malignant Soft tissue proliferations - unknown or other histiogenesis, Other, Specify:___________
-Merkel cell carcinoma
-Mycosis fungoides, NOS
-Mycosis fungoides, Folliculotropic 
-Mycosis fungoides, Pagetoid reticulosis
-Mycosis fungoides, Granulomatous slack skin 
-Mycosis fungoides, with large cell transformation
-Sezary syndrome
-Adult T-cell leukemia/lymphoma
-Primary cutaneous CD30+ lymphoproliferative disease, NOS
-Primary cutaneous CD30+ lymphoproliferative disease, cutanous anaplatic large cell lymphoma
-Primary cutaneous CD30+ lymphoproliferative disease,, lymphomatoid papulosis
-Subcutaneous panniculitis-like T-cell lymphoma
-Extranodal NK/T-cell lymphoma, nasal type
-Chronic active EBV infection
-Primary cutaneous peripheral T-cell lymphoma, rare subtypes NOS
-Primary cutaneous peripheral T-cell lymphoma, rare subtypes, Specify:_______________
-Primary cutaneous peripheral T-cell lymphoma, NOS
-Lymphocytic proliferations, T-Cell/NK, Other, Specify:_______________
-Primary Cutaneous Marginal Zone Lymphoma
-Primary Cutaneous Follicle Center  Lymphoma
-Primary Cutaneous Large B-Cell Lymphoma
-EBV1+ mucocutaneous ulcer (provisional)
-Intravascular large B-cell lymphoma
-Lymphocytic proliferations, B-Cell, Other, Specify:_______________
-Skin Metastasis of Internal Solid (non-hematological) Cancer, Specify:______
-Collision, at least one malignant proliferation, Specify
-Malignant, Other or not readily classifiable, Specify: ________
+			{
+				"block": 27,
+				"index": 154,
+				"label": "Neuroma, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 155,
+				"label": "Neuroma, traumatic",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 156,
+				"label": "Neuroma, palisaded and encapsulated",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 157,
+				"label": "Neurofibroma, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 158,
+				"label": "Neurofibroma, plexiform",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 159,
+				"label": "Granular cell tumor",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 160,
+				"label": "Schwannoma",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 161,
+				"label": "Nerve sheath myxoma",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 162,
+				"label": "Perineurioma",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 27,
+				"index": 163,
+				"label": "Benign Soft tissue proliferations - neural, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 28,
+				"index": 164,
+				"label": "Accessory tragus",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - cartilagenous and ossifying"],
+				"synonyms": []
+			},
+			{
+				"block": 28,
+				"index": 165,
+				"label": "Extraskeletal chondroma",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - cartilagenous and ossifying"],
+				"synonyms": []
+			},
+			{
+				"block": 28,
+				"index": 166,
+				"label": "Subungual osteochodroma",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - cartilagenous and ossifying"],
+				"synonyms": ["subungual exostosis"]
+			},
+			{
+				"block": 28,
+				"index": 167,
+				"label": "Osteoma cutis",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - cartilagenous and ossifying"],
+				"synonyms": []
+			},
+			{
+				"block": 28,
+				"index": 168,
+				"label": "Benign Soft tissue proliferations - cartilagenous and ossifying, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - cartilagenous and ossifying"],
+				"synonyms": []
+			},
+			{
+				"block": 29,
+				"index": 169,
+				"label": "Myoepithelioma",
+				"modifiers": [],
+				"parent": ["benign", "Soft tissue proliferations - Myoepithelial"],
+				"synonyms": []
+			},
+			{
+				"block": 30,
+				"index": 170,
+				"label": "Mastocytosis, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Mast cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 30,
+				"index": 171,
+				"label": "Mastocytoma, solitary / unifocal",
+				"modifiers": [],
+				"parent": ["benign", "Mast cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 30,
+				"index": 172,
+				"label": "Maculopapular Mastocytoma",
+				"modifiers": [],
+				"parent": ["benign", "Mast cell proliferations"],
+				"synonyms": ["Urticaria pigmentosa"]
+			},
+			{
+				"block": 30,
+				"index": 173,
+				"label": "Mastocytosis, diffuse / multifocal (specify subtype: Telangiectasia mcularis eruptiva perstans, diffuse cutaenous, other...)",
+				"modifiers": [],
+				"parent": ["benign", "Mast cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 30,
+				"index": 174,
+				"label": "Mast cell proliferation, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Mast cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 31,
+				"index": 175,
+				"label": "Langerhans cell histiocytosis, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Langerhans cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 31,
+				"index": 176,
+				"label": "Langerhans cell histiocytosis, solitary / unifocal",
+				"modifiers": [],
+				"parent": ["benign", "Langerhans cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 31,
+				"index": 177,
+				"label": "Langerhans cell histiocytosis, diffuse / multifocal",
+				"modifiers": [],
+				"parent": ["benign", "Langerhans cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 31,
+				"index": 178,
+				"label": "Langerhans cell histiocytosis, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Langerhans cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 31,
+				"index": 179,
+				"label": "Indeterminate cell histiocytosis, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Langerhans cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 31,
+				"index": 180,
+				"label": "Erdheim Chester Disease",
+				"modifiers": [],
+				"parent": ["benign", "Langerhans cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 31,
+				"index": 181,
+				"label": "Mixed Langerhans cell histiocytosis and Erdheim Chester Disease",
+				"modifiers": [],
+				"parent": ["benign", "Langerhans cell proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 32,
+				"index": 182,
+				"label": "Cyst, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": []
+			},
+			{
+				"block": 32,
+				"index": 183,
+				"label": "Milium",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": []
+			},
+			{
+				"block": 32,
+				"index": 184,
+				"label": "Comedo",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": []
+			},
+			{
+				"block": 32,
+				"index": 185,
+				"label": "Infundibular / Epidermal cyst",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": ["Epidermoid-includion/Sebaceous/Keratin Cyst"]
+			},
+			{
+				"block": 32,
+				"index": 187,
+				"label": "Trichilemmal / isthmic-catagen / pilar cyst",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": []
+			},
+			{
+				"block": 32,
+				"index": 187,
+				"label": "Dilated pore",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": ["dilated port of Winer"]
+			},
+			{
+				"block": 32,
+				"index": 188,
+				"label": "Steatocystoma",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": []
+			},
+			{
+				"block": 32,
+				"index": 189,
+				"label": "Digital mucous cyst",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": ["Ganglion / Digital Myxoid cyst"]
+			},
+			{
+				"block": 32,
+				"index": 190,
+				"label": "Benign Cysts, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Cysts"],
+				"synonyms": []
+			},
+			{
+				"block": 33,
+				"index": 190,
+				"label": "Psoriasis",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 33,
+				"index": 191,
+				"label": "Lichen planus",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 33,
+				"index": 192,
+				"label": "Folliculitis",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 193,
+				"label": "Dermatitis, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 194,
+				"label": "Dermatitis, atopic",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 195,
+				"label": "Dermatitis, allergic contact",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 196,
+				"label": "Dermatitis, irritant contact",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 197,
+				"label": "Dermatitis, numular",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 198,
+				"label": "Dermatitis, dyshidrotic",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 199,
+				"label": "Schamberg disease",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 200,
+				"label": "Purpura annularis telangiectasia",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": ["Majocchi disease"]
+			},
+			{
+				"block": 34,
+				"index": 201,
+				"label": "Eczematoid purpura",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": ["Doucas-Kapenatakis disease"]
+			},
+			{
+				"block": 34,
+				"index": 202,
+				"label": "Lichenoid purpura",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": ["Gougerot-Blum disease"]
+			},
+			{
+				"block": 34,
+				"index": 203,
+				"label": "Lichen aureus",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 34,
+				"index": 204,
+				"label": "Inflammatory diseases, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Inflammatory diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 204,
+				"label": "Tinea corporis",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 205,
+				"label": "Pityriasis versicolor",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 206,
+				"label": "Verruca, NOS",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 207,
+				"label": "Verruca vulgaris",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": ["common wart"]
+			},
+			{
+				"block": 35,
+				"index": 208,
+				"label": "Verruca plantaris",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": ["palmo-plantar wart"]
+			},
+			{
+				"block": 35,
+				"index": 209,
+				"label": "Verruca plana",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": ["flat wart"]
+			},
+			{
+				"block": 35,
+				"index": 210,
+				"label": "Molluscum Contagiosum",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 211,
+				"label": "Tungiasis",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 212,
+				"label": "Furuncular myiasis",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 213,
+				"label": "Scabies",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 214,
+				"label": "Larva migrans",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 35,
+				"index": 215,
+				"label": "Infectious diseases, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Infectious diseases"],
+				"synonyms": []
+			},
+			{
+				"block": 36,
+				"index": 216,
+				"label": "Tattoo",
+				"modifiers": [],
+				"parent": ["benign", "Exogenous"],
+				"synonyms": []
+			},
+			{
+				"block": 36,
+				"index": 217,
+				"label": "Foreign body granuloma",
+				"modifiers": [],
+				"parent": ["benign", "Exogenous"],
+				"synonyms": []
+			},
+			{
+				"block": 36,
+				"index": 218,
+				"label": "Exogenous, other (specify!)",
+				"modifiers": [],
+				"parent": ["benign", "Exogenous"],
+				"synonyms": []
+			},
+			{
+				"block": 37,
+				"index": 219,
+				"label": "Collision, two benign proliferations",
+				"modifiers": [],
+				"parent": ["benign", "Collision, two benign proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 38,
+				"index": 220,
+				"label": "Benign, Other, Specify:",
+				"modifiers": [],
+				"parent": ["benign", "Benign, other or not readily classifiable"],
+				"synonyms": []
+			},
+			{
+				"block": 39,
+				"index": 221,
+				"label": "Melanoma in situ, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 39,
+				"index": 222,
+				"label": "Melanoma in situ, Lentigo maligna type / Melanoma in situ on chronically sun-exposed skin",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 39,
+				"index": 223,
+				"label": "Melanoma in situ, Acral / Acral-lentiginous",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 39,
+				"index": 224,
+				"label": "Melanoma in situ, Mucosal (Specify site: Lip, Oral mucosa, Genital, other:_____)",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 39,
+				"index": 225,
+				"label": "Melanoma in situ, Superficial spreading",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 39,
+				"index": 226,
+				"label": "Melanoma in situ, recurrent / persistent",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 39,
+				"index": 227,
+				"label": "Melanoma in situ, Other, Specify:",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 228,
+				"label": "Melanoma Invasive, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 229,
+				"label": "Melanoma Invasive, Superficial spreading",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 230,
+				"label": "Melanoma Invasive, on chronically sun-exposed skin / Lentigo maligna melanoma",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 231,
+				"label": "Melanoma Invasive, Acral / Acral-lentiginous",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 232,
+				"label": "Melanoma Invasive, Nodular",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 233,
+				"label": "Melanoma Invasive, Desmoplastic (indicate if associated with lentigo maligna)",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 234,
+				"label": "Melanoma Invasive, Nevoid",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 235,
+				"label": "Melanoma Invasive, Spitzoid (melanoma predominantly resembling Spitz nevus / tumor)",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 236,
+				"label": "Melanoma Invasive, Pigmented Spindle cell nevus like (melanoma predominantly resembling Reed's nevus)",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 237,
+				"label": "Melanoma Invasive, Blue nevus-like",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 238,
+				"label": "Melanoma Invasive, Recurrent / persistent",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 239,
+				"label": "Melanoma Invasive, Mucosal (specify site: Lip, Oral mucosa, Genital, other...)",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 240,
+				"label": "Melanoma Invasive, Heavily pigmented melanoma (resembling epithelioid blue nevus or melanoma in animals)",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 40,
+				"index": 241,
+				"label": "Melanoma Invasive, Other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 41,
+				"index": 242,
+				"label": "Melanoma metastasis",
+				"modifiers": [
+					["Epidermotropic", "Non-epidermotropic"]
+				],
+				"parent": ["malignant", "Melanocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 42,
+				"index": 243,
+				"label": "Solar (actinic) keratosis, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 42,
+				"index": 244,
+				"label": "Solar (actinic) keratosis, Hypertrophic",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": ["hyperplastic"]
+			},
+			{
+				"block": 42,
+				"index": 245,
+				"label": "Solar (actinic) keratosis, Atrophic",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 42,
+				"index": 246,
+				"label": "Solar (actinic) keratosis, Acantholytic",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 42,
+				"index": 247,
+				"label": "Solar (actinic) keratosis, Bowenoid",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 42,
+				"index": 248,
+				"label": "Solar (actinic) keratosis, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 43,
+				"index": 249,
+				"label": "Solar cheilitis (solar keratosis of lip)",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 44,
+				"index": 250,
+				"label": "Puva-associated keratosis",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 45,
+				"index": 251,
+				"label": "Arsenical-associated keratosis",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 252,
+				"label": "Squamous cell carcinoma in situ, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 253,
+				"label": "Squamous cell carcinoma in situ, Solar keratotic type",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 254,
+				"label": "Squamous cell carcinoma in situ, Bowens disease",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 255,
+				"label": "Digitated squamous cell carcinoma in situ",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 256,
+				"label": "Verrucous carcinoma, oral florid papilomatosis type",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 257,
+				"label": "Verrucous carcinoma, carcinoma cuniculatum type",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 258,
+				"label": "Verrucous carcinoma, giant condyloma type",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": ["Buschke-Lowestein tumor"]
+			},
+			{
+				"block": 46,
+				"index": 259,
+				"label": "Bowenoid papulosis",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 46,
+				"index": 260,
+				"label": "Squamous cell carcinoma in situ, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 47,
+				"index": 261,
+				"label": "Keratoacanthoma",
+				"modifiers": [],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 48,
+				"index": 262,
+				"label": "Squamous cell carcinoma, invasive, NOS",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 48,
+				"index": 263,
+				"label": "Squamous cell carcinoma, invasive, Keratoacanthoma-type",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": ["SCC with Keratoacanthoma-features"]
+			},
+			{
+				"block": 48,
+				"index": 264,
+				"label": "Squamous cell carcinoma, invasive, Acantholytic",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 48,
+				"index": 265,
+				"label": "Squamous cell carcinoma, invasive, Spindle cell",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 48,
+				"index": 266,
+				"label": "Squamous cell carcinoma, invasive, Verrucous",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 48,
+				"index": 267,
+				"label": "Squamous cell carcinoma, invasive, Adeno-squamous",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 48,
+				"index": 268,
+				"label": "Squamous cell carcinoma, invasive, Clear cell",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 48,
+				"index": 269,
+				"label": "Squamous cell carcinoma, invasive, other (specify!)",
+				"modifiers": [
+					["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]
+				],
+				"parent": ["malignant", "Keratinocytic proliferations"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 270,
+				"label": "Basal cell carcinoma, NOS",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 271,
+				"label": "Basal cell carcinoma, Superficial",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 272,
+				"label": "Basal cell carcinoma, Nodular",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 273,
+				"label": "Basal cell carcinoma, Micronodular",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 274,
+				"label": "Basal cell carcinoma, Infiltrating",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 275,
+				"label": "Basal cell carcinoma, Sclerosing / Morpheaform (morphoeic)",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 276,
+				"label": "Baso-squamous carcinoma",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 277,
+				"label": "Basal cell carcinoma with adnexal differentiation",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 278,
+				"label": "Basal cell carcinoma with sarcomatoid differentiation",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 279,
+				"label": "Basal cell carcinoma, Fibroeipthelial (Pinkus)",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 280,
+				"label": "Basal cell carcinoma, Combined subtypes (specify details of all components!)",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 49,
+				"index": 281,
+				"label": "Basal cell carcinoma, other (specify!)",
+				"modifiers": [
+					["Pigmented histopathologically", "Not pigmented histopathologically"]
+				],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 50,
+				"index": 282,
+				"label": "Matrical / pilomatrical carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 50,
+				"index": 283,
+				"label": "Proliferating trichilemmal carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": ["proliferating isthmic-catagen carcinoma"]
+			},
+			{
+				"block": 50,
+				"index": 284,
+				"label": "Malignant Adnexal epithelial proliferations, Follicular, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Follicular"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 285,
+				"label": "Paget disease, mammary",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 286,
+				"label": "Paget disease, extra-mammary",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 287,
+				"label": "Microcystic adnexal carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 288,
+				"label": "Apocrine carcinoma, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 289,
+				"label": "Tubular carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 290,
+				"label": "Malignant mixed tumor",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 291,
+				"label": "Porocarcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 292,
+				"label": "Hidradenocarcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 293,
+				"label": "Mucinous carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 294,
+				"label": "Digital papillary carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 295,
+				"label": "Adenoid cystic carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 296,
+				"label": "Adnexal adenocarcinoma arising in association with spiradenoma / cylindroma /spiradenocylindroma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 51,
+				"index": 297,
+				"label": "Malignant Adnexal epithelial proliferations, Apocrine or Eccrine, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Apocrine or Eccrine"],
+				"synonyms": []
+			},
+			{
+				"block": 52,
+				"index": 298,
+				"label": "Sebaceous carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Sebaceous"],
+				"synonyms": []
+			},
+			{
+				"block": 52,
+				"index": 299,
+				"label": "Malignant Adnexal epithelial proliferations, Sebaceous, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Adnexal epithelial proliferations, Sebaceous"],
+				"synonyms": []
+			},
+			{
+				"block": 53,
+				"index": 300,
+				"label": "Kaposi sarcoma",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 53,
+				"index": 301,
+				"label": "Angiosarcoma cutaneous, face and scalp of elderly patients",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 53,
+				"index": 302,
+				"label": "Angiosarcoma cutaneous, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 53,
+				"index": 303,
+				"label": "Angiosarcoma cutaneous, with associated lymphedema",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 53,
+				"index": 304,
+				"label": "Angiosarcoma cutaneous, post-irradiation",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 53,
+				"index": 305,
+				"label": "Angiosarcoma cutaneous, epithelioid",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 53,
+				"index": 306,
+				"label": "Malignant glomus tumor",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": ["glomangiosarcoma"]
+			},
+			{
+				"block": 54,
+				"index": 307,
+				"label": "Hemangioendothelioma, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 54,
+				"index": 308,
+				"label": "Hemangioendothelioma, Kaposiform",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 54,
+				"index": 309,
+				"label": "Hemangioendothelioma, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 54,
+				"index": 310,
+				"label": "Malignant Soft tissue proliferations - vascular, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Vascular"],
+				"synonyms": []
+			},
+			{
+				"block": 55,
+				"index": 311,
+				"label": "Atypical fibroxanthoma",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - fibro-histiocytic"],
+				"synonyms": []
+			},
+			{
+				"block": 55,
+				"index": 312,
+				"label": "Pleomorphic undifferntiated sarcoma",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - fibro-histiocytic"],
+				"synonyms": ["malignant fibrous histiocytoma"]
+			},
+			{
+				"block": 55,
+				"index": 313,
+				"label": "Dermatofibrosarcoma protuberans (DFSP)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - fibro-histiocytic"],
+				"synonyms": []
+			},
+			{
+				"block": 55,
+				"index": 314,
+				"label": "Fibrosarcoma",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - fibro-histiocytic"],
+				"synonyms": []
+			},
+			{
+				"block": 55,
+				"index": 315,
+				"label": "Epithelioid sarcoma",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - fibro-histiocytic"],
+				"synonyms": []
+			},
+			{
+				"block": 55,
+				"index": 316,
+				"label": "Malignant Soft tissue proliferations - fibro-histiocytic, Other, Specify:__________",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - fibro-histiocytic"],
+				"synonyms": []
+			},
+			{
+				"block": 56,
+				"index": 317,
+				"label": "Leiomyosarcoma, cutaneous",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - muscle tissue"],
+				"synonyms": []
+			},
+			{
+				"block": 56,
+				"index": 318,
+				"label": "Rhabdomyoscaroma, cutaneous",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - muscle tissue"],
+				"synonyms": []
+			},
+			{
+				"block": 56,
+				"index": 319,
+				"label": "Malignant Soft tissue proliferations - muscle tissue, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - muscle tissue"],
+				"synonyms": []
+			},
+			{
+				"block": 57,
+				"index": 320,
+				"label": "Malignant peripheral nerve sheath tumor",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Neural"],
+				"synonyms": ["peripheral nerve sheath sarcoma"]
+			},
+			{
+				"block": 57,
+				"index": 321,
+				"label": "Malignant granular cell tumor",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Neural"],
+				"synonyms": ["pgranular cell sarcoma"]
+			},
+			{
+				"block": 57,
+				"index": 322,
+				"label": "Malignant Soft tissue proliferations - Neural, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Neural"],
+				"synonyms": []
+			},
+			{
+				"block": 58,
+				"index": 323,
+				"label": "Liposarcoma, well differentiated",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Adipocytic"],
+				"synonyms": []
+			},
+			{
+				"block": 58,
+				"index": 324,
+				"label": "Liposarcoma, undifferentiated",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Adipocytic"],
+				"synonyms": ["atypical lipomatous tumor"]
+			},
+			{
+				"block": 58,
+				"index": 325,
+				"label": "Malignant Soft tissue proliferations - Adipocytic, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Adipocytic"],
+				"synonyms": []
+			},
+			{
+				"block": 59,
+				"index": 326,
+				"label": "Extraskeletal osteosarcoma",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Cartilagenous and ossifying"],
+				"synonyms": []
+			},
+			{
+				"block": 59,
+				"index": 327,
+				"label": "Malignant Soft tissue proliferations - Cartilagenous and ossifying, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Cartilagenous and ossifying"],
+				"synonyms": []
+			},
+			{
+				"block": 60,
+				"index": 328,
+				"label": "Myoepithelial Sarcoma",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - Myoepithelial"],
+				"synonyms": []
+			},
+			{
+				"block": 61,
+				"index": 329,
+				"label": "Ewing sarcoma, primary cutaenous",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - unknown or other histiogenesis"],
+				"synonyms": []
+			},
+			{
+				"block": 61,
+				"index": 330,
+				"label": "Malignant Soft tissue proliferations - unknown or other histiogenesis, other, (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Soft tissue proliferations - unknown or other histiogenesis"],
+				"synonyms": []
+			},
+			{
+				"block": 62,
+				"index": 331,
+				"label": "Merkel cell carcinoma",
+				"modifiers": [],
+				"parent": ["malignant", "Merkel cell proliferation"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 332,
+				"label": "Mycosis fungoides, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Merkel cell proliferation"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 333,
+				"label": "Mycosis fungoides, Folliculotropic",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 334,
+				"label": "Mycosis fungoides, Pagetoid reticulosis",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 335,
+				"label": "Mycosis fungoides, Granulomatous slack skin",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 336,
+				"label": "Mycosis fungoides, with large cell transformation",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 337,
+				"label": "Sezary syndrome",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 338,
+				"label": "Adult T-cell leukemia/lymphoma",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 339,
+				"label": "Primary cutaneous CD30+ lymphoproliferative disease, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 340,
+				"label": "Primary cutaneous CD30+ lymphoproliferative disease, cutanous anaplatic large cell lymphoma",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 341,
+				"label": "Primary cutaneous CD30+ lymphoproliferative disease,, lymphomatoid papulosis",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 342,
+				"label": "Subcutaneous panniculitis-like T-cell lymphoma",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 343,
+				"label": "Extranodal NK/T-cell lymphoma, nasal type",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 344,
+				"label": "Chronic active EBV infection",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 345,
+				"label": "Primary cutaneous peripheral T-cell lymphoma, rare subtypes NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 346,
+				"label": "Primary cutaneous peripheral T-cell lymphoma, rare subtypes (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 347,
+				"label": "Primary cutaneous peripheral T-cell lymphoma, NOS",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 63,
+				"index": 348,
+				"label": "Lymphocytic proliferations, T-Cell/NK, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, T-Cell/NK"],
+				"synonyms": []
+			},
+			{
+				"block": 64,
+				"index": 349,
+				"label": "Primary Cutaneous Marginal Zone Lymphoma",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, B-Cell"],
+				"synonyms": []
+			},
+			{
+				"block": 64,
+				"index": 350,
+				"label": "Primary Cutaneous Follicle Center Lymphoma",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, B-Cell"],
+				"synonyms": []
+			},
+			{
+				"block": 64,
+				"index": 351,
+				"label": "Primary Cutaneous Large B-Cell Lymphoma",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, B-Cell"],
+				"synonyms": []
+			},
+			{
+				"block": 64,
+				"index": 352,
+				"label": "EBV1+ mucocutaneous ulcer (provisional)",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, B-Cell"],
+				"synonyms": []
+			},
+			{
+				"block": 64,
+				"index": 353,
+				"label": "Intravascular large B-cell lymphoma",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, B-Cell"],
+				"synonyms": []
+			},
+			{
+				"block": 64,
+				"index": 354,
+				"label": "Lymphocytic proliferations, B-Cell, other (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Lymphocytic proliferations, B-Cell"],
+				"synonyms": []
+			},
+			{
+				"block": 65,
+				"index": 355,
+				"label": "Skin Metastasis of Internal Solid (non-hematological) Cancer (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Skin Metastasis of Internal Solid (non-hematological) Cancer"],
+				"synonyms": []
+			},
+			{
+				"block": 66,
+				"index": 356,
+				"label": "Collision, at least one malignant proliferation (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Collision, at least one malignant proliferation"],
+				"synonyms": []
+			},
+			{
+				"block": 67,
+				"index": 357,
+				"label": "Malignant, Other or not readily classifiable (specify!)",
+				"modifiers": [],
+				"parent": ["malignant", "Malignant, Other or not readily classifiable"],
+				"synonyms": []
+			}
+		]
+	}
+}
