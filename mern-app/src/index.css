@@ -124,3 +124,23 @@ button {
   border: none;
 }
 
+/* elements for tree nodes */
+.treenode {
+	cursor: pointer;
+}
+
+.treenode circle {
+	fill: #fff;
+	stroke: steelblue;
+	stroke-width: 3px;
+}
+
+.treenode text {
+	font: 12px sans-serif;
+}
+
+.treelink {
+	fill: none;
+	stroke: #ccc;
+	stroke-width: 2px;
+}
