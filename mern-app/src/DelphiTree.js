@@ -12,6 +12,7 @@ class DelphiTree extends Component {
     drawTree() {
         var data = global.DM_TREE;
         var root = d3.tree(data);
+        var nodes = root.select();
         let x0 = Infinity;
         let x1 = -x0;
         root.each(d => {
