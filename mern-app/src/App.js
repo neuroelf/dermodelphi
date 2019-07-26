@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.css';
+import DelphiTop from './DelphiTop.js';
+import DelphiBlock from './DelphiBlock.js';
+//import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+//import 'bootstrap/dist/css/bootstrap.css';
 //import logo from './logo.svg';
 import './App.css';
 //import './mockup.css';
-import DelphiTop from './DelphiTop.js';
-import DelphiBlock from './DelphiBlock.js';
 
 // load global JSON information
-global.DM_DIAGS = require('./json/dm_diagnoses.json');
-global.DM_LEVELA = {}
-global.DM_LEVELB = {}
-global.DM_LEVELC = {}
-global.DM_LEVELCBLOCKS = {}
-global.DM_TREE = {'name': '', 'children': []}
+global.DM_TREE = require('./json/dm_diagnoses.json');
+global.DM_LEVELANAMES = [];
+global.DM_LEVELBNAMES = [];
+global.DM_LEVELCBLOCKS = {};
+global.DM_LEVELCBLOCKNAMES = [];
+global.DM_LEVELCBLOCKID2NAMES = {};
+global.DM_LEVELCNODES = {};
 
 class App extends Component {
     constructor(props) {
@@ -21,88 +22,83 @@ class App extends Component {
         
         this.state = {
             currentCBlock: 0,
-            levelA: [],
-            levelB: [],
-            levelC: [],
-            lockedBlocks: []
+            blocks: {}
         };
         
-        var dd = global.DM_DIAGS.data;
-        var dda = dd.levelA;
-        var ddb = dd.levelA;
-        var ddc = dd.levelA;
-        var alen = dda.length;
-        var blen = ddb.length;
-        var clen = ddc.length;
-        var bc;
-        var ai;
-        var bi;
-        var pa;
-        var pb;
-        var anames = [];
-        var bnames = {};
-        for (bc = 0; bc < alen; bc++) {
-            global.DM_LEVELA[dda[bc].index] = dda[bc];
-            this.state.levelA.push({
-                index: dda[bc].index,
-                correct: false,
-                correction: 0,
-                correctionInfo: []
-            });
-            global.DM_TREE['children'].push({'name': dda[bc].label, 'children': []});
-            anames.push(dda[bc].label);
-            bnames[bc] = [];
-        }
-        for (bc = 0; bc < blen; bc++) {
-            global.DM_LEVELB[ddb[bc].index] = ddb[bc];
-            this.state.levelB.push({
-                index: ddb[bc].index,
-                correct: false,
-                correction: 0,
-                correctionInfo: []
-            });
-            pa = ddb[bc].parent[0];
-            for (ai = 0; ai < global.DM_TREE.children.length; ai++) {
-                if (anames[ai] === pa) break;
+        var anodes = global.DM_TREE.children;
+        var aname, anode, bname, bnode, cblock, cnode, blname, blnodes,
+            bnodes, cnodes, alen, blen, clen, ac, bc, cc, blc;
+        alen = anodes.length;
+        blname = '';
+        blnodes = [];
+        cblock = 0;
+        for (ac = 0; ac < alen; ac++) {
+            anode = anodes[ac];
+            aname = anode.name;
+            global.DM_LEVELANAMES.push(aname);
+            bnodes = anode.children;
+            blen = bnodes.length;
+            for (bc = 0; bc < blen; bc++) {
+                bnode = bnodes[bc];
+                bname = bnode.name;
+                global.DM_LEVELBNAMES.push(aname + " - " + bname);
+                cnodes = bnode.children;
+                clen = cnodes.length;
+                blc = 0;
+                for (cc = 0; cc < clen; cc++) {
+                    cnode = cnodes[cc];
+                    global.DM_LEVELCNODES[cnode.id] = cnode;
+                    if (cnode.blockid !== cblock) {
+                        if (cblock !== 0) {
+                            global.DM_LEVELCBLOCKS[cblock] = blnodes;
+                            if (this.state.currentCBlock === 0) {
+                                this.state.currentCBlock = cblock;
+                            }
+                        }
+                        blnodes = [];
+                        cblock = cnode.blockid;
+                        blc = blc + 1;
+                        blname = aname + " - " + bname + ", block " + blc.toString();
+                        global.DM_LEVELCBLOCKNAMES.push(blname);
+                        global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
+                    }
+                    blnodes.push(cnode.id);
+                }
             }
-            global.DM_TREE['children'][ai]['children'].push({'name': ddb[bc].label, 'children': []});
-            bnames[ai].push(ddb[bc].label);
-        }
-        for (bc = 0; bc < clen; bc++) {
-            global.DM_LEVELC[ddc[bc].index] = ddc[bc];
-            this.state.levelC.push({
-                index: ddc[bc].index,
-                correct: false,
-                correction: 0,
-                correctionInfo: [0, '']
-            });
-            var cb = ddc[bc].block;
-            if (global.DM_LEVELCBLOCKS[cb] === undefined) {
-                global.DM_LEVELCBLOCKS[cb] = [];
-            }
-            global.DM_LEVELCBLOCKS[cb].push(ddc[bc].index);
-            pa = ddc[bc].parent[0];
-            pb = ddc[bc].parent[1];
-            for (ai = 0; ai < global.DM_TREE.children.length; ai++) {
-                if (anames[ai] === pa) break;
-            }
-            for (bi = 0; bi < global.DM_TREE.children[ai].children.length; bi++) {
-                if (bnames[ai][bi] === pb) break;
-            }
-            global.DM_TREE['children'][ai]['children'][bi]['children'].push({'name': ddc[bc].label, 'value': ddc[bc].index});
+            global.DM_LEVELCBLOCKS[cblock] = blnodes;
+            global.DM_LEVELCBLOCKNAMES.push(blname);
+            global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
         }
     }
     
     render() {
-      return (
-<div>
 
-    <DelphiTop />
+        return (
+            <div>
+                <DelphiTop />
+                <div class="form-row controls-paragraph" align="right">
+                    <select name="choose-category" id="choose-category">
+                        <option value="0" selected>Jump to other category and block...</option>
+                        {global.DM_LEVELCBLOCKNAMES.map(
+                            blockName => <option value="{blockName}">{blockName}</option>
+                        )}
+                    </select>
+                </div>
 
-    <DelphiBlock block={this.state.currentCBlock} />
+                <p>&nbsp;</p>
 
-</div>
+                <div class="form-container" id="formContainer">
+                    <form action="action_page.php">
+                        <table class="form-table" width="100%">
+                            {Object.keys(global.DM_LEVELCBLOCKS).map(
+                                blockID => <DelphiBlock currentCBlock={blockID} />
+                            )}
+                        </table>
+                    </form>
+                </div>
+            </div>
       );
+
     }
 }
 
