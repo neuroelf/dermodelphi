@@ -29,28 +29,28 @@
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Atypical, NOS ",
+				"name": "Nevus, Atypical, NOS",
 				"id": 1010201,
 				"blockid": 10102,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Clark ",
+				"name": "Nevus, Clark",
 				"id": 1010202,
 				"blockid": 10102,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Dysplastic ",
+				"name": "Nevus, Dysplastic",
 				"id": 1010203,
 				"blockid": 10102,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Spitz ",
+				"name": "Nevus, Spitz",
 				"id": 1010301,
 				"blockid": 10103,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
@@ -64,38 +64,38 @@
 				"synonyms": ["Pigmented spindle cell nevus"]
 			},
 			{
-				"name": "Nevus, Unna ",
+				"name": "Nevus, Unna",
 				"id": 1010303,
 				"blockid": 10103,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Miescher ",
+				"name": "Nevus, Miescher",
 				"id": 1010304,
 				"blockid": 10103,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, BAP-1 deficient (Wiesner)",
+				"name": "Nevus, BAP-1 deficient",
 				"id": 1010305,
 				"blockid": 10103,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
-				"synonyms": []
+				"synonyms": ["Wiesner nevus"]
 			},
 			{
-				"name": "Nevus, Congenital (per history - present at birth or within 1 year of infancy) ",
+				"name": "Nevus, Congenital (per history - present at birth or within 1 year of infancy)",
 				"id": 1010401,
 				"blockid": 10104,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep  (Mark Nevus)"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Congenital pattern (per histopathology)  ",
+				"name": "Nevus, Congenital pattern (per histopathology)",
 				"id": 1010402,
 				"blockid": 10104,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep  (Mark Nevus)"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
 				"synonyms": []
 			},
 			{
@@ -127,14 +127,14 @@
 				"synonyms": ["Tièche-Jadanssohn nevus"]
 			},
 			{
-				"name": "Blue nevus, Cellular ",
+				"name": "Blue nevus, Cellular",
 				"id": 1010603,
 				"blockid": 10106,
 				"modifiers": [],
 				"synonyms": ["Masson blue neuronevus"]
 			},
 			{
-				"name": "Blue nevus, Epithelioid ",
+				"name": "Blue nevus, Epithelioid",
 				"id": 1010604,
 				"blockid": 10106,
 				"modifiers": [],
@@ -162,21 +162,21 @@
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Acral ",
+				"name": "Nevus, Acral",
 				"id": 1010801,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Special site nevus (e.g., genital, umbilicus, breast, axillary, other) ",
+				"name": "Nevus, Special site nevus (e.g., genital, umbilicus, breast, axillary, other)",
 				"id": 1010802,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
 				"synonyms": []
 			},
 			{
-				"name": "Nevus, Recurrent / persistent ",
+				"name": "Nevus, Recurrent / persistent",
 				"id": 1010803,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
@@ -190,7 +190,7 @@
 				"synonyms": ["Sutton nevus"]
 			},
 			{
-				"name": "Nevus, Balloon cell ",
+				"name": "Nevus, Balloon cell",
 				"id": 1010805,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
@@ -211,7 +211,7 @@
 				"synonyms": ["Simple lentigo"]
 			},
 			{
-				"name": "Mongolian spot ",
+				"name": "Mongolian spot",
 				"id": 1011001,
 				"blockid": 10110,
 				"modifiers": [],
@@ -373,7 +373,7 @@
 				"synonyms": ["Trichoblastoma, Cribriform"]
 			},
 			{
-				"name": "Trichoepithelioma, Desmoplastic ",
+				"name": "Trichoepithelioma, Desmoplastic",
 				"id": 1040103,
 				"blockid": 10401,
 				"modifiers": [],
@@ -694,7 +694,7 @@
 				"synonyms": ["Cherry angioma"]
 			},
 			{
-				"name": "Hemangioma, Infantile ",
+				"name": "Hemangioma, Infantile",
 				"id": 1080103,
 				"blockid": 10801,
 				"modifiers": [],
@@ -715,14 +715,14 @@
 				"synonyms": []
 			},
 			{
-				"name": "Hemangioma, Hobnail ",
+				"name": "Hemangioma, Hobnail",
 				"id": 1080106,
 				"blockid": 10801,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Hemangioma, Tufted ",
+				"name": "Hemangioma, Tufted",
 				"id": 1080107,
 				"blockid": 10801,
 				"modifiers": [],
@@ -878,42 +878,42 @@
 				"id": 1090101,
 				"blockid": 10901,
 				"modifiers": [],
-				"synonyms": ["Fibrous histiocytoma"]
+				"synonyms": ["Fibrous histiocytoma NOS"]
 			},
 			{
 				"name": "Dermatofibroma, Aneurysmal",
 				"id": 1090102,
 				"blockid": 10901,
 				"modifiers": [],
-				"synonyms": ["Fibrous histiocytoma"]
+				"synonyms": []
 			},
 			{
 				"name": "Dermatofibroma, Hemosiderotic",
 				"id": 1090103,
 				"blockid": 10901,
 				"modifiers": [],
-				"synonyms": ["Fibrous histiocytoma"]
+				"synonyms": []
 			},
 			{
 				"name": "Dermatofibroma, Epithelioid",
 				"id": 1090104,
 				"blockid": 10901,
 				"modifiers": [],
-				"synonyms": ["Fibrous histiocytoma"]
+				"synonyms": []
 			},
 			{
 				"name": "Dermatofibroma, Cellular",
 				"id": 1090105,
 				"blockid": 10901,
 				"modifiers": [],
-				"synonyms": ["Fibrous histiocytoma"]
+				"synonyms": []
 			},
 			{
 				"name": "Dermatofibroma, other (to be specified)",
 				"id": 1090106,
 				"blockid": 10901,
 				"modifiers": [],
-				"synonyms": ["Fibrous histiocytoma"]
+				"synonyms": []
 			},
 			{
 				"name": "Non-Langerhabs histiocytosis, NOS",
@@ -993,14 +993,14 @@
 				"synonyms": []
 			},
 			{
-				"name": "Fibroma, Sclerotic ",
+				"name": "Fibroma, Sclerotic",
 				"id": 1090307,
 				"blockid": 10903,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Fibroma, Pleomorphic ",
+				"name": "Fibroma, Pleomorphic",
 				"id": 1090308,
 				"blockid": 10903,
 				"modifiers": [],
@@ -1275,7 +1275,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Mastocytoma, Solitary / unifocal ",
+				"name": "Mastocytoma, Solitary / unifocal",
 				"id": 1150102,
 				"blockid": 11501,
 				"modifiers": [],
@@ -1315,7 +1315,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Langerhans cell histiocytosis, Solitary / unifocal ",
+				"name": "Langerhans cell histiocytosis, Solitary / unifocal",
 				"id": 1160102,
 				"blockid": 11601,
 				"modifiers": [],
@@ -1437,7 +1437,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Lichen planus ",
+				"name": "Lichen planus",
 				"id": 1180102,
 				"blockid": 11801,
 				"modifiers": [],
@@ -1458,35 +1458,35 @@
 				"synonyms": []
 			},
 			{
-				"name": "Dermatitis, Atopic ",
+				"name": "Dermatitis, Atopic",
 				"id": 1180202,
 				"blockid": 11802,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Dermatitis, Allergic contact ",
+				"name": "Dermatitis, Allergic contact",
 				"id": 1180203,
 				"blockid": 11802,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Dermatitis, Irritant contact ",
+				"name": "Dermatitis, Irritant contact",
 				"id": 1180204,
 				"blockid": 11802,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Dermatitis, Numular ",
+				"name": "Dermatitis, Numular",
 				"id": 1180205,
 				"blockid": 11802,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Dermatitis, Dyshidrotic ",
+				"name": "Dermatitis, Dyshidrotic",
 				"id": 1180206,
 				"blockid": 11802,
 				"modifiers": [],
@@ -1626,7 +1626,7 @@
 			]
 		},
 		{
-			"name": "Exogenous ",
+			"name": "Exogenous",
 			"id": 120,
 			"children": [{
 				"name": "Tattoo",
@@ -1698,7 +1698,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Melanoma in situ, Acral / acral-lentiginous ",
+				"name": "Melanoma in situ, Acral / acral-lentiginous",
 				"id": 2010103,
 				"blockid": 20101,
 				"modifiers": [],
@@ -1712,7 +1712,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Melanoma in situ, Superficial spreading ",
+				"name": "Melanoma in situ, Superficial spreading",
 				"id": 2010105,
 				"blockid": 20101,
 				"modifiers": [],
@@ -1740,28 +1740,28 @@
 				"synonyms": []
 			},
 			{
-				"name": "Melanoma Invasive, Superficial spreading ",
+				"name": "Melanoma Invasive, Superficial spreading",
 				"id": 2010202,
 				"blockid": 20102,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Melanoma Invasive, On chronically sun-exposed skin / lentigo maligna melanoma ",
+				"name": "Melanoma Invasive, On chronically sun-exposed skin / lentigo maligna melanoma",
 				"id": 2010203,
 				"blockid": 20102,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Melanoma Invasive, Acral / acral-lentiginous ",
+				"name": "Melanoma Invasive, Acral / acral-lentiginous",
 				"id": 2010204,
 				"blockid": 20102,
 				"modifiers": [],
 				"synonyms": []
 			},
 			{
-				"name": "Melanoma Invasive, Nodular ",
+				"name": "Melanoma Invasive, Nodular",
 				"id": 2010205,
 				"blockid": 20102,
 				"modifiers": [],
@@ -1803,7 +1803,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Melanoma Invasive, Recurrent / persistent ",
+				"name": "Melanoma Invasive, Recurrent / persistent",
 				"id": 2010211,
 				"blockid": 20102,
 				"modifiers": [],
@@ -1846,133 +1846,133 @@
 				"name": "Solar (actinic) keratosis, NOS",
 				"id": 2020101,
 				"blockid": 20201,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Solar (actinic) keratosis, Hypertrophic",
 				"id": 2020102,
 				"blockid": 20201,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
-				"synonyms": ["Hyperplastic keratosis"]
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"synonyms": ["Hyperplastic solar keratosis"]
 			},
 			{
 				"name": "Solar (actinic) keratosis, Atrophic",
 				"id": 2020103,
 				"blockid": 20201,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Solar (actinic) keratosis, Acantholytic",
 				"id": 2020104,
 				"blockid": 20201,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Solar (actinic) keratosis, Bowenoid",
 				"id": 2020105,
 				"blockid": 20201,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Solar (actinic) keratosis, other (to be specified)",
 				"id": 2020106,
 				"blockid": 20201,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Solar cheilitis",
 				"id": 2020107,
 				"blockid": 20201,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": ["Solar keratosis of lip"]
 			},
 			{
 				"name": "Puva-associated keratosis",
 				"id": 2020201,
 				"blockid": 20202,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Arsenical-associated keratosis",
 				"id": 2020202,
 				"blockid": 20202,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
-				"name": "Squamous cell carcinoma in situ, NOS ",
+				"name": "Squamous cell carcinoma in situ, NOS",
 				"id": 2020301,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Squamous cell carcinoma in situ, Solar keratotic type",
 				"id": 2020302,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Squamous cell carcinoma in situ, Bowens disease",
 				"id": 2020303,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Digitated squamous cell carcinoma in situ",
 				"id": 2020304,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Squamous cell carcinoma in situ, other (to be specified)",
 				"id": 2020305,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Verrucous carcinoma, Oral florid papilomatosis type",
 				"id": 2020306,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Verrucous carcinoma, Carcinoma cuniculatum type",
 				"id": 2020307,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Verrucous carcinoma, Giant condyloma type",
 				"id": 2020308,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": ["Buschke-Lowestein tumor"]
 			},
 			{
 				"name": "Bowenoid papulosis",
 				"id": 2020309,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Keratoacanthoma",
 				"id": 2020310,
 				"blockid": 20203,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
@@ -1983,7 +1983,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Squamous cell carcinoma, Invasive, Keratoacanthoma-type (syn: SCC with Keratoacanthoma-features) ",
+				"name": "Squamous cell carcinoma, Invasive, Keratoacanthoma-type (syn: SCC with Keratoacanthoma-features)",
 				"id": 2020402,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
@@ -2040,84 +2040,84 @@
 				"name": "Basal cell carcinoma, NOS",
 				"id": 2030101,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma, Superficial",
 				"id": 2030102,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma, Nodular",
 				"id": 2030103,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma, Micronodular",
 				"id": 2030104,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
-				"name": "Basal cell carcinoma, Infiltrating ",
+				"name": "Basal cell carcinoma, Infiltrating",
 				"id": 2030105,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma, Sclerosing / morpheaform (morphoeic)",
 				"id": 2030106,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Baso-squamous carcinoma",
 				"id": 2030107,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma with adnexal differentiation",
 				"id": 2030108,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma with sarcomatoid differentiation",
 				"id": 2030109,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma, Fibroeipthelial",
 				"id": 2030110,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
-				"synonyms": ["Pinkus"]
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"synonyms": ["Pinkus tumor"]
 			},
 			{
 				"name": "Basal cell carcinoma, Combined subtypes (details of all components to be specified)",
 				"id": 2030111,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
 				"name": "Basal cell carcinoma, other (to be specified)",
 				"id": 2030112,
 				"blockid": 20301,
-				"modifiers": [["Histopathologically pigmented", "Non-histophathologically pigmented"]],
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
 				"synonyms": []
 			},
 			{
@@ -2318,7 +2318,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Hemangioendothelioma, Kaposiform ",
+				"name": "Hemangioendothelioma, Kaposiform",
 				"id": 2060202,
 				"blockid": 20602,
 				"modifiers": [],
@@ -2414,7 +2414,7 @@
 			]
 		},
 		{
-			"name": "Soft tissue proliferations - Neural ",
+			"name": "Soft tissue proliferations - Neural",
 			"id": 209,
 			"children": [{
 				"name": "Malignant peripheral nerve sheath tumor",
@@ -2440,10 +2440,10 @@
 			]
 		},
 		{
-			"name": "Soft tissue proliferations - Adipocytic ",
+			"name": "Soft tissue proliferations - Adipocytic",
 			"id": 210,
 			"children": [{
-				"name": "Liposarcoma, Well differentiated ",
+				"name": "Liposarcoma, Well differentiated",
 				"id": 2100101,
 				"blockid": 21001,
 				"modifiers": [],
@@ -2538,7 +2538,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Mycosis fungoides, Folliculotropic ",
+				"name": "Mycosis fungoides, Folliculotropic",
 				"id": 2150102,
 				"blockid": 21501,
 				"modifiers": [],
@@ -2552,7 +2552,7 @@
 				"synonyms": []
 			},
 			{
-				"name": "Mycosis fungoides, Granulomatous slack skin ",
+				"name": "Mycosis fungoides, Granulomatous slack skin",
 				"id": 2150104,
 				"blockid": 21501,
 				"modifiers": [],
@@ -2723,7 +2723,7 @@
 			]
 		},
 		{
-			"name": "Malignant, other (or not readily classifiable)",
+			"name": "Malignant - Other (or not readily classifiable)",
 			"id": 219,
 			"children": [{
 				"name": "Malignant, other (or not readily classifiable; to be specified)",
