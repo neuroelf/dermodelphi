@@ -12,12 +12,13 @@
     font-weight: normal;
     font-style: normal;
 }
+* {
+  font-family: bpreplayregular, sans-serif;
+}
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  margin: 4;
+  font-size: 12px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,6 +26,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font: normal 24px bpreplaybold, sans-serif;
+}
+h2 {
+  font: normal 20px bpreplaybold, sans-serif;
+}
+h3 {
+  font: normal 18px bpreplaybold, sans-serif;
+}
+h4 {
+  font-size: 16px;
 }
 
 .controls-paragraph {
@@ -35,12 +49,18 @@ code {
 .general-paragraph {
   padding: 3px 12px 3px 12px;
   color: black;
-  font: normal 14px bpreplayregular, sans-serif;
+  font-size: 14px;
 }
 .general-paragraph-small {
   padding: 3px 12px 3px 12px;
   color: black;
-  font: normal 10px bpreplayregular, sans-serif;
+  font-size: 10px;
+}
+.general-text-paragraph {
+  padding: 3px 12px 3px 12px;
+  color: black;
+  font-size: 14px;
+  width: 600px;
 }
 .title-paragraph {
   padding: 3px 12px 3px 12px;
@@ -56,13 +76,21 @@ code {
   padding: 2px 6px 2px 6px;
   font: normal 14px bpreplaybold, sans-serif;
 }
+.form-control-cell {
+  padding: 2px 10px 2px 10px;
+}
 .form-control-centered-cell {
   padding: 2px 10px 2px 10px;
   text-align: center;
 }
+.form-control-wide-cell {
+  padding: 2px 10px 2px 10px;
+  width: 280px;
+}
 .form-name-cell {
   padding: 2px 12px 2px 12px;
-  font: normal 12px bpreplayregular, sans-serif;
+  font-size: 12px;
+  width: 600px;
 }
 .form-addname-cell {
   padding: 2px 12px 2px 12px;
