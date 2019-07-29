@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Diagnosis Mapper",
+  "name": "Dermatology Diagnosis Mapper - Consensus Survey",
   "icons": [
     {
       "src": "favicon.ico",
