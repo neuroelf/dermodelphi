@@ -13,6 +13,7 @@ class DelphiTop extends Component {
     }
     
     showOrHideTree() {
+        window.alert('pressed');
     }
     
     render() {
@@ -26,14 +27,11 @@ class DelphiTop extends Component {
 
     <div class="tree-container" id="treeInfoContainer" height="64">
         <p class="general-paragraph-small">
-            <button onClick={this.showOrHideTree}>Please click here to show the sub-tree of the current category.</button>
+            <button onClick={this.showOrHideTree}>Please click here to show the full taxonomy tree.</button>
         </p>
     </div>
-    
     <DelphiTree />
-    
 </div>
-
         )
     }
 }
