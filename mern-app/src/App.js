@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DelphiTop from './DelphiTop.js';
+import DelphiWelcome from './DelphiWelcome.js';
 import DelphiBlock from './DelphiBlock.js';
-//import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //, Link } from 'react-router-dom';
 //import 'bootstrap/dist/css/bootstrap.css';
 //import logo from './logo.svg';
 import './App.css';
@@ -15,6 +16,8 @@ global.DM_LEVELCBLOCKS = {};
 global.DM_LEVELCBLOCKNAMES = [];
 global.DM_LEVELCBLOCKID2NAMES = {};
 global.DM_LEVELCNODES = {};
+
+const DelphiNotFound = () => <h2>This page/component wasn't found.</h2>
 
 class App extends Component {
     constructor(props) {
@@ -32,6 +35,7 @@ class App extends Component {
         blname = '';
         blnodes = [];
         cblock = 0;
+        global.DM_LEVELCBLOCKS[0] = []
         for (ac = 0; ac < alen; ac++) {
             anode = anodes[ac];
             aname = anode.name;
@@ -74,29 +78,14 @@ class App extends Component {
     render() {
 
         return (
-            <div>
+            <Router>
                 <DelphiTop />
-                <div class="form-row controls-paragraph" align="right">
-                    <select name="choose-category" id="choose-category">
-                        <option value="0" selected>Jump to other category and block...</option>
-                        {global.DM_LEVELCBLOCKNAMES.map(
-                            blockName => <option value="{blockName}">{blockName}</option>
-                        )}
-                    </select>
-                </div>
-
-                <p>&nbsp;</p>
-
-                <div class="form-container" id="formContainer">
-                    <form action="action_page.php">
-                        <table class="form-table" width="100%">
-                            {Object.keys(global.DM_LEVELCBLOCKS).map(
-                                blockID => <DelphiBlock currentCBlock={blockID} />
-                            )}
-                        </table>
-                    </form>
-                </div>
-            </div>
+                <Switch>
+                    <Route path="/" exact component={DelphiWelcome} />
+                    <Route path="/block/:currentCBlock" component={DelphiBlock} />
+                    <Route component={DelphiNotFound} />
+                </Switch>
+            </Router>
       );
 
     }
