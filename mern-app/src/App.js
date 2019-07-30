@@ -2,11 +2,8 @@ import React, { Component } from 'react';
 import DelphiTop from './DelphiTop.js';
 import DelphiWelcome from './DelphiWelcome.js';
 import DelphiBlock from './DelphiBlock.js';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //, Link } from 'react-router-dom';
-//import 'bootstrap/dist/css/bootstrap.css';
-//import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //, Link // from 'react-router-dom';
 import './App.css';
-//import './mockup.css';
 
 // load global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
@@ -16,6 +13,52 @@ global.DM_LEVELCBLOCKS = {};
 global.DM_LEVELCBLOCKNAMES = [];
 global.DM_LEVELCBLOCKID2NAMES = {};
 global.DM_LEVELCNODES = {};
+
+function parseDMJSONFile() {
+    var anodes = global.DM_TREE.children;
+    var aname, anode, bname, bnode, cblock, cnode, blname, blnodes,
+        bnodes, cnodes, alen, blen, clen, ac, bc, cc, blc;
+    alen = anodes.length;
+    blname = '';
+    blnodes = [];
+    cblock = 0;
+    global.DM_LEVELCBLOCKS[0] = []
+    for (ac = 0; ac < alen; ac++) {
+        anode = anodes[ac];
+        aname = anode.name;
+        global.DM_LEVELANAMES.push(aname);
+        bnodes = anode.children;
+        blen = bnodes.length;
+        for (bc = 0; bc < blen; bc++) {
+            bnode = bnodes[bc];
+            bname = bnode.name;
+            global.DM_LEVELBNAMES.push(aname + " - " + bname);
+            cnodes = bnode.children;
+            clen = cnodes.length;
+            blc = 0;
+            for (cc = 0; cc < clen; cc++) {
+                cnode = cnodes[cc];
+                global.DM_LEVELCNODES[cnode.id] = cnode;
+                if (cnode.blockid !== cblock) {
+                    if (cblock !== 0) {
+                        global.DM_LEVELCBLOCKS[cblock] = blnodes;
+                    }
+                    blnodes = [];
+                    cblock = cnode.blockid;
+                    blc = blc + 1;
+                    blname = aname + " - " + bname + ", block " + blc.toString();
+                    global.DM_LEVELCBLOCKNAMES.push(blname);
+                    global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
+                }
+                blnodes.push(cnode.id);
+            }
+        }
+        global.DM_LEVELCBLOCKS[cblock] = blnodes;
+        global.DM_LEVELCBLOCKNAMES.push(blname);
+        global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
+    }
+return;
+}
 
 const DelphiNotFound = () => <h2>This page/component wasn't found.</h2>
 
@@ -27,56 +70,11 @@ class App extends Component {
             currentCBlock: 0,
             blocks: {}
         };
-        
-        var anodes = global.DM_TREE.children;
-        var aname, anode, bname, bnode, cblock, cnode, blname, blnodes,
-            bnodes, cnodes, alen, blen, clen, ac, bc, cc, blc;
-        alen = anodes.length;
-        blname = '';
-        blnodes = [];
-        cblock = 0;
-        global.DM_LEVELCBLOCKS[0] = []
-        for (ac = 0; ac < alen; ac++) {
-            anode = anodes[ac];
-            aname = anode.name;
-            global.DM_LEVELANAMES.push(aname);
-            bnodes = anode.children;
-            blen = bnodes.length;
-            for (bc = 0; bc < blen; bc++) {
-                bnode = bnodes[bc];
-                bname = bnode.name;
-                global.DM_LEVELBNAMES.push(aname + " - " + bname);
-                cnodes = bnode.children;
-                clen = cnodes.length;
-                blc = 0;
-                for (cc = 0; cc < clen; cc++) {
-                    cnode = cnodes[cc];
-                    global.DM_LEVELCNODES[cnode.id] = cnode;
-                    if (cnode.blockid !== cblock) {
-                        if (cblock !== 0) {
-                            global.DM_LEVELCBLOCKS[cblock] = blnodes;
-                            if (this.state.currentCBlock === 0) {
-                                this.state.currentCBlock = cblock;
-                            }
-                        }
-                        blnodes = [];
-                        cblock = cnode.blockid;
-                        blc = blc + 1;
-                        blname = aname + " - " + bname + ", block " + blc.toString();
-                        global.DM_LEVELCBLOCKNAMES.push(blname);
-                        global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
-                    }
-                    blnodes.push(cnode.id);
-                }
-            }
-            global.DM_LEVELCBLOCKS[cblock] = blnodes;
-            global.DM_LEVELCBLOCKNAMES.push(blname);
-            global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
-        }
+
+        parseDMJSONFile();
     }
     
     render() {
-
         return (
             <Router>
                 <DelphiTop />
@@ -87,7 +85,6 @@ class App extends Component {
                 </Switch>
             </Router>
       );
-
     }
 }
 
