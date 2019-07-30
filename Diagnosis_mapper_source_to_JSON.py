@@ -22,24 +22,6 @@ SHEETNAME = 'TaxonomyBasis'
 OUTPUTFILE = 'dm_diagnoses.json'
 
 # define isNaN function, and the ABCNode class
-def stringJoin(list):
-    rv = ''
-    for v in list:
-        rv += v
-    return rv
-def fullEscape(value, tc=';'):
-    return stringJoin(
-        [letter if (ord(letter)>=32 and ord(letter)<=126) else \
-         '&#' + str(ord(letter)) + tc for letter in html.escape(value)])
-def unEscapeTC(list, oldc='@', newc=';'):
-    if len(list) == 0:
-        return list
-    if len(list[0]) == 1:
-        list = list.replace(oldc, newc)
-    else:
-        for ll in range(len(list)):
-            list[ll] = unEscapeTC(list[ll], oldc, newc)
-    return list
 def isNaN(value):
     return value != value
 
@@ -48,7 +30,7 @@ Bdict = {}
 Cdict = {}
 class ABCNode:
     def __init__(self, name, level, Aid, Bid, CBid, Cid, syns, mod1, mod2):
-        self.name = fullEscape(name.strip())
+        self.name = name.strip()
         self.children = []
         if level == 'A':
             self.id = Aid
@@ -65,17 +47,13 @@ class ABCNode:
             if isNaN(mod1):
                 self.modifiers = []
             elif isNaN(mod2):
-                self.modifiers = unEscapeTC(
-                    [fullEscape(mod1, '@').strip().split(';')])
+                self.modifiers = [mod1.strip().split(';')]
             else:
-                self.modifiers = unEscapeTC(
-                    [fullEscape(mod1, '@').strip().split(';'), 
-                     fullEscape(mod2, '@').strip().split(';')])
+                self.modifiers = [mod1.strip().split(';'), mod2.strip().split(';')]
             if isNaN(syns):
                 self.synonyms = []
             else:
-                self.synonyms = unEscapeTC(
-                    fullEscape(syns, '@').strip().split(';'))
+                self.synonyms = syns.strip().split(';')
             Bdict[Bid].children.append(self)
         else:
             self.id = 0
@@ -86,9 +64,7 @@ class ABCNode:
             tstr = "\t" * clevel
         txstr = tstr + "\t"
         openstr = "{\n"
-        objstr = \
-            txstr + "\"name\": \"" + self.name + "\",\n" + \
-            txstr + "\"id\": " + str(self.id) + ",\n"
+        objstr = txstr + "\"name\": \"" + self.name + "\",\n" + txstr + "\"id\": " + str(self.id) + ",\n"
         numchildren = len(self.children)
         if numchildren > 0:
             objstr += txstr + "\"children\": ["
@@ -99,8 +75,7 @@ class ABCNode:
                     objstr += self.children[cc].toJSON(clevel + 1) + "\n"
             objstr += txstr + "]\n"
         else:
-            objstr += \
-                txstr + "\"blockid\": " + str(self.blockid) + ",\n" + \
+            objstr += txstr + "\"blockid\": " + str(self.blockid) + ",\n" + \
                 txstr + "\"modifiers\": " + repr(self.modifiers).replace("'", "\"") + ",\n" + \
                 txstr + "\"synonyms\": " + repr(self.synonyms).replace("'", "\"") + "\n"
         closestr = tstr + "}"
@@ -131,5 +106,6 @@ for rowindex, row in sourcedf.iterrows():
         currentC = ABCNode(row[2], 'C', Aid, Bid, CBid, Cid, syns, mod1, mod2)
 
 # store converted output to file
-with open(OUTPUTFILE, "w") as textfile:
+with open(OUTPUTFILE, "w", encoding='utf-8') as textfile:
     textfile.write(baseNode.toJSON())
+
