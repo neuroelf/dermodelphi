@@ -19,14 +19,24 @@ class DelphiTop extends Component {
     render() {
         return (
 <div>
-    <div class="info-container" id="infoContainer" height="80">
-        <p class="title-paragraph">
-            Dermatology Diagnosis Mapper - Consensus Survey
-        </p>
+    <div className="top-bar">
+        <table border="0">
+            <tbody>
+                <tr height="64">
+                    <td valign="bottom">
+                        <img src={process.env.PUBLIC_URL + '/img/dm_logo.png'} width="60" height="60" alt="DM Logo" />
+                    </td>
+                    <td width="24"></td>
+                    <td valign="middle">
+                        <h1>Dermatology Diagnosis Mapper - Consensus Survey</h1>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
-    <div class="tree-container" id="treeInfoContainer" height="64">
-        <p class="general-paragraph-small">
+    <div className="tree-container" id="treeInfoContainer" height="64">
+        <p className="general-paragraph-small">
             <button onClick={this.showOrHideTree}>Please click here to show the full taxonomy tree.</button>
         </p>
     </div>

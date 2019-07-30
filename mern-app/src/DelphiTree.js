@@ -201,7 +201,7 @@ return svg.node();
 
 render() {
         return (
-<div class="tree-container" id="treeContainer" height={this.state.treeVisibleHeight}>
+<div className="tree-container" id="treeContainer" height={this.state.treeVisibleHeight}>
     
 </div>
         )

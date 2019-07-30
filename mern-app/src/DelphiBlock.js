@@ -1,81 +1,107 @@
 import React, { Component } from 'react';
+import DelphiSelectCategory from './DelphiSelectCategory';
 import DelphiControlRowC from './DelphiControlRowC.js';
+import DelphiMarkBlockCorrectButton from './DelphiMarkBlockCorrectButton';
+import DelphiUnlockBlockButton from './DelphiUnlockBlockButton'
+import DelphiNextBlockButton from './DelphiNextBlockButton';
+
+const CurrentCategoryLabel = props => (
+    <p>Current Category: {global.DM_LEVELCBLOCKID2NAMES[props.CBlockId]}</p>
+);
+
+const CategoryHeaderRow = () => (
+    <tr className="form-header-row">
+        <td className="form-pad-cell"></td>
+        <td className="form-header-cell">Diagnosis (name)</td>
+        <td className="form-header-cell" align="center">Correct?</td>
+        <td className="form-header-cell">Correction (configure as needed)</td>
+    </tr>
+);
 
 export default class DelphiBlock extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            allcorrect: false
-        };
+        this.state = { };
         this.markBlockControlsAsCorrect = this.markBlockControlsAsCorrect.bind(this);
-        this.setNewBlock = this.setNewBlock.bind(this);
     }
     
     markBlockControlsAsCorrect() {
-        this.setState(state => ({
-            allcorrect: true
+
+        // get blocks from AppObj, and blockId from Router match
+        const { blocks } = { ...this.props.AppObj.state };
+        const currentState = blocks;
+        var blockId = this.props.match.params.CBlockId;
+
+        // start by setting all correct
+        currentState[blockId].allcorrect = true;
+        this.props.AppObj.setState(state => ({
+            blocks: currentState
         }));
     }
 
-    setNewBlock() {
-        var nextBlock = document.getElementById('choose-category').value;
-        if (nextBlock === 0) {
-            // nothing yet
-        } else {
-            this.props.history.push('/block/0');
-            this.props.history.push('/block/' + nextBlock.toString());
-        }
-    }
-    
     render() {
 
         const { params } = this.props.match;
+        var CBlockId = parseInt(params.CBlockId);
+        var blockState = this.props.AppObj.state.blocks[CBlockId];
+        const LockOpenImage = <img src={process.env.PUBLIC_URL + '/img/unlocked.png'} width="24" height="24" alt="Page unlocked" />;
+        const LockClosedImage = <img src={process.env.PUBLIC_URL + '/img/locked.png'} width="24" height="24" alt="Page unlocked" />;
+
         return (
-<tbody>
-    <tr className={"form-header-row form-row" + params.currentCBlock.toString()}>
-        <td class="form-control-cell" colspan="3">
-            <p class="controls-paragraph">
-                Current Category: {global.DM_LEVELCBLOCKID2NAMES[params.currentCBlock]}
-            </p>
-        </td>
-        <td class="form-control-cell">
-            <div class="form-row controls-paragraph" align="right">
-                <select name="choose-category" id="choose-category" onChange={this.setNewBlock}>
-                    <option value="0" selected>Jump to other category and block...</option>
-                    {Object.keys(global.DM_LEVELCBLOCKS).map(
-                        blockId => <option value={blockId}>{global.DM_LEVELCBLOCKID2NAMES[blockId]}</option>
-                    )}
-                </select>
-            </div>
-        </td>
-    </tr>
 
-    <tr className={"form-header-row form-row" + params.currentCBlock.toString()}>
-        <td class="form-pad-cell"></td>
-        <td class="form-header-cell">Diagnosis (name)</td>
-        <td class="form-header-cell">Correct (yes/no)</td>
-        <td class="form-header-cell">Correction (configure as needed)</td>
-    </tr>
+<table className="form-table" width="100%">
+    <tbody>
+        <tr className="control-bar">
+            <td></td>
+            <td colSpan="2">
+                <CurrentCategoryLabel CBlockId={params.CBlockId} />
+            </td>
+            <td className="form-control-cell">
+                <div className="form-row controls-paragraph" align="right">
+                    <DelphiSelectCategory AppObj={this.props.AppObj} history={this.props.history} CBlockId={params.CBlockId} />
+                </div>
+            </td>
+        </tr>
 
-    {global.DM_LEVELCBLOCKS[params.currentCBlock].map(CNodeID => <DelphiControlRowC CNodeID={CNodeID} />)}
+        <CategoryHeaderRow />
 
-    <tr className={"form-header-row form-row" + params.currentCBlock.toString()}>
-        <td class="form-control-cell" colspan="3">
-            <p class="controls-paragraph">
-                <button onClick={this.markBlockControlsAsCorrect}>mark entire block as correct</button>
-            </p>
-        </td>
-        <td class="form-control-cell">
-            <div align="right">
-                <img src={process.env.PUBLIC_URL + '/img/unlocked.png'} width="24" height="24" alt="Page unlocked" />
-                &nbsp;&nbsp;&nbsp;
-                <font color="#CCCCCC"><i>this page is already unlocked</i></font>
-                &nbsp;&nbsp;&nbsp;
-                <button type="button" disabled="disabled">Continue with the next block</button>
-            </div>
-        </td>
-    </tr>
-</tbody>
+        {global.DM_LEVELCBLOCKS[params.CBlockId].map(CNodeId => 
+            <DelphiControlRowC key={CNodeId} AppObj={this.props.AppObj}
+                CBlockId={params.CBlockId} CNodeId={CNodeId} />)
+        }
+
+        <tr className="form-header-row">
+            <td className="form-control-cell" colSpan="3">
+                <p className="controls-paragraph">
+                    <DelphiMarkBlockCorrectButton AppObj={this.props.AppObj}
+                        CBlockId={params.CBlockId} />
+                </p>
+            </td>
+            <td className="form-control-cell">
+                <div align="right"><table><tbody><tr>
+                    <td className="form-control-cell">
+                        {blockState.locked ? LockClosedImage : LockOpenImage}
+                    </td>
+                    <td className="form-control-cell">
+                        {blockState.locked ? 
+                            <DelphiUnlockBlockButton AppObj={this.props.AppObj}
+                                CBlockId={params.CBlockId} />
+                            :
+                            <font color="#737373"><i>This page is already unlocked</i></font>
+                        }
+                    </td>
+                    <td className="form-control-cell">
+                        <p className="controls-paragraph">
+                            <DelphiNextBlockButton AppObj={this.props.AppObj}
+                                CBlockId={params.CBlockId} history={this.props.history} />
+                        </p>
+                    </td>
+                </tr></tbody></table></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
         );
     }
 }

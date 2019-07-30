@@ -9,7 +9,7 @@ class DelphiControlCheckBox extends Component {
         super(props);
         
         this.state = {
-            value: 0
+            checked: false
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,7 +17,7 @@ class DelphiControlCheckBox extends Component {
     }
     
     handleChange(event) {
-        this.setState({value: event.target.value});
+        this.setState({checked: event.target.checked});
     }
 
     handleSubmit(event) {
@@ -31,7 +31,8 @@ class DelphiControlCheckBox extends Component {
     render() {
         return (
             <input type="checkbox" name={correctName(this.props.nodeId)}
-             id={correctName(this.props.nodeId)} value={this.state.value} />
+             id={correctName(this.props.nodeId)} checked={!!this.state.checked}
+             onChange={this.handleChange} />
         );
     }
 }
