@@ -11,7 +11,7 @@ const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 const DM_session = new Schema( {
     user: String,
-    session: String,
+    sessionID: String,
     state: String,
     date: Date
 });
