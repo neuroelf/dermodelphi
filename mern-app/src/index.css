@@ -16,6 +16,10 @@
   font-family: bpreplayregular, sans-serif;
 }
 
+b {
+  font: normal bpreplaybold, sans-serif;
+}
+
 body {
   margin: 4;
   font-size: 14px;
@@ -41,6 +45,9 @@ h4 {
   font-size: 18px;
 }
 
+ul {
+  font-size: 14px;
+}
 .top-bar {
   background-color: #1c73ca;
   padding: 6px 80px 6px 80px;
@@ -73,8 +80,8 @@ h4 {
 .general-text-paragraph {
   padding: 3px 12px 3px 12px;
   color: black;
-  font-size: 16px;
-  width: 600px;
+  font-size: 14px;
+  width: 800px;
 }
 .title-paragraph {
   padding: 3px 12px 3px 12px;
@@ -94,6 +101,12 @@ h4 {
   border: 12px solid #bcbcbc;
   padding: 2px 6px 2px 6px;
   font: normal 16px bpreplaybold, sans-serif;
+}
+.form-row {
+  background-color: #f8f8f6;
+}
+.form-row-first {
+  background-color: #f0f0ee;
 }
 .form-control-cell {
   vertical-align: middle;

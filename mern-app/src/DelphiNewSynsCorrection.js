@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DelphiNewSynsCorrection extends Component {
+export default class DelphiNewSynsCorrection extends Component {
     constructor(props) {
         super(props);
         
@@ -29,5 +29,3 @@ class DelphiNewSynsCorrection extends Component {
         );
     }
 }
-
-export default DelphiNewSynsCorrection;

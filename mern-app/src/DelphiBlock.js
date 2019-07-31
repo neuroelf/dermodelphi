@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DelphiAllBlocks from './DelphiAllBlocks';
 import DelphiSelectCategory from './DelphiSelectCategory';
 import DelphiControlRowC from './DelphiControlRowC.js';
 import DelphiMarkBlockCorrectButton from './DelphiMarkBlockCorrectButton';
@@ -46,6 +47,13 @@ export default class DelphiBlock extends Component {
         var blockState = this.props.AppObj.state.blocks[CBlockId];
         const LockOpenImage = <img src={process.env.PUBLIC_URL + '/img/unlocked.png'} width="24" height="24" alt="Page unlocked" />;
         const LockClosedImage = <img src={process.env.PUBLIC_URL + '/img/locked.png'} width="24" height="24" alt="Page unlocked" />;
+
+        // special case for all blocks
+        if (CBlockId === 99) {
+            return (
+                <DelphiAllBlocks AppObj={this.props.AppObj} />
+            );
+        }
 
         return (
 

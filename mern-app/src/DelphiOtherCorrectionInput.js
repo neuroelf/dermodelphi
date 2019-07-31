@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DelphiOtherCorrectionInput extends Component {
+export default class DelphiOtherCorrectionInput extends Component {
     constructor(props) {
         super(props);
         
@@ -21,11 +21,11 @@ class DelphiOtherCorrectionInput extends Component {
     }
     
     render() {
+        const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
+        const rowState = blockState[this.props.CNodeId];
         return (
             <input className="form-minwidth" type="text" placeholder="Please describe the desired correction(s)..."
-                value="" onChange={this.handleChange} />
+                value={rowState.corrother} onChange={this.handleChange} />
         );
     }
 }
-
-export default DelphiOtherCorrectionInput;

@@ -11,6 +11,7 @@ import * as DCONST from './DelphiConstants.js'
 global.DM_TREE = require('./json/dm_diagnoses.json');
 global.DM_LEVELANAMES = [];
 global.DM_LEVELBNAMES = [];
+global.DM_LEVELBFULLNAMES = {};
 global.DM_LEVELCBLOCKS = {};
 global.DM_LEVELCBLOCKIDS = [];
 global.DM_LEVELCBLOCKNAMES = [];
@@ -40,7 +41,8 @@ function parseDMJSONFile() {
         for (bc = 0; bc < blen; bc++) {
             bnode = bnodes[bc];
             bname = bnode.name;
-            global.DM_LEVELBNAMES.push(aname + " - " + bname);
+            global.DM_LEVELBNAMES.push(bname);
+            global.DM_LEVELBFULLNAMES[bnode.id] = aname + " - " + bname;
 
             // parse diagnoses (names)
             cnodes = bnode.children;
@@ -84,14 +86,17 @@ return;
 const DelphiNotFound = () => <h2>This page/component wasn't found.</h2>
 
 // main component (rendered by index.js)
-class App extends Component {
+export default class App extends Component {
     constructor(props) {
         super(props);
         
         // place holder state (will be filled from JSON data)
         this.state = {
+            user: '',
+            sessionId: '',
             currentCBlockId: 10101,
-            blocks: {}
+            blocks: {},
+            date: Date.now()
         };
 
         // parse the JSON file synchronously
@@ -126,6 +131,7 @@ class App extends Component {
                     corrnewsyns: '',
                     corrcombine: 0,
                     corrmoveto: 0,
+                    corrmovetox: '',
                     corrnewmods: '',
                     correditmods: '',
                     corrother: ''
@@ -156,5 +162,3 @@ class App extends Component {
         );
     }
 }
-
-export default App;

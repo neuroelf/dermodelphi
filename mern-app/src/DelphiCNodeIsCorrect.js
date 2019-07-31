@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import * as DCONST from './DelphiConstants'
 
-class DelphiCNodeIsCorrect extends Component {
+export default class DelphiCNodeIsCorrect extends Component {
     constructor(props) {
         super(props);
         
         this.state = { };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+    }
+    
+    handleSubmit(event) {
+        event.preventDefault();
     }
     
     handleChange(event) {
@@ -18,10 +22,6 @@ class DelphiCNodeIsCorrect extends Component {
         this.props.AppObj.setState({blocks: newState});
     }
 
-    handleSubmit(event) {
-        event.preventDefault();
-    }
-    
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
@@ -35,5 +35,3 @@ class DelphiCNodeIsCorrect extends Component {
         );
     }
 }
-
-export default DelphiCNodeIsCorrect;

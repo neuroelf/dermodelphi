@@ -4,7 +4,7 @@ function correctName(id) {
     return `correct` + id.toString();
 }
 
-class DelphiControlCheckBox extends Component {
+export default class DelphiControlCheckBox extends Component {
     constructor(props) {
         super(props);
         
@@ -36,5 +36,3 @@ class DelphiControlCheckBox extends Component {
         );
     }
 }
-
-export default DelphiControlCheckBox;

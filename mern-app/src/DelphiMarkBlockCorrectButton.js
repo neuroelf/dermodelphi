@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as DCONST from './DelphiConstants'
 
-class DelphiMarkBlockCorrectButton extends Component {
+export default class DelphiMarkBlockCorrectButton extends Component {
     constructor(props) {
         super(props);
         
@@ -62,5 +62,3 @@ class DelphiMarkBlockCorrectButton extends Component {
         );
     }
 }
-
-export default DelphiMarkBlockCorrectButton;

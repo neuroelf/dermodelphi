@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import DelphiTree from './DelphiTree.js';
 
-class DelphiTop extends Component {
+export default class DelphiTop extends Component {
     constructor(props) {
         super(props);
         
@@ -45,5 +45,3 @@ class DelphiTop extends Component {
         )
     }
 }
-
-export default DelphiTop;

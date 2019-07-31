@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class DelphiTypoCorrection extends Component {
+export default class DelphiCombineCorrection extends Component {
     constructor(props) {
         super(props);
         
@@ -12,7 +12,7 @@ export default class DelphiTypoCorrection extends Component {
     handleChange(event) {
         const { blocks } = { ...this.props.AppObj.state };
         const newState = blocks;
-        newState[this.props.CBlockId][this.props.CNodeId].corrspelling = event.target.value;
+        newState[this.props.CBlockId][this.props.CNodeId].corrcombine = parseInt(event.target.value);
         this.props.AppObj.setState({blocks: newState});
     }
 
@@ -23,9 +23,14 @@ export default class DelphiTypoCorrection extends Component {
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
+        const CNodeIds = global.DM_LEVELCBLOCKS[this.props.CBlockId];
         return (
-            <input className="form-minwidth" type="text" placeholder="Please provide the correct spelling..."
-                value={rowState.corrspelling} onChange={this.handleChange} />
+            <select value={rowState.corrcombine.toString()} onChange={this.handleChange}>
+                <option value="0" key="0">Please select the diagnosis to combine with...</option>
+                {CNodeIds.filter(CNodeId => CNodeId !== this.props.CNodeId)
+                    .map(CNodeId =>
+                    <option value={CNodeId} key={CNodeId}>{global.DM_LEVELCNODES[CNodeId].name}</option>)}
+            </select>
         );
     }
 }

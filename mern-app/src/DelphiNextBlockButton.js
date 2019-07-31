@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as DCONST from './DelphiConstants'
 
-class DelphiNextBlockButton extends Component {
+export default class DelphiNextBlockButton extends Component {
     constructor(props) {
         super(props);
         
@@ -23,7 +23,6 @@ class DelphiNextBlockButton extends Component {
         newState[currentCBlockId].locked = true;
         var bc;
         for (bc = 0; bc < global.DM_LEVELCBLOCKIDS.length; bc++) {
-            console.log([global.DM_LEVELCBLOCKIDS[bc], currentCBlockId]);
             if (global.DM_LEVELCBLOCKIDS[bc] === currentCBlockId) {
                 if (bc < (global.DM_LEVELCBLOCKIDS.length - 1)) {
                     nextCBlockId = global.DM_LEVELCBLOCKIDS[bc+1];
@@ -86,5 +85,3 @@ class DelphiNextBlockButton extends Component {
         }
     }
 }
-
-export default DelphiNextBlockButton;

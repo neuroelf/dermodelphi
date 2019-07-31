@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import * as DCONST from './DelphiConstants.js'
 
-class DelphiSelectCorrection extends Component {
+export default class DelphiSelectCorrection extends Component {
     constructor(props) {
         super(props);
         
@@ -52,5 +52,3 @@ class DelphiSelectCorrection extends Component {
         );
     }
 }
-
-export default DelphiSelectCorrection;

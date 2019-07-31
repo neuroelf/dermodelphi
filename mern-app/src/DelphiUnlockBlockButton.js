@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class DelphiUnlockBlockButton extends Component {
+export default class DelphiUnlockBlockButton extends Component {
     constructor(props) {
         super(props);
         
@@ -27,5 +27,3 @@ class DelphiUnlockBlockButton extends Component {
         );
     }
 }
-
-export default DelphiUnlockBlockButton;

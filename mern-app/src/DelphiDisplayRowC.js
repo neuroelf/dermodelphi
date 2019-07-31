@@ -1,14 +1,4 @@
 import React, { Component } from 'react';
-import DelphiCNodeIsCorrect from './DelphiCNodeIsCorrect';
-import DelphiSelectCorrection from './DelphiSelectCorrection';
-import DelphiTypoCorrection from './DelphiTypoCorrection';
-import DelphiNewNameCorrection from './DelphiNewNameCorrection';
-import DelphiNewSynsCorrection from './DelphiNewSynsCorrection';
-import DelphiCombineCorrection from './DelphiCombineCorrection';
-import DelphiReassignCorrection from './DelphiReassignCorrection';
-import DelphiReassignToCorrection from './DelphiReassignToCorrection';
-import DelphiNewModsCorrection from './DelphiNewModsCorrection';
-import DelphiOtherCorrectionInput from './DelphiOtherCorrectionInput';
 import * as DCONST from './DelphiConstants.js'
 
 function CNodeName(CNodeId, CBlockId, appState) {
@@ -81,7 +71,7 @@ function CNodeName(CNodeId, CBlockId, appState) {
     return nodeName;
 }
 
-export default class DelphiControlRowC extends Component {
+export default class DelphiDisplayRowC extends Component {
     constructor(props) {
         super(props);
         this.state = { };
@@ -90,74 +80,24 @@ export default class DelphiControlRowC extends Component {
     render() {
 
         const rowState = this.props.AppObj.state.blocks[this.props.CBlockId][this.props.CNodeId];
+        var firstNodeClass = 'form-row';
+        if (this.props.CNodeId % 100 === 1) {
+            firstNodeClass = 'form-row-first';
+        }
         return (
-
-<tr className="form-row">
+        
+<tr className={firstNodeClass}>
     <td className="form-pad-cell" width="24"></td>
     <td className="form-name-cell">
         {CNodeName(this.props.CNodeId, this.props.CBlockId, this.props.AppObj.state)}
     </td>
     <td className="form-control-centered-cell">
-        <DelphiCNodeIsCorrect AppObj={this.props.AppObj} 
-            CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
+        {
+            rowState.correct ? <span><small>correct</small></span> : 
+            rowState.correction === DCONST.CORRECTION_NONE ? <span><small><font color="red"><i>to be checked</i></font></small></span> :
+            <span><small><b>corrected</b></small></span> }
     </td>
-    <td>
-        <table className="form-table"><tbody><tr className="form-row">
-            <td className="form-control-wide-cell">
-                <DelphiSelectCorrection AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-            </td>
-            <td className="form-nopadd-cell">
-                { rowState.correction === DCONST.CORRECTION_TYPO ?
-                    <DelphiTypoCorrection AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-            <td className="form-nopadd-cell">
-                { rowState.correction === DCONST.CORRECTION_NEWNAME ? 
-                    <DelphiNewNameCorrection AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-            <td className="form-nopadd-cell">
-                { rowState.correction === DCONST.CORRECTION_ADDSYN ? 
-                    <DelphiNewSynsCorrection AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-            <td className="form-nopadd-cell">
-                { rowState.correction === DCONST.CORRECTION_COMBINE ? 
-                    <DelphiCombineCorrection AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-            <td className="form-nopadd-cell">
-                { rowState.correction === DCONST.CORRECTION_MOVETOCAT ? 
-                    <DelphiReassignCorrection AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-            <td className="form-nopadd-cell">
-                { ((rowState.correction === DCONST.CORRECTION_MOVETOCAT) &&
-                    (rowState.corrmoveto === 99)) ? 
-                    <DelphiReassignToCorrection AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-            <td className="form-nopadd-cell">
-                { rowState.correction === DCONST.CORRECTION_ADDMODS ? 
-                    <DelphiNewModsCorrection AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-            <td className="form-nopadd-cell">
-                { rowState.correction === DCONST.CORRECTION_OTHER ?
-                    <DelphiOtherCorrectionInput AppObj={this.props.AppObj}
-                        CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }
-            </td>
-        </tr></tbody></table>
-    </td>
+    <td></td>
 </tr>
 
         );
