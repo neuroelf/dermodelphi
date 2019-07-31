@@ -7,6 +7,11 @@ for a dermoscopy diagnostics taxonomy.
 - Konstantinos Liopyris
 - Alon Scope
 
+## Installation steps
+- clone the repository into a folder
+- if you haven't (globally) installed nodemon, use ```npm install -g nodemon``` (make sure that python version 2 is first on the path!)
+- run npm install in both the mern-app and mern-backend folders
+
 ## Summary from initial discussion with collaborators on 7/10/2019
 Data capture for the Delphi project:
 
