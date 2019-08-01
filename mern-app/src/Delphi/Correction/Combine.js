@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_COMBINE_SELECT } from '../Constants'
 
-export default class DelphiCombineCorrection extends Component {
+export default class DelphiCorrectionCombine extends Component {
     constructor(props) {
         super(props);
         
@@ -26,7 +27,7 @@ export default class DelphiCombineCorrection extends Component {
         const CNodeIds = global.DM_LEVELCBLOCKS[this.props.CBlockId];
         return (
             <select value={rowState.corrcombine.toString()} onChange={this.handleChange}>
-                <option value="0" key="0">Please select the diagnosis to combine with...</option>
+                <option value="0" key="0">{CORRECTION_COMBINE_SELECT}</option>
                 {CNodeIds.filter(CNodeId => CNodeId !== this.props.CNodeId)
                     .map(CNodeId =>
                     <option value={CNodeId} key={CNodeId}>{global.DM_LEVELCNODES[CNodeId].name}</option>)}

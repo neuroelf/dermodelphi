@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_NEWSYNS_EMPTY } from '../Constants'
 
-export default class DelphiNewSynsCorrection extends Component {
+export default class DelphiCorrectionNewSyns extends Component {
     constructor(props) {
         super(props);
         
@@ -24,7 +25,8 @@ export default class DelphiNewSynsCorrection extends Component {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="form-minwidth" type="text" placeholder="Please enter additional synonyms..."
+            <input className="delphi-form-minwidth"
+                type="text" placeholder={CORRECTION_NEWSYNS_EMPTY}
                 value={rowState.corrnewsyns} onChange={this.handleChange} />
         );
     }

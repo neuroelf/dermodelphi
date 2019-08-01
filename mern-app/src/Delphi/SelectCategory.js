@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BLOCKS_ALL, BLOCKS_ALL_TXT } from './Constants'
 
 export default class DelphiSelectCategory extends Component {
     constructor(props) {
@@ -23,9 +24,9 @@ export default class DelphiSelectCategory extends Component {
     render() {
         return (
             <select onChange={this.handleChange} value={this.props.CBlockId}>
-                <option value="99" key="99">See all diagnoses (overview)</option>
+                <option value={BLOCKS_ALL} key={BLOCKS_ALL}>{BLOCKS_ALL_TXT}</option>
                 {Object.keys(global.DM_LEVELCBLOCKS).map(blockId => 
-                 <option value={blockId} key={blockId}>{global.DM_LEVELCBLOCKID2NAMES[blockId]}</option>)}
+                    <option value={blockId} key={blockId}>{global.DM_LEVELCBLOCKID2NAMES[blockId]}</option>)}
             </select>
         );
     }

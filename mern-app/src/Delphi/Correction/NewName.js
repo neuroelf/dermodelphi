@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_NEWNAME_EMPTY } from '../Constants'
 
-export default class DelphiNewNameCorrection extends Component {
+export default class DelphiCorrectionNewName extends Component {
     constructor(props) {
         super(props);
         
@@ -24,7 +25,8 @@ export default class DelphiNewNameCorrection extends Component {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="form-minwidth" type="text" placeholder="Please enter a new diagnosis name..."
+            <input className="delphi-form-minwidth"
+                type="text" placeholder={CORRECTION_NEWNAME_EMPTY}
                 value={rowState.corrnewname} onChange={this.handleChange} />
         );
     }

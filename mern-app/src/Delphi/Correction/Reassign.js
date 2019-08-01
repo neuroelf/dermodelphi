@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_MOVECAT_SELECT, CORRECTION_MOVECAT_OTHER, BLOCKS_ALL } from '../Constants'
 
-export default class DelphiReassignCorrection extends Component {
+export default class DelphiCorrectionReassign extends Component {
     constructor(props) {
         super(props);
         
@@ -26,9 +27,10 @@ export default class DelphiReassignCorrection extends Component {
         const rowState = blockState[this.props.CNodeId];
         return (
             <select value={rowState.corrmoveto.toString()} onChange={this.handleChange}>
-                <option value="0" key="0">Please select the category to move this to...</option>
-                <option value="99" key="99">Other (please specify...)</option>
-                {Object.keys(global.DM_LEVELBFULLNAMES).filter(BNodeId => BNodeId !== thisBNodeId)
+                <option value="0" key="0">{CORRECTION_MOVECAT_SELECT}</option>
+                <option value={BLOCKS_ALL} key={BLOCKS_ALL}>{CORRECTION_MOVECAT_OTHER}</option>
+                {Object.keys(global.DM_LEVELBFULLNAMES)
+                    .filter(BNodeId => BNodeId !== thisBNodeId)
                     .map(BNodeId =>
                     <option value={BNodeId} key={BNodeId}>{global.DM_LEVELBFULLNAMES[BNodeId]}</option>)}
             </select>

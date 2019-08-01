@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_OTHER_EMPTY } from '../Constants'
 
-export default class DelphiOtherCorrectionInput extends Component {
+export default class DelphiCorrectionOther extends Component {
     constructor(props) {
         super(props);
         
@@ -24,7 +25,8 @@ export default class DelphiOtherCorrectionInput extends Component {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="form-minwidth" type="text" placeholder="Please describe the desired correction(s)..."
+            <input className="delphi-form-minwidth"
+                type="text" placeholder={CORRECTION_OTHER_EMPTY}
                 value={rowState.corrother} onChange={this.handleChange} />
         );
     }

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import DelphiDisplayRowC from './DelphiDisplayRowC.js';
+import DelphiDisplayRow from './DisplayRow.js';
+import { TABLE_CATEGORY, TABLE_NO_DIAGNOSES } from './Constants'
 
-function categoryLabel(BCatId) {
-    return <p>Category: {global.DM_LEVELBFULLNAMES[BCatId]}</p>
+function categoryLabel(CatId) {
+    return <p>{TABLE_CATEGORY} {global.DM_LEVELBFULLNAMES[CatId]}</p>
 };
 
 export default class DelphiDisplayBlock extends Component {
@@ -15,19 +16,15 @@ export default class DelphiDisplayBlock extends Component {
     render() {
 
         // get all nodes in that category
-        const BCatCNodeIds = Object.keys(global.DM_LEVELCNODES).filter(CNodeId => Math.floor(global.DM_LEVELCNODES[CNodeId].blockid / 100) === parseInt(this.props.BCatId));
+        const BCatCNodeIds = Object.keys(global.DM_LEVELCNODES).filter(CNodeId => Math.floor(global.DM_LEVELCNODES[CNodeId].blockid / 100) === parseInt(this.props.CatId));
 
         // handle 0 elements
         if (BCatCNodeIds.length === 0) {
             return (
-    <tbody>
-        <tr className="control-bar">
+    <tbody><tr className="delphi-control-bar">
             <td></td>
-            <td colSpan="3">
-                <b>No nodes in this category.</b>
-            </td>
-        </tr>
-    </tbody>
+            <td colSpan="3"><b>{TABLE_NO_DIAGNOSES}</b></td>
+    </tr></tbody>
             );
         }
 
@@ -35,18 +32,13 @@ export default class DelphiDisplayBlock extends Component {
         return (
 
     <tbody>
-        <tr className="control-bar">
+        <tr className="delphi-control-bar">
             <td></td>
-            <td colSpan="3">
-                {categoryLabel(parseInt(this.props.BCatId))}
-            </td>
+            <td colSpan="3">{categoryLabel(parseInt(this.props.CatId))}</td>
         </tr>
-
         {BCatCNodeIds.map(CNodeId => 
-            <DelphiDisplayRowC key={CNodeId} AppObj={this.props.AppObj}
-                CBlockId={Math.floor(CNodeId / 100)} CNodeId={CNodeId} />)
-        }
-
+            <DelphiDisplayRow key={CNodeId} AppObj={this.props.AppObj}
+                CBlockId={Math.floor(CNodeId / 100)} CNodeId={CNodeId} />)}
     </tbody>
 
         )

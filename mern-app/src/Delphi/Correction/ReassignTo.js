@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_MOVECAT_EMPTY } from '../Constants'
 
-export default class DelphiReassignToCorrection extends Component {
+export default class DelphiCorrectionReassignTo extends Component {
     constructor(props) {
         super(props);
         
@@ -24,7 +25,8 @@ export default class DelphiReassignToCorrection extends Component {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="form-minwidth" type="text" placeholder="Please enter a category name..."
+            <input className="delphi-form-minwidth"
+                type="text" placeholder={CORRECTION_MOVECAT_EMPTY}
                 value={rowState.corrmovetox} onChange={this.handleChange} />
         );
     }

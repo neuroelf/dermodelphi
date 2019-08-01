@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import * as DCONST from './DelphiConstants';
+import * as DC from './Constants';
 
 export default class DelphiWelcome extends Component {
     //constructor(props) {
@@ -10,7 +10,7 @@ export default class DelphiWelcome extends Component {
     render() {
         return (
 <table border="0"><tr><td width="50%"></td><td width="800"><div>
-    <h2>Welcome to the Dermatology Diagnosis Mapper - Consensus Survey</h2>
+    <h2>Welcome to the {DC.TITLE_TXT_FULL}</h2>
 
     <p className="general-text-paragraph">
         Our mission is to help the dermatology community by creating an accepted
@@ -36,26 +36,26 @@ export default class DelphiWelcome extends Component {
     </p>
     <ul>
         <li>generally agree with the term, but believe we made a spelling
-            mistake, please select <b>{DCONST.CORRECTION_TYPO_TXT}</b>
+            mistake, please select <b>{DC.CORRECTION_SPELLING_TXT}</b>
         </li>
         <li>believe that the name we chose doesn't correctly capture the
-            diagnosis, please select <b>{DCONST.CORRECTION_NEWNAME_TXT}</b>
+            diagnosis, please select <b>{DC.CORRECTION_NEWNAME_TXT}</b>
         </li>
         <li>
             would like to add one or several additional synonyms, please
-            select <b>{DCONST.CORRECTION_ADDSYN_TXT}</b>
+            select <b>{DC.CORRECTION_NEWSYNS_TXT}</b>
         </li>
         <li>
             think this particular diagnosis ought to be combined with another
-            one, please select <b>{DCONST.CORRECTION_COMBINE_TXT}</b>
+            one, please select <b>{DC.CORRECTION_COMBINE_TXT}</b>
         </li>
     </ul>
-    <p className="general-text-paragraph">
+    <p className="delphi-general-text-paragraph">
         If you would like to get an overview of our proposed taxonomy, please
         take a moment to look
-        over <Link to="/block/99">the list of categories and diagnoses</Link>.
+        over <Link to={'/block/' + DC.BLOCKS_ALL}>the list of categories and diagnoses</Link>.
         Or if you want to get started right away, simply head over to 
-        to <Link to="/block/10101">the first block</Link>.
+        to <Link to={'/block/' + DC.BLOCKS_FIRST}>the first block</Link>.
     </p>
 </div></td><td width="50%"></td></tr></table>
         );

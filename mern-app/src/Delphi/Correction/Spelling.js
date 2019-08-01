@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_SPELLING_EMPTY } from '../Constants'
 
-export default class DelphiTypoCorrection extends Component {
+export default class DelphiCorrectionSpelling extends Component {
     constructor(props) {
         super(props);
         
@@ -24,7 +25,8 @@ export default class DelphiTypoCorrection extends Component {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="form-minwidth" type="text" placeholder="Please provide the correct spelling..."
+            <input className="delphi-form-minwidth"
+                type="text" placeholder={CORRECTION_SPELLING_EMPTY}
                 value={rowState.corrspelling} onChange={this.handleChange} />
         );
     }

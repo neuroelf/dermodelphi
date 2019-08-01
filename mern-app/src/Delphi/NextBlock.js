@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import * as DCONST from './DelphiConstants'
+import * as DCONST from './Constants'
 
-export default class DelphiNextBlockButton extends Component {
+export default class DelphiNextBlock extends Component {
     constructor(props) {
         super(props);
         
@@ -51,12 +51,12 @@ export default class DelphiNextBlockButton extends Component {
             }
             if (rowState.correct) { continue; }
             switch (rowState.correction) {
-                case DCONST.CORRECTION_ADDMODS:
+                case DCONST.CORRECTION_NEWMODS:
                     if (rowState.corraddmods === '') {
                         anymissing = true;
                     }
                     break;
-                case DCONST.CORRECTION_TYPO:
+                case DCONST.CORRECTION_SPELLING:
                     if (rowState.corrspelling === '') {
                         anymissing = true;
                     }
@@ -75,12 +75,12 @@ export default class DelphiNextBlockButton extends Component {
         if (!lastBlock) {
             return (
                 <button onClick={this.goToNextBlock}
-                    disabled={disabled}>Continue with the next block</button>
+                    disabled={disabled}>{DCONST.BLOCK_NEXT}</button>
             );
         } else {
             return (
                 <button onClick={this.goToOverview}
-                    disabled={disabled}>Review all choices</button>
+                    disabled={disabled}>{DCONST.BLOCK_REVIEW_ALL}</button>
             );
         }
     }

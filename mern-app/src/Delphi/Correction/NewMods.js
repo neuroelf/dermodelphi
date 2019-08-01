@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import { CORRECTION_NEWMODS_EMPTY } from '../Constants'
 
-export default class DelphiNewModsCorrection extends Component {
+export default class DelphiCorrectionNewMods extends Component {
     constructor(props) {
         super(props);
         
@@ -24,7 +25,8 @@ export default class DelphiNewModsCorrection extends Component {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="form-minwidth" type="text" placeholder="Please enter additional modifiers..."
+            <input className="delphi-form-minwidth"
+                type="text" placeholder={CORRECTION_NEWMODS_EMPTY}
                 value={rowState.corrnewmods} onChange={this.handleChange} />
         );
     }

@@ -48,91 +48,105 @@ h4 {
 ul {
   font-size: 14px;
 }
-.top-bar {
+.delphi-top-bar {
   background-color: #1c73ca;
   padding: 6px 80px 6px 80px;
   color: white;
   font: normal 28px bpreplaybold, sans-serif;
 }
 
-.control-bar {
+.delphi-control-bar {
   background-color: #064785;
   padding: 6px 24px 6px 24px;
   color: white;
   font: normal 18px bpreplaybold, sans-serif;
 }
 
-.controls-paragraph {
+.delphi-controls-paragraph {
   padding: 1px 12px 1px 12px;
   color: black;
   font: normal 14px bpreplaybold, sans-serif;
 }
-.general-paragraph {
+.delphi-general-paragraph {
   padding: 3px 12px 3px 12px;
   color: black;
   font-size: 16px;
 }
-.general-paragraph-small {
+.delphi-general-paragraph-small {
   padding: 3px 12px 3px 12px;
   color: black;
   font-size: 12px;
 }
-.general-text-paragraph {
+.delphi-general-text-paragraph {
   padding: 3px 12px 3px 12px;
   color: black;
   font-size: 14px;
   width: 800px;
 }
-.title-paragraph {
+.delphi-title-paragraph {
   padding: 3px 12px 3px 12px;
   color: black;
   font: normal 28px bpreplaybold, sans-serif;
 }
 
 /* form elements */
-.form-table {
+.delphi-form-table {
   margin: 0;
   border-spacing: 0;
+  border-bottom: 1px solid #064785;
 }
-.form-header-row {
+.delphi-form-header-row {
   background-color: #bcbcbc;
 }
-.form-header-cell {
+.delphi-form-header-cell {
   border: 12px solid #bcbcbc;
   padding: 2px 6px 2px 6px;
   font: normal 16px bpreplaybold, sans-serif;
 }
-.form-row {
+.delphi-form-row {
   background-color: #f8f8f6;
+  border-bottom: 1px solid #064785;
 }
-.form-row-first {
+.delphi-form-row-first {
   background-color: #f0f0ee;
 }
-.form-control-cell {
+.delphi-form-control-cell {
   vertical-align: middle;
   padding: 2px 10px 2px 10px;
 }
-.form-control-centered-cell {
+.delphi-form-control-centered-cell {
   padding: 2px 10px 2px 10px;
   text-align: center;
 }
-.form-control-wide-cell {
+.delphi-form-control-wide-cell {
   padding: 2px 10px 2px 10px;
   width: 280px;
 }
-.form-name-cell {
-  padding: 2px 12px 2px 12px;
+.delphi-form-name-cell {
+  padding: 8px 16px 8px 16px;
+  font-size: 14px;
+  width: 512px;
+  border-bottom: 1px solid #064785;
+}
+.delphi-form-wide-name-cell {
+  padding: 8px 16px 8px 16px;
+  font-size: 14px;
+  width: 85%;
+  border-bottom: 1px solid #064785;
+}
+.delphi-form-name-cell:last-child {
+  padding: 4px 12px 4px 12px;
   font-size: 14px;
   width: 480px;
 }
-.form-addname-cell {
+.delphi-form-addname-cell {
   padding: 2px 12px 2px 12px;
   font: normal 14px bpreplaybold, sans-serif;
 }
-.form-minwidth {
+.delphi-form-minwidth {
   min-width: 320px;
 }
-.form-nopadd-cell {
+.delphi-form-nopadd-cell {
   padding: 0px;
 }
 
@@ -181,32 +195,32 @@ input[type=submit] {
   cursor: pointer;
 }
 
-.tree-container {
+.delphi-tree-container {
   color: #222222;
   border: 1px solid black;
 }
 
-.form-container {
+.delphi-form-container {
   color: black;
   border: none;
 }
 
 /* elements for tree nodes */
-.treenode {
+.delphi-treenode {
 	cursor: pointer;
 }
 
-.treenode circle {
+.delphi-treenode circle {
 	fill: #fff;
 	stroke: steelblue;
 	stroke-width: 3px;
 }
 
-.treenode text {
+.delphi-treenode text {
 	font: 14px sans-serif;
 }
 
-.treelink {
+.delphi-treelink {
 	fill: none;
 	stroke: #ccc;
 	stroke-width: 2px;

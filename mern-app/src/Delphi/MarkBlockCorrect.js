@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import * as DCONST from './DelphiConstants'
+import { BLOCK_MARK_AS_CORRECT, CORRECTION_NONE } from './Constants'
 
-export default class DelphiMarkBlockCorrectButton extends Component {
+export default class DelphiMarkBlockCorrect extends Component {
     constructor(props) {
         super(props);
         
@@ -24,7 +24,7 @@ export default class DelphiMarkBlockCorrectButton extends Component {
         for (cc = 0; cc < numCNodes; cc++) {
             if (CNodes[cc] === 'locked') { continue; }
             var rowState = blockState[CNodes[cc]];
-            if (rowState.correction !== DCONST.CORRECTION_NONE) {
+            if (rowState.correction !== CORRECTION_NONE) {
                 return;
             }
             newState[this.props.CBlockId][CNodes[cc]].correct = true;
@@ -43,7 +43,7 @@ export default class DelphiMarkBlockCorrectButton extends Component {
             for (cc = 0; cc < numCNodes; cc++) {
                 if (CNodes[cc] === 'locked') { continue; }
                 var rowState = blockState[CNodes[cc]];
-                if (rowState.correction !== DCONST.CORRECTION_NONE) {
+                if (rowState.correction !== CORRECTION_NONE) {
                     disabled = true;
                     break;
                 }
@@ -58,7 +58,7 @@ export default class DelphiMarkBlockCorrectButton extends Component {
 
         return (
             <button onClick={this.markBlockAsCorrect}
-                disabled={disabled}>mark entire block as correct</button>
+                disabled={disabled}>{BLOCK_MARK_AS_CORRECT}</button>
         );
     }
 }

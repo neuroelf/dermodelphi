@@ -1,11 +1,11 @@
 // imports
 import React, { Component } from 'react';
-import DelphiTop from './DelphiTop.js';
-import DelphiWelcome from './DelphiWelcome.js';
-import DelphiBlock from './DelphiBlock.js';
+import DelphiTop from './Delphi/Top';
+import DelphiWelcome from './Delphi/Welcome';
+import DelphiBlock from './Delphi/Block';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //, Link // from 'react-router-dom';
 import './App.css';
-import * as DCONST from './DelphiConstants.js'
+import * as DCONST from './Delphi/Constants'
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');

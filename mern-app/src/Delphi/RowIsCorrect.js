@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import * as DCONST from './DelphiConstants'
+import { CORRECTION_NONE } from './Constants'
 
-export default class DelphiCNodeIsCorrect extends Component {
+export default class DelphiRowIsCorrect extends Component {
     constructor(props) {
         super(props);
         
@@ -26,7 +26,7 @@ export default class DelphiCNodeIsCorrect extends Component {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         const rowState = blockState[this.props.CNodeId];
         var disabled = blockState.locked;
-        if (rowState.correction !== DCONST.CORRECTION_NONE) {
+        if (rowState.correction !== CORRECTION_NONE) {
             disabled = true;
         }
         return (
