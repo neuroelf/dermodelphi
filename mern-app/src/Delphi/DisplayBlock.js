@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import DelphiSelectCategory from './SelectCategory'
 import DelphiDisplayRow from './DisplayRow.js';
-import { TABLE_CATEGORY, TABLE_NO_DIAGNOSES } from './Constants'
+import { CATEGORY_FIRST, TABLE_CATEGORY, TABLE_NO_DIAGNOSES } from './Constants'
 
 function categoryLabel(CatId) {
     return <p>{TABLE_CATEGORY} {global.DM_LEVELBFULLNAMES[CatId]}</p>
@@ -16,7 +17,9 @@ export default class DelphiDisplayBlock extends Component {
     render() {
 
         // get all nodes in that category
-        const BCatCNodeIds = Object.keys(global.DM_LEVELCNODES).filter(CNodeId => Math.floor(global.DM_LEVELCNODES[CNodeId].blockid / 100) === parseInt(this.props.CatId));
+        var CatId = parseInt(this.props.CatId);
+        const BCatCNodeIds = Object.keys(global.DM_LEVELCNODES)
+            .filter(CNodeId => Math.floor(global.DM_LEVELCNODES[CNodeId].id / 10000) === CatId);
 
         // handle 0 elements
         if (BCatCNodeIds.length === 0) {
@@ -34,7 +37,12 @@ export default class DelphiDisplayBlock extends Component {
     <tbody>
         <tr className="delphi-control-bar">
             <td></td>
-            <td colSpan="3">{categoryLabel(parseInt(this.props.CatId))}</td>
+            <td colSpan="2">{categoryLabel(CatId)}</td>
+            <td className="delphi-controls-paragraph" align="right">
+                {CatId === CATEGORY_FIRST ?
+                    <DelphiSelectCategory AppObj={this.props.AppObj} />
+                    : ''}
+            </td>
         </tr>
         {BCatCNodeIds.map(CNodeId => 
             <DelphiDisplayRow key={CNodeId} AppObj={this.props.AppObj}

@@ -45,21 +45,19 @@ export default function DiagnosisName(CNodeId, CBlockId, appState) {
         } else {
             if (cnodeState.correditmods !== '') {
                 newModifiers.length = 0;
-                newModifiers.push.apply(newModifiers,
-                    cnodeState.correditmods.split(';').slice());
+                newModifiers.push(cnodeState.correditmods.split(';'));
             }
         }
 
         // add any new modifiers
         if (cnodeState.corrnewmods !== '') {
-            newModifiers.push.apply(newModifiers,
-                cnodeState.corrnewmods.split(';'));
+            newModifiers.push(cnodeState.corrnewmods.split(';'));
         }
 
         // and same for synonyms
         if (cnodeState.corrnewsyns !== '') {
             newSynonyms.push.apply(newSynonyms,
-                cnodeState.corrnewsyns.split(';'));
+                cnodeState.corrnewsyns.split(';').slice());
         }
     }
 
@@ -75,7 +73,7 @@ export default function DiagnosisName(CNodeId, CBlockId, appState) {
     } else if (newModifiers.length === 1) {
         if (newSynonyms.length === 0) {
             nodeName = <span>{nodeName}<br /><small>
-                {DC.TXT_MODIFIABLE_BY} {newModifiers[0].join(', ')})
+                {DC.TXT_MODIFIABLE_BY} {newModifiers[0].join(', ')}
                 </small></span>
         } else {
             nodeName = <span>{nodeName} <small><i>
@@ -87,7 +85,7 @@ export default function DiagnosisName(CNodeId, CBlockId, appState) {
         if (newSynonyms.length === 0) {
             nodeName = <span>{nodeName}<br /><small>
                 {DC.TXT_MODIFIABLE_BY} [{newModifiers[0].join(', ')}]
-                {DC.TXT_AND_MODIFIABLE_BY} [{newModifiers[1].join(', ')}])
+                {DC.TXT_AND_MODIFIABLE_BY} [{newModifiers[1].join(', ')}]
                 </small></span>
         } else {
             nodeName = <span>{nodeName} <small><i>

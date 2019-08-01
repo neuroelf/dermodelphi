@@ -48,20 +48,19 @@ h4 {
 ul {
   font-size: 14px;
 }
+
 .delphi-top-bar {
   background-color: #1c73ca;
   padding: 6px 80px 6px 80px;
   color: white;
   font: normal 28px bpreplaybold, sans-serif;
 }
-
 .delphi-control-bar {
   background-color: #064785;
   padding: 6px 24px 6px 24px;
   color: white;
   font: normal 18px bpreplaybold, sans-serif;
 }
-
 .delphi-controls-paragraph {
   padding: 1px 12px 1px 12px;
   color: black;
@@ -131,7 +130,6 @@ ul {
 .delphi-form-wide-name-cell {
   padding: 8px 16px 8px 16px;
   font-size: 14px;
-  width: 85%;
   border-bottom: 1px solid #064785;
 }
 .delphi-form-name-cell:last-child {
@@ -158,6 +156,16 @@ button {
   box-sizing: border-box;
   font-size: 14px;
   resize: vertical;
+}
+.delphi-button-as-link {
+  background: none;
+  color: inherit;
+  border: none; 
+  padding: 0!important;
+  font: inherit;
+  border-radius: 0px;
+  border-bottom: 1px solid black; 
+  cursor: pointer;
 }
 input[type=text], select, textarea {
   width: 100%;

@@ -9,7 +9,7 @@ export default class DelphiAllBlocks extends Component {
     
     render() {
         return (
-<table className="delphi-form-table" width="100%">
+<table className="delphi-form-table">
     {Object.keys(global.DM_LEVELBFULLNAMES).map(
         CatId => <DelphiDisplayBlock AppObj={this.props.AppObj} CatId={CatId} />)}
 </table>

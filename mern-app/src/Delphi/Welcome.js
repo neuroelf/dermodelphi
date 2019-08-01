@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import DelphiLinkSetState from './LinkSetState'
 import * as DC from './Constants';
 
 export default class DelphiWelcome extends Component {
@@ -9,7 +9,7 @@ export default class DelphiWelcome extends Component {
     
     render() {
         return (
-<table border="0"><tr><td width="50%"></td><td width="800"><div>
+<table border="0"><tbody><tr><td width="50%"></td><td width="800"><div>
     <h2>Welcome to the {DC.TITLE_TXT_FULL}</h2>
 
     <p className="general-text-paragraph">
@@ -53,11 +53,15 @@ export default class DelphiWelcome extends Component {
     <p className="delphi-general-text-paragraph">
         If you would like to get an overview of our proposed taxonomy, please
         take a moment to look
-        over <Link to={'/block/' + DC.BLOCKS_ALL}>the list of categories and diagnoses</Link>.
+        over <DelphiLinkSetState AppObj={this.props.AppObj}
+            stateProp="currentCBlockId" stateValue={DC.BLOCKS_ALL}
+            linkText="the list of categories and diagnoses" />.
         Or if you want to get started right away, simply head over to 
-        to <Link to={'/block/' + DC.BLOCKS_FIRST}>the first block</Link>.
+        to <DelphiLinkSetState AppObj={this.props.AppObj}
+            stateProp="currentCBlockId" stateValue={DC.BLOCKS_FIRST}
+            linkText='the first block' />.
     </p>
-</div></td><td width="50%"></td></tr></table>
+</div></td><td width="50%"></td></tr></tbody></table>
         );
     }
 }

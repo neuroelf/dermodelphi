@@ -23,9 +23,10 @@ export default class DelphiCorrectionNewSyns extends Component {
     
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
+        const blockLocked = blockState.locked;
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="delphi-form-minwidth"
+            <input className="delphi-form-minwidth" disabled={!!blockLocked}
                 type="text" placeholder={CORRECTION_NEWSYNS_EMPTY}
                 value={rowState.corrnewsyns} onChange={this.handleChange} />
         );

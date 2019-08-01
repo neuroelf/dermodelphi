@@ -51,13 +51,13 @@ export default class DelphiControlRow extends Component {
                 <DelphiCorrectionCombine AppObj={this.props.AppObj}
                     CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : '' }
             { rowState.correction === DC.CORRECTION_MOVECAT ? 
-                <table><tr><td><DelphiCorrectionReassign AppObj={this.props.AppObj}
+                <table><tbody><tr><td><DelphiCorrectionReassign AppObj={this.props.AppObj}
                     CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /></td>
                     <td>{((rowState.correction === DC.CORRECTION_MOVECAT) &&
                           (rowState.corrmoveto === 99)) ? 
                             <DelphiCorrectionReassignTo AppObj={this.props.AppObj}
                                 CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
-                    : '' }</td></tr></table>
+                    : '' }</td></tr></tbody></table>
                 : '' }
             { rowState.correction === DC.CORRECTION_NEWMODS ? 
                 <DelphiCorrectionNewMods AppObj={this.props.AppObj}

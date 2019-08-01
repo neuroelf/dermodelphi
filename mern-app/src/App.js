@@ -1,11 +1,12 @@
 // imports
 import React, { Component } from 'react';
+import DelphiNotFound from './Delphi/NotFound'
 import DelphiTop from './Delphi/Top';
 import DelphiWelcome from './Delphi/Welcome';
 import DelphiBlock from './Delphi/Block';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; //, Link // from 'react-router-dom';
 import './App.css';
-import * as DCONST from './Delphi/Constants'
+import { BLOCKS_ALL, CORRECTION_NONE } from './Delphi/Constants'
+import DelphiAllBlocks from './Delphi/AllBlocks';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
@@ -82,9 +83,6 @@ function parseDMJSONFile() {
 return;
 }
 
-// not-found component for Switch/Router (simple for now)
-const DelphiNotFound = () => <h2>This page/component wasn't found.</h2>
-
 // main component (rendered by index.js)
 export default class App extends Component {
     constructor(props) {
@@ -94,7 +92,7 @@ export default class App extends Component {
         this.state = {
             user: '',
             sessionId: '',
-            currentCBlockId: 10101,
+            currentCBlockId: 0,
             blocks: {},
             date: Date.now()
         };
@@ -125,7 +123,7 @@ export default class App extends Component {
                 // set state for node
                 blockState[blockNodes[cc]] = {
                     correct: false,
-                    correction: DCONST.CORRECTION_NONE,
+                    correction: CORRECTION_NONE,
                     corrspelling: '',
                     corrnewname: '',
                     corrnewsyns: '',
@@ -143,22 +141,23 @@ export default class App extends Component {
         }
     }
     
-    // output for main component is wrapped in Router containing
-    // - the DelphiTop (title)
-    // - and a Switch (to create a default/error route)
-    // - and then the entry page (DelphiWelcome)
-    // - as well as a Block route to work as a "page" like control
+    // original idea of Router (using URL in history) replaced
+    // with a "poor-man's switch" on the main component
     render() {
         return (
-            <Router>
+            <div>
                 <DelphiTop />
-                <Switch>
-                    <Route path="/" exact component={DelphiWelcome} />
-                    <Route path="/block/:CBlockId"
-                        render={(props) => <DelphiBlock {...props} AppObj={this} />} />
-                    <Route component={DelphiNotFound} />
-                </Switch>
-            </Router>
+                {
+                this.state.currentCBlockId === 0 ?
+                    <DelphiWelcome AppObj={this} />
+                : this.state.currentCBlockId === BLOCKS_ALL ?
+                    <DelphiAllBlocks AppObj={this} />
+                : this.state.currentCBlockId in global.DM_LEVELCBLOCKS ?
+                    <DelphiBlock AppObj={this} />
+                :
+                    <DelphiNotFound AppObj={this} ErrTxt={this.state.currentCBlockId} />
+                }
+            </div>
         );
     }
 }

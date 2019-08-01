@@ -34,8 +34,7 @@ export default class DelphiBlock extends Component {
 
     render() {
 
-        const { params } = this.props.match;
-        var CBlockId = parseInt(params.CBlockId);
+        var CBlockId = this.props.AppObj.state.currentCBlockId;
         var blockState = this.props.AppObj.state.blocks[CBlockId];
         const LockOpenImage = <img src={process.env.PUBLIC_URL + DC.IMG_LOCK_UNLOCKED}
             width={DC.IMG_LOCK_SIZE} height={DC.IMG_LOCK_SIZE} alt={DC.IMG_LOCK_UNLOCKED_ALT} />;
@@ -56,13 +55,10 @@ export default class DelphiBlock extends Component {
         <tr className="delphi-control-bar">
             <td></td>
             <td colSpan="2">
-                <CurrentCategoryLabel CBlockId={params.CBlockId} />
+                <CurrentCategoryLabel CBlockId={CBlockId} />
             </td>
-            <td className="delphi-form-control-cell">
-                <div className="delphi-form-row delphi-controls-paragraph" align="right">
-                    <DelphiSelectCategory AppObj={this.props.AppObj}
-                        history={this.props.history} CBlockId={params.CBlockId} />
-                </div>
+            <td className="delphi-controls-paragraph" align="right">
+                <DelphiSelectCategory AppObj={this.props.AppObj} />
             </td>
         </tr>
 
@@ -73,16 +69,16 @@ export default class DelphiBlock extends Component {
             <td className="delphi-form-header-cell">{DC.TABLE_HEADER_CORRECTION}</td>
         </tr>
 
-        {global.DM_LEVELCBLOCKS[params.CBlockId].map(CNodeId => 
+        {global.DM_LEVELCBLOCKS[CBlockId].map(CNodeId => 
             <DelphiControlRow key={CNodeId} AppObj={this.props.AppObj}
-                CBlockId={params.CBlockId} CNodeId={CNodeId} />)
+                CBlockId={CBlockId} CNodeId={CNodeId} />)
         }
 
         <tr className="delphi-form-header-row">
             <td className="delphi-form-control-cell" colSpan="3">
                 <p className="delphi-controls-paragraph">
                     <DelphiMarkBlockCorrect AppObj={this.props.AppObj}
-                        CBlockId={params.CBlockId} />
+                        CBlockId={CBlockId} />
                 </p>
             </td>
             <td className="delphi-form-control-cell" align="right"><table><tbody><tr>
@@ -92,7 +88,7 @@ export default class DelphiBlock extends Component {
                 <td className="delphi-form-control-cell">
                     {blockState.locked ? 
                         <DelphiUnlockBlock AppObj={this.props.AppObj}
-                            CBlockId={params.CBlockId} />
+                            CBlockId={CBlockId} />
                         :
                         <font color="#737373"><i>{DC.BLOCK_UNLOCKED}</i></font>
                     }
@@ -100,7 +96,7 @@ export default class DelphiBlock extends Component {
                 <td className="delphi-form-control-cell">
                     <p className="delphi-controls-paragraph">
                         <DelphiNextBlock AppObj={this.props.AppObj}
-                            CBlockId={params.CBlockId} history={this.props.history} />
+                            CBlockId={CBlockId} history={this.props.history} />
                     </p>
                 </td></tr></tbody></table>
             </td>

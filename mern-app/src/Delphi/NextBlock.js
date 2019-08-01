@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as DCONST from './Constants'
+import * as DC from './Constants'
 
 export default class DelphiNextBlock extends Component {
     constructor(props) {
@@ -15,10 +15,10 @@ export default class DelphiNextBlock extends Component {
     }
     
     goToNextBlock(event) {
+        event.preventDefault();
         const { blocks } = { ...this.props.AppObj.state };
-        const { history } = { ...this.props };
         var currentCBlockId = parseInt(this.props.CBlockId);
-        var nextCBlockId = 0;
+        var nextCBlockId = DC.BLOCKS_ALL;
         const newState = blocks;
         newState[currentCBlockId].locked = true;
         var bc;
@@ -31,9 +31,10 @@ export default class DelphiNextBlock extends Component {
         }
         
         this.props.AppObj.setState({blocks: newState, currentCBlockId: nextCBlockId});
-        history.push('/block/' + nextCBlockId.toString());
     }
 
+    // this component contains the (rendering) logic as to whether
+    // or not a user can continue with the next block
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         var disabled = false;
@@ -42,22 +43,65 @@ export default class DelphiNextBlock extends Component {
         var numCNodes = CNodes.length;
         var cc;
         var lastBlock = this.props.CBlockId === global.DM_LEVELCBLOCKIDS[global.DM_LEVELCBLOCKIDS.length - 1];
+
+        // iterating over all nodes (rows)
         for (cc = 0; cc < numCNodes; cc++) {
+
+            // skipping the "locked" entry
             if (CNodes[cc] === 'locked') { continue; }
+
+            // checking the rowState
             var rowState = blockState[CNodes[cc]];
-            if ((!rowState.correct) && (rowState.correction === DCONST.CORRECTION_NONE)) {
+
+            // if a control is not marked as correct and no selection made
+            if ((!rowState.correct) && (rowState.correction === DC.CORRECTION_NONE)) {
+
+                // no need to look any further
                 disabled = true;
                 break;
             }
+
+            // if, on the other hand, the row state *is* correct, check next
             if (rowState.correct) { continue; }
+
+            // otherwise, we check depending on the state of correction
             switch (rowState.correction) {
-                case DCONST.CORRECTION_NEWMODS:
-                    if (rowState.corraddmods === '') {
+                case DC.CORRECTION_SPELLING:
+                    if (rowState.corrspelling === '') {
                         anymissing = true;
                     }
                     break;
-                case DCONST.CORRECTION_SPELLING:
-                    if (rowState.corrspelling === '') {
+                case DC.CORRECTION_NEWNAME:
+                    if (rowState.corrnewname === '') {
+                        anymissing = true;
+                    }
+                    break;
+                case DC.CORRECTION_NEWSYNS:
+                    if (rowState.corrnewsyns === '') {
+                        anymissing = true;
+                    }
+                    break;
+                case DC.CORRECTION_COMBINE:
+                    if (rowState.corrcombine === 0) {
+                        anymissing = true;
+                    }
+                    break;
+                case DC.CORRECTION_MOVECAT:
+                    if (rowState.corrmoveto === 0) {
+                        anymissing = true;
+                    }
+                    if ((rowState.corrmoveto === DC.BLOCKS_ALL) &&
+                        (rowState.corrmovetox === '')) {
+                        anymissing = true;
+                    }
+                    break;
+                case DC.CORRECTION_NEWMODS:
+                    if (rowState.corrnewmods === '') {
+                        anymissing = true;
+                    }
+                    break;
+                case DC.CORRECTION_OTHER:
+                    if (rowState.corrother === '') {
                         anymissing = true;
                     }
                     break;
@@ -72,15 +116,16 @@ export default class DelphiNextBlock extends Component {
             disabled = true;
         }
 
+        // if it's not the last block, show next block, otherwise to review
         if (!lastBlock) {
             return (
                 <button onClick={this.goToNextBlock}
-                    disabled={disabled}>{DCONST.BLOCK_NEXT}</button>
+                    disabled={disabled}>{DC.BLOCK_NEXT}</button>
             );
         } else {
             return (
-                <button onClick={this.goToOverview}
-                    disabled={disabled}>{DCONST.BLOCK_REVIEW_ALL}</button>
+                <button onClick={this.goToNextBlock}
+                    disabled={disabled}>{DC.BLOCK_REVIEW_ALL}</button>
             );
         }
     }

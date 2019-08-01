@@ -20,6 +20,7 @@ export const BLOCK_UNLOCKED = 'This block is currently unlocked'
 export const BLOCK_MARK_AS_CORRECT = 'Mark entire block as correct'
 export const BLOCK_NEXT = 'Continue with the next block'
 export const BLOCK_REVIEW_ALL = 'Review all choices'
+export const CATEGORY_FIRST = 101
 
 // table texts
 export const TABLE_CATEGORY = 'Category: '

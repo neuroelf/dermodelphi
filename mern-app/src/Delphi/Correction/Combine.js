@@ -23,10 +23,12 @@ export default class DelphiCorrectionCombine extends Component {
     
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
+        const blockLocked = blockState.locked;
         const rowState = blockState[this.props.CNodeId];
         const CNodeIds = global.DM_LEVELCBLOCKS[this.props.CBlockId];
         return (
-            <select value={rowState.corrcombine.toString()} onChange={this.handleChange}>
+            <select value={rowState.corrcombine.toString()}
+                disabled={!!blockLocked} onChange={this.handleChange}>
                 <option value="0" key="0">{CORRECTION_COMBINE_SELECT}</option>
                 {CNodeIds.filter(CNodeId => CNodeId !== this.props.CNodeId)
                     .map(CNodeId =>

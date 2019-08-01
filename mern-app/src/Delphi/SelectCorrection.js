@@ -25,11 +25,12 @@ export default class DelphiSelectCorrection extends Component {
     
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
+        var blockLocked = blockState.locked;
         const rowState = blockState[this.props.CNodeId];
         const CNode = global.DM_LEVELCNODES[this.props.CNodeId];
         return (
 
-<select value={rowState.correction} onChange={this.handleChange} disabled={!!rowState.correct}>
+<select value={rowState.correction} onChange={this.handleChange} disabled={blockLocked || !!rowState.correct}>
     <option value={DC.CORRECTION_NONE} key={0}>{DC.CORRECTION_NONE_TXT}</option>
     <option value={DC.CORRECTION_SPELLING} key={1}>{DC.CORRECTION_SPELLING_TXT}</option>
     <option value={DC.CORRECTION_NEWNAME} key={2}>{DC.CORRECTION_NEWNAME_TXT}</option>

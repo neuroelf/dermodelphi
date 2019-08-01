@@ -23,9 +23,10 @@ export default class DelphiCorrectionOther extends Component {
     
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
+        const blockLocked = blockState.locked;
         const rowState = blockState[this.props.CNodeId];
         return (
-            <input className="delphi-form-minwidth"
+            <input className="delphi-form-minwidth" disabled={!!blockLocked}
                 type="text" placeholder={CORRECTION_OTHER_EMPTY}
                 value={rowState.corrother} onChange={this.handleChange} />
         );

@@ -11,10 +11,8 @@ export default class DelphiSelectCategory extends Component {
     }
     
     handleChange(event) {
-        var nextCBlockId = event.target.value;
+        var nextCBlockId = parseInt(event.target.value);
         this.props.AppObj.setState({currentCBlockId: nextCBlockId});
-        const { history } = this.props;
-        history.push('/block/' + nextCBlockId.toString());
     }
 
     handleSubmit(event) {
@@ -23,7 +21,7 @@ export default class DelphiSelectCategory extends Component {
     
     render() {
         return (
-            <select onChange={this.handleChange} value={this.props.CBlockId}>
+            <select onChange={this.handleChange} value={this.props.AppObj.state.currentCBlockId}>
                 <option value={BLOCKS_ALL} key={BLOCKS_ALL}>{BLOCKS_ALL_TXT}</option>
                 {Object.keys(global.DM_LEVELCBLOCKS).map(blockId => 
                     <option value={blockId} key={blockId}>{global.DM_LEVELCBLOCKID2NAMES[blockId]}</option>)}
