@@ -10,8 +10,7 @@ import DelphiAllBlocks from './Delphi/AllBlocks';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
-global.DM_LEVELANAMES = [];
-global.DM_LEVELBNAMES = [];
+global.DM_LEVELANAMES = {};
 global.DM_LEVELBFULLNAMES = {};
 global.DM_LEVELCBLOCKS = {};
 global.DM_LEVELCBLOCKIDS = [];
@@ -34,7 +33,7 @@ function parseDMJSONFile() {
     for (ac = 0; ac < alen; ac++) {
         anode = anodes[ac];
         aname = anode.name;
-        global.DM_LEVELANAMES.push(aname);
+        global.DM_LEVELANAMES[anode.id] = aname;
 
         // parse categories
         bnodes = anode.children;
@@ -42,7 +41,6 @@ function parseDMJSONFile() {
         for (bc = 0; bc < blen; bc++) {
             bnode = bnodes[bc];
             bname = bnode.name;
-            global.DM_LEVELBNAMES.push(bname);
             global.DM_LEVELBFULLNAMES[bnode.id] = aname + " - " + bname;
 
             // parse diagnoses (names)
@@ -93,6 +91,8 @@ export default class App extends Component {
             user: '',
             sessionId: '',
             currentCBlockId: 0,
+            historyCBlockId: [],
+            nextAID: 3,
             blocks: {},
             date: Date.now()
         };
