@@ -2,6 +2,10 @@
 export const TITLE_TXT = 'Diagnosis Mapper'
 export const TITLE_TXT_FULL = 'Dermatology Diagnosis Mapper - Consensus Survey'
 
+// hot-keys
+export const HK_MARK_BLOCK_AS_CORRECT = 'alt+x'
+export const HK_NEXT_BLOCK = 'alt+n'
+
 // image filenames and settings
 export const IMG_LOCK_LOCKED = '/img/locked.png'
 export const IMG_LOCK_LOCKED_ALT = 'Block locked'
@@ -33,6 +37,8 @@ export const TABLE_CURRENT_CATEGORY = 'Current Category: '
 export const TABLE_HEADER_DIAGNOSIS = 'Diagnosis (name)'
 export const TABLE_HEADER_CORRECT = 'Correct?'
 export const TABLE_HEADER_CORRECTION = 'Correction (configure as needed)'
+export const TABLE_HEADER_NEWCAT = 'Category name'
+export const TABLE_HEADER_NEWSUPERCAT = 'Super-category name'
 export const TABLE_NO_DIAGNOSES = 'No diagnoses in this category.'
 
 // name mangling
@@ -83,13 +89,22 @@ export const CORRECTION_OTHER_EMPTY = 'Please describe the desired correction(s)
 export const CORRECTION_SPELLING_EMPTY = 'Please provide the correct spelling...'
 
 // new entry texts
+export const NEWENTRY_CANCEL = 'Cancel'
 export const NEWENTRY_CONFIRM = 'Confirm'
 export const NEWENTRY_CREATE = 'Add a new diagnosis (name)'
 export const NEWENTRY_NAME_EMPTY = 'Please enter the diagnosis name...'
 export const NEWENTRY_CAT_SELECT = 'Please select the desired category...'
 export const NEWENTRY_CAT_NEW = 'Create a new category...'
 export const NEWENTRY_PLACEIN = 'placed in'
+export const NEWENTRY_ERROR_BAD_BLOCK = 'Category block not found!'
+export const NEWENTRY_ERROR_CNAME = 'Duplicate or missing diagnosis name!'
+export const NEWCATEGORY_ACAT_NEW = 'New super-category...'
+export const NEWCATEGORY_ACAT_ANAME_EMPTY = 'Please enter a super-category name...'
+export const NEWCATEGORY_ACAT_BNAME_EMPTY = 'Please enter a new category name...'
+export const NEWCATEGORY_ERROR_ANAME = 'Duplicate or missing new super-category name!'
+export const NEWCATEGORY_ERROR_BNAME = 'Duplicate or missing new category name!'
 
 // additional texts
 export const TXT_TOGGLE_TREE_ON = 'Please click here to show the full taxonomy tree.'
 export const TXT_NOT_YET_IMPLEMENTED = 'Feature not yet implemented...'
+export const TXT_SUBMIT = 'Submit'

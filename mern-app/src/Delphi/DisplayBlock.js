@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DelphiSelectCategory from './SelectCategory'
 import DelphiGoBack from './GoBack';
+import DelphiSubmit from './Submit';
 import DelphiDisplayRow from './DisplayRow.js';
 import { CATEGORY_FIRST, TABLE_CATEGORY, TABLE_NO_DIAGNOSES } from './Constants'
 
@@ -44,6 +45,7 @@ export default class DelphiDisplayBlock extends Component {
                     <table><tbody><tr>
                         <td><DelphiSelectCategory AppObj={this.props.AppObj} /></td>
                         <td><DelphiGoBack AppObj={this.props.AppObj} /></td>
+                        <td><DelphiSubmit AppObj={this.props.AppObj} /></td>
                     </tr></tbody></table>
                     : ''}
             </td>

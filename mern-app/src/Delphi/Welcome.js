@@ -28,6 +28,8 @@ export default class DelphiWelcome extends Component {
         editing experience using this survey.
     </p>
     <h3>Instructions</h3>
+    <h4>IMPORTANT: <font color="red"><u>Please do <i>not</i> use your
+        Browser's Back / history buttons to navigate!!</u></font></h4>
     <p className="delphi-general-text-paragraph">
         For each <font color="red"><b>Diagnosis (name)</b></font>, you
         can choose to accept the current configuration by checking the

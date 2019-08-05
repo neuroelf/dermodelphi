@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NEWENTRY_NAME_EMPTY } from '../Constants'
 
-export default class DelphiCorrectionNewName extends Component {
+export default class DelphiNewEntryName extends Component {
     constructor(props) {
         super(props);
         
