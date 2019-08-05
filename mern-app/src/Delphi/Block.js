@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DelphiAllBlocks from './AllBlocks';
 import DelphiSelectCategory from './SelectCategory';
-import DelphiControlRow from './ControlRow.js';
+import DelphiControlRow from './ControlRow';
+import DelphiNewEntryRow from './NewEntry/Row';
 import DelphiMarkBlockCorrect from './MarkBlockCorrect';
 import DelphiUnlockBlock from './UnlockBlock'
 import DelphiNextBlock from './NextBlock';
@@ -74,6 +75,8 @@ export default class DelphiBlock extends Component {
             <DelphiControlRow key={CNodeId} AppObj={this.props.AppObj}
                 CBlockId={CBlockId} CNodeId={CNodeId} />)
         }
+
+        <DelphiNewEntryRow AppObj={this.props.AppObj} />
 
         <tr className="delphi-form-header-row">
             <td className="delphi-form-control-cell" colSpan="3">

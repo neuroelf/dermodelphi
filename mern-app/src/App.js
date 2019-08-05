@@ -5,7 +5,8 @@ import DelphiTop from './Delphi/Top';
 import DelphiWelcome from './Delphi/Welcome';
 import DelphiBlock from './Delphi/Block';
 import './App.css';
-import { BLOCKS_ALL, CORRECTION_NONE } from './Delphi/Constants'
+import { BLOCKS_ADDCAT, BLOCKS_ALL, CORRECTION_NONE,
+    TXT_NOT_YET_IMPLEMENTED } from './Delphi/Constants'
 import DelphiAllBlocks from './Delphi/AllBlocks';
 
 // variables for global JSON information
@@ -92,6 +93,11 @@ export default class App extends Component {
             sessionId: '',
             currentCBlockId: 0,
             historyCBlockId: [],
+            newEntry: {
+                pressed: 0,
+                name: '',
+                category: 0
+                },
             nextAID: 3,
             blocks: {},
             date: Date.now()
@@ -150,6 +156,8 @@ export default class App extends Component {
                 {
                 this.state.currentCBlockId === 0 ?
                     <DelphiWelcome AppObj={this} />
+                : this.state.currentCBlockId === BLOCKS_ADDCAT ?
+                    <div>{TXT_NOT_YET_IMPLEMENTED}</div>
                 : this.state.currentCBlockId === BLOCKS_ALL ?
                     <DelphiAllBlocks AppObj={this} />
                 : this.state.currentCBlockId in global.DM_LEVELCBLOCKS ?

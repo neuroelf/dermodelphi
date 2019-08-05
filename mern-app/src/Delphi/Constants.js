@@ -13,6 +13,7 @@ export const IMG_LOGO_ALT = TITLE_TXT + ' logo'
 export const IMG_LOGO_SIZE = 60
 
 // block controls
+export const BLOCKS_ADDCAT = 98
 export const BLOCKS_ALL = 99
 export const BLOCKS_ALL_TXT = 'See all diagnoses (overview)'
 export const BLOCKS_FIRST = 10101
@@ -81,5 +82,14 @@ export const CORRECTION_NEWSYNS_EMPTY = 'Please enter additional synonyms...'
 export const CORRECTION_OTHER_EMPTY = 'Please describe the desired correction(s)...'
 export const CORRECTION_SPELLING_EMPTY = 'Please provide the correct spelling...'
 
+// new entry texts
+export const NEWENTRY_CONFIRM = 'Confirm'
+export const NEWENTRY_CREATE = 'Add a new diagnosis (name)'
+export const NEWENTRY_NAME_EMPTY = 'Please enter the diagnosis name...'
+export const NEWENTRY_CAT_SELECT = 'Please select the desired category...'
+export const NEWENTRY_CAT_NEW = 'Create a new category...'
+export const NEWENTRY_PLACEIN = 'placed in'
+
 // additional texts
 export const TXT_TOGGLE_TREE_ON = 'Please click here to show the full taxonomy tree.'
+export const TXT_NOT_YET_IMPLEMENTED = 'Feature not yet implemented...'
