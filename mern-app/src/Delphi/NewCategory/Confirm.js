@@ -31,7 +31,7 @@ export default class DelphiNewCategoryConfirm extends Component {
 
         // get newAName and check need to add a super-category
         var newAName = '';
-        var newAId = newCategory.acat;
+        var newAId = nextAId;
         const oldAIds = Object.keys(global.DM_LEVELANAMES);
         var oldAs = [];
         var idCount = 0;
@@ -40,6 +40,7 @@ export default class DelphiNewCategoryConfirm extends Component {
         }
         if (newCategory.acat < nextAId) {
             newAName = global.DM_LEVELANAMES[newCategory.acat];
+            newAId = newCategory.acat;
         } else {
             newAName = newCategory.aname;
             if ((newAName === '') ||
@@ -60,7 +61,6 @@ export default class DelphiNewCategoryConfirm extends Component {
         for (idCount = 0; idCount < oldBs.length; idCount++) {
             oldBs[idCount] = global.DM_LEVELBNAMES[oldBs[idCount]].toLowerCase();
         }
-        console.log(oldBs);
         if (oldBs.includes(newBName.toLowerCase())) {
             window.alert(NEWCATEGORY_ERROR_BNAME);
             return;
