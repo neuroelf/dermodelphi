@@ -6,6 +6,7 @@ export default class DelphiMarkBlockCorrect extends Component {
         super(props);
         
         this.state = { };
+        this.props.AppObj.refMarkBlockAsCorrect = React.createRef();
         this.handleSubmit = this.handleSubmit.bind(this);
         this.markBlockAsCorrect = this.markBlockAsCorrect.bind(this);
     }
@@ -57,7 +58,7 @@ export default class DelphiMarkBlockCorrect extends Component {
         }
 
         return (
-            <button onClick={this.markBlockAsCorrect}
+            <button onClick={this.markBlockAsCorrect} ref={this.props.AppObj.refMarkBlockAsCorrect}
                 disabled={disabled}>{BLOCK_MARK_AS_CORRECT}</button>
         );
     }

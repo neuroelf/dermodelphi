@@ -1,23 +1,38 @@
 // imports
 import React, { Component } from 'react';
+import { GlobalHotKeys } from 'react-hotkeys';
 import DelphiNotFound from './Delphi/NotFound'
 import DelphiTop from './Delphi/Top';
 import DelphiWelcome from './Delphi/Welcome';
 import DelphiBlock from './Delphi/Block';
+import DelphiNewCategoryPage from './Delphi/NewCategory/Page'
 import './App.css';
-import { BLOCKS_ADDCAT, BLOCKS_ALL, CORRECTION_NONE,
-    TXT_NOT_YET_IMPLEMENTED } from './Delphi/Constants'
+import * as DC from './Delphi/Constants'
 import DelphiAllBlocks from './Delphi/AllBlocks';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
 global.DM_LEVELANAMES = {};
+global.DM_LEVELBNAMES = {};
 global.DM_LEVELBFULLNAMES = {};
 global.DM_LEVELCBLOCKS = {};
 global.DM_LEVELCBLOCKIDS = [];
 global.DM_LEVELCBLOCKNAMES = [];
 global.DM_LEVELCBLOCKID2NAMES = {};
 global.DM_LEVELCNODES = {};
+
+// key map for hotkeys
+global.DM_HOTKEYMAP = {
+    HK_MARK_BLOCK_AS_CORRECT: DC.HK_MARK_BLOCK_AS_CORRECT,
+    HK_NEXT_BLOCK: DC.HK_NEXT_BLOCK
+};
+global.DM_HOTKEYHANDLERS = {
+    HK_MARK_BLOCK_AS_CORRECT: handlerFun,
+    HK_NEXT_BLOCK: handlerFun
+};
+function handlerFun() {
+    console.log('Not yet set!');
+}
 
 // function for loading the JSON file into global config
 function parseDMJSONFile() {
@@ -28,8 +43,7 @@ function parseDMJSONFile() {
     blname = '';
     blnodes = [];
     cblock = 0;
-    // global.DM_LEVELCBLOCKS[0] = []
-
+    
     // parse top nodes (currently only 'Benign' and 'Malignant')
     for (ac = 0; ac < alen; ac++) {
         anode = anodes[ac];
@@ -42,6 +56,7 @@ function parseDMJSONFile() {
         for (bc = 0; bc < blen; bc++) {
             bnode = bnodes[bc];
             bname = bnode.name;
+            global.DM_LEVELBNAMES[bnode.id] = bname;
             global.DM_LEVELBFULLNAMES[bnode.id] = aname + " - " + bname;
 
             // parse diagnoses (names)
@@ -91,16 +106,25 @@ export default class App extends Component {
         this.state = {
             user: '',
             sessionId: '',
+            sessionDate: Date.now(),
             currentCBlockId: 0,
             historyCBlockId: [],
+            newCategory: {
+                acat: 1,
+                aname: '',
+                bname: ''
+            },
             newEntry: {
                 pressed: 0,
                 name: '',
                 category: 0
-                },
-            nextAID: 3,
-            blocks: {},
-            date: Date.now()
+            },
+            newAs: [],
+            newBs: [],
+            newCs: [],
+            nextAId: 0,
+            nextBId: [1],
+            blocks: {}
         };
 
         // parse the JSON file synchronously
@@ -124,12 +148,23 @@ export default class App extends Component {
             // get and iterater over block nodes
             blockNodes = global.DM_LEVELCBLOCKS[blockIds[bc]];
             var numBlockNodes = blockNodes.length;
+            if (numBlockNodes > 0) {
+                var blockCatId = Math.floor(parseInt(blockNodes[0]) / 10000);
+                var blockAId = Math.floor(blockCatId / 100);
+                this.state.nextAId = Math.max(this.state.nextAId, blockAId + 1);
+                while (this.state.nextBId.length <= this.state.nextAId) {
+                    this.state.nextBId.push(1);
+                }
+                this.state.nextBId[blockAId] = Math.max(
+                    this.state.nextBId[blockAId], blockCatId + 1 - 100 * blockAId
+                );
+            }
             for (cc = 0; cc < numBlockNodes; cc++) {
 
                 // set state for node
                 blockState[blockNodes[cc]] = {
                     correct: false,
-                    correction: CORRECTION_NONE,
+                    correction: DC.CORRECTION_NONE,
                     corrspelling: '',
                     corrnewname: '',
                     corrnewsyns: '',
@@ -145,27 +180,51 @@ export default class App extends Component {
             // store in overall state
             this.state.blocks[blockIds[bc]] = blockState;
         }
+
+        // bind key handler functions
+        this.markBlockAsCorrectClick = this.markBlockAsCorrectClick.bind(this);
+        this.nextBlockClick = this.nextBlockClick.bind(this);
+    }
+
+    // key handlers
+    markBlockAsCorrectClick(event) {
+        var btn = this.refMarkBlockAsCorrect.current;
+        if ((btn !== undefined) && (btn !== null)) {
+            btn.click();
+        }
+    }
+    nextBlockClick(event) {
+        var btn = this.refNextBlock.current;
+        if ((btn !== undefined) && (btn !== null)) {
+            btn.click();
+        }
+    }
+
+    // override key handlers
+    componentDidMount() {
+        global.DM_HOTKEYHANDLERS.HK_MARK_BLOCK_AS_CORRECT = this.markBlockAsCorrectClick;
+        global.DM_HOTKEYHANDLERS.HK_NEXT_BLOCK = this.nextBlockClick;
     }
     
     // original idea of Router (using URL in history) replaced
     // with a "poor-man's switch" on the main component
     render() {
         return (
-            <div>
+            <GlobalHotKeys keyMap={global.DM_HOTKEYMAP} handlers={global.DM_HOTKEYHANDLERS}><div>
                 <DelphiTop />
                 {
                 this.state.currentCBlockId === 0 ?
                     <DelphiWelcome AppObj={this} />
-                : this.state.currentCBlockId === BLOCKS_ADDCAT ?
-                    <div>{TXT_NOT_YET_IMPLEMENTED}</div>
-                : this.state.currentCBlockId === BLOCKS_ALL ?
+                : this.state.currentCBlockId === DC.BLOCKS_ADDCAT ?
+                    <div><DelphiNewCategoryPage AppObj={this} /></div>
+                : this.state.currentCBlockId === DC.BLOCKS_ALL ?
                     <DelphiAllBlocks AppObj={this} />
                 : this.state.currentCBlockId in global.DM_LEVELCBLOCKS ?
                     <DelphiBlock AppObj={this} />
                 :
                     <DelphiNotFound AppObj={this} ErrTxt={this.state.currentCBlockId} />
                 }
-            </div>
+            </div></GlobalHotKeys>
         );
     }
 }

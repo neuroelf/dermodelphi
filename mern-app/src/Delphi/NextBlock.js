@@ -6,6 +6,7 @@ export default class DelphiNextBlock extends Component {
         super(props);
         
         this.state = { };
+        this.props.AppObj.refNextBlock = React.createRef();
         this.handleSubmit = this.handleSubmit.bind(this);
         this.goToNextBlock = this.goToNextBlock.bind(this);
     }
@@ -125,7 +126,7 @@ export default class DelphiNextBlock extends Component {
         // if it's not the last block, show next block, otherwise to review
         if (!lastBlock) {
             return (
-                <button onClick={this.goToNextBlock}
+                <button onClick={this.goToNextBlock} ref={this.props.AppObj.refNextBlock}
                     disabled={disabled}>{DC.BLOCK_NEXT}</button>
             );
         } else {
