@@ -5,7 +5,8 @@ import DelphiControlRow from './ControlRow.js';
 import DelphiMarkBlockCorrect from './MarkBlockCorrect';
 import DelphiUnlockBlock from './UnlockBlock'
 import DelphiNextBlock from './NextBlock';
-import * as DC from './Constants'
+import DelphiGoBack from './GoBack';
+import * as DC from './Constants';
 
 const CurrentCategoryLabel = props => (
     <p>{DC.TABLE_CURRENT_CATEGORY} {global.DM_LEVELCBLOCKID2NAMES[props.CBlockId]}</p>
@@ -97,6 +98,11 @@ export default class DelphiBlock extends Component {
                     <p className="delphi-controls-paragraph">
                         <DelphiNextBlock AppObj={this.props.AppObj}
                             CBlockId={CBlockId} history={this.props.history} />
+                    </p>
+                </td>
+                <td className="delphi-form-control-cell">
+                    <p className="delphi-controls-paragraph">
+                        <DelphiGoBack AppObj={this.props.AppObj} />
                     </p>
                 </td></tr></tbody></table>
             </td>

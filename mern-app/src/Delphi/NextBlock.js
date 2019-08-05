@@ -16,11 +16,13 @@ export default class DelphiNextBlock extends Component {
     
     goToNextBlock(event) {
         event.preventDefault();
-        const { blocks } = { ...this.props.AppObj.state };
+        const { blocks, historyCBlockId } = { ...this.props.AppObj.state };
         var currentCBlockId = parseInt(this.props.CBlockId);
         var nextCBlockId = DC.BLOCKS_ALL;
         const newState = blocks;
+        const newHistoryBlockId = [ ...historyCBlockId]
         newState[currentCBlockId].locked = true;
+        newHistoryBlockId.push(currentCBlockId)
         var bc;
         for (bc = 0; bc < global.DM_LEVELCBLOCKIDS.length; bc++) {
             if (global.DM_LEVELCBLOCKIDS[bc] === currentCBlockId) {
@@ -30,7 +32,11 @@ export default class DelphiNextBlock extends Component {
             }
         }
         
-        this.props.AppObj.setState({blocks: newState, currentCBlockId: nextCBlockId});
+        this.props.AppObj.setState({
+            blocks: newState,
+            currentCBlockId: nextCBlockId,
+            historyCBlockId: newHistoryBlockId
+        });
     }
 
     // this component contains the (rendering) logic as to whether

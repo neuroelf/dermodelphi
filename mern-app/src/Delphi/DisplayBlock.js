@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DelphiSelectCategory from './SelectCategory'
+import DelphiGoBack from './GoBack';
 import DelphiDisplayRow from './DisplayRow.js';
 import { CATEGORY_FIRST, TABLE_CATEGORY, TABLE_NO_DIAGNOSES } from './Constants'
 
@@ -40,7 +41,10 @@ export default class DelphiDisplayBlock extends Component {
             <td colSpan="2">{categoryLabel(CatId)}</td>
             <td className="delphi-controls-paragraph" align="right">
                 {CatId === CATEGORY_FIRST ?
-                    <DelphiSelectCategory AppObj={this.props.AppObj} />
+                    <table><tbody><tr>
+                        <td><DelphiSelectCategory AppObj={this.props.AppObj} /></td>
+                        <td><DelphiGoBack AppObj={this.props.AppObj} /></td>
+                    </tr></tbody></table>
                     : ''}
             </td>
         </tr>

@@ -12,7 +12,13 @@ export default class DelphiSelectCategory extends Component {
     
     handleChange(event) {
         var nextCBlockId = parseInt(event.target.value);
-        this.props.AppObj.setState({currentCBlockId: nextCBlockId});
+        const { historyCBlockId } = { ...this.props.AppObj.state };
+        const newHistoryBlockId = [ ...historyCBlockId]
+        newHistoryBlockId.push(this.props.AppObj.state.currentCBlockId)
+        this.props.AppObj.setState({
+            currentCBlockId: nextCBlockId,
+            historyCBlockId: newHistoryBlockId
+        });
     }
 
     handleSubmit(event) {

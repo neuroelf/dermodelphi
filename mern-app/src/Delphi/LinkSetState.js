@@ -15,8 +15,14 @@ export default class DelphiLinkSetState extends Component {
     
     handleClick(event) {
         event.preventDefault();
+        const { historyCBlockId } = { ...this.props.AppObj.state};
+        const newHistoryCBlockId = [ ...historyCBlockId];
         const newState = {};
         newState[this.props.stateProp] = this.props.stateValue;
+        if (this.props.stateProp === 'currentCBlockId') {
+            newHistoryCBlockId.push(this.props.AppObj.state.currentCBlockId);
+            newState['historyCBlockId'] = newHistoryCBlockId
+        }
         this.props.AppObj.setState(newState);
     }
 
