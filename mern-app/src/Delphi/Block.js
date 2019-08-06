@@ -29,9 +29,7 @@ export default class DelphiBlock extends Component {
 
         // start by setting all correct
         currentState[blockId].allcorrect = true;
-        this.props.AppObj.setState(state => ({
-            blocks: currentState
-        }));
+        this.props.AppObj.setState({ blocks: currentState });
     }
 
     render() {
@@ -100,7 +98,13 @@ export default class DelphiBlock extends Component {
                 <td className="delphi-form-control-cell">
                     <p className="delphi-controls-paragraph">
                         <DelphiNextBlock AppObj={this.props.AppObj}
-                            CBlockId={CBlockId} history={this.props.history} />
+                            CBlockId={CBlockId} continue="no" />
+                    </p>
+                </td>
+                <td className="delphi-form-control-cell">
+                    <p className="delphi-controls-paragraph">
+                        <DelphiNextBlock AppObj={this.props.AppObj}
+                            CBlockId={CBlockId} continue="yes" />
                     </p>
                 </td>
                 <td className="delphi-form-control-cell">

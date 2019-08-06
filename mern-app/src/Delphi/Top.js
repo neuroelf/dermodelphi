@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import DelphiTree from './Tree';
-import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_SIZE,
-    TITLE_TXT_FULL, TXT_TOGGLE_TREE_ON } from './Constants'
+import DiagnosisDone from './func/DiagnosisDone';
+import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_SIZE, TITLE_TXT_FULL,
+    TXT_TOGGLE_TREE_ON, SESS_INFO, SESS_PROGRESS } from './Constants'
 
 export default class DelphiTop extends Component {
     constructor(props) {
@@ -19,6 +20,23 @@ export default class DelphiTop extends Component {
     }
     
     render() {
+        const { blocks, sessionOk, sessionId } = { ...this.props.AppObj.state};
+        var doneNodes = 0;
+        var totalNodes = 0;
+        const blockKeys = Object.keys(blocks);
+        for (var bc = 0; bc < blockKeys.length; bc++) {
+            const block = blocks[blockKeys[bc]];
+            const nodeKeys = Object.keys(block);
+            for (var nc = 0; nc < nodeKeys.length; nc++) {
+                if (nodeKeys[nc] === 'locked') {
+                    continue;
+                }
+                totalNodes++;
+                if (DiagnosisDone(block[nodeKeys[nc]])) {
+                    doneNodes++;
+                }
+            }
+        }
         return (
 
 <div>
@@ -33,6 +51,13 @@ export default class DelphiTop extends Component {
                     <td width="24"></td>
                     <td valign="middle">
                         <h1>{TITLE_TXT_FULL}</h1>
+                    </td>
+                    <td width="192" className="delphi-general-paragraph-small" align="right">
+                        {(!!sessionOk) ?
+                        <div>
+                            <font color="white">{SESS_INFO} {sessionId}<br />
+                            {SESS_PROGRESS} {doneNodes} of {totalNodes}</font>
+                        </div> : '' }
                     </td>
                 </tr>
             </tbody>

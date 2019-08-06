@@ -16,7 +16,17 @@ export default class DelphiNextBlock extends Component {
     }
     
     goToNextBlock(event) {
-        event.preventDefault();
+        
+        // store to server
+        this.props.AppObj.saveSession();
+
+        // then exit if not advancing!
+        if (this.props.continue !== 'yes') {
+            this.props.AppObj.checkSession();
+            return;
+        }
+
+        // lock and advance block
         const { blocks, historyCBlockId } = { ...this.props.AppObj.state };
         var currentCBlockId = parseInt(this.props.CBlockId);
         var nextCBlockId = DC.BLOCKS_ALL;
@@ -125,15 +135,27 @@ export default class DelphiNextBlock extends Component {
 
         // if it's not the last block, show next block, otherwise to review
         if (!lastBlock) {
-            return (
-                <button onClick={this.goToNextBlock} ref={this.props.AppObj.refNextBlock}
-                    disabled={disabled}>{DC.BLOCK_NEXT}</button>
-            );
+            if (this.props.continue === 'yes') {
+                return (
+                    <button onClick={this.goToNextBlock} ref={this.props.AppObj.refNextBlock}
+                        disabled={disabled}>{DC.BLOCK_NEXT}</button>
+                );
+            } else {
+                return (
+                    <button onClick={this.goToNextBlock}>{DC.BLOCK_SAVE}</button>
+                );
+            }
         } else {
-            return (
-                <button onClick={this.goToNextBlock}
-                    disabled={disabled}>{DC.BLOCK_REVIEW_ALL}</button>
-            );
+            if (this.props.continue === 'yes') {
+                return (
+                    <button onClick={this.goToNextBlock}
+                        disabled={disabled}>{DC.BLOCK_REVIEW_ALL}</button>
+                );
+            } else {
+                return (
+                    <button onClick={this.goToNextBlock}>{DC.BLOCK_SAVE}</button>
+                );
+            }
         }
     }
 }

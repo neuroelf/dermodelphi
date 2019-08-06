@@ -16,16 +16,29 @@ export const IMG_LOGO = '/img/dm_logo.png'
 export const IMG_LOGO_ALT = TITLE_TXT + ' logo'
 export const IMG_LOGO_SIZE = 60
 
+// user/session ID
+export const SESS_BEGIN = 'Begin or resume session'
+export const SESS_ERROR_NOTFOUND = 'Session information not found. Please try again!'
+export const SESS_ERROR_UNEXPECTED = 'Unexpected server response. Please try again!'
+export const SESS_INFO = 'Session ID: '
+export const SESS_LABEL = 'User info: '
+export const SESS_PROGRESS = 'Progress: '
+export const SESS_PROMPT_EMAIL = 'Please enter your email address...'
+export const SESS_PROMPT_ID = 'and session ID...'
+
 // block controls
 export const BLOCKS_ADDCAT = 98
 export const BLOCKS_ALL = 99
 export const BLOCKS_ALL_TXT = 'See all diagnoses (overview)'
 export const BLOCKS_FIRST = 10101
+export const BLOCKS_INSTRUCT = 5
+export const BLOCKS_WELCOME = 0
 export const BLOCK_UNLOCKED = 'This block is currently unlocked'
 export const BLOCK_MARK_AS_CORRECT = 'Mark entire block as correct'
-export const BLOCK_NEXT = 'Continue with the next block'
+export const BLOCK_NEXT = 'Save and continue'
 export const BLOCK_PREVIOUS = 'Go back'
 export const BLOCK_REVIEW_ALL = 'Review all choices'
+export const BLOCK_SAVE = 'Save only'
 export const CATEGORY_FIRST = 101
 
 // table texts
