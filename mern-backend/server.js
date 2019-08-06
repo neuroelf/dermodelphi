@@ -131,7 +131,7 @@ sessionRouter.route('/:sessionId/block/:blockId/save').post(function(req, res) {
     DMSessionBlock.updateOne({ sessionId: sessionId, blockId: blockId }, { $set: req.body})
     .then(dbres => {
         if ((dbres.n === 0) && (dbres.nModified === 0)) {
-            dm_log.dm_log(' - error(saveSessionBlock): didn\'t exist, saving instead');
+            dm_log.dm_log(' - status(saveSessionBlock): didn\'t exist, saving instead');
             block = new DMSessionBlock({
                 sessionId: sessionId,
                 blockId: blockId,
