@@ -11,6 +11,9 @@
 # production
 /build
 
+# mongoDB (local)
+/mongodb
+
 # misc
 .DS_Store
 .env.local
