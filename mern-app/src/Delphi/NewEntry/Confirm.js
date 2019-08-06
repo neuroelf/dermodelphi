@@ -20,7 +20,16 @@ export default class DelphiNewEntryConfirm extends Component {
         const { blocks, newEntry, newCs } = { ...AppObj.state};
         var newName = newEntry.name;
         var newCBlockId = newEntry.pressed;
-        var newCCatId = Math.floor(newCBlockId / 100);
+        var testCBlockId = 0;
+        var newCCatId = newEntry.category;
+        if (newCCatId !== Math.floor(newCBlockId / 100)) {
+            for (var bc = 0; bc < global.DM_LEVELCBLOCKIDS.length; bc++) {
+                testCBlockId = global.DM_LEVELCBLOCKIDS[bc];
+                if (newCCatId === Math.floor(testCBlockId / 100)) {
+                    newCBlockId = Math.max(newCBlockId, testCBlockId);
+                }
+            }
+        }
         const CBlock = global.DM_LEVELCBLOCKS[newCBlockId];
         if (CBlock === undefined) {
             window.alert(NEWENTRY_ERROR_BAD_BLOCK);
@@ -54,7 +63,7 @@ export default class DelphiNewEntryConfirm extends Component {
         global.DM_LEVELCBLOCKS[newCBlockId].push(newCNodeId);
         const newBlocks = Object.assign({}, blocks);
         newBlocks[newCBlockId][newCNodeId] = {
-            correct: false,
+            correct: true,
             correction: CORRECTION_NONE,
             corrspelling: '',
             corrnewname: '',

@@ -6,7 +6,7 @@ import DelphiDisplayRow from './DisplayRow.js';
 import { CATEGORY_FIRST, TABLE_CATEGORY, TABLE_NO_DIAGNOSES } from './Constants'
 
 function categoryLabel(CatId) {
-    return <p>{TABLE_CATEGORY} {global.DM_LEVELBFULLNAMES[CatId]}</p>
+    return <span>{TABLE_CATEGORY} {global.DM_LEVELBFULLNAMES[CatId]}</span>
 };
 
 export default class DelphiDisplayBlock extends Component {

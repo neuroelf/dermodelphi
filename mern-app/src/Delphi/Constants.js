@@ -33,12 +33,13 @@ export const BLOCKS_ALL_TXT = 'See all diagnoses (overview)'
 export const BLOCKS_FIRST = 10101
 export const BLOCKS_INSTRUCT = 5
 export const BLOCKS_WELCOME = 0
-export const BLOCK_UNLOCKED = 'This block is currently unlocked'
 export const BLOCK_MARK_AS_CORRECT = 'Mark entire block as correct'
 export const BLOCK_NEXT = 'Save and continue'
 export const BLOCK_PREVIOUS = 'Go back'
 export const BLOCK_REVIEW_ALL = 'Review all choices'
 export const BLOCK_SAVE = 'Save only'
+export const BLOCK_TXT = ', block '
+export const BLOCK_UNLOCKED = 'This block is currently unlocked'
 export const CATEGORY_FIRST = 101
 
 // table texts

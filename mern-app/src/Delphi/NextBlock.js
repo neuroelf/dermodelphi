@@ -19,10 +19,19 @@ export default class DelphiNextBlock extends Component {
     
     saveBlock(event) {
         event.preventDefault();
+        const AppObj = this.props.AppObj;
+        const { blocks } = { ...AppObj.state };
         if (this.props.continue === 'yes') {
-            this.props.AppObj.saveSessionBlock(this.goToNextBlock);
+            var currentCBlockId = parseInt(this.props.CBlockId);
+            const newState = Object.assign({}, blocks);
+            newState[currentCBlockId].locked = true;
+            AppObj.setState({
+                blocks: newState
+            }, () => {
+                AppObj.saveSessionBlock(this.goToNextBlock);
+            });
         } else {
-            this.props.AppObj.saveSessionBlock(null);
+            AppObj.saveSessionBlock(this.props.AppObj.nullHook);
         }
     }
     goToNextBlock() {
@@ -31,7 +40,7 @@ export default class DelphiNextBlock extends Component {
         const { blocks, historyCBlockId } = { ...this.props.AppObj.state };
         var currentCBlockId = parseInt(this.props.CBlockId);
         var nextCBlockId = DC.BLOCKS_ALL;
-        const newState = blocks;
+        const newState = Object.assign({}, blocks);
         const newHistoryBlockId = [ ...historyCBlockId]
         newState[currentCBlockId].locked = true;
         newHistoryBlockId.push(currentCBlockId)

@@ -86,7 +86,7 @@ function parseDMJSONFile() {
 
                     // create new node list, generate and store name
                     blnodes = [];
-                    blname = aname + " - " + bname + ", block " + blc.toString();
+                    blname = aname + " - " + bname + DC.BLOCK_TXT + blc.toString();
                     global.DM_LEVELCBLOCKIDS.push(cblock);
                     global.DM_LEVELCBLOCKNAMES.push(blname);
                     global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
@@ -260,18 +260,21 @@ export default class App extends Component {
     // hook for loading/resuming a session
     loadSession() {
         const { sessionId } = { ...this.state};
-        var AppObj = this;
-        var newAs = [];
-        var newBs = [];
-        var newCs = [];
-        var nextAId = this.state.nextAId;
-        var nextBId = [ ...this.state.nextBId];
+        const AppObj = this;
+        const newAs = [];
+        const newBs = [];
+        const newCs = [];
+        const nextAId = [0];
+        const nextBId = [];
+        const newStateVals = {};
         axios.get(global.DM_BACKEND_URL + 'session/' + sessionId)
         .then(function (res) {
             if ('data' in res) {
                 const { data } = { ...res};
-                if (data === null) return;
-                const newStateVals = {};
+                if (data === null) {
+                    window.alert(DC.SESS_ERROR_UNEXPECTED);
+                    return;
+                }
                 if ('currentCBlockId' in data) {
                     if (parseInt(data.currentCBlockId) > DC.BLOCKS_ALL) {
                         newStateVals['currentCBlockId'] = parseInt(data.currentCBlockId);
@@ -279,64 +282,88 @@ export default class App extends Component {
                 }
                 if ('newAs' in data) {
                     if (data.newAs.length > 0) {
-                        newAs = data.newAs;
-                        newStateVals['newAs'] = [ ...newAs];
+                        newAs.push.apply(newAs, data.newAs);
+                        newStateVals['newAs'] = newAs;
                     }
                 }
                 if ('newBs' in data) {
                     if (data.newBs.length > 0) {
-                        newBs = data.newBs;
-                        newStateVals['newBs'] = [ ...newBs];
+                        newBs.push.apply(newBs, data.newBs);
+                        newStateVals['newBs'] = newBs;
                     }
                 }
                 if ('newCs' in data) {
                     if (data.newCs.length > 0) {
-                        newCs = data.newCs;
-                        newStateVals['newCs'] = [ ...newCs];
+                        newCs.push.apply(newCs, data.newCs);
+                        newStateVals['newCs'] = newCs;
                     }
                 }
                 if ('nextAId' in data) {
-                    if (data.nextAId.length > 0) {
-                        nextAId = data.nextAId;
-                        newStateVals['nextAId'] = nextAId;
-                    }
+                    nextAId[0] = data.nextAId;
+                    newStateVals['nextAId'] = nextAId[0];
                 }
                 if ('nextBId' in data) {
                     if (data.nextBId.length > 0) {
-                        nextBId = data.nextBId;
-                        newStateVals['nextBId'] = [ ...nextBId];
+                        nextBId.push.apply(nextBId, data.nextBId);
+                        newStateVals['nextBId'] = nextBId;
                     }
                 }
-                console.log(newStateVals);
-                AppObj.setState(newStateVals);
             }
-        });
-        axios.get(global.DM_BACKEND_URL + 'session/' + sessionId + '/blocks')
-        .then(function (res) {
-            if ('data' in res) {
-                const { data } = { ...res};
-                if (data === null) return;
-                const { blocks } = { ...AppObj.state};
-                const newBlocks = Object.assign({}, blocks);
-                for (var bc = 0; bc < data.length; bc++) {
-                    const block = data[bc];
-                    newBlocks[block.blockId] = block.block;
+        }).then(function () {
+            axios.get(global.DM_BACKEND_URL + 'session/' + sessionId + '/blocks')
+            .then(function (res) {
+                if ('data' in res) {
+                    const { data } = { ...res};
+                    if (data === null) {
+                        window.alert(DC.SESS_ERROR_UNEXPECTED);
+                        return;
+                    }
+                    const { blocks } = { ...AppObj.state};
+                    const newBlocks = Object.assign({}, blocks);
+                    for (var bc = 0; bc < data.length; bc++) {
+                        const block = data[bc];
+                        newBlocks[block.blockId] = block.block;
+                    }
+                    newStateVals['blocks'] = newBlocks;
+                    var blname = '';
+                    var cc = 0;
+                    for (cc = 0; cc < newAs.length; cc++) {
+                        const newANode = newAs[cc];
+                        global.DM_LEVELANAMES[newANode.id] = newANode.name;
+                    }
+                    for (cc = 0; cc < newBs.length; cc++) {
+                        const newBNode = newBs[cc];
+                        global.DM_LEVELBNAMES[newBNode.id] = newBNode.name;
+                        global.DM_LEVELBFULLNAMES[newBNode.id] = 
+                            global.DM_LEVELANAMES[Math.floor(newBNode.id / 100)] +
+                            " - " + newBNode.name;
+                    }
+                    for (cc = 0; cc < newCs.length; cc++) {
+                        const newCNode = newCs[cc];
+                        global.DM_LEVELCNODES[newCNode.id] = {
+                            name: newCNode.name,
+                            id: newCNode.id,
+                            blockid: newCNode.blockid,
+                            modifiers: [],
+                            synonyms: []
+                        };
+                        if (!(newCNode.blockid in global.DM_LEVELCBLOCKS)) {
+                            global.DM_LEVELCBLOCKS[newCNode.blockid] = [];
+                            global.DM_LEVELCBLOCKIDS.push(newCNode.blockid);
+                            blname = global.DM_LEVELBFULLNAMES[Math.floor(newCNode.blockid / 100)] + 
+                                DC.BLOCK_TXT + (newCNode.blockid % 100).toString();
+                            global.DM_LEVELCBLOCKNAMES.push(blname);
+                            global.DM_LEVELCBLOCKID2NAMES[newCNode.blockid] = blname;
+                        }
+                        global.DM_LEVELCBLOCKS[newCNode.blockid].push(newCNode.id);
+                    }
+                } else {
+                    Object.keys(newStateVals).map(key => delete newStateVals[key]);
                 }
-                AppObj.setState({ blocks: newBlocks });
-            }
+            }).then(function () {
+                AppObj.setState(newStateVals);
+            });
         });
-        console.log(newCs);
-        for (var cc = 0; cc < newCs.length; cc++) {
-            const newCNode = newCs[cc];
-            global.DM_LEVELCNODES[newCNode.id] = {
-                name: newCNode.name,
-                id: newCNode.id,
-                blockid: newCNode.blockid,
-                modifiers: [],
-                synonyms: []
-            };
-            global.DM_LEVELCBLOCKS[newCNode.blockid].push(newCNode.id);
-        }
     }
 
     // hook for saving session to server
@@ -355,8 +382,8 @@ export default class App extends Component {
             nextAId: nextAId,
             nextBId: nextBId
         })
-        .then(function (res) {
-            console.log(res);
+        .catch(function (err) {
+            window.alert('Error: ' + JSON.stringify(err));
         })
         .finally(function () {
             document.body.classList.remove('busy-cursor');

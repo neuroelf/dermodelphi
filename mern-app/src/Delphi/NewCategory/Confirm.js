@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NEWENTRY_CONFIRM,
+import { BLOCK_TXT, NEWENTRY_CONFIRM,
     NEWCATEGORY_ERROR_ANAME, NEWCATEGORY_ERROR_BNAME
     } from '../Constants'
 
@@ -74,8 +74,9 @@ export default class DelphiNewCategoryConfirm extends Component {
         var nextCBlockId = 100*newBIdValue+1;
         global.DM_LEVELCBLOCKS[nextCBlockId] = [];
         global.DM_LEVELCBLOCKIDS.push(nextCBlockId);
-        global.DM_LEVELCBLOCKNAMES.push(newAName + " - " + newBName);
-        global.DM_LEVELCBLOCKID2NAMES[nextCBlockId] = newAName + " - " + newBName;
+        var blname = newAName + " - " + newBName + BLOCK_TXT + (nextCBlockId % 100).toString()
+        global.DM_LEVELCBLOCKNAMES.push(blname);
+        global.DM_LEVELCBLOCKID2NAMES[nextCBlockId] = blname;
         newBlocks[nextCBlockId] = { locked: false };
         newNewEntry.pressed = nextCBlockId;
         newNewEntry.category = newBIdValue;
@@ -85,6 +86,7 @@ export default class DelphiNewCategoryConfirm extends Component {
                 name: newAName
             });
             newNextAId += 1;
+            newNextBId.push(1);
         }
         newNewBs.push({
             id: newBIdValue,

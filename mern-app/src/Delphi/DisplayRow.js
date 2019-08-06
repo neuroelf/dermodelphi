@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
+import DiagnosisDone from './func/DiagnosisDone'
 import DiagnosisName from './func/DiagnosisName'
-import { CORRECTION_NONE, TABLE_CORRECT, TABLE_CORRECTED, TABLE_CORRECT_NOT_YET } from './Constants.js'
+import { TABLE_CORRECT, TABLE_CORRECTED, TABLE_CORRECT_NOT_YET } from './Constants.js'
 
 export default class DelphiDisplayRow extends Component {
     constructor(props) {
@@ -16,6 +17,7 @@ export default class DelphiDisplayRow extends Component {
             firstNodeClass = 'delphi-form-row-first';
         }
 
+        var rowDone = DiagnosisDone(rowState);
         return (
         
 <tr className={firstNodeClass}>
@@ -27,7 +29,7 @@ export default class DelphiDisplayRow extends Component {
         {
             rowState.correct ?
                 <span>{TABLE_CORRECT}</span> : 
-            rowState.correction === CORRECTION_NONE ?
+            (!rowDone) ?
                 <font color="red"><i>{TABLE_CORRECT_NOT_YET}</i></font> :
                 <b>{TABLE_CORRECTED}</b> }
     </small></span></td>

@@ -84,6 +84,12 @@ ul {
   font-size: 14px;
   width: 800px;
 }
+.delphi-tight-control-bar {
+  background-color: #064785;
+  padding: 2px 24px 2px 24px;
+  color: white;
+  font: normal 16px bpreplaybold, sans-serif;
+}
 .delphi-title-paragraph {
   padding: 3px 12px 3px 12px;
   color: black;
