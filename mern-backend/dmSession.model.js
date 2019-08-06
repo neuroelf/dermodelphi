@@ -10,12 +10,11 @@ let DMSession = new Schema( {
     newBs: { type: [Object], required: true },
     newCs: { type: [Object], required: true },
     nextAId:  { type: Number, required: true },
-    nextBId: { type: [Number], required: true },
-    blocks: { type: Object, required: true }
+    nextBId: { type: [Number], required: true }
 });
 
 // create index
-DMSession.index({ sessionId: 1, sessionDate: 1 }, { unique: true });
+DMSession.index({ sessionId: 1 }, { unique: true });
 
 // export default DMSession;
 module.exports = mongoose.model('DMSession', DMSession);

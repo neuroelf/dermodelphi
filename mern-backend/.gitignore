@@ -14,6 +14,9 @@
 # mongoDB (local)
 /mongodb
 
+# md5 salt (md5salt.md5salt: String) for computing sessionIds from user emails
+/md5salt.js
+
 # misc
 .DS_Store
 .env.local
