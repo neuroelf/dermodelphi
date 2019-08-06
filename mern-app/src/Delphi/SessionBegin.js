@@ -16,14 +16,8 @@ export default class DelphiSessionBegin extends Component {
     handleClick(event) {
         event.preventDefault();
 
-        // request whether a session
+        // pass on to checkSession hook in App.js
         this.props.AppObj.checkSession(event);
-        return;
-
-        // move to welcome block
-        this.props.AppObj.setState( {
-            currentCBlockId: DC.BLOCKS_INSTRUCT
-        });
     }
 
     render() {

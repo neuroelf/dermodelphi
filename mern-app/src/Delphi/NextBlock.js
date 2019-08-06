@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DiagnosisDone from './func/DiagnosisDone';
 import * as DC from './Constants'
 
 export default class DelphiNextBlock extends Component {
@@ -9,23 +10,23 @@ export default class DelphiNextBlock extends Component {
         this.props.AppObj.refNextBlock = React.createRef();
         this.handleSubmit = this.handleSubmit.bind(this);
         this.goToNextBlock = this.goToNextBlock.bind(this);
+        this.saveBlock = this.saveBlock.bind(this);
     }
     
     handleSubmit(event) {
         event.preventDefault();
     }
     
-    goToNextBlock(event) {
-        
-        // store to server
-        this.props.AppObj.saveSession();
-
-        // then exit if not advancing!
-        if (this.props.continue !== 'yes') {
-            this.props.AppObj.checkSession();
-            return;
+    saveBlock(event) {
+        event.preventDefault();
+        if (this.props.continue === 'yes') {
+            this.props.AppObj.saveSessionBlock(this.goToNextBlock);
+        } else {
+            this.props.AppObj.saveSessionBlock(null);
         }
-
+    }
+    goToNextBlock() {
+        
         // lock and advance block
         const { blocks, historyCBlockId } = { ...this.props.AppObj.state };
         var currentCBlockId = parseInt(this.props.CBlockId);
@@ -55,7 +56,6 @@ export default class DelphiNextBlock extends Component {
     render() {
         const blockState = this.props.AppObj.state.blocks[this.props.CBlockId];
         var disabled = false;
-        var anymissing = false;
         var CNodes = Object.keys(blockState);
         var numCNodes = CNodes.length;
         var cc;
@@ -67,93 +67,34 @@ export default class DelphiNextBlock extends Component {
             // skipping the "locked" entry
             if (CNodes[cc] === 'locked') { continue; }
 
-            // checking the rowState
-            var rowState = blockState[CNodes[cc]];
-
             // if a control is not marked as correct and no selection made
-            if ((!rowState.correct) && (rowState.correction === DC.CORRECTION_NONE)) {
-
-                // no need to look any further
+            if (!DiagnosisDone(blockState[CNodes[cc]])) {
                 disabled = true;
                 break;
             }
-
-            // if, on the other hand, the row state *is* correct, check next
-            if (rowState.correct) { continue; }
-
-            // otherwise, we check depending on the state of correction
-            switch (rowState.correction) {
-                case DC.CORRECTION_SPELLING:
-                    if (rowState.corrspelling === '') {
-                        anymissing = true;
-                    }
-                    break;
-                case DC.CORRECTION_NEWNAME:
-                    if (rowState.corrnewname === '') {
-                        anymissing = true;
-                    }
-                    break;
-                case DC.CORRECTION_NEWSYNS:
-                    if (rowState.corrnewsyns === '') {
-                        anymissing = true;
-                    }
-                    break;
-                case DC.CORRECTION_COMBINE:
-                    if (rowState.corrcombine === 0) {
-                        anymissing = true;
-                    }
-                    break;
-                case DC.CORRECTION_MOVECAT:
-                    if (rowState.corrmoveto === 0) {
-                        anymissing = true;
-                    }
-                    if ((rowState.corrmoveto === DC.BLOCKS_ALL) &&
-                        (rowState.corrmovetox === '')) {
-                        anymissing = true;
-                    }
-                    break;
-                case DC.CORRECTION_NEWMODS:
-                    if (rowState.corrnewmods === '') {
-                        anymissing = true;
-                    }
-                    break;
-                case DC.CORRECTION_OTHER:
-                    if (rowState.corrother === '') {
-                        anymissing = true;
-                    }
-                    break;
-                default:
-                    break;
-            }
-            if (anymissing) {
-                break;
-            }
-        }
-        if (anymissing) {
-            disabled = true;
         }
 
         // if it's not the last block, show next block, otherwise to review
         if (!lastBlock) {
             if (this.props.continue === 'yes') {
                 return (
-                    <button onClick={this.goToNextBlock} ref={this.props.AppObj.refNextBlock}
+                    <button onClick={this.saveBlock} ref={this.props.AppObj.refNextBlock}
                         disabled={disabled}>{DC.BLOCK_NEXT}</button>
                 );
             } else {
                 return (
-                    <button onClick={this.goToNextBlock}>{DC.BLOCK_SAVE}</button>
+                    <button onClick={this.saveBlock}>{DC.BLOCK_SAVE}</button>
                 );
             }
         } else {
             if (this.props.continue === 'yes') {
                 return (
-                    <button onClick={this.goToNextBlock}
+                    <button onClick={this.saveBlock}
                         disabled={disabled}>{DC.BLOCK_REVIEW_ALL}</button>
                 );
             } else {
                 return (
-                    <button onClick={this.goToNextBlock}>{DC.BLOCK_SAVE}</button>
+                    <button onClick={this.saveBlock}>{DC.BLOCK_SAVE}</button>
                 );
             }
         }

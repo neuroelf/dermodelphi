@@ -19,8 +19,9 @@ export default class DelphiNewCategoryConfirm extends Component {
         event.preventDefault();
 
         // extract all settings we may possible touch, and copy them
+        const { AppObj } = { ...this.props};
         const { blocks, newCategory, newEntry, newAs, newBs, nextAId, nextBId,
-            historyCBlockId } = { ...this.props.AppObj.state};
+            historyCBlockId } = { ...AppObj.state};
         const newBlocks = Object.assign({}, blocks);
         const newNewEntry = Object.assign({}, newEntry);
         const newNewAs = [ ...newAs ];
@@ -106,6 +107,8 @@ export default class DelphiNewCategoryConfirm extends Component {
             newAs: newNewAs,
             newBs: newNewBs,
             blocks: newBlocks
+        }, () => {
+            AppObj.saveSessionBlock(AppObj.nullHook, nextCBlockId);
         });
     }
 

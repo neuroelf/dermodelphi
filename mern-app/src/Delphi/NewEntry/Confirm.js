@@ -16,7 +16,8 @@ export default class DelphiNewEntryConfirm extends Component {
     }
     handleClick(event) {
         event.preventDefault();
-        const { blocks, newEntry, newCs } = { ...this.props.AppObj.state};
+        const { AppObj } = { ...this.props};
+        const { blocks, newEntry, newCs } = { ...AppObj.state};
         var newName = newEntry.name;
         var newCBlockId = newEntry.pressed;
         var newCCatId = Math.floor(newCBlockId / 100);
@@ -78,10 +79,13 @@ export default class DelphiNewEntryConfirm extends Component {
             name: '',
             category: 0
         }
-        this.props.AppObj.setState( {
-            currentCBlockId: this.props.AppObj.state.currentCBlockId,
+        AppObj.setState( {
+            currentCBlockId: AppObj.state.currentCBlockId,
             newEntry: newNewEntry,
+            newCs: newNewCs,
             blocks: newBlocks
+        }, () => {
+            AppObj.saveSessionBlock(AppObj.nullHook, newCBlockId);
         });
     }
 
