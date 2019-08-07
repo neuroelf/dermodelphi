@@ -1,18 +1,80 @@
-# dermodelphi
-Code for rendering a dermoscopy Delphi consensus site that collects data
-for a dermoscopy diagnostics taxonomy.
+# dermodelphi (Diagnosis Mapper backend and website)
+This is the repository for the Diagnosis Mapper developed at
+[Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/), MSKCC.
+It includes:
+- the original data source (basis) of the taxonomy presented (in the ```/basis``` folder)
+- the code for the website, using [React](https://reactjs.org/) (in the ```/mern-app``` folder)
+- and the code for the backend, using [mongodb](https://www.mongodb.com/) and [Express](https://expressjs.com/) (in the ```/mern-backend``` folder)
 
-## Collaborators
-- Veronica Rotemberg
-- Konstantinos Liopyris
-- Alon Scope
+All code was developed using [Visual Studio Code](https://code.visualstudio.com/),
+running on [Node.js](https://nodejs.org/) v.10.16.0.
+
+## Authors / Collaborators
+- Jochen Weber (MSKCC), coding
+- Veronica Rotemberg (MSKCC), project supervision
+- Konstantinos Liopyris (MSKCC), project co-coordinator
+- Alon Scope (MSKCC), project co-coordinator
 
 ## Installation steps
+Below is a list of installation steps that were performed to install
+the Diagnosis Mapper on a fresh Azure VM instance, using CentOs 7.5
+
+~~~~
+# update OS
+sudo yum install -y epel-release
+sudo yum update
+
+# prepare for and add Node.js repo, then install Node.js
+sudo yum install -y gcc-c++ make
+sudo curl -sL https://rpm.nodesource.com/setup_10.x | sudo -E bash -
+sudo yum install -y nodejs
+sudo npm install -g nodemon
+
+# install Apache/httpd, git
+sudo yum install -y httpd
+sudo yum install -y git
+
+# install mongodb (requires step from: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/ (1))
+sudo yum install -y mongodb-og
+
+# create repository folder, and clone git repo
+mkdir ~/dermodelphi
+cd ~/dermodelphi
+git clone https://github.com/neuroelf/dermodelphi ./
+
+# install required packages and build React production files
+cd ~/dermodelphi/mern-app
+npm install
+npm run build
+cd ~/dermodelphi/mern-backend
+npm install
+
+# allow/activate localhost proxy (see https://serverfault.com/questions/382076/apache-proxy-not-working-for-a-localhost-port)
+sudo setsebool -P httpd_can_network_connect on
+
+# start mongodb and backend (Express in Node.js) servers
+cd ~/dermodelphi/mern-backend
+mkdir mongodb
+./dm_mongo.sh
+./dm_server.sh
+
+# copy data
+sudo cp -r ~/dermodelphi/mern-app/build/* /var/www/html/
+
+# start Apache (please install httpd.conf and certificates, see below!)
+sudo apachectl start
+~~~~
+
+If you wish to develop
+- download mongodb for your machine, and start it with your preferred settings
 - clone the repository into a folder
 - if you haven't (globally) installed nodemon, use ```npm install -g nodemon``` (make sure that python version 2 is first on the path!)
-- run npm install in both the mern-app and mern-backend folders
+- run ```npm install``` in both the mern-app and mern-backend folders
+- run ```nodemon server.js``` in the mern-backend folder
+- run ```npm start``` (or ```npm run build```) in the mern-app folder
 
-## Summary from initial discussion with collaborators on 7/10/2019
+## History
+### Summary from initial discussion with collaborators on 7/10/2019
 Data capture for the Delphi project:
 
 The taxonomy has four (4) preliminary levels (prior to stage 1 of the Delphi process):
@@ -87,10 +149,3 @@ Views:
   - bottom row:
     - next/resume (resume if jumped there)
     - lock/unlock icon with "click to edit" link that is disabled if controls are unlocked, once next is clicked, perform plausibility checks, if unsuccessful, highlight rows with problems, or if successful, lock this "page" (box) and either move on or return to previous location
-
-## Suggested frameworks
-- D3.js (for tree visualization, might require removing certain information from data/tree structure)
-- webix.js (commercial framework already available at MSKCC)
-- alternatively: react/Vue (?)
-
-### D3.js
