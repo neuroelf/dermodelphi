@@ -51,7 +51,7 @@ export default class DelphiDisplayBlock extends Component {
             </td>
         </tr>
         {BCatCNodeIds.map(CNodeId => 
-            <DelphiDisplayRow key={CNodeId} AppObj={this.props.AppObj}
+            <DelphiDisplayRow key={"node" + (CNodeId).toString()} AppObj={this.props.AppObj}
                 CBlockId={Math.floor(CNodeId / 100)} CNodeId={CNodeId} />)}
     </tbody>
 
