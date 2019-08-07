@@ -1,2 +1,5 @@
 # iPython/Jupyter notebook checkpoints
 .ipynb_checkpoints
+
+# log files
+/logs
