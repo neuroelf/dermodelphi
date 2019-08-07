@@ -234,7 +234,7 @@ export default class App extends Component {
                 const { data } = { ...res};
                 if (('userEmail' in data) &&
                     ('sessionId' in data)) {
-                    if ((data.userEmail === userEmail) &&
+                    if ((data.userEmail.toLowerCase() === userEmail.toLowerCase()) &&
                         (data.sessionId === sessionId)) {
                         AppObj.setState({
                             sessionOk: true,
