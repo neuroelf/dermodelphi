@@ -17,6 +17,9 @@
 # md5 salt (md5salt.md5salt: String) for computing sessionIds from user emails
 /md5salt.js
 
+# server log
+/dm_server.log
+
 # misc
 .DS_Store
 .env.local
