@@ -65,6 +65,16 @@ sudo cp -r ~/dermodelphi/mern-app/build/* /var/www/html/
 sudo apachectl start
 ~~~~
 
+To configure the website with an SSL certificate, the following steps were performed:
+
+~~~~
+# install certbot
+sudo yum install certbot python2-certbot-apache
+sudo certbot --apache
+
+# make sure to check the /etc/httpd/conf/httpd.conf file to ensure SSL rewrite rules are OK!
+~~~~
+
 If you wish to develop
 - download mongodb for your machine, and start it with your preferred settings
 - clone the repository into a folder
