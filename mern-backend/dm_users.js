@@ -15,7 +15,7 @@ function emailToId(email) {
     var emailHash = md5(email.toLowerCase() + md5salt.md5salt);
     var hashPos = 0;
     var hashVal = 1000000;
-    while (hashVal > 999999) {
+    while ((hashVal > 999999) || (hashVal < 100000)) {
         hashVal = parseInt(emailHash.substr(hashPos, 5), 16);
         hashPos++;
     }
