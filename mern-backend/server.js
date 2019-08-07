@@ -160,6 +160,6 @@ app.use('/checkEmail', checkRouter);
 app.use('/session', sessionRouter);
 
 // start server
-app.listen(PORT, function() {
+app.listen(PORT, '127.0.0.1', function() {
     dm_log.dm_log('Server is running on port ' + PORT.toString());
 });
