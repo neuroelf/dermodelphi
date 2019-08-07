@@ -14,7 +14,7 @@ import DelphiAllBlocks from './Delphi/AllBlocks';
 
 // server configuration
 // global.DM_BACKEND_URL = 'http://localhost:4000/';
-global.DM_BACKEND_URL = 'http://delphi.diagnosismapper.com/';
+global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
