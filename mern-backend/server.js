@@ -127,6 +127,7 @@ sessionRouter.route('/:sessionId/block/:blockId/save').post(function(req, res) {
     let blockId = parseInt(req.params.blockId);
     let block = req.body.block;
     dm_log.dm_log('Trying to update block ' + blockId.toString() + ' for session ID ' + sessionId);
+    dm_log.dm_log(' - content: ' + JSON.stringify(req.body));
     res.setHeader('Content-Type', 'application/json');
     DMSessionBlock.updateOne({ sessionId: sessionId, blockId: blockId }, { $set: req.body})
     .then(dbres => {
