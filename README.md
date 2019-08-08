@@ -70,6 +70,7 @@ mkdir mongodb
 sudo cp -r ~/dermodelphi/mern-app/build/* /var/www/html/
 
 # start Apache (please install httpd.conf and certificates, see below!)
+sudo systemctl enable httpd
 sudo apachectl start
 ~~~~
 
