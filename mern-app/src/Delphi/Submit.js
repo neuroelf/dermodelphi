@@ -16,18 +16,15 @@ export default class DelphiSubmit extends Component {
     
     handleClick(event) {
         event.preventDefault();
-        const { user, sessionId, sessionDate,
-            newAs, newBs, newCs, blocks  } = { ...this.props.AppObj.state };
-        const submitObj = {
-            user: user,
-            sessionId: sessionId,
-            sessionDate: sessionDate,
-            newAs: newAs,
-            newBs: newBs,
-            newCs: newCs,
-            blocks: blocks
-        };
-        console.log(JSON.stringify(submitObj));
+        const { AppObj  } = { ...this.props };
+        for (var cc = 0; cc < global.DM_LEVELCBLOCKIDS.length; cc++) {
+            if (cc === 0) {
+                AppObj.saveSessionBlock(this.nullHook, global.DM_LEVELCBLOCKIDS[cc]);
+            } else {
+                AppObj.saveSessionBlock(null, global.DM_LEVELCBLOCKIDS[cc]);
+            }
+        }
+        window.alert('All data saved.');
     }
 
     // this component contains the (rendering) logic as to whether

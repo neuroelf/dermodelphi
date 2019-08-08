@@ -119,6 +119,5 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
             {DC.TXT_TO_BE_CORRECTED_BY}</font>
             {cnodeState.corrother}</b></i></small></span>
     }
-    console.log(nodeName);
     return nodeName;
 }
