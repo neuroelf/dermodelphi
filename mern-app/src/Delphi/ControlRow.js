@@ -26,7 +26,7 @@ export default class DelphiControlRow extends Component {
 <tr className="delphi-form-row">
     <td width="24"></td>
     <td className="delphi-form-name-cell">
-        {DiagnosisName(this.props.CNodeId, this.props.CBlockId, this.props.AppObj.state)}
+        {DiagnosisName(this.props.CNodeId, this.props.CBlockId, this.props.AppObj)}
     </td>
     <td className="delphi-form-control-centered-cell">
         <DelphiRowIsCorrect AppObj={this.props.AppObj} 

@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import DelphiAllBlocks from './AllBlocks';
-import DelphiSelectCategory from './SelectCategory';
-import DelphiControlRow from './ControlRow';
-import DelphiNewEntryRow from './NewEntry/Row';
-import DelphiMarkBlockCorrect from './MarkBlockCorrect';
+import React, { Component } from 'react'
+import DelphiAllBlocks from './AllBlocks'
+import DelphiLinkSetState from './LinkSetState'
+import DelphiSelectCategory from './SelectCategory'
+import DelphiControlRow from './ControlRow'
+import DelphiNewEntryRow from './NewEntry/Row'
+import DelphiMarkBlockCorrect from './MarkBlockCorrect'
 import DelphiUnlockBlock from './UnlockBlock'
-import DelphiNextBlock from './NextBlock';
-import DelphiGoBack from './GoBack';
-import * as DC from './Constants';
+import DelphiNextBlock from './NextBlock'
+import DelphiGoBack from './GoBack'
+import * as DC from './Constants'
 
 const CurrentCategoryLabel = props => (
     <p>{DC.TABLE_CURRENT_CATEGORY} {global.DM_LEVELCBLOCKID2NAMES[props.CBlockId]}</p>
@@ -54,8 +55,13 @@ export default class DelphiBlock extends Component {
     <tbody>
         <tr className="delphi-control-bar">
             <td></td>
-            <td colSpan="2">
+            <td>
                 <CurrentCategoryLabel CBlockId={CBlockId} />
+            </td>
+            <td align="center">
+                <font style={{fontSize: "12px"}}><DelphiLinkSetState AppObj={this.props.AppObj}
+                    stateProp="currentCBlockId" stateValue={DC.BLOCKS_ADDCAT}
+                    linkText={DC.TABLE_CATEGORY_ADD} /></font>
             </td>
             <td className="delphi-controls-paragraph" align="right">
                 <DelphiSelectCategory AppObj={this.props.AppObj} />

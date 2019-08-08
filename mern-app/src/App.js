@@ -114,6 +114,7 @@ export default class App extends Component {
             sessionId: '',
             sessionOk: false,
             sessionDate: Date.now(),
+            treeHeight: 0,
             treeVisible: false,
             currentCBlockId: DC.BLOCKS_WELCOME,
             historyCBlockId: [],
@@ -441,22 +442,21 @@ export default class App extends Component {
         return (
             <GlobalHotKeys keyMap={global.DM_HOTKEYMAP} handlers={global.DM_HOTKEYHANDLERS}><div>
                 <DelphiTop AppObj={this} />
-                <div id="delphiContent" style={{
-                    display: (!!this.state.treeVisible ? 'none': 'initial')
-                }}>{
-                this.state.currentCBlockId === DC.BLOCKS_WELCOME ?
-                    <DelphiWelcome AppObj={this} />
-                : this.state.currentCBlockId === DC.BLOCKS_INSTRUCT ?
-                    <DelphiInstructions AppObj={this} />
-                : this.state.currentCBlockId === DC.BLOCKS_ADDCAT ?
-                    <div><DelphiNewCategoryPage AppObj={this} /></div>
-                : this.state.currentCBlockId === DC.BLOCKS_ALL ?
-                    <DelphiAllBlocks AppObj={this} />
-                : this.state.currentCBlockId in global.DM_LEVELCBLOCKS ?
-                    <DelphiBlock AppObj={this} />
-                :
-                    <DelphiNotFound AppObj={this} ErrTxt={this.state.currentCBlockId} />
-                }</div>
+                <div style={{ display: (!!this.state.treeVisible ? 'none': 'initial') }}>
+                    {this.state.currentCBlockId === DC.BLOCKS_WELCOME ?
+                        <DelphiWelcome AppObj={this} />
+                    : this.state.currentCBlockId === DC.BLOCKS_INSTRUCT ?
+                        <DelphiInstructions AppObj={this} />
+                    : this.state.currentCBlockId === DC.BLOCKS_ADDCAT ?
+                        <div><DelphiNewCategoryPage AppObj={this} /></div>
+                    : this.state.currentCBlockId === DC.BLOCKS_ALL ?
+                        <DelphiAllBlocks AppObj={this} />
+                    : this.state.currentCBlockId in global.DM_LEVELCBLOCKS ?
+                        <DelphiBlock AppObj={this} />
+                    :
+                        <DelphiNotFound AppObj={this} ErrTxt={this.state.currentCBlockId} />
+                    }
+                </div>
             </div></GlobalHotKeys>
         );
     }

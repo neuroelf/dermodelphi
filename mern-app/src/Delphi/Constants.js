@@ -1,6 +1,7 @@
 // main texts
 export const TITLE_TXT = 'Diagnosis Mapper'
-export const TITLE_TXT_FULL = 'Dermatology Diagnosis Mapper - Consensus Survey'
+export const TITLE_TXT_FULL = 'Dermatology Diagnosis Mapper'
+export const TITLE_TXT_SUBTITLE = 'Consensus Survey'
 
 // hot-keys
 export const HK_MARK_BLOCK_AS_CORRECT = 'alt+x'
@@ -14,7 +15,7 @@ export const IMG_LOCK_UNLOCKED = '/img/unlocked.png'
 export const IMG_LOCK_UNLOCKED_ALT = 'Block unlocked'
 export const IMG_LOGO = '/img/dm_logo.png'
 export const IMG_LOGO_ALT = TITLE_TXT + ' logo'
-export const IMG_LOGO_SIZE = 60
+export const IMG_LOGO_SIZE = 64
 
 // user/session ID
 export const SESS_BEGIN = 'Begin or resume session'
@@ -44,9 +45,10 @@ export const CATEGORY_FIRST = 101
 
 // table texts
 export const TABLE_CATEGORY = 'Category: '
+export const TABLE_CATEGORY_ADD = 'add category'
 export const TABLE_CORRECT = 'correct'
 export const TABLE_CORRECTED = 'corrected'
-export const TABLE_CORRECT_NOT_YET = 'to be checked'
+export const TABLE_CORRECT_NOT_YET = 'pending'
 export const TABLE_CURRENT_CATEGORY = 'Current Category: '
 export const TABLE_HEADER_DIAGNOSIS = 'Diagnosis (name)'
 export const TABLE_HEADER_CORRECT = 'Correct?'
@@ -119,7 +121,7 @@ export const NEWCATEGORY_ERROR_ANAME = 'Duplicate or missing new super-category 
 export const NEWCATEGORY_ERROR_BNAME = 'Duplicate or missing new category name!'
 
 // additional texts
-export const TXT_TOGGLE_TREE_OFF = 'Click here to hide the taxonomy tree'
-export const TXT_TOGGLE_TREE_ON = 'Click here to show the taxonomy tree'
+export const TXT_TOGGLE_TREE_OFF = 'Click here to hide the suggested taxonomy tree'
+export const TXT_TOGGLE_TREE_ON = 'Click here to show the suggested taxonomy tree'
 export const TXT_NOT_YET_IMPLEMENTED = 'Feature not yet implemented...'
 export const TXT_SUBMIT = 'Submit'

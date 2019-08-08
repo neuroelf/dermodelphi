@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import DelphiTree from './Tree';
+import { DelphiTree } from './Tree';
 import * as d3 from 'd3';
-import { BLOCKS_ALL, TXT_TOGGLE_TREE_OFF, TXT_TOGGLE_TREE_ON } from './Constants';
+import { TXT_TOGGLE_TREE_OFF, TXT_TOGGLE_TREE_ON } from './Constants';
 const cssfont = require('../css/bpreplay-webfont.woff');
 
 export default class DelphiTreeContainer extends Component {
@@ -50,11 +50,11 @@ export default class DelphiTreeContainer extends Component {
     stroke-width: 2px;
 }
 .node text {
-    stroke-width: 4px;
+    stroke-width: 2px;
 }
 .link {
     fill: none;
-    stroke: #aaa;
+    stroke: #ddd;
     stroke-width: 2px;
 }
     </style>
@@ -68,17 +68,16 @@ export default class DelphiTreeContainer extends Component {
     render() {
         const { AppObj } = { ...this.props};
         return (
-<div className="tree-container">
+<div>
     <div className="delphi-general-paragraph-small">
-        <button disabled={AppObj.state.currentCBlockId < BLOCKS_ALL}
-            onClick={this.showOrHideTree}>{
-                AppObj.state.treeVisible ? TXT_TOGGLE_TREE_OFF : TXT_TOGGLE_TREE_ON
+        <button onClick={this.showOrHideTree}>{
+            AppObj.state.treeVisible ? TXT_TOGGLE_TREE_OFF : TXT_TOGGLE_TREE_ON
             }</button>
     </div>
     <div><iframe frameBorder="0" width="100%" id="treeFrame" title="DM Tree"
         style={(!!AppObj.state.treeVisible ? 
-            {overflow: "scroll", height: "100%", width: "100%", position: "absolute"} :
-            {overflow: "hidden", height: "0px", width: "100%", position: "absolute"})}>
+            {overflow: "scroll", height: AppObj.state.treeHeight, width: "98%", position: "absolute"} :
+            {overflow: "hidden", height: "0px", width: "98%", position: "absolute"})}>
     </iframe></div>
 </div>
         )

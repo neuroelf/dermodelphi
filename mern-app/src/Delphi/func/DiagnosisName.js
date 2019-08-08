@@ -2,9 +2,9 @@ import React from 'react'
 import * as DC from '../Constants'
 
 // this function performs a series of mangling steps
-export default function DiagnosisName(CNodeId, CBlockId, appState) {
+export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
     const cnode = global.DM_LEVELCNODES[CNodeId];
-    const cnodeState = appState.blocks[CBlockId][CNodeId];
+    const cnodeState = AppObj.state.blocks[CBlockId][CNodeId];
     var nodeName = cnode.name;
     const { modifiers, synonyms } = { ...cnode };
     const newModifiers = modifiers.slice();
@@ -119,5 +119,6 @@ export default function DiagnosisName(CNodeId, CBlockId, appState) {
             {DC.TXT_TO_BE_CORRECTED_BY}</font>
             {cnodeState.corrother}</b></i></small></span>
     }
+    console.log(nodeName);
     return nodeName;
 }
