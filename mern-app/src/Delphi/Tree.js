@@ -1,34 +1,97 @@
 import React, { Component } from 'react';
-//import * as d3 from 'd3';
+import * as d3 from 'd3';
+import { BLOCKS_ALL, TXT_TOGGLE_TREE_ON } from './Constants'
+
+function tree(data, width) {
+    const root = d3.hierarchy(data);
+    root.dx = 10;
+    root.dy = width / (root.height + 1);
+    return d3.tree().nodeSize([root.dx, root.dy])(root);
+}
 
 class DelphiTree extends Component {
     constructor(props) {
         super(props);
+        this.node = null;
         this.state = {
-            collapsed: false
-        }
+            g: null,
+            node: null,
+            link: null,
+        };
+        this.drawTree = this.drawTree.bind(this);
+        this.showOrHideTree = this.showOrHideTree.bind(this);
+    }
+    
+    showOrHideTree(event) {
+        event.preventDefault();
+        const { AppObj } = { ...this.props};
+        var { treeVisible } = { ...AppObj.state};
+        treeVisible = !treeVisible;
+        AppObj.setState({ treeVisible: treeVisible });
+        var treeVisibility = (treeVisible ? 'visible' : 'hidden');
+        d3.select("#treeRoot").style("visibility", treeVisibility);
     }
     
     drawTree() {
-        /*
-        var data = global.DM_TREE;
-        var margin = {top: 20, right: 120, bottom: 20, left: 120},
-            width = 960 - margin.right - margin.left,
-            height = 500 - margin.top - margin.bottom;
-	
-        var i = 0, duration = 750, root;
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        const root = tree(global.DM_TREE, width);
+        let x0 = Infinity;
+        let x1 = -x0;
+        root.each(d => {
+          if (d.x > x1) x1 = d.x;
+          if (d.x < x0) x0 = d.x;
+        });
+        var margin = {top: 20, right: 120, bottom: 20, left: 120};
+        const svg = d3.select('#treeContainer').append('svg')
+            .attr("viewBox", [0, 0, width, x1 - x0 + root.dx * 2]);
+        const g = svg.append("g")
+            .attr("id", "treeRoot")
+            .attr("font-family", "sans-serif")
+            .attr("font-size", 10)
+            .attr("transform", `translate(${root.dy / 3},${root.dx - x0})`);
+        const link = g.append("g")
+            .attr("fill", "none")
+            .attr("stroke", "#555")
+            .attr("stroke-opacity", 0.4)
+            .attr("stroke-width", 1.5)
+            .selectAll("path")
+            .data(root.links())
+            .join("path")
+            .attr("d", d3.linkHorizontal()
+                .x(d => d.y)
+                .y(d => d.x));
+        const node = g.append("g")
+            .attr("stroke-linejoin", "round")
+            .attr("stroke-width", 3)
+            .selectAll("g")
+            .data(root.descendants())
+            .join("g")
+            .attr("transform", d => `translate(${d.y},${d.x})`);
+          
+        node.append("circle")
+            .attr("fill", d => d.children ? "#555" : "#999")
+            .attr("r", 2.5);
+      
+        node.append("text")
+            .attr("dy", "0.31em")
+            .attr("x", d => d.children ? -6 : 6)
+            .attr("text-anchor", d => d.children ? "end" : "start")
+            .text(d => d.data.name)
+            .clone(true).lower()
+            .attr("stroke", "white");
+        
+        var treeVisibility = (this.props.AppObj.state.treeVisible ? 'visible' : 'hidden');
+        g.style("visibility", treeVisibility);
+        this.setState({
+            g: g,
+            link: link,
+            node: node
+        });
 
-        var tree = d3.layout.tree()
-            .size([height, width]);
-
+              /*
         var diagonal = d3.svg.diagonal()
             .projection(function(d) { return [d.y, d.x]; });
-
-        var svg = d3.select("body").append("svg")
-            .attr("width", width + margin.right + margin.left)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         root = data;
         root.x0 = height / 2;
@@ -192,17 +255,24 @@ node.append("text")
 
 return svg.node();
 */
-        return (<div>tree</div>);
+        return;
     }
     
     componentDidMount() {
         this.drawTree();
     }
 
-render() {
+    render() {
+        const { AppObj } = { ...this.props};
         return (
-<div className="tree-container" id="treeContainer" height={this.state.treeVisibleHeight}>
-    
+<div className="tree-container"
+    style={{height: (!!AppObj.state.treeVisible ? this.props.treeHeight : "42") + "px"}}>
+        <p className="delphi-general-paragraph-small">
+            <button disabled={AppObj.state.currentCBlockId < BLOCKS_ALL}
+                onClick={this.showOrHideTree}>{TXT_TOGGLE_TREE_ON}</button>
+        </p>
+        <div className="tree-container" id="treeContainer">
+        </div>
 </div>
         )
     }

@@ -2,21 +2,13 @@ import React, { Component } from 'react';
 import DelphiTree from './Tree';
 import DiagnosisDone from './func/DiagnosisDone';
 import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_SIZE, TITLE_TXT_FULL,
-    TXT_TOGGLE_TREE_ON, SESS_INFO, SESS_PROGRESS } from './Constants'
+    SESS_INFO, SESS_PROGRESS } from './Constants'
 
 export default class DelphiTop extends Component {
     constructor(props) {
         super(props);
-        
-        this.state = {
-            treeVisible: false,
-            treeVisibleHeight: 0
-        };
-        this.showOrHideTree = this.showOrHideTree.bind(this);
-    }
-    
-    showOrHideTree() {
-        window.alert('pressed');
+
+        this.state = { };
     }
     
     render() {
@@ -64,12 +56,7 @@ export default class DelphiTop extends Component {
         </table>
     </div>
 
-    <div className="delphi-tree-container" id="treeInfoContainer" height="64">
-        <p className="delphi-general-paragraph-small">
-            <button onClick={this.showOrHideTree}>{TXT_TOGGLE_TREE_ON}</button>
-        </p>
-    </div>
-    <DelphiTree />
+    <DelphiTree AppObj={this.props.AppObj} treeHeight={"4100"} />
 </div>
 
         );

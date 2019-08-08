@@ -6,11 +6,11 @@ import DelphiNotFound from './Delphi/NotFound'
 import DelphiTop from './Delphi/Top';
 import DelphiWelcome from './Delphi/Welcome';
 import DelphiInstructions from './Delphi/Instructions'
-import DelphiBlock from './Delphi/Block';
 import DelphiNewCategoryPage from './Delphi/NewCategory/Page'
+import DelphiAllBlocks from './Delphi/AllBlocks';
+import DelphiBlock from './Delphi/Block';
 import './App.css';
 import * as DC from './Delphi/Constants'
-import DelphiAllBlocks from './Delphi/AllBlocks';
 
 // server configuration
 // global.DM_BACKEND_URL = 'http://localhost:4000/';
@@ -114,6 +114,7 @@ export default class App extends Component {
             sessionId: '',
             sessionOk: false,
             sessionDate: Date.now(),
+            treeVisible: false,
             currentCBlockId: DC.BLOCKS_WELCOME,
             historyCBlockId: [],
             newCategory: {
