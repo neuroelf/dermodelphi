@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import DelphiTree from './Tree';
+import DelphiTreeContainer from './TreeContainer';
 import DiagnosisDone from './func/DiagnosisDone';
 import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_SIZE, TITLE_TXT_FULL,
     SESS_INFO, SESS_PROGRESS } from './Constants'
@@ -56,7 +56,7 @@ export default class DelphiTop extends Component {
         </table>
     </div>
 
-    <DelphiTree AppObj={this.props.AppObj} treeHeight={"4100"} />
+    <DelphiTreeContainer AppObj={this.props.AppObj} />
 </div>
 
         );

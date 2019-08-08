@@ -441,7 +441,9 @@ export default class App extends Component {
         return (
             <GlobalHotKeys keyMap={global.DM_HOTKEYMAP} handlers={global.DM_HOTKEYHANDLERS}><div>
                 <DelphiTop AppObj={this} />
-                {
+                <div id="delphiContent" style={{
+                    display: (!!this.state.treeVisible ? 'none': 'initial')
+                }}>{
                 this.state.currentCBlockId === DC.BLOCKS_WELCOME ?
                     <DelphiWelcome AppObj={this} />
                 : this.state.currentCBlockId === DC.BLOCKS_INSTRUCT ?
@@ -454,7 +456,7 @@ export default class App extends Component {
                     <DelphiBlock AppObj={this} />
                 :
                     <DelphiNotFound AppObj={this} ErrTxt={this.state.currentCBlockId} />
-                }
+                }</div>
             </div></GlobalHotKeys>
         );
     }

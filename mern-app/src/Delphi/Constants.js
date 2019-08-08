@@ -119,6 +119,7 @@ export const NEWCATEGORY_ERROR_ANAME = 'Duplicate or missing new super-category 
 export const NEWCATEGORY_ERROR_BNAME = 'Duplicate or missing new category name!'
 
 // additional texts
-export const TXT_TOGGLE_TREE_ON = 'Please click here to show the full taxonomy tree.'
+export const TXT_TOGGLE_TREE_OFF = 'Click here to hide the taxonomy tree'
+export const TXT_TOGGLE_TREE_ON = 'Click here to show the taxonomy tree'
 export const TXT_NOT_YET_IMPLEMENTED = 'Feature not yet implemented...'
 export const TXT_SUBMIT = 'Submit'
