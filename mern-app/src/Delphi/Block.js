@@ -5,6 +5,7 @@ import DelphiSelectCategory from './SelectCategory'
 import DelphiControlRow from './ControlRow'
 import DelphiNewEntryRow from './NewEntry/Row'
 import DelphiMarkBlockCorrect from './MarkBlockCorrect'
+import DelphiSearch from './Search'
 import DelphiUnlockBlock from './UnlockBlock'
 import DelphiNextBlock from './NextBlock'
 import DelphiGoBack from './GoBack'
@@ -35,20 +36,21 @@ export default class DelphiBlock extends Component {
 
     render() {
 
-        var CBlockId = this.props.AppObj.state.currentCBlockId;
-        var blockState = this.props.AppObj.state.blocks[CBlockId];
-        const LockOpenImage = <img src={process.env.PUBLIC_URL + DC.IMG_LOCK_UNLOCKED}
-            width={DC.IMG_LOCK_SIZE} height={DC.IMG_LOCK_SIZE} alt={DC.IMG_LOCK_UNLOCKED_ALT} />;
-        const LockClosedImage = <img src={process.env.PUBLIC_URL + DC.IMG_LOCK_LOCKED}
-            width={DC.IMG_LOCK_SIZE} height={DC.IMG_LOCK_SIZE} alt={DC.IMG_LOCK_LOCKED_ALT} />;
-
         // special case for all blocks
+        var CBlockId = this.props.AppObj.state.currentCBlockId;
         if (CBlockId === DC.BLOCKS_ALL) {
             return (
                 <DelphiAllBlocks AppObj={this.props.AppObj} />
             );
         }
 
+        // needed elements
+        var blockState = this.props.AppObj.state.blocks[CBlockId];
+        const LockOpenImage = <img src={process.env.PUBLIC_URL + DC.IMG_LOCK_UNLOCKED}
+            width={DC.IMG_LOCK_SIZE} height={DC.IMG_LOCK_SIZE} alt={DC.IMG_LOCK_UNLOCKED_ALT} />;
+        const LockClosedImage = <img src={process.env.PUBLIC_URL + DC.IMG_LOCK_LOCKED}
+            width={DC.IMG_LOCK_SIZE} height={DC.IMG_LOCK_SIZE} alt={DC.IMG_LOCK_LOCKED_ALT} />;
+        
         return (
 
 <table className="delphi-form-table" width="100%">
@@ -83,12 +85,16 @@ export default class DelphiBlock extends Component {
         <DelphiNewEntryRow AppObj={this.props.AppObj} />
 
         <tr className="delphi-form-header-row">
-            <td className="delphi-form-control-cell" colSpan="3">
-                <p className="delphi-controls-paragraph">
+            <td className="delphi-form-control-top-cell" colSpan="3"><table><tbody><tr>
+                <td className="delphi-form-control-cell"><br />
                     <DelphiMarkBlockCorrect AppObj={this.props.AppObj}
                         CBlockId={CBlockId} />
-                </p>
-            </td>
+                </td>
+                <td className="delphi-form-control-top-cell">
+                    <DelphiSearch AppObj={this.props.AppObj}
+                        CBlockId={CBlockId} />
+                </td>
+            </tr></tbody></table></td>
             <td className="delphi-form-control-cell" align="right"><table><tbody><tr>
                 <td className="delphi-form-control-cell">
                     {blockState.locked ? LockClosedImage : LockOpenImage}

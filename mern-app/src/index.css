@@ -150,6 +150,10 @@ input[type=submit] {
   vertical-align: middle;
   padding: 2px 10px 2px 10px;
 }
+.delphi-form-control-top-cell {
+  vertical-align: top!important;
+  padding: 2px 10px 2px 10px;
+}
 .delphi-form-control-centered-cell {
   padding: 2px 10px 2px 10px;
   text-align: center;
@@ -176,4 +180,53 @@ input[type=submit] {
 .delphi-form-nopadd-cell {
   border-spacing: 0;
   padding: 0px;
+}
+
+/* Delphi search field */
+.delphi-search-container {
+  margin: 12px auto;
+	width: 100%;
+	max-width: 400px;
+	box-sizing: border-box;
+  outline: none;
+  vertical-align: top;
+}
+.delphi-search-input {
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  outline: none;
+  min-width: 256px;
+}
+.delphi-search-icon {
+  position: absolute;
+  top: -10px;
+  font-size: 24px;
+  color: #555;
+  right: 18px;
+}
+.delphi-results-container {
+  font: normal 12px bpreplayregular, sans-serif;
+  position: fixed;
+  overflow : hidden;
+  background-size: cover;
+  background-color: #bcbcbc;
+  border: 1px solid #888888;
+  border-radius: 4px;
+  padding: 6px;
+  min-width: 240px;
+}
+.delphi-search-result-item {
+  background: none;
+  color: inherit;
+  border: none; 
+  padding: 1px;
+  font: inherit;
+  border-radius: 0px;
+  border-bottom: 1px solid #737373; 
+  cursor: pointer;
+  color: #373737;
+}
+.delphi-search-result-none {
+  color: #888888;
 }

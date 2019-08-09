@@ -27,9 +27,16 @@ export default class DelphiLinkSetState extends Component {
     }
 
     render() {
-        return (
-            <button className="delphi-button-as-link"
-                onClick={this.handleClick}> {this.props.linkText}</button>
-        );
+        if (!this.props.className) {
+            return (
+                <button className="delphi-button-as-link"
+                    onClick={this.handleClick}> {this.props.linkText}</button>
+            );
+        } else {
+            return (
+                <button className={this.props.className}
+                    onClick={this.handleClick}> {this.props.linkText}</button>
+            );
+        }
     }
 }
