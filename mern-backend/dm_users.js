@@ -49,8 +49,8 @@ async function setupUsers(DMSessionId, DMSession) {
                 newAs: [],
                 newBs: [],
                 newCs: [],
-                nextAId: 1,
-                nextBId: []
+                nextAId: 3,
+                nextBId: [1, 23, 20, 1]
             });
             newUserData.save(function(err) {
                 if (err) console.log(err);

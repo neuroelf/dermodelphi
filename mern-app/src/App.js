@@ -131,8 +131,8 @@ export default class App extends Component {
             newAs: [],
             newBs: [],
             newCs: [],
-            nextAId: 0,
-            nextBId: [1],
+            nextAId: 3,
+            nextBId: [1, 23, 20, 1],
             blocks: {}
         };
 
