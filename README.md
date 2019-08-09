@@ -7,7 +7,7 @@ It includes:
 - and the code for the backend, using [mongodb](https://www.mongodb.com/) and [Express](https://expressjs.com/) (in the ```/mern-backend``` folder)
 
 All code was developed using [Visual Studio Code](https://code.visualstudio.com/),
-running on [Node.js](https://nodejs.org/) v.10.16.0.
+and runs on [Node.js](https://nodejs.org/) v.10.16.0.
 
 ## Authors / Collaborators
 - Jochen Weber (MSKCC), coding
@@ -42,7 +42,8 @@ sudo npm install -g nodemon
 sudo yum install -y httpd
 sudo yum install -y git
 
-# install mongodb (requires step from: https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/ (1))
+# install mongodb (requires step from:
+# https://docs.mongodb.com/manual/tutorial/install-mongodb-on-red-hat/ (1))
 sudo yum install -y mongodb-og
 
 # create repository folder, and clone git repo
@@ -57,7 +58,11 @@ npm run build
 cd ~/dermodelphi/mern-backend
 npm install
 
-# allow/activate localhost proxy (see https://serverfault.com/questions/382076/apache-proxy-not-working-for-a-localhost-port)
+# create the necessary md5salt.js file, please use your own SECRET!
+echo "module.exports.md5salt = '<YOUR_SECRET_HERE>';" >> md5salt.js
+
+# allow/activate localhost proxy (see
+# https://serverfault.com/questions/382076/apache-proxy-not-working-for-a-localhost-port)
 sudo setsebool -P httpd_can_network_connect on
 
 # start mongodb and backend (Express in Node.js) servers
