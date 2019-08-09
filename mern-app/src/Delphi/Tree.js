@@ -6,6 +6,7 @@ import * as d3 from 'd3';
 // https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
 
 const transDuration = 750;
+const circlesizes = [13, 8, 5, 3];
 const fontSize = [22, 18, 12, 10];
 const indentation = [20, 120, 512, 576];
 const margin = {
@@ -77,9 +78,9 @@ function update(source) {
     var nodeEnter = node.enter().append('g')
         .attr('class', 'node')
         .attr("transform", function(d) {
-        return "translate(" + source.y0 + "," + source.x0 + ")";
-    })
-    .on('click', click);
+            return "translate(" + source.y0 + "," + source.x0 + ")";
+        })
+        .on('click', click);
 
     // Add Circle for the nodes
     nodeEnter.append('circle')
@@ -100,12 +101,15 @@ function update(source) {
         .attr("text-anchor", function(d) {
             return d.children || d._children ? "end" : "start";
         })
-        .text(d => d.data.name) //(d.depth < 3 ? d.data.name :
-            //DiagnosisName(d.data.id, Math.floor(d.data.id / 100), AppObj)
-            //))
+        .text(d => d.data.name)
         .clone(true).lower()
         .attr("stroke", "white");
                 
+    // entrance transition
+    nodeEnter.transition()
+        .duration(transDuration)
+        .style('fill-opacity', 1);
+
     // UPDATE
     var nodeUpdate = nodeEnter.merge(node);
 
@@ -114,16 +118,16 @@ function update(source) {
         .duration(transDuration)
         .attr("transform", function(d) { 
             return "translate(" + d.y + "," + d.x + ")";
-        });
+        })
+        .style('fill-opacity', 1);
 
     // Update the node attributes and style
     nodeUpdate.select('circle.node')
-        .attr('r', 6)
+        .attr('r', d => circlesizes[d.depth])
         .style("fill", function(d) {
             return d._children ? "lightsteelblue" : "#fff";
         })
         .attr('cursor', 'pointer');
-
 
     // Remove any exiting nodes
     var nodeExit = node.exit().transition()
@@ -131,6 +135,8 @@ function update(source) {
         .attr("transform", function(d) {
             return "translate(" + source.y + "," + source.x + ")";
         })
+        .style('fill-opacity', 1e-6)
+        .style('stroke-opacity', 1e-6)
         .remove();
 
     // On exit reduce the node circles size to 0
