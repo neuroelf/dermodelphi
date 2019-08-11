@@ -13,8 +13,8 @@ import './App.css';
 import * as DC from './Delphi/Constants'
 
 // server configuration
-// global.DM_BACKEND_URL = 'http://localhost:4000/';
-global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
+global.DM_BACKEND_URL = 'http://localhost:4000/';
+// global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
@@ -97,6 +97,7 @@ function parseDMJSONFile() {
                 blnodes.push(cnode.id);
             }
         }
+        
         // also for last block (at the end of the loops)
         global.DM_LEVELCBLOCKS[cblock] = blnodes;
     }
@@ -114,8 +115,15 @@ export default class App extends Component {
             sessionId: '',
             sessionOk: false,
             sessionDate: Date.now(),
+            tokenId: '',
+            tokenValid: false,
+            tokenVisible: false,
+            adminSessions: [],
+            adminBlocks: {},
             treeHeight: 0,
             treeVisible: false,
+            query: '',
+            results: [],
             currentCBlockId: DC.BLOCKS_WELCOME,
             historyCBlockId: [],
             newCategory: {
@@ -195,6 +203,8 @@ export default class App extends Component {
         this.nextBlockClick = this.nextBlockClick.bind(this);
         this.nullHook = this.nullHook.bind(this);
         this.checkSession = this.checkSession.bind(this);
+        this.checkToken = this.checkToken.bind(this);
+        this.adminLoadBlocks = this.adminLoadBlocks.bind(this);
         this.loadSession = this.loadSession.bind(this);
         this.saveSession = this.saveSession.bind(this);
         this.saveSessionBlock = this.saveSessionBlock.bind(this);
@@ -225,7 +235,7 @@ export default class App extends Component {
         return;
     }
 
-    // hooks for session checking
+    // hook for session checking
     checkSession(event) {
         //event.preventDefault();
         const { userEmail, sessionId } = { ...this.state};
@@ -254,6 +264,74 @@ export default class App extends Component {
             } else {
                 AppObj.setState({ sessionId: '' });
                 window.alert(DC.SESS_ERROR_UNEXPECTED);
+            }})
+        .catch(function (err) {
+            window.alert('Error:' + JSON.stringify(err));
+        });
+    }
+
+    // hook for token checking
+    checkToken(event) {
+        //event.preventDefault();
+        const { sessionId, tokenId } = { ...this.state};
+        if (tokenId.length !== 8) {
+            return;
+        }
+        var AppObj = this;
+        axios.get(global.DM_BACKEND_URL + 
+            'admin/' + sessionId + '/token/' + tokenId + '/sessions')
+        .then(function (res) {
+            if ('data' in res) {
+                const { data } = { ...res};
+                if ('error' in data) {
+                    window.alert(data.error);
+                    return;
+                }
+                if (data.length > 1) {
+                    AppObj.setState({
+                        adminSessions: data,
+                        tokenValid: true
+                    }, () => {AppObj.adminLoadBlocks()});
+                } else {
+                    AppObj.setState({ adminSessions: [], adminBlocks: {} });
+                    window.alert(DC.TOKEN_ERROR_UNEXPECTED);
+                    }
+            } else {
+                AppObj.setState({ adminSessions: [], adminBlocks: {} });
+                window.alert(DC.TOKEN_ERROR_UNEXPECTED);
+            }})
+        .catch(function (err) {
+            window.alert('Error:' + JSON.stringify(err));
+        });
+    }
+
+    // hook for loading/resuming a session
+    adminLoadBlocks(blockId) {
+        const { sessionId, tokenId, tokenValid, currentCBlockId } = { ...this.state};
+        if (!tokenValid || (tokenId.length !== 8)) {
+            return;
+        }
+        if (blockId === undefined || blockId === null) {
+            blockId = currentCBlockId;
+        }
+        const AppObj = this;
+        axios.get(global.DM_BACKEND_URL + 
+            'admin/' + sessionId + '/token/' + tokenId + '/blocks/' + blockId)
+        .then(function (res) {
+            if ('data' in res) {
+                const { data } = { ...res};
+                if (data === null) {
+                    window.alert(DC.SESS_ERROR_UNEXPECTED);
+                    return;
+                }
+                if (data.length === 0) {
+                    return;
+                }
+                var newAdminBlocks = AppObj.state.adminBlocks;
+                newAdminBlocks[blockId] = data;
+                AppObj.setState({ adminBlocks: newAdminBlocks });
+            } else {
+                window.alert(DC.TOKEN_ERROR_UNEXPECTED);
             }})
         .catch(function (err) {
             window.alert('Error:' + JSON.stringify(err));

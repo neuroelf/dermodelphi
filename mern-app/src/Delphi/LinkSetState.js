@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 
+// helper function
+function isDict(v) {
+    return !!v &&
+        typeof v === 'object' &&
+        v !== null &&
+        !(v instanceof Array) && !(v instanceof Date);
+}
+
 export default class DelphiLinkSetState extends Component {
     constructor(props) {
         super(props);
@@ -15,15 +23,30 @@ export default class DelphiLinkSetState extends Component {
     
     handleClick(event) {
         event.preventDefault();
-        const { historyCBlockId } = { ...this.props.AppObj.state};
+        const { AppObj, stateProp, stateValue } = { ...this.props};
+        const { tokenId, tokenValid, historyCBlockId } = { ...AppObj.state};
         const newHistoryCBlockId = [ ...historyCBlockId];
-        const newState = {};
-        newState[this.props.stateProp] = this.props.stateValue;
-        if (this.props.stateProp === 'currentCBlockId') {
-            newHistoryCBlockId.push(this.props.AppObj.state.currentCBlockId);
-            newState['historyCBlockId'] = newHistoryCBlockId
+        var newState = {};
+        if (!isDict(stateProp)) {
+            newState[stateProp] = stateValue;
+            if (this.props.stateProp === 'currentCBlockId') {
+                if (!!tokenValid && tokenId !== '') {
+                    AppObj.adminLoadBlocks(parseInt(stateValue));
+                }
+                newHistoryCBlockId.push(AppObj.state.currentCBlockId);
+                newState['historyCBlockId'] = newHistoryCBlockId
+            }
+        } else {
+            newState = stateProp;
+            if ('currentCBlockId' in newState) {
+                if (!!tokenValid && tokenId !== '') {
+                    AppObj.adminLoadBlocks(parseInt(newState.currentCBlockId));
+                }
+                newHistoryCBlockId.push(AppObj.state.currentCBlockId);
+                newState['historyCBlockId'] = newHistoryCBlockId
+            }
         }
-        this.props.AppObj.setState(newState);
+        AppObj.setState(newState);
     }
 
     render() {

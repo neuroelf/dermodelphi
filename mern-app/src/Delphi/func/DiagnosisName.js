@@ -1,5 +1,6 @@
 import React from 'react'
 import * as DC from '../Constants'
+import DiagnosisResults from './DiagnosisResults'
 
 // this function performs a series of mangling steps
 export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
@@ -10,22 +11,36 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
     const newModifiers = modifiers.slice();
     const newSynonyms = synonyms.slice();
 
+    // admin additions?
+    var adminBlock = [];
+    var adminResults = '';
+    const { tokenId, tokenValid } = { ...AppObj.state};
+    if (!!tokenValid && (tokenId.length === 8)) {
+        const { adminBlocks } = { ...AppObj.state};
+        if (CBlockId in adminBlocks) {
+            adminBlock = adminBlocks[CBlockId];
+        }
+    }
+    if (adminBlock.length > 0) {
+        adminResults = DiagnosisResults(CNodeId, adminBlock);
+    }
+
     // if some correction must be applied, alter name and
     // alter modifiers and synonyms
     if ((!cnodeState.correct) && (cnodeState.correction !== DC.CORRECTION_NONE)) {
 
         // if to be deleted, don't bother with anything else
         if (cnodeState.correction === DC.CORRECTION_DELETE) {
-            return <span><i>{nodeName} <small><b><font color="red">
-                {DC.TXT_TO_BE_DELETED}</font></b></small></i></span>
+            return <span className="delphi-diagnosis-name"><i>{nodeName} <small><b><font color="red">
+                {DC.TXT_TO_BE_DELETED}</font></b></small></i>{adminResults}</span>
         }
 
         // and if to be combined, same!
         if (cnodeState.corrcombine !== 0) {
-            return <span><i>{nodeName} <small><b><font color="red">
+            return <span className="delphi-diagnosis-name"><i>{nodeName} <small><b><font color="red">
                 {DC.TXT_TO_BE_COMBINED_WITH}</font>
                 {global.DM_LEVELCNODES[cnodeState.corrcombine].name}
-                </b></small></i></span>
+                </b></small></i>{adminResults}</span>
         }
 
         // a corrected name get priority over spelling correction
@@ -64,35 +79,35 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
     // extend name with modifiers and synonyms as requested
     if (newModifiers.length === 0) {
         if (newSynonyms.length === 0) {
-            nodeName = <span>{nodeName}</span>
+            nodeName = <span className="delphi-diagnosis-name">{nodeName}{adminResults}</span>
         } else {
-            nodeName = <span>{nodeName} <small><i>
+            nodeName = <span className="delphi-diagnosis-name">{nodeName} <small><i>
                 ({DC.TXT_AKA} {newSynonyms.join(', ')})
-                </i></small></span>
+                </i></small>{adminResults}</span>
         }
     } else if (newModifiers.length === 1) {
         if (newSynonyms.length === 0) {
-            nodeName = <span>{nodeName}<br /><small>
+            nodeName = <span className="delphi-diagnosis-name">{nodeName}<br /><small>
                 {DC.TXT_MODIFIABLE_BY} {newModifiers[0].join(', ')}
-                </small></span>
+                </small>{adminResults}</span>
         } else {
-            nodeName = <span>{nodeName} <small><i>
+            nodeName = <span className="delphi-diagnosis-name">{nodeName} <small><i>
                 ({DC.TXT_AKA} {newSynonyms.join(', ')})</i><br />
                 {DC.TXT_MODIFIABLE_BY} {newModifiers[0].join(', ')}
-                </small></span>
+                </small>{adminResults}</span>
         }
     } else {
         if (newSynonyms.length === 0) {
-            nodeName = <span>{nodeName}<br /><small>
+            nodeName = <span className="delphi-diagnosis-name">{nodeName}<br /><small>
                 {DC.TXT_MODIFIABLE_BY} [{newModifiers[0].join(', ')}]
                 {DC.TXT_AND_MODIFIABLE_BY} [{newModifiers[1].join(', ')}]
-                </small></span>
+                </small>{adminResults}</span>
         } else {
-            nodeName = <span>{nodeName} <small><i>
+            nodeName = <span className="delphi-diagnosis-name">{nodeName} <small><i>
                 ({DC.TXT_AKA} {newSynonyms.join(', ')})</i><br />
                 {DC.TXT_MODIFIABLE_BY} [{newModifiers[0].join(', ')}]
                 {DC.TXT_AND_MODIFIABLE_BY} [{newModifiers[1].join(', ')}]
-                </small></span>
+                </small>{adminResults}</span>
         }
     }
 

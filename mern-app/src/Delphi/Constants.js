@@ -17,7 +17,10 @@ export const IMG_LOGO = '/img/dm_logo.png'
 export const IMG_LOGO_ALT = TITLE_TXT + ' logo'
 export const IMG_LOGO_SIZE = 64
 
-// user/session ID
+// search results
+export const SEARCH_MAX_RESULTS = 25
+
+// user/session ID/token
 export const SESS_BEGIN = 'Begin or resume session'
 export const SESS_ERROR_NOTFOUND = 'Session information not found. Please try again!'
 export const SESS_ERROR_UNEXPECTED = 'Unexpected server response. Please try again!'
@@ -26,6 +29,8 @@ export const SESS_LABEL = 'User info: '
 export const SESS_PROGRESS = 'Progress: '
 export const SESS_PROMPT_EMAIL = 'Please enter your email address...'
 export const SESS_PROMPT_ID = 'and session ID...'
+export const TOKEN_ERROR_UNEXPECTED = 'Unexpected server response. Please try again!'
+export const TOKEN_PROMPT_ID = 'admin access code...'
 
 // block controls
 export const BLOCKS_ADDCAT = 98
@@ -127,4 +132,17 @@ export const TXT_NOT_YET_IMPLEMENTED = 'Feature not yet implemented...'
 export const TXT_SEARCH_NORESULTS = 'Nothing found.'
 export const TXT_SEARCH_PROMPT = 'Search for elements... (reg. exp.)'
 export const TXT_SEARCH_RESULTS = 'Results...'
+export const TXT_SEARCH_RESULTS_A = 'Super-category: '
+export const TXT_SEARCH_RESULTS_B = 'Category: '
 export const TXT_SUBMIT = 'Submit'
+
+// results output
+export const TXT_RESULTS_APPROVE = 'Approve'
+export const TXT_RESULTS_CORRECTED = 'Corrected'
+export const TXT_RESULTS_CORRECTIONS = 'Corrections requested'
+export const TXT_RESULTS_DELETE = 'Deleted'
+export const TXT_RESULTS_NORESULTS = 'No results yet.'
+export const TXT_RESULTS_NUMRATERS = ' rater(s) corrected this block'
+export const TXT_RESULTS_PENDING = 'Pending'
+export const TXT_RESULTS_RATERID = 'Rater (ID)'
+export const TXT_RESULTS_STATUS = 'Status'

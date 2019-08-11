@@ -92,6 +92,16 @@ input[type=submit] {
   color: white;
   font: normal 24px bpreplaybold, sans-serif;
 }
+.delphi-session-id {
+  background: none;
+  color: inherit;
+  border: none; 
+  padding: 1px;
+  font: inherit;
+  border-radius: 0px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
 .delphi-control-bar {
   background-color: #064785;
   padding: 6px 24px 6px 24px;
@@ -124,6 +134,34 @@ input[type=submit] {
   border-bottom: 1px solid black; 
   cursor: pointer;
 }
+.delphi-diagnosis-name {
+  position: relative;
+  display: inline-block;
+}
+.delphi-diagnosis-results {
+  visibility: hidden;
+  width: 500px;
+  background-color: #1c73ca;
+  color: #ffffff;
+  text-align: left;
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 200px; 
+  margin-left: 0px;
+}
+.delphi-diagnosis-name:hover .delphi-diagnosis-results {
+  visibility: visible;
+}
+.delphi-diagnosis-results-table {
+  border-collapse: collapse;
+  border-color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 2px 8px 2px 8px;
+  
+}
 
 /* Delphi form classes */
 .delphi-form-table {
@@ -148,10 +186,6 @@ input[type=submit] {
 }
 .delphi-form-control-cell {
   vertical-align: middle;
-  padding: 2px 10px 2px 10px;
-}
-.delphi-form-control-top-cell {
-  vertical-align: top!important;
   padding: 2px 10px 2px 10px;
 }
 .delphi-form-control-centered-cell {
@@ -208,13 +242,14 @@ input[type=submit] {
 .delphi-results-container {
   font: normal 12px bpreplayregular, sans-serif;
   position: fixed;
-  overflow : hidden;
+  overflow-x: hidden;
   background-size: cover;
   background-color: #bcbcbc;
   border: 1px solid #888888;
   border-radius: 4px;
   padding: 6px;
   min-width: 240px;
+  z-index: 1;
 }
 .delphi-search-result-item {
   background: none;

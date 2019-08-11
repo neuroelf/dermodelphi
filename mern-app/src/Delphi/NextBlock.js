@@ -37,7 +37,8 @@ export default class DelphiNextBlock extends Component {
     goToNextBlock() {
         
         // lock and advance block
-        const { blocks, historyCBlockId } = { ...this.props.AppObj.state };
+        const { AppObj } = { ...this.props};
+        const { blocks, historyCBlockId, tokenValid, tokenId } = { ...AppObj.state };
         var currentCBlockId = parseInt(this.props.CBlockId);
         var nextCBlockId = DC.BLOCKS_ALL;
         const newState = Object.assign({}, blocks);
@@ -52,8 +53,11 @@ export default class DelphiNextBlock extends Component {
                 }
             }
         }
-        
-        this.props.AppObj.setState({
+        if (!!tokenValid && tokenId !== '') {
+            AppObj.adminLoadBlocks(parseInt(nextCBlockId));
+        }
+
+        AppObj.setState({
             blocks: newState,
             currentCBlockId: nextCBlockId,
             historyCBlockId: newHistoryBlockId

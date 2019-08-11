@@ -17,11 +17,15 @@ export default class DelphiSelectCategory extends Component {
     }
     
     handleChange(event) {
+        const { AppObj } = { ...this.props};
         var nextCBlockId = parseInt(event.target.value);
-        const { historyCBlockId } = { ...this.props.AppObj.state };
+        const { historyCBlockId, tokenValid, tokenId } = { ...AppObj.state };
         const newHistoryBlockId = [ ...historyCBlockId]
-        newHistoryBlockId.push(this.props.AppObj.state.currentCBlockId)
-        this.props.AppObj.setState({
+        newHistoryBlockId.push(AppObj.state.currentCBlockId)
+        if (!!tokenValid && tokenId !== '') {
+            AppObj.adminLoadBlocks(parseInt(nextCBlockId));
+        }
+        AppObj.setState({
             currentCBlockId: nextCBlockId,
             historyCBlockId: newHistoryBlockId
         });

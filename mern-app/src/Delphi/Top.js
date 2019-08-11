@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import DelphiTreeContainer from './TreeContainer';
+import DelphiLinkSetState from './LinkSetState';
+import DelphiTokenId from './TokenId';
 import DiagnosisDone from './func/DiagnosisDone';
 import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_SIZE, TITLE_TXT_FULL, TITLE_TXT_SUBTITLE,
     SESS_INFO, SESS_PROGRESS } from './Constants'
@@ -12,7 +14,8 @@ export default class DelphiTop extends Component {
     }
     
     render() {
-        const { blocks, sessionOk, sessionId } = { ...this.props.AppObj.state};
+        const { blocks, sessionOk, sessionId,
+            tokenValid, tokenVisible } = { ...this.props.AppObj.state};
         var doneNodes = 0;
         var totalNodes = 0;
         const blockKeys = Object.keys(blocks);
@@ -44,11 +47,18 @@ export default class DelphiTop extends Component {
                     <td valign="middle">
                         <h1>{TITLE_TXT_FULL} <small> - {TITLE_TXT_SUBTITLE}</small></h1>
                     </td>
-                    <td width="192" className="delphi-general-paragraph-small" align="right">
+                    <td width="120"></td>
+                    <td width="192" className="delphi-general-paragraph-small">
                         {(!!sessionOk) ?
                         <div>
-                            <font color="white">{SESS_INFO} {sessionId}<br />
-                            {SESS_PROGRESS} {doneNodes} of {totalNodes}</font>
+                            <font color="white"> {SESS_INFO} <DelphiLinkSetState AppObj={this.props.AppObj}
+                                stateValue={true} stateProp={'tokenVisible'}
+                                className="delphi-session-id" linkText={sessionId} /></font><br />
+                            <font color="white"> {SESS_PROGRESS} {doneNodes} of {totalNodes}<br /></font>
+                            {(!!tokenVisible && !tokenValid) ?
+                            <div>
+                                <DelphiTokenId AppObj={this.props.AppObj} />
+                            </div> : ''}
                         </div> : '' }
                     </td>
                 </tr>

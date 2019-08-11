@@ -72,7 +72,10 @@ export default class DelphiBlock extends Component {
 
         <tr className="delphi-form-header-row">
             <td></td>
-            <td className="delphi-form-header-cell">{DC.TABLE_HEADER_DIAGNOSIS}</td>
+            <td><table><tbody><tr>
+                <td className="delphi-form-header-cell">{DC.TABLE_HEADER_DIAGNOSIS}</td>
+                <td><DelphiSearch AppObj={this.props.AppObj} CBlockId={CBlockId} /></td>
+            </tr></tbody></table></td>
             <td className="delphi-form-header-cell" align="center">{DC.TABLE_HEADER_CORRECT}</td>
             <td className="delphi-form-header-cell">{DC.TABLE_HEADER_CORRECTION}</td>
         </tr>
@@ -85,13 +88,9 @@ export default class DelphiBlock extends Component {
         <DelphiNewEntryRow AppObj={this.props.AppObj} />
 
         <tr className="delphi-form-header-row">
-            <td className="delphi-form-control-top-cell" colSpan="3"><table><tbody><tr>
-                <td className="delphi-form-control-cell"><br />
+            <td className="delphi-form-control-cell" colSpan="3"><table><tbody><tr>
+                <td className="delphi-form-control-cell">
                     <DelphiMarkBlockCorrect AppObj={this.props.AppObj}
-                        CBlockId={CBlockId} />
-                </td>
-                <td className="delphi-form-control-top-cell">
-                    <DelphiSearch AppObj={this.props.AppObj}
                         CBlockId={CBlockId} />
                 </td>
             </tr></tbody></table></td>
