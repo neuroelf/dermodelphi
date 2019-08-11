@@ -1,6 +1,6 @@
 // imports
-var md5 = require('md5');
-var md5salt = require('./md5salt');
+const md5 = require('md5');
+const md5salt = require('./md5salt');
 
 // list of users
 const dm_users = [
