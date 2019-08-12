@@ -1,6 +1,6 @@
 # dermodelphi (Diagnosis Mapper backend and website)
-This is the repository for the Diagnosis Mapper developed at
-[Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/), MSKCC.
+This is the repository for the [Diagnosis Mapper](https://diagnosismapper.com/)
+developed at [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/), MSKCC.
 It includes:
 - the original data source (basis) of the taxonomy presented (in the ```/basis``` folder)
 - the code for the website, using [React](https://reactjs.org/) (in the ```/mern-app``` folder)
