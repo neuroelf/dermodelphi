@@ -87,7 +87,15 @@ function resultCell(CNodeId, sessionId, cnodeState) {
 
 function resultRow(CNodeId, adminSubBlock) {
     var sessionId = adminSubBlock.sessionId;
+    if (!(CNodeId in adminSubBlock.block)) {
+        return <tr className="delphi-diagnosis-results-table" key={'cr' + adminSubBlock.sessionId + '_' + CNodeId.toString()}>
+            <td className="delphi-diagnosis-results-table">{adminSubBlock.sessionId}</td>
+            <td className="delphi-diagnosis-results-table">{DC.TXT_RESULTS_PENDING}</td>
+            <td></td>
+        </tr>
+    }
     const cnodeState = adminSubBlock.block[CNodeId];
+    console.log(cnodeState);
     return <tr className="delphi-diagnosis-results-table" key={'cr' + adminSubBlock.sessionId + '_' + CNodeId.toString()}>
         <td className="delphi-diagnosis-results-table">{adminSubBlock.sessionId}</td>
         <td className="delphi-diagnosis-results-table">{(!!cnodeState.correct) ? DC.TXT_RESULTS_APPROVE :
