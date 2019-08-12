@@ -109,6 +109,7 @@ can be performed in addition to the regular build with node/npm:
 - copy the contents of the ```/mern-app/public``` and ```/mern-app/src``` folders to the ```/mern-app/build/parcel``` folder
 - in the ```/mern-app/build/parcel``` folder, execute ```parcel build parcel.html --no-minify -o index.html```
 - given that Parcel replaces the ```manifest.json``` file with ```manifest.js``` copy the original JSON file and edit the built ```index.html``` file!
+- copy the ```/mern-app/public/img``` folder to ```/mern-app/build/parcel/dist/img```
 - to serve the content, change into folder ```/mern-app/build/parcel/dist``` and execute ```serve .```
 
 ## History
