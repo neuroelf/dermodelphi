@@ -104,12 +104,12 @@ can be performed in addition to the regular build with node/npm:
 
 - install Parcel.js with ```npm install -g parcel-bundler```
 - optionally install [serve](https://www.npmjs.com/package/serve) with ```npm install -g serve```
-- create the folders ```/build/parcel``` and ```/build/parcel/dist```
-- copy the file ```/parcel.env``` to ```/build/parcel/.env```
-- copy the contents of the ```/public``` and ```/src``` folders to the ```/build/parcel``` folder
-- in the ```/build/parcel``` folder, execute ```parcel build parcel.html --no-minify -o index.html```
+- in the ```/mern-app``` folder, create the folders ```/build```, ```/build/parcel```, and ```/build/parcel/dist```
+- copy the file ```/mern-app/parcel.env``` to ```/mern-app/build/parcel/.env```
+- copy the contents of the ```/mern-app/public``` and ```/mern-app/src``` folders to the ```/mern-app/build/parcel``` folder
+- in the ```/mern-app/build/parcel``` folder, execute ```parcel build parcel.html --no-minify -o index.html```
 - given that Parcel replaces the ```manifest.json``` file with ```manifest.js``` copy the original JSON file and edit the built ```index.html``` file!
-- to serve the content, change into folder ```/build/parcel/dist``` and execute ```serve .```
+- to serve the content, change into folder ```/mern-app/build/parcel/dist``` and execute ```serve .```
 
 ## History
 ### Summary from initial discussion with collaborators on 7/10/2019
