@@ -97,6 +97,19 @@ If you wish to develop
 - run ```nodemon server.js``` in the mern-backend folder
 - run ```npm start``` (or ```npm run build```) in the mern-app folder
 
+### Building with parcel (without minification)
+In preparation for a separate project, I also wanted to support building the
+web application using [Parcel.js](https://parceljs.org/). The following steps
+can be performed in addition to the regular build with node/npm:
+
+- install Parcel.js with ```npm install -g parcel-bundler```
+- optionally install [serve](https://www.npmjs.com/package/serve) with ```npm install -g serve```
+- create the folders ```/build/parcel``` and ```/build/parcel/dist```
+- copy the file ```/parcel.env``` to ```/build/parcel/.env```
+- copy the contents of the ```/public``` and ```/src``` folders to the ```/build/parcel``` folder
+- in the ```/build/parcel``` folder, execute ```parcel build parcel.html --no-minify -o index.html```
+- to serve the content, change into folder ```/build/parcel/dist``` and execute ```serve .```
+
 ## History
 ### Summary from initial discussion with collaborators on 7/10/2019
 Data capture for the Delphi project:
