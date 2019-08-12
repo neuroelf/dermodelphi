@@ -95,7 +95,6 @@ function resultRow(CNodeId, adminSubBlock) {
         </tr>
     }
     const cnodeState = adminSubBlock.block[CNodeId];
-    console.log(cnodeState);
     return <tr className="delphi-diagnosis-results-table" key={'cr' + adminSubBlock.sessionId + '_' + CNodeId.toString()}>
         <td className="delphi-diagnosis-results-table">{adminSubBlock.sessionId}</td>
         <td className="delphi-diagnosis-results-table">{(!!cnodeState.correct) ? DC.TXT_RESULTS_APPROVE :
