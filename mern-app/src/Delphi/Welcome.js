@@ -14,29 +14,44 @@ export default class DelphiWelcome extends Component {
     render() {
         return (
 <table border="0"><tbody><tr><td width="50%"></td><td width="800"><div>
-    <h2>Welcome to the {DC.TITLE_TXT_FULL}</h2>
+    <h2>Welcome to the {DC.TITLE_TXT_FULL} ({DC.TITLE_TXT_MINI})</h2>
 
     <p className="delphi-general-text-paragraph">
-        Our mission is to help the dermatology community by creating an
-        accepted standard for how diagnoses--especially those associated
-        with dermoscopy images uploaded to
+        Our aim is to label each of
         the <a href={"https://isic-archive.com/"} target={"_blank"}>ISIC
-        Archive</a>--are entered.
+        Archive</a> images with the <b>{DC.TITLE_TXT_DIAG + " "}
+        ({DC.TITLE_TXT_MINI})</b> that most <u>accurately and
+        reproducibly</u> represents the histopathological diagnosis.
     </p>
     <p className="delphi-general-text-paragraph">
-        As part of this survey, you will see a list of diagnoses (names)
-        which are grouped within specific categories (and the present
-        super-categories "Benign" and "Malignant"). Within several of
-        the categories, we have further grouped diagnoses into logical
-        blocks or clusters of names, which we believe will simplify the
-        editing experience using this survey.
+        We all know that at present, the same lesion may be given variable
+        names, depending on the clinician or pathologist diagnosing the
+        lesion. However, for the ISIC Archive to be a useful database, we
+        need to converge on agreed-upon diagnostic labels (i.e., a unique
+        {" " + DC.TITLE_TXT_MINI}) for each type of lesion.
+    </p>
+    <p className="delphi-general-text-paragraph">
+        We need your help to reach an agreement on the {DC.TITLE_TXT_MINI}
+        working list!
+    </p>
+    <p className="delphi-general-text-paragraph">
+        Our overarching hope is that in generating this consensus list of
+        diagnoses, we can contribute to the greater dermatology
+        community – by creating accepted diagnostic standards.
+    </p>
+    <p className="delphi-general-text-paragraph">
+        As part of this survey, you will see a list of {DC.TITLE_TXT_MINI + " "}
+        terms, which are grouped under categories (e.g., type of
+        proliferation) and under super-categories (e.g., "Benign" and
+        "Malignant"). The {DC.TITLE_TXT_MINI} terms will be presented as
+        blocks / clusters to simplify viewing and editing of the terms.
     </p>
 
     <h3>User and session information:</h3>
 
     <p className="delphi-general-text-paragraph">
-        Please enter either your email address or the session identifier
-        you received via email below:
+        Please enter below your email address <b>AND</b> the session
+        identifier (sent to you via email):
     </p>
 
     <table><tbody><tr>

@@ -21,7 +21,7 @@ export default class DelphiNewCategoryConfirm extends Component {
         // extract all settings we may possible touch, and copy them
         const { AppObj } = { ...this.props};
         const { blocks, newCategory, newEntry, newAs, newBs, nextAId, nextBId,
-            historyCBlockId } = { ...AppObj.state};
+            historyCBlockId, newCategoryGoBack } = { ...AppObj.state};
         const newBlocks = Object.assign({}, blocks);
         const newNewEntry = Object.assign({}, newEntry);
         const newNewAs = [ ...newAs ];
@@ -99,10 +99,20 @@ export default class DelphiNewCategoryConfirm extends Component {
             aname: '',
             bname: ''
         }
+        if (newCategoryGoBack !== false) {
+            nextCBlockId = newHistoryCBlockId.pop();
+            var CBlockId = Math.floor(newCategoryGoBack / 100);
+            if (CBlockId in newBlocks) {
+                if (newCategoryGoBack in newBlocks[CBlockId]) {
+                    newBlocks[CBlockId][newCategoryGoBack].corrmoveto = newBIdValue;
+                }
+            }
+        }
         this.props.AppObj.setState( {
             currentCBlockId: nextCBlockId,
             historyCBlockId: newHistoryCBlockId,
             newCategory: newNewCategory,
+            newCategoryGoBack: false,
             newEntry: newNewEntry,
             nextAId: newNextAId,
             nextBId: newNextBId,

@@ -11,60 +11,62 @@ export default class DelphiInstructions extends Component {
         return (
 <table border="0"><tbody><tr><td width="50%"></td><td width="800"><div>
     <h2>Instructions</h2>
-    <h4>IMPORTANT: <font color="red"><u>Please do <i>not</i> use your
-        Browser's Back / history buttons to navigate!!</u></font></h4>
+    <h4><font color="#064785"><u>Please do <i>not</i> use your
+        Browser's Back / history buttons to navigate</u><br />
+        <small>This survey was optimized for use on a desktop computer,
+        and requires a persistent network connection</small></font></h4>
     <p className="delphi-general-text-paragraph">
-        For each <font color="red"><b>Diagnosis (name)</b></font>, you
-        can choose to accept the current configuration by checking the
-        box in the <font color="red"><b>Correct?</b></font> column. This
-        configuration includes the potential synonyms and modifiers
-        (i.e. a list of terms from which one can be optionally chosen to
-        further clarify a diagnosis).
+        For each <font color="red"><b>{DC.TITLE_TXT_DIAG} ({DC.TITLE_TXT_MINI})</b></font>,
+        you can simply choose to accept the current term and configuration
+        by checking the box in the "<font color="red"><b>Correct?</b></font>"
+        column.
     </p>
     <p className="delphi-general-text-paragraph">
-        If you <b>do not</b> agree with our initial suggestion for a
-        diagnosis configuration, you can use an initial dropdown to
-        select among several possible corrections. If you...
+        Some of the {DC.TITLE_TXT_MINI} terms are supplemented by:
+        <ul>
+            <li>Synonymous names: additional commonly used names (e.g.,
+                eponyms) that imply the same diagnosis</li>
+            <li>
+                Modifiers: descriptors that may add useful information about
+                the diagnosis</li>
+        </ul>
+    </p>
+    <p className="delphi-general-text-paragraph">
+        If you <b>do not</b> agree with the suggested
+        {" " + DC.TITLE_TXT_MINI} term, its synonyms or modifiers, you can
+        use the dropdown menu to select among several possible corrections:
     </p>
     <ul>
-        <li>generally agree with the term, but believe we made a spelling
-            mistake, please select
-            <font color="red"><b> {DC.CORRECTION_SPELLING_TXT}</b></font>
+        <li><font color="red"><b>{DC.CORRECTION_SPELLING_TXT}</b></font>:
+            if you agree with the term, but not with the spelling we used
         </li>
-        <li>believe that the name we chose doesn't correctly capture the
-            diagnosis, please select
-            <font color="red"><b> {DC.CORRECTION_NEWNAME_TXT}</b></font>
+        <li><font color="red"><b>{DC.CORRECTION_NEWNAME_TXT}</b></font>:
+            if the current name doesn't correctly / optimally capture the diagnosis
         </li>
-        <li>
-            would like to add one or several additional synonyms, please
-            select
-            <font color="red"><b> {DC.CORRECTION_NEWSYNS_TXT}</b></font>
+        <li><font color="red"><b>{DC.CORRECTION_NEWSYNS_TXT}</b></font>:
+            if you would like to add one or more synonyms
         </li>
-        <li>
-            think this particular diagnosis ought to be combined with
-            another one, please select
-            <font color="red"><b> {DC.CORRECTION_COMBINE_TXT}</b></font>
+        <li><font color="red"><b>{DC.CORRECTION_COMBINE_TXT}</b></font>:
+            if this particular diagnosis is redundant and should to be
+            combined with another one
         </li>
-        <li>
-            believe that a diagnosis needs to be assigned to a different
-            category, you can select
-            <font color="red"><b> {DC.CORRECTION_MOVECAT_TXT}</b></font>
+        <li><font color="red"><b>{DC.CORRECTION_MOVECAT_TXT}</b></font>:
+            if the diagnosis ought to be assigned under a different category
+            (e.g. it belongs to a different category of proliferation)
         </li>
-        <li>
-            wish to change the modifiers, you can choose either
-            <font color="red"><b> {DC.CORRECTION_NEWMODS_TXT}</b></font>,
+        <li><font color="red"><b>{DC.CORRECTION_NEWMODS_TXT}</b></font>,
             <font color="red"><b> {DC.CORRECTION_DELMODS_TXT}</b></font>, or
-            <font color="red"><b> {DC.CORRECTION_EDITMODS_TXT}</b></font>
+            <font color="red"><b> {DC.CORRECTION_EDITMODS_TXT}</b></font>:
+            if you wish to change the modifiers of the
+            {" " + DC.TITLE_TXT_MINI} term
         </li>
-        <li>
-            think that a diagnosis should not be included in the taxonomy
-            catologue, select
-            <font color="red"><b> {DC.CORRECTION_DELETE_TXT}</b></font>
+        <li><font color="red"><b>{DC.CORRECTION_DELETE_TXT}</b></font>:
+            the {DC.TITLE_TXT_MINI} term should not be included in the
+            taxonomy catalogue
         </li>
-        <li>
-            wish to suggest any other kind of correction, please choose
-            <font color="red"><b> {DC.CORRECTION_OTHER_TXT}</b></font>,
-            and then let us know
+        <li><font color="red"><b>{DC.CORRECTION_OTHER_TXT}</b></font>:
+            if you wish to suggest any other kind of correction - please
+            let us know the details of your suggestion
         </li>
     </ul>
     <h3>Getting started</h3>
@@ -73,11 +75,14 @@ export default class DelphiInstructions extends Component {
         take a moment to look
         over <DelphiLinkSetState AppObj={this.props.AppObj}
             stateProp="currentCBlockId" stateValue={DC.BLOCKS_ALL}
-            linkText="the list of categories and diagnoses" />.
-        Or if you want to get started right away, simply head over to 
+            linkText={"the list of categories, " + DC.TITLE_TXT_MINI +
+                " terms, their synonyms and modifiers"} />.
+    </p>
+    <p className="delphi-general-text-paragraph">
+        Or if you want to get started right away, simply go 
         to <DelphiLinkSetState AppObj={this.props.AppObj}
             stateProp="currentCBlockId" stateValue={DC.BLOCKS_FIRST}
-            linkText='the first block' />.
+            linkText="the first block of terms" />.
     </p>
 </div></td><td width="50%"></td></tr></tbody></table>
         );

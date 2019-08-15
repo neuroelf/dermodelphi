@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import { CORRECTION_MOVECAT_SELECT, CORRECTION_MOVECAT_OTHER, BLOCKS_ALL } from '../Constants'
+import React, { Component } from 'react'
+import { CORRECTION_MOVECAT_SELECT,
+    CORRECTION_MOVECAT_OTHER, BLOCKS_ADDCAT } from '../Constants'
 
 export default class DelphiCorrectionReassign extends Component {
     constructor(props) {
@@ -11,10 +12,25 @@ export default class DelphiCorrectionReassign extends Component {
     }
     
     handleChange(event) {
-        const { blocks } = { ...this.props.AppObj.state };
+        event.preventDefault();
+        const { AppObj } = { ...this.props};
+        const { blocks, currentCBlockId } = { ...AppObj.state };
         const newState = blocks;
-        newState[this.props.CBlockId][this.props.CNodeId].corrmoveto = parseInt(event.target.value);
-        this.props.AppObj.setState({blocks: newState});
+        var corrmoveto = parseInt(event.target.value);
+        if (corrmoveto === BLOCKS_ADDCAT) {
+            const { historyCBlockId } = { ...AppObj.state};
+            const newHistoryCBlockId = [ ...historyCBlockId];
+            newHistoryCBlockId.push(currentCBlockId);
+            var newHistState = {
+                'currentCBlockId': BLOCKS_ADDCAT,
+                'historyCBlockId': newHistoryCBlockId,
+                'newCategoryGoBack': this.props.CNodeId,
+            }
+            AppObj.setState(newHistState);
+            return;
+        }
+        newState[this.props.CBlockId][this.props.CNodeId].corrmoveto = corrmoveto;
+        AppObj.setState({blocks: newState});
     }
 
     handleSubmit(event) {
@@ -30,7 +46,7 @@ export default class DelphiCorrectionReassign extends Component {
             <select value={rowState.corrmoveto.toString()}
                 disabled={!!blockLocked} onChange={this.handleChange}>
                 <option value="0" key="0">{CORRECTION_MOVECAT_SELECT}</option>
-                <option value={BLOCKS_ALL} key={BLOCKS_ALL}>{CORRECTION_MOVECAT_OTHER}</option>
+                <option value={BLOCKS_ADDCAT} key={BLOCKS_ADDCAT}>{CORRECTION_MOVECAT_OTHER}</option>
                 {Object.keys(global.DM_LEVELBFULLNAMES)
                     .filter(BNodeId => BNodeId !== thisBNodeId)
                     .map(BNodeId =>

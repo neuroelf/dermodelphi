@@ -13,8 +13,8 @@ import './App.css';
 import * as DC from './Delphi/Constants'
 
 // server configuration
-// global.DM_BACKEND_URL = 'http://localhost:4000/';
-global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
+global.DM_BACKEND_URL = 'http://localhost:4000/';
+// global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
@@ -111,8 +111,8 @@ export default class App extends Component {
         
         // place holder state (will be filled from JSON data)
         this.state = {
-            userEmail: '',
-            sessionId: '',
+            userEmail: 'weberj3@mskcc.org',
+            sessionId: '758798',
             sessionOk: false,
             sessionDate: Date.now(),
             tokenId: '',
@@ -131,6 +131,7 @@ export default class App extends Component {
                 aname: '',
                 bname: ''
             },
+            newCategoryGoBack: false,
             newEntry: {
                 pressed: 0,
                 name: '',
@@ -182,15 +183,16 @@ export default class App extends Component {
                 blockState[blockNodes[cc]] = {
                     correct: false,
                     correction: DC.CORRECTION_NONE,
-                    corrspelling: '',
-                    corrnewname: '',
-                    corrnewsyns: '',
                     corrcombine: 0,
+                    correditmods: '',
+                    correditsyns: '',
                     corrmoveto: 0,
                     corrmovetox: '',
                     corrnewmods: '',
-                    correditmods: '',
-                    corrother: ''
+                    corrnewname: '',
+                    corrnewsyns: '',
+                    corrother: '',
+                    corrspelling: ''
                 }
             }
 

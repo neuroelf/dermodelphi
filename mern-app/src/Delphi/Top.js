@@ -3,8 +3,9 @@ import DelphiTreeContainer from './TreeContainer';
 import DelphiLinkSetState from './LinkSetState';
 import DelphiTokenId from './TokenId';
 import DiagnosisDone from './func/DiagnosisDone';
-import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_SIZE, TITLE_TXT_FULL, TITLE_TXT_SUBTITLE,
-    SESS_INFO, SESS_PROGRESS } from './Constants'
+import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_HEIGHT, IMG_LOGO_WIDTH,
+    TITLE_TXT_FULL, TITLE_TXT_SUBTITLE,
+    SESS_INFO, SESS_PROGRESS, } from './Constants'
 
 export default class DelphiTop extends Component {
     constructor(props) {
@@ -38,14 +39,14 @@ export default class DelphiTop extends Component {
     <div className="delphi-top-bar">
         <table border="0">
             <tbody>
-                <tr height={IMG_LOGO_SIZE + 12} valign="middle">
-                    <td valign="bottom" className="delphi-form-nopadd-cell">
+                <tr height={IMG_LOGO_HEIGHT + 12} valign="middle">
+                    <td className="delphi-form-nopadd-cell">
                         <img src={process.env.PUBLIC_URL + IMG_LOGO}
-                            alt={IMG_LOGO_ALT} width={IMG_LOGO_SIZE} height={IMG_LOGO_SIZE} />
+                            alt={IMG_LOGO_ALT} width={IMG_LOGO_WIDTH} height={IMG_LOGO_HEIGHT} />
                     </td>
                     <td width="24"></td>
                     <td valign="middle">
-                        <h1>{TITLE_TXT_FULL} <small> - {TITLE_TXT_SUBTITLE}</small></h1>
+                        <h1>{TITLE_TXT_FULL} <small><b> - {TITLE_TXT_SUBTITLE}</b></small></h1>
                     </td>
                     <td width="120"></td>
                     <td width="192" className="delphi-general-paragraph-small">

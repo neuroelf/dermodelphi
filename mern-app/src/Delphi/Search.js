@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { SEARCH_MAX_RESULTS, TXT_SEARCH_RESULTS_A, TXT_SEARCH_RESULTS_B,
-    TXT_SEARCH_NORESULTS, TXT_SEARCH_PROMPT, TXT_SEARCH_RESULTS, TXT_AKA } from './Constants'
+import * as DC from './Constants'
 import DelphiLinkSetState from './LinkSetState'
 import '../index.css'
 
@@ -28,57 +27,145 @@ export default class DelphiSearch extends Component {
             AppObj.setState({ results: [] });
             return;
         }
+        var queryparts = query.split(' ');
+        queryparts = queryparts.filter(part => part.length > 0);
+        var pc, patterns = [], patternmatch;
         try {
-            var pattern = new RegExp(query, 'i');
+            for (pc = 0; pc < queryparts.length; pc++) {
+                patterns[pc] = new RegExp(queryparts[pc], 'i');
+            }
         } catch {
             return;
         }
         var results = [];
         var cresults = []
         // look through the category and node names
-        var nc, cnode, nname, blockId, rowState;
+        var nc, cnode, nname, nodename, blockId, rowState;
         var akeys = Object.keys(global.DM_LEVELANAMES);
         var bkeys = Object.keys(global.DM_LEVELBNAMES);
         var ckeys = Object.keys(global.DM_LEVELCNODES);
         for (nc = 0; nc < akeys.length; nc++) {
             nname = global.DM_LEVELANAMES[akeys[nc]];
-            if (pattern.test(nname)) {
-                results.push( { id: akeys[nc], name: TXT_SEARCH_RESULTS_A + nname });
+            patternmatch = true;
+            for (pc = 0; pc < patterns.length; pc++) {
+                if (!patterns[pc].test(nname)) {
+                    patternmatch = false;
+                    break;
+                }
+            }
+            if (patternmatch) {
+                results.push({
+                    id: akeys[nc],
+                    name: DC.TXT_SEARCH_RESULTS_A + nname
+                });
             }
         }
         for (nc = 0; nc < bkeys.length; nc++) {
             nname = global.DM_LEVELBNAMES[bkeys[nc]];
-            if (pattern.test(nname)) {
-                results.push( { id: bkeys[nc], name: TXT_SEARCH_RESULTS_B + nname });
+            patternmatch = true;
+            for (pc = 0; pc < patterns.length; pc++) {
+                if (!patterns[pc].test(nname)) {
+                    patternmatch = false;
+                    break;
+                }
+            }
+            if (patternmatch) {
+                results.push({
+                    id: bkeys[nc],
+                    name: DC.TXT_SEARCH_RESULTS_B +
+                        global.DM_LEVELBFULLNAMES[bkeys[nc]]
+                });
             }
         }
         for (nc = 0; nc < ckeys.length; nc++) {
             cnode = global.DM_LEVELCNODES[ckeys[nc]];
             nname = cnode.name;
-            if (pattern.test(nname)) {
-                cresults.push( { id: ckeys[nc], name: nname });
+            nodename = nname;
+            patternmatch = true;
+            for (pc = 0; pc < patterns.length; pc++) {
+                if (!patterns[pc].test(nname)) {
+                    patternmatch = false;
+                    break;
+                }
+            }
+            if (patternmatch) {
+                cresults.push({
+                    id: ckeys[nc],
+                    name: nname
+                });
                 continue;
             }
             if (cnode.synonyms.length > 0) {
                 nname = cnode.synonyms.join(', ');
-                if (pattern.test(nname)) {
-                    cresults.push( { id: ckeys[nc], name: cnode.name + ' (' + TXT_AKA + nname + ')'});
+                patternmatch = true;
+                for (pc = 0; pc < patterns.length; pc++) {
+                    if (!patterns[pc].test(nname)) {
+                        patternmatch = false;
+                        break;
+                    }
+                }
+                if (patternmatch) {
+                    cresults.push({
+                        id: ckeys[nc],
+                        name: nodename + ' (' + DC.TXT_AKA + nname + ')'
+                    });
                     continue;
                 }
             }
             blockId = Math.floor(ckeys[nc] / 100);
             rowState = blocks[blockId][ckeys[nc]];
+            if (rowState.correct) {
+                continue;
+            }
             nname = rowState.corrnewname;
             if (nname !== '') {
-                if (pattern.test(nname)) {
-                    cresults.push( { id: ckeys[nc], name: nname });
+                nodename = nodename + " " + DC.TXT_RENAMED_TO + " " + nname;
+                patternmatch = true;
+                for (pc = 0; pc < patterns.length; pc++) {
+                    if (!patterns[pc].test(nname)) {
+                        patternmatch = false;
+                        break;
+                    }
+                }
+                if (patternmatch) {
+                    cresults.push({
+                        id: ckeys[nc], 
+                        name: nodename
+                    });
                     continue;
                 }
             }
             nname = rowState.corrspelling;
             if (nname !== '' && rowState.corrnewname === '') {
-                if (pattern.test(nname)) {
-                    cresults.push( { id: ckeys[nc], name: nname });
+                patternmatch = true;
+                for (pc = 0; pc < patterns.length; pc++) {
+                    if (!patterns[pc].test(nname)) {
+                        patternmatch = false;
+                        break;
+                    }
+                }
+                if (patternmatch) {
+                    cresults.push({
+                        id: ckeys[nc],
+                        name: nodename + " " + DC.TXT_CORRECTED_TO + " " + nname
+                    });
+                    continue;
+                }
+            }
+            nname = rowState.corrnewsyns;
+            if (nname !== '') {
+                patternmatch = true;
+                for (pc = 0; pc < patterns.length; pc++) {
+                    if (!patterns[pc].test(nname)) {
+                        patternmatch = false;
+                        break;
+                    }
+                }
+                if (patternmatch) {
+                    cresults.push({
+                        id: ckeys[nc],
+                        name: nodename + ' (' + DC.TXT_AKA + nname + ')'
+                    });
                     continue;
                 }
             }
@@ -87,8 +174,8 @@ export default class DelphiSearch extends Component {
             cresults = cresults.sort((a, b) => (a.name > b.name) ? 1 : (a.name < b.name) ? -1 : 0 );
             results.push.apply(results, cresults);
         }
-        if (results.length > SEARCH_MAX_RESULTS) {
-            results = results.slice(0, SEARCH_MAX_RESULTS);
+        if (results.length > DC.SEARCH_MAX_RESULTS) {
+            results = results.slice(0, DC.SEARCH_MAX_RESULTS);
         }
         AppObj.setState({ results: results });
     }
@@ -100,13 +187,13 @@ export default class DelphiSearch extends Component {
             if (AppObj.state.query === '') {
                 return (
 <div className="delphi-results-container">
-    <span className="delphi-search-result-none">{TXT_SEARCH_RESULTS}</span>
+    <span className="delphi-search-result-none">{DC.TXT_SEARCH_RESULTS}</span>
 </div>
                 );
             } else {
                 return (
 <div className="delphi-results-container">
-    <span className="delphi-search-result-none">{TXT_SEARCH_NORESULTS}</span>
+    <span className="delphi-search-result-none">{DC.TXT_SEARCH_NORESULTS}</span>
 </div>
                 );
             }
@@ -134,7 +221,7 @@ export default class DelphiSearch extends Component {
 <div className="delphi-search-container">
     <label className="delphi-search-label" htmlFor="search-input">
         <input type="text" className="delphi-search-input"
-            placeholder={TXT_SEARCH_PROMPT} value={AppObj.state.query}
+            placeholder={DC.TXT_SEARCH_PROMPT} value={AppObj.state.query}
             onChange={this.handleChange} />
         <i className="delphi-search-icon" />
     </label>
