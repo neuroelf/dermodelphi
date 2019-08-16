@@ -37,14 +37,11 @@ export default class DelphiInstructions extends Component {
         use the dropdown menu to select among several possible corrections:
     </p>
     <ul>
-        <li><font color="red"><b>{DC.CORRECTION_SPELLING_TXT}</b></font>:
-            if you agree with the term, but not with the spelling we used
-        </li>
         <li><font color="red"><b>{DC.CORRECTION_NEWNAME_TXT}</b></font>:
             if the current name doesn't correctly / optimally capture the diagnosis
         </li>
-        <li><font color="red"><b>{DC.CORRECTION_NEWSYNS_TXT}</b></font>:
-            if you would like to add one or more synonyms
+        <li><font color="red"><b>{DC.CORRECTION_SPELLING_TXT}</b></font>:
+            if you agree with the term, but not with the spelling we used
         </li>
         <li><font color="red"><b>{DC.CORRECTION_COMBINE_TXT}</b></font>:
             if this particular diagnosis is redundant and should to be
@@ -54,11 +51,20 @@ export default class DelphiInstructions extends Component {
             if the diagnosis ought to be assigned under a different category
             (e.g. it belongs to a different category of proliferation)
         </li>
-        <li><font color="red"><b>{DC.CORRECTION_NEWMODS_TXT}</b></font>,
-            <font color="red"><b> {DC.CORRECTION_DELMODS_TXT}</b></font>, or
-            <font color="red"><b> {DC.CORRECTION_EDITMODS_TXT}</b></font>:
-            if you wish to change the modifiers of the
-            {" " + DC.TITLE_TXT_MINI} term
+        <li><font color="red"><b>{DC.CORRECTION_EDITSYNS_TXT}</b></font>,
+            <font color="red"><b> {DC.CORRECTION_NEWSYNS_TXT}</b></font>, or
+            <font color="red"><b> {DC.CORRECTION_DELSYNS_TXT}</b></font>:
+            if you wish to change the synonyms of
+            the {DC.TITLE_TXT_MINI} term
+        </li>
+        <li><font color="red"><b>{DC.CORRECTION_EDITMODS_TXT}</b></font>,
+            <font color="red"><b> {DC.CORRECTION_NEWMODS_TXT}</b></font>, or
+            <font color="red"><b> {DC.CORRECTION_DELMODS_TXT}</b></font>:
+            if you wish to change the modifiers of
+            the {DC.TITLE_TXT_MINI} term
+        </li>
+        <li><font color="red"><b> {DC.CORRECTION_DELBOTH_TXT}</b></font>:
+            if there are modifiers and synonyms, and you wish to delete both
         </li>
         <li><font color="red"><b>{DC.CORRECTION_DELETE_TXT}</b></font>:
             the {DC.TITLE_TXT_MINI} term should not be included in the

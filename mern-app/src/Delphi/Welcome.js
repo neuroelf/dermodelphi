@@ -31,8 +31,8 @@ export default class DelphiWelcome extends Component {
         {" " + DC.TITLE_TXT_MINI}) for each type of lesion.
     </p>
     <p className="delphi-general-text-paragraph">
-        We need your help to reach an agreement on the {DC.TITLE_TXT_MINI}
-        working list!
+        We need your help to reach an agreement on
+        the {DC.TITLE_TXT_MINI} working list!
     </p>
     <p className="delphi-general-text-paragraph">
         Our overarching hope is that in generating this consensus list of

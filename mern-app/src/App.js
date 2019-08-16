@@ -1,20 +1,20 @@
 // imports
-import React, { Component } from 'react';
-import axios from 'axios';
-import { GlobalHotKeys } from 'react-hotkeys';
+import React, { Component } from 'react'
+import axios from 'axios'
+import { GlobalHotKeys } from 'react-hotkeys'
 import DelphiNotFound from './Delphi/NotFound'
-import DelphiTop from './Delphi/Top';
-import DelphiWelcome from './Delphi/Welcome';
+import DelphiTop from './Delphi/Top'
+import DelphiWelcome from './Delphi/Welcome'
 import DelphiInstructions from './Delphi/Instructions'
 import DelphiNewCategoryPage from './Delphi/NewCategory/Page'
-import DelphiAllBlocks from './Delphi/AllBlocks';
-import DelphiBlock from './Delphi/Block';
-import './App.css';
+import DelphiAllBlocks from './Delphi/AllBlocks'
+import DelphiBlock from './Delphi/Block'
+import './App.css'
 import * as DC from './Delphi/Constants'
 
 // server configuration
-global.DM_BACKEND_URL = 'http://localhost:4000/';
-// global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
+// global.DM_BACKEND_URL = 'http://localhost:4000/';
+global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
@@ -195,7 +195,8 @@ export default class App extends Component {
                     corrnewname: '',
                     corrnewsyns: '',
                     corrother: '',
-                    corrspelling: ''
+                    corrspelling: '',
+                    byuser: false
                 }
             }
 
@@ -473,7 +474,7 @@ export default class App extends Component {
             nextBId: nextBId
         })
         .catch(function (err) {
-            window.alert(DC.SESS_ERROR_UNEXPECTED);
+            window.alert(DC.SESS_SAVE_ERROR);
         })
         .finally(function () {
             document.body.classList.remove('busy-cursor');
@@ -515,7 +516,7 @@ export default class App extends Component {
                         AppObj.saveSession();
                     }
                 } else {
-                    window.alert(DC.SESS_ERROR_UNEXPECTED);
+                    window.alert(DC.SESS_SAVE_ERROR);
                 }
                 sleepMS(500).then(() => {
                     document.body.classList.remove('busy-cursor');
@@ -523,7 +524,7 @@ export default class App extends Component {
                 AppObj.setState({ isSaving: false });
             })
             .catch(function (err) {
-                window.alert(DC.SESS_ERROR_UNEXPECTED);
+                window.alert(DC.SESS_SAVE_ERROR);
                 document.body.classList.remove('busy-cursor');
                 AppObj.setState({ isSaving: false });
             });

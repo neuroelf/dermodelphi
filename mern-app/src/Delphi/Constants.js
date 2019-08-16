@@ -32,6 +32,7 @@ export const SESS_LABEL = 'User info: '
 export const SESS_PROGRESS = 'Progress: '
 export const SESS_PROMPT_EMAIL = 'Please enter your email address...'
 export const SESS_PROMPT_ID = 'and session ID...'
+export const SESS_SAVE_ERROR = 'Saving data failed. Please try again!'
 export const TOKEN_ERROR_UNEXPECTED = 'Unexpected server response. Please try again!'
 export const TOKEN_PROMPT_ID = 'admin access code...'
 

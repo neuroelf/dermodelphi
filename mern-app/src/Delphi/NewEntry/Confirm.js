@@ -65,15 +65,16 @@ export default class DelphiNewEntryConfirm extends Component {
         newBlocks[newCBlockId][newCNodeId] = {
             correct: false,
             correction: CORRECTION_NONE,
-            corrspelling: '',
+            corrcombine: 0,
+            correditmods: '',
+            correditsyns: '',
+            corrmoveto: 0,
+            corrnewmods: '',
             corrnewname: '',
             corrnewsyns: '',
-            corrcombine: 0,
-            corrmoveto: 0,
-            corrmovetox: '',
-            corrnewmods: '',
-            correditmods: '',
-            corrother: ''
+            corrother: '',
+            corrspelling: '',
+            byuser: true
         };
         const newNewCs = [ ...newCs];
         newNewCs.push({

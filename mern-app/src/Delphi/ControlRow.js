@@ -21,7 +21,9 @@ export default class DelphiControlRow extends Component {
     
     render() {
 
-        const rowState = this.props.AppObj.state.blocks[this.props.CBlockId][this.props.CNodeId];
+        const { AppObj, CBlockId, CNodeId } = { ...this.props};
+        const { blocks } = { ...AppObj.state};
+        const rowState = blocks[CBlockId][CNodeId];
         var rowIsIncomplete = ((!rowState.correct) && (
             (rowState.correction === DC.CORRECTION_NONE) ||
             ((rowState.correction === DC.CORRECTION_SPELLING) && (rowState.corrspelling === '')) ||
