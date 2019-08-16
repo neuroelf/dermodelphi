@@ -39,6 +39,9 @@ global.DM_HOTKEYHANDLERS = {
 function handlerFun() {
     console.log('Not yet set!');
 }
+function sleepMS(milliseconds) {
+    return new Promise((resolve) => setTimeout(resolve, milliseconds));
+}
 
 // function for loading the JSON file into global config
 function parseDMJSONFile() {
@@ -111,13 +114,14 @@ export default class App extends Component {
         
         // place holder state (will be filled from JSON data)
         this.state = {
-            userEmail: 'weberj3@mskcc.org',
-            sessionId: '758798',
+            userEmail: '',
+            sessionId: '',
             sessionOk: false,
             sessionDate: Date.now(),
             tokenId: '',
             tokenValid: false,
             tokenVisible: false,
+            isSaving: false,
             adminSessions: [],
             adminBlocks: {},
             treeHeight: 0,
@@ -187,7 +191,6 @@ export default class App extends Component {
                     correditmods: '',
                     correditsyns: '',
                     corrmoveto: 0,
-                    corrmovetox: '',
                     corrnewmods: '',
                     corrnewname: '',
                     corrnewsyns: '',
@@ -268,7 +271,7 @@ export default class App extends Component {
                 window.alert(DC.SESS_ERROR_UNEXPECTED);
             }})
         .catch(function (err) {
-            window.alert('Error:' + JSON.stringify(err));
+            window.alert(DC.SESS_ERROR_UNEXPECTED);
         });
     }
 
@@ -290,8 +293,12 @@ export default class App extends Component {
                     return;
                 }
                 if (data.length > 1) {
+                    var adminSessions = {};
+                    for (var asc = 0; asc < data.length; asc++) {
+                        adminSessions[data[asc]['sessionId']] = data[asc];
+                    }
                     AppObj.setState({
-                        adminSessions: data,
+                        adminSessions: adminSessions,
                         tokenValid: true
                     }, () => {AppObj.adminLoadBlocks()});
                 } else {
@@ -303,7 +310,7 @@ export default class App extends Component {
                 window.alert(DC.TOKEN_ERROR_UNEXPECTED);
             }})
         .catch(function (err) {
-            window.alert('Error:' + JSON.stringify(err));
+            window.alert(DC.TOKEN_ERROR_UNEXPECTED);
         });
     }
 
@@ -336,7 +343,7 @@ export default class App extends Component {
                 window.alert(DC.TOKEN_ERROR_UNEXPECTED);
             }})
         .catch(function (err) {
-            window.alert('Error:' + JSON.stringify(err));
+            window.alert(DC.TOKEN_ERROR_UNEXPECTED);
         });
     }
 
@@ -466,7 +473,7 @@ export default class App extends Component {
             nextBId: nextBId
         })
         .catch(function (err) {
-            window.alert('Error: ' + JSON.stringify(err));
+            window.alert(DC.SESS_ERROR_UNEXPECTED);
         })
         .finally(function () {
             document.body.classList.remove('busy-cursor');
@@ -475,45 +482,52 @@ export default class App extends Component {
     saveSessionBlock(successFcn, blockId) {
         document.body.classList.add('busy-cursor');
         const AppObj = this;
-        const { sessionId, currentCBlockId, blocks } = { ...this.state};
-        if (blockId === undefined) {
-            blockId = currentCBlockId;
-        }
-        var postUrl = global.DM_BACKEND_URL +
-            'session/' + sessionId + '/block/' + blockId.toString() + '/save';
-        axios.post(postUrl, {
-            block: blocks[parseInt(blockId)]
-        })
-        .then(function (res) {
-            if ('data' in res) {
-                const { data } = { ...res};
-                if (data === null) {
-                    window.alert(DC.SESS_ERROR_UNEXPECTED);
-                    document.body.classList.remove('busy-cursor');
-                    return;
-                }
-                if (!('ok' in data)) {
-                    window.alert(DC.SESS_ERROR_UNEXPECTED);
-                    document.body.classList.remove('busy-cursor');
-                    return;
-                }
-                if (data.ok !== 1) {
-                    window.alert(DC.SESS_ERROR_UNEXPECTED);
-                    document.body.classList.remove('busy-cursor');
-                    return;
-                }
-                if (successFcn !== null) {
-                    successFcn();
-                    AppObj.saveSession();
-                }
-            } else {
-                window.alert(DC.SESS_ERROR_UNEXPECTED);
+        AppObj.setState({ isSaving: true }, () => {
+            const { sessionId, currentCBlockId, blocks } = { ...this.state};
+            if (blockId === undefined) {
+                blockId = currentCBlockId;
             }
-        })
-        .catch(function (err) {
-            window.alert(JSON.stringify(err));
+            var postUrl = global.DM_BACKEND_URL +
+                'session/' + sessionId + '/block/' + blockId.toString() + '/save';
+            axios.post(postUrl, {
+                block: blocks[parseInt(blockId)]
+            })
+            .then(function (res) {
+                if ('data' in res) {
+                    const { data } = { ...res};
+                    if (data === null) {
+                        window.alert(DC.SESS_ERROR_UNEXPECTED);
+                        document.body.classList.remove('busy-cursor');
+                        return;
+                    }
+                    if (!('ok' in data)) {
+                        window.alert(DC.SESS_ERROR_UNEXPECTED);
+                        document.body.classList.remove('busy-cursor');
+                        return;
+                    }
+                    if (data.ok !== 1) {
+                        window.alert(DC.SESS_ERROR_UNEXPECTED);
+                        document.body.classList.remove('busy-cursor');
+                        return;
+                    }
+                    if (successFcn !== null) {
+                        successFcn();
+                        AppObj.saveSession();
+                    }
+                } else {
+                    window.alert(DC.SESS_ERROR_UNEXPECTED);
+                }
+                sleepMS(500).then(() => {
+                    document.body.classList.remove('busy-cursor');
+                });            
+                AppObj.setState({ isSaving: false });
+            })
+            .catch(function (err) {
+                window.alert(DC.SESS_ERROR_UNEXPECTED);
+                document.body.classList.remove('busy-cursor');
+                AppObj.setState({ isSaving: false });
+            });
         });
-        document.body.classList.remove('busy-cursor');
     }
     
     // original idea of Router (using URL in history) replaced

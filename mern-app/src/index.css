@@ -28,6 +28,9 @@ body {
 body.busy-cursor {
   cursor: progress;
 }
+.busy-cursor {
+  cursor: progress;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -193,6 +196,11 @@ input[type=submit] {
 .delphi-form-control-centered-cell {
   padding: 2px 10px 2px 10px;
   text-align: center;
+}
+.delphi-form-incomplete-control-cell {
+  vertical-align: middle;
+  padding: 2px 10px 2px 10px;
+  background-color: #f88888;
 }
 .delphi-form-name-cell {
   padding: 8px 16px 8px 16px;

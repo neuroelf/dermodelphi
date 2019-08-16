@@ -9,6 +9,7 @@ import DelphiSearch from './Search'
 import DelphiUnlockBlock from './UnlockBlock'
 import DelphiNextBlock from './NextBlock'
 import DelphiGoBack from './GoBack'
+import DiagnosisDone from './func/DiagnosisDone';
 import * as DC from './Constants'
 
 const CurrentCategoryLabel = props => (
@@ -37,19 +38,49 @@ export default class DelphiBlock extends Component {
     render() {
 
         // special case for all blocks
-        var CBlockId = this.props.AppObj.state.currentCBlockId;
+        const { AppObj } = { ...this.props};
+        var CBlockId = AppObj.state.currentCBlockId;
         if (CBlockId === DC.BLOCKS_ALL) {
             return (
-                <DelphiAllBlocks AppObj={this.props.AppObj} />
+                <DelphiAllBlocks AppObj={AppObj} />
             );
         }
 
         // needed elements
-        var blockState = this.props.AppObj.state.blocks[CBlockId];
+        var blockState = AppObj.state.blocks[CBlockId];
         const LockOpenImage = <img src={process.env.PUBLIC_URL + DC.IMG_LOCK_UNLOCKED}
             width={DC.IMG_LOCK_SIZE} height={DC.IMG_LOCK_SIZE} alt={DC.IMG_LOCK_UNLOCKED_ALT} />;
         const LockClosedImage = <img src={process.env.PUBLIC_URL + DC.IMG_LOCK_LOCKED}
             width={DC.IMG_LOCK_SIZE} height={DC.IMG_LOCK_SIZE} alt={DC.IMG_LOCK_LOCKED_ALT} />;
+        
+        // iterating over all nodes (rows)
+        var CNodes = Object.keys(blockState);
+        var numCNodes = CNodes.length;
+        var cc;
+        var disabled = false;
+        for (cc = 0; cc < numCNodes; cc++) {
+
+            // skipping the "locked" entry
+            if (CNodes[cc] === 'locked') { continue; }
+
+            // if a control is not marked as correct and no selection made
+            if (!DiagnosisDone(blockState[CNodes[cc]])) {
+                disabled = true;
+                break;
+            }
+        }
+        var controlClass;
+        if (disabled) {
+            controlClass = 'delphi-form-incomplete-control-cell';
+        } else {
+            controlClass = 'delphi-form-control-cell';
+        }
+        var saveClass;
+        if (AppObj.state.isSaving) {
+            saveClass = 'delphi-form-incomplete-control-cell';
+        } else {
+            saveClass = 'delphi-form-control-cell';
+        }
         
         return (
 
@@ -106,13 +137,13 @@ export default class DelphiBlock extends Component {
                         <font color="#737373"><i>{DC.BLOCK_UNLOCKED}</i></font>
                     }
                 </td>
-                <td className="delphi-form-control-cell">
+                <td className={saveClass}>
                     <p className="delphi-controls-paragraph">
                         <DelphiNextBlock AppObj={this.props.AppObj}
                             CBlockId={CBlockId} continue="no" />
                     </p>
                 </td>
-                <td className="delphi-form-control-cell">
+                <td className={controlClass}>
                     <p className="delphi-controls-paragraph">
                         <DelphiNextBlock AppObj={this.props.AppObj}
                             CBlockId={CBlockId} continue="yes" />

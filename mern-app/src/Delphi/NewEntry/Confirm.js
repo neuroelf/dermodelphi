@@ -63,7 +63,7 @@ export default class DelphiNewEntryConfirm extends Component {
         global.DM_LEVELCBLOCKS[newCBlockId].push(newCNodeId);
         const newBlocks = Object.assign({}, blocks);
         newBlocks[newCBlockId][newCNodeId] = {
-            correct: true,
+            correct: false,
             correction: CORRECTION_NONE,
             corrspelling: '',
             corrnewname: '',

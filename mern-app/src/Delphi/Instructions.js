@@ -23,14 +23,14 @@ export default class DelphiInstructions extends Component {
     </p>
     <p className="delphi-general-text-paragraph">
         Some of the {DC.TITLE_TXT_MINI} terms are supplemented by:
-        <ul>
-            <li>Synonymous names: additional commonly used names (e.g.,
-                eponyms) that imply the same diagnosis</li>
-            <li>
-                Modifiers: descriptors that may add useful information about
-                the diagnosis</li>
-        </ul>
-    </p>
+        </p>
+    <ul>
+        <li>Synonymous names: additional commonly used names (e.g.,
+            eponyms) that imply the same diagnosis</li>
+        <li>
+            Modifiers: descriptors that may add useful information about
+            the diagnosis</li>
+    </ul>
     <p className="delphi-general-text-paragraph">
         If you <b>do not</b> agree with the suggested
         {" " + DC.TITLE_TXT_MINI} term, its synonyms or modifiers, you can

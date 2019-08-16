@@ -39,42 +39,41 @@ export default class DelphiSelectCorrection extends Component {
             value={DC.CORRECTION_NONE} key={0}>{DC.CORRECTION_NONE_ALT}</option>
     }
     <option style={smallFont} value={DC.CORRECTION_FILL1} key={10} disabled>{DC.CORRECTION_FILLING_TXT}</option>
-    <option value={DC.CORRECTION_SPELLING} key={11}>{DC.CORRECTION_SPELLING_TXT}</option>
-    <option value={DC.CORRECTION_NEWNAME} key={12}>{DC.CORRECTION_NEWNAME_TXT}</option>
+    <option value={DC.CORRECTION_NEWNAME} key={11}>{DC.CORRECTION_NEWNAME_TXT}</option>
+    <option value={DC.CORRECTION_SPELLING} key={12}>{DC.CORRECTION_SPELLING_TXT}</option>
     <option style={smallFont} value={DC.CORRECTION_FILL2} key={20} disabled>{DC.CORRECTION_FILLING_TXT}</option>
-    <option value={DC.CORRECTION_NEWSYNS} key={21}>{DC.CORRECTION_NEWSYNS_TXT}</option>
-    { CNode.synonyms.length === 0 ?
-        <option value={DC.CORRECTION_EDITSYNS} key={22} disabled>{DC.CORRECTION_EDITSYNS_TXT}</option>
-        :
-        <option value={DC.CORRECTION_EDITSYNS} key={22}>{DC.CORRECTION_EDITSYNS_TXT}</option>
-    }
-    { CNode.synonyms.length === 0 ?
-        <option value={DC.CORRECTION_DELSYNS} key={23} disabled>{DC.CORRECTION_DELSYNS_TXT}</option>
-        :
-        <option value={DC.CORRECTION_DELSYNS} key={23}>{DC.CORRECTION_DELSYNS_TXT}</option>
-    }
+    <option value={DC.CORRECTION_COMBINE} key={21}>{DC.CORRECTION_COMBINE_TXT}</option>
+    <option value={DC.CORRECTION_MOVECAT} key={22}>{DC.CORRECTION_MOVECAT_TXT}</option>
     <option style={smallFont} value={DC.CORRECTION_FILL3} key={30} disabled>{DC.CORRECTION_FILLING_TXT}</option>
-    <option value={DC.CORRECTION_COMBINE} key={31}>{DC.CORRECTION_COMBINE_TXT}</option>
-    <option value={DC.CORRECTION_MOVECAT} key={32}>{DC.CORRECTION_MOVECAT_TXT}</option>
-    <option style={smallFont} value={DC.CORRECTION_FILL4} key={40} disabled>{DC.CORRECTION_FILLING_TXT}</option>
-    <option value={DC.CORRECTION_NEWMODS} key={41}>{DC.CORRECTION_NEWMODS_TXT}</option>
-    { CNode.modifiers.length === 0 ?
-        <option value={DC.CORRECTION_DELMODS} key={42} disabled>{DC.CORRECTION_DELMODS_TXT}</option>
+    { CNode.synonyms.length === 0 ?
+        <option value={DC.CORRECTION_EDITSYNS} key={31} disabled>{DC.CORRECTION_EDITSYNS_TXT}</option>
         :
-        <option value={DC.CORRECTION_DELMODS} key={42}>{DC.CORRECTION_DELMODS_TXT}</option>
+        <option value={DC.CORRECTION_EDITSYNS} key={31}>{DC.CORRECTION_EDITSYNS_TXT}</option>
+    }
+    <option value={DC.CORRECTION_NEWSYNS} key={32}>{DC.CORRECTION_NEWSYNS_TXT}</option>
+    { CNode.modifiers.length === 0 ?
+        <option value={DC.CORRECTION_EDITMODS} key={41} disabled>{DC.CORRECTION_EDITMODS_TXT}</option>
+        :
+        <option value={DC.CORRECTION_EDITMODS} key={41}>{DC.CORRECTION_EDITMODS_TXT}</option>
+    }
+    <option value={DC.CORRECTION_NEWMODS} key={42}>{DC.CORRECTION_NEWMODS_TXT}</option>
+    <option style={smallFont} value={DC.CORRECTION_FILL5} key={50} disabled>{DC.CORRECTION_FILLING_TXT}</option>
+    <option value={DC.CORRECTION_DELETE} key={80}>{DC.CORRECTION_DELETE_TXT}</option>
+    { CNode.synonyms.length === 0 ?
+        <option value={DC.CORRECTION_DELSYNS} key={81} disabled>{DC.CORRECTION_DELSYNS_TXT}</option>
+        :
+        <option value={DC.CORRECTION_DELSYNS} key={81}>{DC.CORRECTION_DELSYNS_TXT}</option>
     }
     { CNode.modifiers.length === 0 ?
-        <option value={DC.CORRECTION_EDITMODS} key={43} disabled>{DC.CORRECTION_EDITMODS_TXT}</option>
+        <option value={DC.CORRECTION_DELMODS} key={82} disabled>{DC.CORRECTION_DELMODS_TXT}</option>
         :
-        <option value={DC.CORRECTION_EDITMODS} key={43}>{DC.CORRECTION_EDITMODS_TXT}</option>
+        <option value={DC.CORRECTION_DELMODS} key={82}>{DC.CORRECTION_DELMODS_TXT}</option>
     }
     { ((CNode.modifiers.length === 0) || (CNode.synonyms.length === 0)) ?
-        <option value={DC.CORRECTION_DELBOTH} key={49} disabled>{DC.CORRECTION_DELBOTH_TXT}</option>
+        <option value={DC.CORRECTION_DELBOTH} key={83} disabled>{DC.CORRECTION_DELBOTH_TXT}</option>
         :
-        <option value={DC.CORRECTION_DELBOTH} key={49}>{DC.CORRECTION_DELBOTH_TXT}</option>
+        <option value={DC.CORRECTION_DELBOTH} key={83}>{DC.CORRECTION_DELBOTH_TXT}</option>
     }
-    <option style={smallFont} value={DC.CORRECTION_FILL8} key={80} disabled>{DC.CORRECTION_FILLING_TXT}</option>
-    <option value={DC.CORRECTION_DELETE} key={81}>{DC.CORRECTION_DELETE_TXT}</option>
     <option style={smallFont} value={DC.CORRECTION_FILL9} key={90} disabled>{DC.CORRECTION_FILLING_TXT}</option>
     <option value={DC.CORRECTION_OTHER} key={91}>{DC.CORRECTION_OTHER_TXT}</option>
 </select>
