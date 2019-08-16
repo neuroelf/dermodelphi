@@ -1,6 +1,7 @@
-# dermodelphi (Diagnosis Mapper backend and website)
-This is the repository for the [Diagnosis Mapper](https://diagnosismapper.com/)
+# dermodelphi (ISIC-Designated Diagnosis/IDDx Mapper backend and website)
+This is the repository for the [ISIC-Designated Diagnosis Mapper](https://diagnosismapper.com/)
 developed at [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/), MSKCC.
+
 It includes:
 - the original data source (basis) of the taxonomy presented (in the ```/basis``` folder)
 - the code for the website, using [React](https://reactjs.org/) (in the ```/mern-app``` folder)
@@ -13,7 +14,24 @@ and runs on [Node.js](https://nodejs.org/) v.10.16.0.
 - Jochen Weber (MSKCC), coding
 - Veronica Rotemberg (MSKCC), project supervision
 - Konstantinos Liopyris (MSKCC), project co-coordinator
-- Alon Scope (MSKCC), project co-coordinator
+- Alon Scope (MSKCC), project co-coordinator and taxonomy editor
+
+## Revisions (tracked since 8/16/2019)
+### 8/16/2019
+- changing blocks (pages) now clears the search box (state.query) and results
+- new IDDx terms are now marked as new (with same display logic!)
+- instructions button (next to tree show/hide button)
+- logout button (under session info)
+- second set of modifiers after a forced line break
+- combining with terms now works within category (not block)
+- added a "Saving failed" message if either the saveSession or saveSessionBlock methods fail
+- improved the Search box logic (multiple words are treated like in a search engine)
+- newly entered terms no longer have "correct" marked automatically, allowing modifications (e.g. synonyms, etc.)
+- replaced "Diagnosis name" with "IDDx term"
+- changed the "SelectCorrection" control text for "no correction" if another item is selected
+- added "to-do" markers around controls that require action for completing a block
+- added a brief visual indicator during saving the data (Save only button flashes)
+- harmonized the way in which changes are displayed (including renamed terms and corrected spelling)
 
 ## Installation steps
 Below is a list of installation steps that were performed to install
