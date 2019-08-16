@@ -32,70 +32,70 @@
 				"name": "Nevus, Atypical, NOS",
 				"id": 1010201,
 				"blockid": 10102,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Clark",
 				"id": 1010202,
 				"blockid": 10102,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Dysplastic",
 				"id": 1010203,
 				"blockid": 10102,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Spitz",
 				"id": 1010301,
 				"blockid": 10103,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": ["Spindle cell nevus", "Epithelioid cell nevus"]
 			},
 			{
 				"name": "Nevus, Reed",
 				"id": 1010302,
 				"blockid": 10103,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": ["Pigmented spindle cell nevus"]
 			},
 			{
 				"name": "Nevus, Unna",
 				"id": 1010303,
 				"blockid": 10103,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Miescher",
 				"id": 1010304,
 				"blockid": 10103,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, BAP-1 deficient",
 				"id": 1010305,
 				"blockid": 10103,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": ["Wiesner nevus"]
 			},
 			{
 				"name": "Nevus, Congenital (per history - present at birth or within 1 year of infancy)",
 				"id": 1010401,
 				"blockid": 10104,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Congenital pattern (per histopathology)",
 				"id": 1010402,
 				"blockid": 10104,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
 				"synonyms": []
 			},
 			{
@@ -165,42 +165,42 @@
 				"name": "Nevus, Acral",
 				"id": 1010801,
 				"blockid": 10108,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Special site nevus (e.g., genital, umbilicus, breast, axillary, other)",
 				"id": 1010802,
 				"blockid": 10108,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Recurrent / persistent",
 				"id": 1010803,
 				"blockid": 10108,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Halo",
 				"id": 1010804,
 				"blockid": 10108,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": ["Sutton nevus"]
 			},
 			{
 				"name": "Nevus, Balloon cell",
 				"id": 1010805,
 				"blockid": 10108,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Meyerson",
 				"id": 1010806,
 				"blockid": 10108,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intredermal) nevus"]],
+				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
 				"synonyms": ["Nevus with spongiotic inflammation"]
 			},
 			{
@@ -356,7 +356,7 @@
 			]
 		},
 		{
-			"name": "Adnexal epithelial proliferations - Follicular or Infundibular",
+			"name": "Adnexal epithelial proliferations - Follicular",
 			"id": 104,
 			"children": [{
 				"name": "Trichoblastoma, NOS",
@@ -1051,7 +1051,7 @@
 			]
 		},
 		{
-			"name": "Soft tissue proliferations - Myofibroblastic or muscle tissue",
+			"name": "Soft tissue proliferations - Muscle tissue or myofibroblastic",
 			"id": 110,
 			"children": [{
 				"name": "Dermatomyofibroma",
@@ -1289,7 +1289,7 @@
 				"synonyms": ["Urticaria pigmentosa"]
 			},
 			{
-				"name": "Mastocytosis, Diffuse / multifocal  (subtype: Telangiectasia mcularis eruptiva perstans, Diffuse cutaenous, other; to be specified)",
+				"name": "Mastocytosis, Diffuse / multifocal (subtype: Telangiectasia mcularis eruptiva perstans, Diffuse cutaenous, other; to be specified)",
 				"id": 1150104,
 				"blockid": 11501,
 				"modifiers": [],
@@ -1652,10 +1652,10 @@
 			]
 		},
 		{
-			"name": "Collision",
+			"name": "Collision - Only benign proliferation",
 			"id": 121,
 			"children": [{
-				"name": "Collision / two benign proliferations",
+				"name": "Collision, Only benign proliferations (to be specified)",
 				"id": 1210101,
 				"blockid": 12101,
 				"modifiers": [],
@@ -1840,7 +1840,7 @@
 			]
 		},
 		{
-			"name": "Keratinocytic proliferations",
+			"name": "Epidermal proliferations",
 			"id": 202,
 			"children": [{
 				"name": "Solar (actinic) keratosis, NOS",
@@ -2144,6 +2144,25 @@
 			]
 		},
 		{
+			"name": "Adnexal epithelial proliferations - Sebaceous",
+			"id": 205,
+			"children": [{
+				"name": "Sebaceous carcinoma",
+				"id": 2050101,
+				"blockid": 20501,
+				"modifiers": [],
+				"synonyms": []
+			},
+			{
+				"name": "Malignant adnexal epithelial proliferations, Sebaceous, other (to be specified)",
+				"id": 2050102,
+				"blockid": 20501,
+				"modifiers": [],
+				"synonyms": []
+			}
+			]
+		},
+		{
 			"name": "Adnexal epithelial proliferations - Apocrine or Eccrine",
 			"id": 204,
 			"children": [{
@@ -2234,25 +2253,6 @@
 				"name": "Malignant adnexal epithelial proliferations, Apocrine or Eccrine, other (to be specified)",
 				"id": 2040113,
 				"blockid": 20401,
-				"modifiers": [],
-				"synonyms": []
-			}
-			]
-		},
-		{
-			"name": "Adnexal epithelial proliferations - Sebaceous",
-			"id": 205,
-			"children": [{
-				"name": "Sebaceous carcinoma",
-				"id": 2050101,
-				"blockid": 20501,
-				"modifiers": [],
-				"synonyms": []
-			},
-			{
-				"name": "Malignant adnexal epithelial proliferations, Sebaceous, other (to be specified)",
-				"id": 2050102,
-				"blockid": 20501,
 				"modifiers": [],
 				"synonyms": []
 			}
@@ -2388,7 +2388,7 @@
 			]
 		},
 		{
-			"name": "Soft tissue proliferations - Muscle tissue",
+			"name": "Soft tissue proliferations - Muscle tissue or myofibroblastic",
 			"id": 208,
 			"children": [{
 				"name": "Leiomyosarcoma, Cutaneous",
@@ -2408,32 +2408,6 @@
 				"name": "Malignant Soft tissue proliferations, Muscle tissue, other (to be specified)",
 				"id": 2080103,
 				"blockid": 20801,
-				"modifiers": [],
-				"synonyms": []
-			}
-			]
-		},
-		{
-			"name": "Soft tissue proliferations - Neural",
-			"id": 209,
-			"children": [{
-				"name": "Malignant peripheral nerve sheath tumor",
-				"id": 2090101,
-				"blockid": 20901,
-				"modifiers": [],
-				"synonyms": ["Peripheral nerve sheath sarcoma"]
-			},
-			{
-				"name": "Malignant granular cell tumor",
-				"id": 2090102,
-				"blockid": 20901,
-				"modifiers": [],
-				"synonyms": ["Granular cell sarcoma"]
-			},
-			{
-				"name": "Malignant soft tissue proliferations, Neural, other (to be specified)",
-				"id": 2090103,
-				"blockid": 20901,
 				"modifiers": [],
 				"synonyms": []
 			}
@@ -2460,6 +2434,32 @@
 				"name": "Malignant soft tissue proliferations, Adipocytic, other (to be specified)",
 				"id": 2100103,
 				"blockid": 21001,
+				"modifiers": [],
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Neural",
+			"id": 209,
+			"children": [{
+				"name": "Malignant peripheral nerve sheath tumor",
+				"id": 2090101,
+				"blockid": 20901,
+				"modifiers": [],
+				"synonyms": ["Peripheral nerve sheath sarcoma"]
+			},
+			{
+				"name": "Malignant granular cell tumor",
+				"id": 2090102,
+				"blockid": 20901,
+				"modifiers": [],
+				"synonyms": ["Granular cell sarcoma"]
+			},
+			{
+				"name": "Malignant soft tissue proliferations, Neural, other (to be specified)",
+				"id": 2090103,
+				"blockid": 20901,
 				"modifiers": [],
 				"synonyms": []
 			}
@@ -2711,7 +2711,7 @@
 			]
 		},
 		{
-			"name": "Collision - at least one malignant proliferation",
+			"name": "Collision - At least one malignant proliferation",
 			"id": 218,
 			"children": [{
 				"name": "Collision, At least one malignant proliferation (to be specified)",
@@ -2723,7 +2723,7 @@
 			]
 		},
 		{
-			"name": "Malignant - Other (or not readily classifiable)",
+			"name": "Malignant – Other (or not readily classifiable)",
 			"id": 219,
 			"children": [{
 				"name": "Malignant, other (or not readily classifiable; to be specified)",
