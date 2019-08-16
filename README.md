@@ -2,6 +2,8 @@
 This is the repository for the [ISIC-Designated Diagnosis Mapper](https://diagnosismapper.com/)
 developed at [Memorial Sloan Kettering Cancer Center](https://www.mskcc.org/), MSKCC.
 
+![ISIC-Designated Diagnosis/IDDx Mapper website](mern-app/public/img/IDDx_frontpage.png?raw=true "IDDx website")
+
 It includes:
 - the original data source (basis) of the taxonomy presented (in the ```/basis``` folder)
 - the code for the website, using [React](https://reactjs.org/) (in the ```/mern-app``` folder)
