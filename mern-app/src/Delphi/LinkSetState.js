@@ -34,7 +34,9 @@ export default class DelphiLinkSetState extends Component {
                     AppObj.adminLoadBlocks(parseInt(stateValue));
                 }
                 newHistoryCBlockId.push(AppObj.state.currentCBlockId);
-                newState['historyCBlockId'] = newHistoryCBlockId
+                newState['historyCBlockId'] = newHistoryCBlockId;
+                newState['query'] = '';
+                newState['results'] = [];
             }
         } else {
             newState = stateProp;
@@ -44,6 +46,8 @@ export default class DelphiLinkSetState extends Component {
                 }
                 newHistoryCBlockId.push(AppObj.state.currentCBlockId);
                 newState['historyCBlockId'] = newHistoryCBlockId
+                newState['query'] = '';
+                newState['results'] = [];
             }
         }
         AppObj.setState(newState);

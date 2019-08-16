@@ -368,7 +368,7 @@ export default class App extends Component {
                 }
                 if ('currentCBlockId' in data) {
                     if (parseInt(data.currentCBlockId) > DC.BLOCKS_ALL) {
-                        newStateVals['currentCBlockId'] = parseInt(data.currentCBlockId);
+                        newStateVals['historyCBlockId'] = [parseInt(data.currentCBlockId)];
                     }
                 }
                 if ('newAs' in data) {
@@ -542,6 +542,8 @@ export default class App extends Component {
                         <DelphiWelcome AppObj={this} />
                     : this.state.currentCBlockId === DC.BLOCKS_INSTRUCT ?
                         <DelphiInstructions AppObj={this} />
+                    : this.state.currentCBlockId === DC.BLOCKS_LOGOUT ?
+                        <div><h2>{DC.BLOCK_LOGGED_OUT}</h2></div>
                     : this.state.currentCBlockId === DC.BLOCKS_ADDCAT ?
                         <div><DelphiNewCategoryPage AppObj={this} /></div>
                     : this.state.currentCBlockId === DC.BLOCKS_ALL ?

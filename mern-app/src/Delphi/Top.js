@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import DelphiTreeContainer from './TreeContainer';
-import DelphiLinkSetState from './LinkSetState';
-import DelphiTokenId from './TokenId';
-import DiagnosisDone from './func/DiagnosisDone';
+import React, { Component } from 'react'
+import DelphiTreeContainer from './TreeContainer'
+import DelphiLinkSetState from './LinkSetState'
+import DelphiLogout from './Logout'
+import DelphiTokenId from './TokenId'
+import DiagnosisDone from './func/DiagnosisDone'
 import { IMG_LOGO, IMG_LOGO_ALT, IMG_LOGO_HEIGHT, IMG_LOGO_WIDTH,
-    TITLE_TXT_FULL, TITLE_TXT_SUBTITLE,
+    BLOCKS_LOGOUT, TITLE_TXT_FULL, TITLE_TXT_SUBTITLE,
     SESS_INFO, SESS_PROGRESS, } from './Constants'
 
 export default class DelphiTop extends Component {
@@ -15,8 +16,9 @@ export default class DelphiTop extends Component {
     }
     
     render() {
-        const { blocks, sessionOk, sessionId,
-            tokenValid, tokenVisible } = { ...this.props.AppObj.state};
+        const { AppObj } = { ...this.props};
+        const { blocks, currentCBlockId, sessionOk, sessionId,
+            tokenValid, tokenVisible } = { ...AppObj.state};
         var doneNodes = 0;
         var totalNodes = 0;
         const blockKeys = Object.keys(blocks);
@@ -46,20 +48,23 @@ export default class DelphiTop extends Component {
                     </td>
                     <td width="24"></td>
                     <td valign="middle">
-                        <h1>{TITLE_TXT_FULL} <small><b> - {TITLE_TXT_SUBTITLE}</b></small></h1>
+                        <h1>{TITLE_TXT_FULL} - {TITLE_TXT_SUBTITLE}</h1>
                     </td>
                     <td width="120"></td>
                     <td width="192" className="delphi-general-paragraph-small">
                         {(!!sessionOk) ?
                         <div>
-                            <font color="white"> {SESS_INFO} <DelphiLinkSetState AppObj={this.props.AppObj}
+                            <font color="white"> {SESS_INFO} <DelphiLinkSetState AppObj={AppObj}
                                 stateValue={true} stateProp={'tokenVisible'}
                                 className="delphi-session-id" linkText={sessionId} /></font><br />
                             <font color="white"> {SESS_PROGRESS} {doneNodes} of {totalNodes}<br /></font>
                             {(!!tokenVisible && !tokenValid) ?
                             <div>
-                                <DelphiTokenId AppObj={this.props.AppObj} />
+                                <DelphiTokenId AppObj={AppObj} />
                             </div> : ''}
+                            <br />
+                            {(currentCBlockId !== BLOCKS_LOGOUT) ?
+                                <DelphiLogout AppObj={AppObj} /> : '' }
                         </div> : '' }
                     </td>
                 </tr>
@@ -67,7 +72,7 @@ export default class DelphiTop extends Component {
         </table>
     </div>
 
-    <DelphiTreeContainer AppObj={this.props.AppObj} />
+    <DelphiTreeContainer AppObj={AppObj} />
 </div>
 
         );

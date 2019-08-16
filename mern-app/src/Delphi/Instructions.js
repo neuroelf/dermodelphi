@@ -8,6 +8,7 @@ export default class DelphiInstructions extends Component {
     //}
     
     render() {
+        const { historyCBlockId } = { ...this.props.AppObj.state};
         return (
 <table border="0"><tbody><tr><td width="50%"></td><td width="800"><div>
     <h2>Instructions</h2>
@@ -84,12 +85,21 @@ export default class DelphiInstructions extends Component {
             linkText={"the list of categories, " + DC.TITLE_TXT_MINI +
                 " terms, their synonyms and modifiers"} />.
     </p>
-    <p className="delphi-general-text-paragraph">
-        Or if you want to get started right away, simply go 
+    { (historyCBlockId.length === 0) ?
+        <p className="delphi-general-text-paragraph">
+            Or if you want to get started right away, simply go 
+            to <DelphiLinkSetState AppObj={this.props.AppObj}
+                stateProp="currentCBlockId" stateValue={DC.BLOCKS_FIRST}
+                linkText="the first block of terms" />.
+        </p>
+    :
+        <p className="delphi-general-text-paragraph">
+        Or if you want to continue, simply go 
         to <DelphiLinkSetState AppObj={this.props.AppObj}
-            stateProp="currentCBlockId" stateValue={DC.BLOCKS_FIRST}
-            linkText="the first block of terms" />.
-    </p>
+            stateProp="currentCBlockId" stateValue={historyCBlockId[historyCBlockId.length-1]}
+            linkText="where you left things off" />.
+        </p>
+    }
 </div></td><td width="50%"></td></tr></tbody></table>
         );
     }

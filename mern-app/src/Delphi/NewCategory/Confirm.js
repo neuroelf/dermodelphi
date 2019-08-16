@@ -120,6 +120,7 @@ export default class DelphiNewCategoryConfirm extends Component {
             newBs: newNewBs,
             blocks: newBlocks
         }, () => {
+            AppObj.saveSession();
             AppObj.saveSessionBlock(AppObj.nullHook, nextCBlockId);
         });
     }

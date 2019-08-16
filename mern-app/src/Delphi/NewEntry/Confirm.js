@@ -95,6 +95,7 @@ export default class DelphiNewEntryConfirm extends Component {
             newCs: newNewCs,
             blocks: newBlocks
         }, () => {
+            AppObj.saveSession();
             AppObj.saveSessionBlock(AppObj.nullHook, newCBlockId);
         });
     }

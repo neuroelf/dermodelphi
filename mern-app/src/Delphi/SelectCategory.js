@@ -27,7 +27,9 @@ export default class DelphiSelectCategory extends Component {
         }
         AppObj.setState({
             currentCBlockId: nextCBlockId,
-            historyCBlockId: newHistoryBlockId
+            historyCBlockId: newHistoryBlockId,
+            query: '',
+            results: []
         });
     }
 

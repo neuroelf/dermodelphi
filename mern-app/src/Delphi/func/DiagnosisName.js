@@ -29,9 +29,18 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
     }
     cnodeCorrect = cnodeCorrect | isAdmin;
 
+    // user provided term?
+    var byUserText;
+    if (cnodeState.byuser) {
+        byUserText = <span><small><b><font color="red">{DC.TXT_NEW_TERM}</font></b></small></span>
+        nodeName = <span><b>{nodeName}</b></span>
+    } else {
+        byUserText = <span></span>
+    }
+
     // if to be deleted, don't bother with anything else
     if ((!cnodeCorrect) && (cnodeState.correction === DC.CORRECTION_DELETE)) {
-        return <span className="delphi-diagnosis-name"><i>{nodeName} <small><b><font color="red">
+        return <span className="delphi-diagnosis-name"><i>{byUserText}{nodeName} <small><b><font color="red">
             {DC.TXT_TO_BE_DELETED}</font></b></small></i>{adminResults}</span>
     }
 
@@ -39,7 +48,7 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
     if ((!cnodeCorrect) &&
         (cnodeState.correction === DC.CORRECTION_COMBINE) &&
         (cnodeState.corrcombine !== 0)) {
-        return <span className="delphi-diagnosis-name"><i>{nodeName} <small><b><font color="red">
+        return <span className="delphi-diagnosis-name"><i>{byUserText}{nodeName} <small><b><font color="red">
             {DC.TXT_TO_BE_COMBINED_WITH}</font>
             {global.DM_LEVELCNODES[cnodeState.corrcombine].name}
             </b></small></i>{adminResults}</span>
@@ -56,11 +65,11 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
     } else {
         if (oldModifiers.length === 1) {
             oldModifiersText = <span><br /><small>
-                {DC.TXT_MODIFIABLE_BY} {oldModifiers[0].join(', ')}</small></span>
+                {DC.TXT_MODIFIABLE_BY} {oldModifiers[0].join(' / ')}</small></span>
         } else {
             oldModifiersText = <span><br /><small>
-                {DC.TXT_MODIFIABLE_BY} [{oldModifiers[0].join(', ')}]
-                    {DC.TXT_AND_MODIFIABLE_BY} [{oldModifiers[1].join(', ')}]</small></span>
+                {DC.TXT_MODIFIABLE_BY} {oldModifiers[0].join(' / ')}<br />
+                    {DC.TXT_AND_MODIFIABLE_BY} {oldModifiers[1].join(' / ')}</small></span>
         }
     }
     if ((oldSynonyms.length === 0) ||
@@ -106,7 +115,7 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
         (cnodeState.correction !== DC.CORRECTION_NONE) &&
         (cnodeState.correditsyns !== '')) {
         editSyns = <span> <small><b><font color="red">{DC.TXT_SYNS_TO_BE_EDITED} </font>
-            (<i>{DC.TXT_AKA_EDITED}{cnodeState.correditsyns.split(';').join(', ')}</i>)</b></small></span>
+            (<i>{DC.TXT_AKA_EDITED}{cnodeState.correditsyns.split(/[;,]/).join(', ')}</i>)</b></small></span>
     } else {
         editSyns = <span></span>
     }
@@ -117,7 +126,7 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
         (cnodeState.correction !== DC.CORRECTION_NONE) &&
         (cnodeState.corrnewsyns !== '')) {
         newSyns = <span> <small><b>(<i><font color="red">{DC.TXT_AKA_NEW} </font>
-            {cnodeState.corrnewsyns.split(';').join(', ')}</i>)</b></small></span>
+            {cnodeState.corrnewsyns.split(/[;,]/).join(', ')}</i>)</b></small></span>
     } else {
         newSyns = <span></span>
     }
@@ -138,7 +147,7 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
         (cnodeState.correction !== DC.CORRECTION_NONE) &&
         (cnodeState.correditmods !== '')) {
         editMods = <span><br /><small><b><font color="red">{DC.TXT_MODS_TO_BE_EDITED} </font>
-            {cnodeState.correditmods.split(';').slice().join(', ')}</b></small></span>
+            {cnodeState.correditmods.split(/[;,]/).slice().join(' / ')}</b></small></span>
     } else {
         editMods = <span></span>
     }
@@ -149,7 +158,7 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
         (cnodeState.correction !== DC.CORRECTION_NONE) &&
         (cnodeState.corrnewmods !== '')) {
         newMods = <span><br /><small><b><font color="red">{DC.TXT_MODIFIABLE_BY_NEW} </font>
-            {cnodeState.corrnewmods.split(';').join(', ')}</b></small></span>
+            {cnodeState.corrnewmods.split(/[;,]/).join(' / ')}</b></small></span>
     } else {
         newMods = <span></span>
     }
@@ -178,6 +187,7 @@ export default function DiagnosisName(CNodeId, CBlockId, AppObj) {
 
     // put together the name and the synonyms and modifiers (as by now)
     return <span className="delphi-diagnosis-name">
+        {byUserText}
         {nodeName}
         {oldSynonymsText}
         {renameCorrection}

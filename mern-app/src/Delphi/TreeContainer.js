@@ -2,17 +2,33 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { DelphiTree } from './Tree';
 import * as d3 from 'd3';
-import { TXT_TOGGLE_TREE_OFF, TXT_TOGGLE_TREE_ON } from './Constants';
+import { TXT_TOGGLE_TREE_OFF, TXT_TOGGLE_TREE_ON,
+    BLOCK_INSTRUCTIONS, BLOCKS_INSTRUCT } from './Constants';
 const cssfont = require('../css/bpreplay-webfont.woff');
 
 export default class DelphiTreeContainer extends Component {
     constructor(props) {
         super(props);
         this.node = null;
-        this.state = { }
+        this.state = { };
+        this.goToInstructions = this.goToInstructions.bind(this);
         this.showOrHideTree = this.showOrHideTree.bind(this);
     }
     
+    goToInstructions(event) {
+        event.preventDefault();
+
+        const { AppObj } = { ...this.props};
+        const { historyCBlockId, currentCBlockId } = { ...AppObj.state};
+        const newHistoryCBlockId = [ ...historyCBlockId];
+        newHistoryCBlockId.push(currentCBlockId);
+        var newState = {
+            currentCBlockId: BLOCKS_INSTRUCT,
+            historyCBlockId: newHistoryCBlockId
+        };
+        AppObj.setState(newState);
+    }
+
     showOrHideTree(event) {
         event.preventDefault();
 
@@ -67,12 +83,20 @@ export default class DelphiTreeContainer extends Component {
 
     render() {
         const { AppObj } = { ...this.props};
+        var { currentCBlockId, sessionOk} = { ...AppObj.state};
         return (
 <div>
     <div className="delphi-general-paragraph-small">
         <button onClick={this.showOrHideTree}>{
             AppObj.state.treeVisible ? TXT_TOGGLE_TREE_OFF : TXT_TOGGLE_TREE_ON
             }</button>
+        { ((!!sessionOk) && (currentCBlockId !== BLOCKS_INSTRUCT)) ?
+            <span>
+                <font color="#FFFFFF">--------</font>
+                <button onClick={this.goToInstructions}>{BLOCK_INSTRUCTIONS}</button>
+            </span>
+            : ""
+        }
     </div>
     <div><iframe frameBorder="0" width="100%" id="treeFrame" title="DM Tree"
         style={(!!AppObj.state.treeVisible ? 
