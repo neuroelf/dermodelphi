@@ -11,10 +11,10 @@ All code was developed using [Visual Studio Code](https://code.visualstudio.com/
 and runs on [Node.js](https://nodejs.org/) v.10.16.0.
 
 ## Authors / Collaborators
+- **Alon Scope (MSKCC), project lead**
+- Konstantinos Liopyris (MSKCC), team member
+- Veronica Rotemberg (MSKCC), team member
 - Jochen Weber (MSKCC), coding
-- Veronica Rotemberg (MSKCC), project supervision
-- Konstantinos Liopyris (MSKCC), project co-coordinator
-- Alon Scope (MSKCC), project co-coordinator and taxonomy editor
 
 ## Revisions (tracked since 8/16/2019)
 ### 8/16/2019
