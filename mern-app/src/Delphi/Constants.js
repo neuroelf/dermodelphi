@@ -19,6 +19,12 @@ export const IMG_LOGO = '/img/dm_logo_2.png'
 export const IMG_LOGO_ALT = TITLE_TXT + ' logo'
 export const IMG_LOGO_HEIGHT = 60
 export const IMG_LOGO_WIDTH = 120
+export const IMG_FORMATPAINT = '/img/paint.png'
+export const IMG_FORMATPAINT_ALT = 'Copy this setting to other IDDx terms in this block'
+export const IMG_FORMATPAINT_SIZE = 24
+export const IMG_FORMATRESET = '/img/reset.png'
+export const IMG_FORMATRESET_ALT = 'Reset the settings for this IDDx term'
+export const IMG_FORMATRESET_SIZE = 24
 
 // search results
 export const SEARCH_MAX_RESULTS = 30
@@ -119,6 +125,7 @@ export const CORRECTION_SPELLING = 'CORRECTION_SPELLING'
 // and their associated dropdown entries
 export const CORRECTION_COMBINE_TXT = 'Combine with another IDDx term'
 export const CORRECTION_COMBINE_USER_DEFINED_TXT = ' (user defined term)'
+export const CORRECTION_COPY = 'Copy correction to terms below'
 export const CORRECTION_DELETE_TXT = 'Remove IDDx term completely'
 export const CORRECTION_DELBOTH_TXT = 'Remove modifiers and synonyms'
 export const CORRECTION_DELMODS_TXT = 'Remove modifiers'

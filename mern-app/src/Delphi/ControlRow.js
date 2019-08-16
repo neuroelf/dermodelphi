@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import DelphiRowIsCorrect from './RowIsCorrect'
+import DelphiFormatPaint from './FormatPaint'
+import DelphiFormatReset from './FormatReset'
 import DelphiSelectCorrection from './SelectCorrection'
 import DelphiCorrectionCombine from './Correction/Combine'
 import DelphiCorrectionEditMods from './Correction/EditMods'
@@ -24,6 +26,7 @@ export default class DelphiControlRow extends Component {
         const { AppObj, CBlockId, CNodeId } = { ...this.props};
         const { blocks } = { ...AppObj.state};
         const rowState = blocks[CBlockId][CNodeId];
+        var blockLocked = blocks[CBlockId]['locked'];
         var rowIsIncomplete = ((!rowState.correct) && (
             (rowState.correction === DC.CORRECTION_NONE) ||
             ((rowState.correction === DC.CORRECTION_SPELLING) && (rowState.corrspelling === '')) ||
@@ -52,54 +55,69 @@ export default class DelphiControlRow extends Component {
 <tr className="delphi-form-row">
     <td width="24"></td>
     <td className="delphi-form-name-cell">
-        {DiagnosisName(this.props.CNodeId, this.props.CBlockId, this.props.AppObj)}
+        {DiagnosisName(CNodeId, CBlockId, AppObj)}
     </td>
     <td className="delphi-form-control-centered-cell">
-        <DelphiRowIsCorrect AppObj={this.props.AppObj} 
-            CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
+        <DelphiRowIsCorrect AppObj={AppObj} 
+            CBlockId={CBlockId} CNodeId={CNodeId} />
     </td>
     <td><table><tbody><tr>
         <td className={selectClass}>
-            <DelphiSelectCorrection AppObj={this.props.AppObj}
-                CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} />
+            <DelphiSelectCorrection AppObj={AppObj}
+                CBlockId={CBlockId} CNodeId={CNodeId} />
+        </td>
+        <td>{
+            ((!blockLocked) &&
+            (!rowState.correct) &&
+            (rowState.correction !== DC.CORRECTION_NONE)) ?
+            <DelphiFormatReset AppObj={AppObj} CNodeId={CNodeId} /> : "" }
         </td>
         <td className={controlClass + " delphi-form-nopadd-cell"}>
             { rowState.correction === DC.CORRECTION_NEWNAME ? 
-                <DelphiCorrectionNewName AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionNewName AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_SPELLING ?
-                <DelphiCorrectionSpelling AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionSpelling AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_COMBINE ? 
-                <DelphiCorrectionCombine AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionCombine AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_MOVECAT ? 
-                <DelphiCorrectionReassign AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionReassign AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_EDITSYNS ? 
-                <DelphiCorrectionEditSyns AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionEditSyns AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_NEWSYNS ? 
-                <DelphiCorrectionNewSyns AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionNewSyns AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_EDITMODS ? 
-                <DelphiCorrectionEditMods AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionEditMods AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_NEWMODS ? 
-                <DelphiCorrectionNewMods AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionNewMods AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
             { rowState.correction === DC.CORRECTION_OTHER ?
-                <DelphiCorrectionOther AppObj={this.props.AppObj}
-                    CBlockId={this.props.CBlockId} CNodeId={this.props.CNodeId} /> : ''
+                <DelphiCorrectionOther AppObj={AppObj}
+                    CBlockId={CBlockId} CNodeId={CNodeId} /> : ''
             }
+        </td><td>
+            { (((CNodeId % 100) === 1) && (!blockLocked) &&
+               (((rowState.correction === DC.CORRECTION_NEWMODS) &&
+                 (rowState.corrnewmods !== '')) ||
+                ((rowState.correction === DC.CORRECTION_MOVECAT) &&
+                 (rowState.corrmoveto !== 0)) ||
+                ((rowState.correction === DC.CORRECTION_OTHER) &&
+                 (rowState.corrother !== '')))) ?
+                <DelphiFormatPaint AppObj={AppObj} CNodeId={CNodeId} /> : "" }
         </td>
     </tr></tbody></table></td>
 </tr>
