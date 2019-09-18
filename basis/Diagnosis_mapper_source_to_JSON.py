@@ -28,10 +28,16 @@ def isNaN(value):
 Adict = {}
 Bdict = {}
 Cdict = {}
+
 class ABCNode:
-    def __init__(self, name, level, Aid, Bid, CBid, Cid, syns, mod1, mod2):
-        self.name = name.strip()
+    
+    def __init__(self, name, level, Aid, Bid, CBid, Cid, syns, mod1, mod2, status):
         self.children = []
+        self.modifiers = None
+        self.synonyms = None
+        self.name = name.strip()
+        self.status = status if status else 'visible'
+        
         if level == 'A':
             self.id = Aid
             if not Aid in Adict:
@@ -75,9 +81,10 @@ class ABCNode:
                     objstr += self.children[cc].toJSON(clevel + 1) + "\n"
             objstr += txstr + "]\n"
         else:
-            objstr += txstr + "\"blockid\": " + str(self.blockid) + ",\n" + \
-                txstr + "\"modifiers\": " + repr(self.modifiers).replace("'", "\"") + ",\n" + \
-                txstr + "\"synonyms\": " + repr(self.synonyms).replace("'", "\"") + "\n"
+            objstr += (txstr + "\"blockid\": " + str(self.blockid) + ",\n" +
+                txstr + "\"modifiers\": " + repr(self.modifiers).replace("'", "\"") + ",\n" +
+                txstr + "\"status\": \"" + self.status + "\",\n" +
+                txstr + "\"synonyms\": " + repr(self.synonyms).replace("'", "\"") + "\n")
         closestr = tstr + "}"
         return openstr + objstr + closestr
 
@@ -88,7 +95,7 @@ sourcedf = pd.read_excel(XLSFILE, sheet_name=SHEETNAME, header=0)
 currentA = None
 currentB = None
 currentC = None
-baseNode = ABCNode('', 0, 0, 0, 0, 0, None, None, None)
+baseNode = ABCNode('', 0, 0, 0, 0, 0, None, None, None, None)
 for rowindex, row in sourcedf.iterrows():
     syns = row[3]
     mod1 = row[4]
@@ -97,15 +104,15 @@ for rowindex, row in sourcedf.iterrows():
     Bid = row[7]
     CBid = row[9]
     Cid = row[10]
+    status = row[11]
     if not isNaN(row[0]):
-        currentA = ABCNode(row[0], 'A', Aid, Bid, CBid, Cid, syns, mod1, mod2)
+        currentA = ABCNode(row[0], 'A', Aid, Bid, CBid, Cid, syns, mod1, mod2, None)
         baseNode.children.append(currentA)
     if not isNaN(row[1]):
-        currentB = ABCNode(row[1], 'B', Aid, Bid, CBid, Cid, syns, mod1, mod2)
+        currentB = ABCNode(row[1], 'B', Aid, Bid, CBid, Cid, syns, mod1, mod2, None)
     if not isNaN(row[2]):
-        currentC = ABCNode(row[2], 'C', Aid, Bid, CBid, Cid, syns, mod1, mod2)
+        currentC = ABCNode(row[2], 'C', Aid, Bid, CBid, Cid, syns, mod1, mod2, status)
 
 # store converted output to file
 with open(OUTPUTFILE, "w", encoding='utf-8') as textfile:
     textfile.write(baseNode.toJSON())
-
