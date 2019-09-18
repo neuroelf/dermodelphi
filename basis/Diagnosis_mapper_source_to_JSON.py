@@ -97,6 +97,9 @@ currentB = None
 currentC = None
 baseNode = ABCNode('', 0, 0, 0, 0, 0, None, None, None, None)
 for rowindex, row in sourcedf.iterrows():
+    status = row[11]
+    if status and status[0] == 'd':
+        continue
     syns = row[3]
     mod1 = row[4]
     mod2 = row[5]
@@ -104,7 +107,6 @@ for rowindex, row in sourcedf.iterrows():
     Bid = row[7]
     CBid = row[9]
     Cid = row[10]
-    status = row[11]
     if not isNaN(row[0]):
         currentA = ABCNode(row[0], 'A', Aid, Bid, CBid, Cid, syns, mod1, mod2, None)
         baseNode.children.append(currentA)
