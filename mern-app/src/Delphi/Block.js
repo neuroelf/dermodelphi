@@ -60,8 +60,9 @@ export default class DelphiBlock extends Component {
         var disabled = false;
         for (cc = 0; cc < numCNodes; cc++) {
 
-            // skipping the "locked" entry
+            // skipping the "locked" entry, as well as hidden/locked nodes
             if (CNodes[cc] === 'locked') { continue; }
+            if (global.DM_LEVELCNODES[CNodes[cc]].status !== 'visible') { continue; }
 
             // if a control is not marked as correct and no selection made
             if (!DiagnosisDone(blockState[CNodes[cc]])) {
@@ -111,9 +112,10 @@ export default class DelphiBlock extends Component {
             <td className="delphi-form-header-cell">{DC.TABLE_HEADER_CORRECTION}</td>
         </tr>
 
-        {global.DM_LEVELCBLOCKS[CBlockId].map(CNodeId => 
+        {global.DM_LEVELCBLOCKS[CBlockId].map(CNodeId =>
+            (global.DM_LEVELCNODES[CNodeId].status === 'hidden') ? null :
             <DelphiControlRow key={CNodeId} AppObj={this.props.AppObj}
-                CBlockId={CBlockId} CNodeId={CNodeId} />)
+                CBlockId={CBlockId} CNodeId={CNodeId} /> )
         }
 
         <DelphiNewEntryRow AppObj={this.props.AppObj} />

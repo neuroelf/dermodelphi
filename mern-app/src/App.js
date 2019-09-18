@@ -18,10 +18,16 @@ global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
 
 // variables for global JSON information
 global.DM_TREE = require('./json/dm_diagnoses.json');
+global.DM_LEVELAHIDDEN = {};
+global.DM_LEVELALOCKED = {};
 global.DM_LEVELANAMES = {};
+global.DM_LEVELBHIDDEN = {};
+global.DM_LEVELBLOCKED = {};
 global.DM_LEVELBNAMES = {};
 global.DM_LEVELBFULLNAMES = {};
 global.DM_LEVELCBLOCKS = {};
+global.DM_LEVELCBLOCKSHIDDEN = {};
+global.DM_LEVELCBLOCKSLOCKED = {};
 global.DM_LEVELCBLOCKIDS = [];
 global.DM_LEVELCBLOCKNAMES = [];
 global.DM_LEVELCBLOCKID2NAMES = {};
@@ -46,7 +52,8 @@ function sleepMS(milliseconds) {
 // function for loading the JSON file into global config
 function parseDMJSONFile() {
     var anodes = global.DM_TREE.children;
-    var aname, anode, bname, bnode, cblock, cnode, blname, blnodes,
+    var ahidden, alocked, aname, anode, bhidden, blocked, bname, bnode,
+        cblock, cblockhidden, cblocklocked, cnode, blname, blnodes,
         bnodes, cnodes, alen, blen, clen, ac, bc, cc, blc;
     alen = anodes.length;
     blname = '';
@@ -58,6 +65,8 @@ function parseDMJSONFile() {
         anode = anodes[ac];
         aname = anode.name;
         global.DM_LEVELANAMES[anode.id] = aname;
+        ahidden = true;
+        alocked = true;
 
         // parse categories
         bnodes = anode.children;
@@ -67,11 +76,14 @@ function parseDMJSONFile() {
             bname = bnode.name;
             global.DM_LEVELBNAMES[bnode.id] = bname;
             global.DM_LEVELBFULLNAMES[bnode.id] = aname + " - " + bname;
+            bhidden = true;
+            blocked = true;
 
             // parse diagnoses (names)
             cnodes = bnode.children;
             clen = cnodes.length;
             blc = 0;
+            cblockhidden = false;
             for (cc = 0; cc < clen; cc++) {
                 cnode = cnodes[cc];
                 global.DM_LEVELCNODES[cnode.id] = cnode;
@@ -84,9 +96,13 @@ function parseDMJSONFile() {
 
                         // store node list into array
                         global.DM_LEVELCBLOCKS[cblock] = blnodes;
+                        global.DM_LEVELCBLOCKSHIDDEN[cblock] = cblockhidden;
+                        global.DM_LEVELCBLOCKSLOCKED[cblock] = cblocklocked;
                     }
                     cblock = cnode.blockid;
-                    blc = blc + 1;
+                    if (!cblockhidden) {
+                        blc = blc + 1;
+                    }
 
                     // create new node list, generate and store name
                     blnodes = [];
@@ -94,15 +110,33 @@ function parseDMJSONFile() {
                     global.DM_LEVELCBLOCKIDS.push(cblock);
                     global.DM_LEVELCBLOCKNAMES.push(blname);
                     global.DM_LEVELCBLOCKID2NAMES[cblock] = blname;
+                    cblockhidden = true;
+                    cblocklocked = true;
                 }
 
                 // add node to list
                 blnodes.push(cnode.id);
+                if (cnode.status !== 'hidden') {
+                    ahidden = false;
+                    bhidden = false;
+                    cblockhidden = false;
+                }
+                if (cnode.status === 'visible') {
+                    alocked = false;
+                    blocked = false;
+                    cblocklocked = false;
+                }
             }
+            global.DM_LEVELBHIDDEN[bnode.id] = bhidden;
+            global.DM_LEVELBLOCKED[bnode.id] = blocked;
         }
+        global.DM_LEVELAHIDDEN[anode.id] = ahidden;
+        global.DM_LEVELALOCKED[anode.id] = alocked;
         
         // also for last block (at the end of the loops)
         global.DM_LEVELCBLOCKS[cblock] = blnodes;
+        global.DM_LEVELCBLOCKSHIDDEN[cblock] = cblockhidden;
+        global.DM_LEVELCBLOCKSLOCKED[cblock] = cblocklocked;
     }
 return;
 }
@@ -114,9 +148,9 @@ export default class App extends Component {
         
         // place holder state (will be filled from JSON data)
         this.state = {
-            userEmail: '',
-            sessionId: '',
-            sessionOk: false,
+            userEmail: 'weberj3@mskcc.org',
+            sessionId: '758798',
+            sessionOk: true,
             sessionDate: Date.now(),
             tokenId: '',
             tokenValid: false,

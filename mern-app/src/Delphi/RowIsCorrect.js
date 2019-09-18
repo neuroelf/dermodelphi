@@ -29,6 +29,9 @@ export default class DelphiRowIsCorrect extends Component {
         if (rowState.correction !== CORRECTION_NONE) {
             disabled = true;
         }
+        if (global.DM_LEVELCNODES[this.props.CNodeId].status === 'locked') {
+            disabled = true;
+        }
         return (
             <input type="checkbox" checked={!!rowState.correct}
              onChange={this.handleChange} disabled={disabled} />

@@ -11,7 +11,9 @@ export default class DelphiAllBlocks extends Component {
         return (
 <table className="delphi-form-table">
     {Object.keys(global.DM_LEVELBFULLNAMES).map(
-        CatId => <DelphiDisplayBlock key={"cat" + CatId} AppObj={this.props.AppObj} CatId={CatId} />)}
+        CatId => global.DM_LEVELBHIDDEN[CatId] ?
+            null :
+            <DelphiDisplayBlock key={"cat" + CatId} AppObj={this.props.AppObj} CatId={CatId} /> )}
 </table>
         );
     }

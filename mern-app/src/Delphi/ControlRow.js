@@ -39,6 +39,12 @@ export default class DelphiControlRow extends Component {
             ((rowState.correction === DC.CORRECTION_MOVECAT) && (rowState.corrmoveto === 0)) ||
             ((rowState.correction === DC.CORRECTION_OTHER) && (rowState.corrother === ''))
         ));
+        if (global.DM_LEVELCNODES[CNodeId].status === 'locked') {
+            blockLocked = true;
+            rowIsIncomplete = false;
+            rowState.correct = true;
+            rowState.correction = DC.CORRECTION_NONE;
+        }
         var controlClass, selectClass;
         if (rowIsIncomplete) {
             controlClass = 'delphi-form-incomplete-control-cell';

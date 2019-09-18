@@ -29,6 +29,9 @@ export default class DelphiTop extends Component {
                 if (nodeKeys[nc] === 'locked') {
                     continue;
                 }
+                if (global.DM_LEVELCNODES[nodeKeys[nc]].status !== 'visible') {
+                    continue;
+                }
                 totalNodes++;
                 if (DiagnosisDone(block[nodeKeys[nc]])) {
                     doneNodes++;
