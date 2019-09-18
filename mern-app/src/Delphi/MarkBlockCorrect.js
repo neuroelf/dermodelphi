@@ -24,6 +24,7 @@ export default class DelphiMarkBlockCorrect extends Component {
         var cc;
         for (cc = 0; cc < numCNodes; cc++) {
             if (CNodes[cc] === 'locked') { continue; }
+            if (global.DM_LEVELCNODES[CNodes[cc]].status !== 'visible') { continue; }
             var rowState = blockState[CNodes[cc]];
             if (rowState.correction !== CORRECTION_NONE) {
                 return;
@@ -43,6 +44,7 @@ export default class DelphiMarkBlockCorrect extends Component {
             var cc;
             for (cc = 0; cc < numCNodes; cc++) {
                 if (CNodes[cc] === 'locked') { continue; }
+                if (global.DM_LEVELCNODES[CNodes[cc]].status !== 'visible') { continue; }
                 var rowState = blockState[CNodes[cc]];
                 if (rowState.correction !== CORRECTION_NONE) {
                     disabled = true;

@@ -74,7 +74,10 @@ export default class DelphiSelectCategory extends Component {
                 <option value={(BLOCKS_ALL).toString()} key={(BLOCKS_ALL).toString()}>{BLOCKS_ALL_TXT}</option>
                 {Object.keys(global.DM_LEVELCBLOCKS).map(blockId =>
                     global.DM_LEVELCBLOCKSHIDDEN[blockId] ? null :
-                    <option key={"block"+blockId} value={blockId}>{global.DM_LEVELCBLOCKID2NAMES[blockId]}</option>)}
+                    global.DM_LEVELCBLOCKSLOCKED[blockId] ?
+                    <option key={"block"+blockId} value={blockId} disabled>{global.DM_LEVELCBLOCKID2NAMES[blockId]}</option>
+                    :
+                    <option key={"block"+blockId} value={blockId}>{global.DM_LEVELCBLOCKID2NAMES[blockId]}</option> )}
             </select>
         );
     }

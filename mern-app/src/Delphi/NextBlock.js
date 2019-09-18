@@ -79,6 +79,7 @@ export default class DelphiNextBlock extends Component {
 
             // skipping the "locked" entry
             if (CNodes[cc] === 'locked') { continue; }
+            if (global.DM_LEVELCNODES[CNodes[cc]].status !== 'visible') { continue; }
 
             // if a control is not marked as correct and no selection made
             if (!DiagnosisDone(blockState[CNodes[cc]])) {
