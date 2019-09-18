@@ -1,5 +1,8 @@
 # iPython/Jupyter notebook checkpoints
 .ipynb_checkpoints
 
+# analysis output
+/analysis/analysis.csv
+
 # log files
 /logs
