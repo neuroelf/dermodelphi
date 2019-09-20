@@ -13,7 +13,6 @@ import './App.css'
 import * as DC from './Delphi/Constants'
 
 // server configuration
-// global.DM_BACKEND_URL = 'http://localhost:4000/';
 global.DM_BACKEND_URL = 'https://delphi.diagnosismapper.com/';
 
 // variables for global JSON information
@@ -148,9 +147,9 @@ export default class App extends Component {
         
         // place holder state (will be filled from JSON data)
         this.state = {
-            userEmail: 'weberj3@mskcc.org',
-            sessionId: '758798',
-            sessionOk: true,
+            userEmail: '',
+            sessionId: '',
+            sessionOk: False,
             sessionDate: Date.now(),
             tokenId: '',
             tokenValid: false,
