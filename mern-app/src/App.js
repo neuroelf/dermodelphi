@@ -149,7 +149,7 @@ export default class App extends Component {
         this.state = {
             userEmail: '',
             sessionId: '',
-            sessionOk: False,
+            sessionOk: false,
             sessionDate: Date.now(),
             tokenId: '',
             tokenValid: false,
