@@ -12,6 +12,7 @@
 				"id": 1010101,
 				"blockid": 10101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -19,6 +20,7 @@
 				"id": 1010102,
 				"blockid": 10101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -26,6 +28,7 @@
 				"id": 1010103,
 				"blockid": 10101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -33,6 +36,7 @@
 				"id": 1010201,
 				"blockid": 10102,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -40,6 +44,7 @@
 				"id": 1010202,
 				"blockid": 10102,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -47,6 +52,7 @@
 				"id": 1010203,
 				"blockid": 10102,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -54,6 +60,7 @@
 				"id": 1010301,
 				"blockid": 10103,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": ["Spindle cell nevus", "Epithelioid cell nevus"]
 			},
 			{
@@ -61,20 +68,23 @@
 				"id": 1010302,
 				"blockid": 10103,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": ["Pigmented spindle cell nevus"]
 			},
 			{
 				"name": "Nevus, Unna",
 				"id": 1010303,
 				"blockid": 10103,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"modifiers": [["Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
 				"name": "Nevus, Miescher",
 				"id": 1010304,
 				"blockid": 10103,
-				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"modifiers": [["Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -82,6 +92,7 @@
 				"id": 1010305,
 				"blockid": 10103,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": ["Wiesner nevus"]
 			},
 			{
@@ -89,6 +100,7 @@
 				"id": 1010401,
 				"blockid": 10104,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -96,6 +108,7 @@
 				"id": 1010402,
 				"blockid": 10104,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -103,6 +116,7 @@
 				"id": 1010501,
 				"blockid": 10105,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -110,6 +124,7 @@
 				"id": 1010502,
 				"blockid": 10105,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -117,6 +132,7 @@
 				"id": 1010601,
 				"blockid": 10106,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -124,6 +140,7 @@
 				"id": 1010602,
 				"blockid": 10106,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Tièche-Jadanssohn nevus"]
 			},
 			{
@@ -131,6 +148,7 @@
 				"id": 1010603,
 				"blockid": 10106,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Masson blue neuronevus"]
 			},
 			{
@@ -138,6 +156,7 @@
 				"id": 1010604,
 				"blockid": 10106,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -145,6 +164,7 @@
 				"id": 1010605,
 				"blockid": 10106,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Seab nevus"]
 			},
 			{
@@ -152,6 +172,7 @@
 				"id": 1010701,
 				"blockid": 10107,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -159,6 +180,7 @@
 				"id": 1010702,
 				"blockid": 10107,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -166,6 +188,7 @@
 				"id": 1010801,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -173,6 +196,7 @@
 				"id": 1010802,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -180,6 +204,7 @@
 				"id": 1010803,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -187,6 +212,7 @@
 				"id": 1010804,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": ["Sutton nevus"]
 			},
 			{
@@ -194,6 +220,7 @@
 				"id": 1010805,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -201,6 +228,7 @@
 				"id": 1010806,
 				"blockid": 10108,
 				"modifiers": [["Junctional nevus", "Compound nevus", "Dermal (intradermal) nevus"]],
+				"status": "locked",
 				"synonyms": ["Nevus with spongiotic inflammation"]
 			},
 			{
@@ -208,6 +236,7 @@
 				"id": 1010901,
 				"blockid": 10109,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Simple lentigo"]
 			},
 			{
@@ -215,6 +244,7 @@
 				"id": 1011001,
 				"blockid": 10110,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -222,6 +252,7 @@
 				"id": 1011002,
 				"blockid": 10110,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -229,6 +260,7 @@
 				"id": 1011003,
 				"blockid": 10110,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -236,6 +268,7 @@
 				"id": 1011101,
 				"blockid": 10111,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -243,6 +276,7 @@
 				"id": 1011201,
 				"blockid": 10112,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -255,6 +289,7 @@
 				"id": 1020101,
 				"blockid": 10201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Reticulated lentigo"]
 			},
 			{
@@ -262,6 +297,7 @@
 				"id": 1020102,
 				"blockid": 10201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Mucosal lentigo"]
 			},
 			{
@@ -269,6 +305,7 @@
 				"id": 1020103,
 				"blockid": 10201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -281,6 +318,7 @@
 				"id": 1030101,
 				"blockid": 10301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -288,6 +326,7 @@
 				"id": 1030102,
 				"blockid": 10301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -295,6 +334,7 @@
 				"id": 1030103,
 				"blockid": 10301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Lichenoid keratosis"]
 			},
 			{
@@ -302,6 +342,7 @@
 				"id": 1030201,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Pale cell acanthoma"]
 			},
 			{
@@ -309,6 +350,7 @@
 				"id": 1030202,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -316,6 +358,7 @@
 				"id": 1030203,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -323,6 +366,7 @@
 				"id": 1030204,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -330,6 +374,7 @@
 				"id": 1030205,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -337,6 +382,7 @@
 				"id": 1030206,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -344,6 +390,7 @@
 				"id": 1030207,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -351,6 +398,7 @@
 				"id": 1030208,
 				"blockid": 10302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -363,6 +411,7 @@
 				"id": 1040101,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -370,6 +419,7 @@
 				"id": 1040102,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Trichoblastoma, Cribriform"]
 			},
 			{
@@ -377,6 +427,7 @@
 				"id": 1040103,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -384,6 +435,7 @@
 				"id": 1040104,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -391,6 +443,7 @@
 				"id": 1040105,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -398,6 +451,7 @@
 				"id": 1040106,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -405,6 +459,7 @@
 				"id": 1040107,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -412,6 +467,7 @@
 				"id": 1040108,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -419,6 +475,7 @@
 				"id": 1040109,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -426,6 +483,7 @@
 				"id": 1040110,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -433,6 +491,7 @@
 				"id": 1040111,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -440,6 +499,7 @@
 				"id": 1040112,
 				"blockid": 10401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -452,6 +512,7 @@
 				"id": 1050101,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -459,6 +520,7 @@
 				"id": 1050102,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -466,6 +528,7 @@
 				"id": 1050103,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -473,6 +536,7 @@
 				"id": 1050104,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -480,6 +544,7 @@
 				"id": 1050105,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Montgomery tubercles"]
 			},
 			{
@@ -487,6 +552,7 @@
 				"id": 1050106,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -494,6 +560,7 @@
 				"id": 1050107,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -501,6 +568,7 @@
 				"id": 1050108,
 				"blockid": 10501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -513,6 +581,7 @@
 				"id": 1060101,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -520,6 +589,7 @@
 				"id": 1060102,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -527,6 +597,7 @@
 				"id": 1060103,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -534,6 +605,7 @@
 				"id": 1060104,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -541,6 +613,7 @@
 				"id": 1060105,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -548,6 +621,7 @@
 				"id": 1060106,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -555,6 +629,7 @@
 				"id": 1060107,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -562,6 +637,7 @@
 				"id": 1060108,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -569,6 +645,7 @@
 				"id": 1060109,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Chondroid syringioma, Apocrine type"]
 			},
 			{
@@ -576,6 +653,7 @@
 				"id": 1060110,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Chondroid syringioma, Eccrine type"]
 			},
 			{
@@ -583,6 +661,7 @@
 				"id": 1060111,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -590,6 +669,7 @@
 				"id": 1060112,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -597,6 +677,7 @@
 				"id": 1060113,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -604,6 +685,7 @@
 				"id": 1060114,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -611,6 +693,7 @@
 				"id": 1060115,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -618,6 +701,7 @@
 				"id": 1060116,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -625,6 +709,7 @@
 				"id": 1060117,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -632,6 +717,7 @@
 				"id": 1060118,
 				"blockid": 10601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -644,6 +730,7 @@
 				"id": 1070101,
 				"blockid": 10701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -651,6 +738,7 @@
 				"id": 1070102,
 				"blockid": 10701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -658,6 +746,7 @@
 				"id": 1070103,
 				"blockid": 10701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -665,6 +754,7 @@
 				"id": 1070104,
 				"blockid": 10701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -672,6 +762,7 @@
 				"id": 1070105,
 				"blockid": 10701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -684,6 +775,7 @@
 				"id": 1080101,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -691,6 +783,7 @@
 				"id": 1080102,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Cherry angioma"]
 			},
 			{
@@ -698,6 +791,7 @@
 				"id": 1080103,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -705,6 +799,7 @@
 				"id": 1080104,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -712,6 +807,7 @@
 				"id": 1080105,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -719,6 +815,7 @@
 				"id": 1080106,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -726,6 +823,7 @@
 				"id": 1080107,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -733,6 +831,7 @@
 				"id": 1080108,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -740,6 +839,7 @@
 				"id": 1080109,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -747,6 +847,7 @@
 				"id": 1080110,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -754,6 +855,7 @@
 				"id": 1080111,
 				"blockid": 10801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -761,6 +863,7 @@
 				"id": 1080201,
 				"blockid": 10802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -768,6 +871,7 @@
 				"id": 1080202,
 				"blockid": 10802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -775,6 +879,7 @@
 				"id": 1080203,
 				"blockid": 10802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -782,6 +887,7 @@
 				"id": 1080204,
 				"blockid": 10802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -789,6 +895,7 @@
 				"id": 1080205,
 				"blockid": 10802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -796,6 +903,7 @@
 				"id": 1080301,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -803,6 +911,7 @@
 				"id": 1080302,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Port wine stain", "Nevus flammeus"]
 			},
 			{
@@ -810,6 +919,7 @@
 				"id": 1080303,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -817,6 +927,7 @@
 				"id": 1080304,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -824,6 +935,7 @@
 				"id": 1080305,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -831,6 +943,7 @@
 				"id": 1080306,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -838,6 +951,7 @@
 				"id": 1080307,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Spider angioma"]
 			},
 			{
@@ -845,6 +959,7 @@
 				"id": 1080308,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -852,6 +967,7 @@
 				"id": 1080309,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -859,6 +975,7 @@
 				"id": 1080310,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -866,6 +983,7 @@
 				"id": 1080311,
 				"blockid": 10803,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -878,6 +996,7 @@
 				"id": 1090101,
 				"blockid": 10901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Fibrous histiocytoma NOS"]
 			},
 			{
@@ -885,6 +1004,7 @@
 				"id": 1090102,
 				"blockid": 10901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -892,6 +1012,7 @@
 				"id": 1090103,
 				"blockid": 10901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -899,6 +1020,7 @@
 				"id": 1090104,
 				"blockid": 10901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -906,6 +1028,7 @@
 				"id": 1090105,
 				"blockid": 10901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -913,6 +1036,7 @@
 				"id": 1090106,
 				"blockid": 10901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -920,6 +1044,7 @@
 				"id": 1090201,
 				"blockid": 10902,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -927,6 +1052,7 @@
 				"id": 1090202,
 				"blockid": 10902,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -934,6 +1060,7 @@
 				"id": 1090203,
 				"blockid": 10902,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -941,6 +1068,7 @@
 				"id": 1090204,
 				"blockid": 10902,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -948,6 +1076,7 @@
 				"id": 1090205,
 				"blockid": 10902,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -955,6 +1084,7 @@
 				"id": 1090301,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Skin tag", "Acrochordon"]
 			},
 			{
@@ -962,6 +1092,7 @@
 				"id": 1090302,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Fibrous papule"]
 			},
 			{
@@ -969,6 +1100,7 @@
 				"id": 1090303,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Pearly penile papule"]
 			},
 			{
@@ -976,6 +1108,7 @@
 				"id": 1090304,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Koenen tumor"]
 			},
 			{
@@ -983,6 +1116,7 @@
 				"id": 1090305,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -990,6 +1124,7 @@
 				"id": 1090306,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -997,6 +1132,7 @@
 				"id": 1090307,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1004,6 +1140,7 @@
 				"id": 1090308,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1011,6 +1148,7 @@
 				"id": 1090309,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1018,6 +1156,7 @@
 				"id": 1090310,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1025,6 +1164,7 @@
 				"id": 1090311,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1032,6 +1172,7 @@
 				"id": 1090312,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1039,6 +1180,7 @@
 				"id": 1090313,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1046,6 +1188,7 @@
 				"id": 1090314,
 				"blockid": 10903,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1058,6 +1201,7 @@
 				"id": 1100101,
 				"blockid": 11001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Plaque-like dermal fibromatosis"]
 			},
 			{
@@ -1065,6 +1209,7 @@
 				"id": 1100102,
 				"blockid": 11001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1072,6 +1217,7 @@
 				"id": 1100103,
 				"blockid": 11001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1079,6 +1225,7 @@
 				"id": 1100104,
 				"blockid": 11001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1086,6 +1233,7 @@
 				"id": 1100105,
 				"blockid": 11001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Nipple or external genital leiomyoma"]
 			},
 			{
@@ -1093,6 +1241,7 @@
 				"id": 1100106,
 				"blockid": 11001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1105,6 +1254,7 @@
 				"id": 1110101,
 				"blockid": 11101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1112,6 +1262,7 @@
 				"id": 1110102,
 				"blockid": 11101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1119,6 +1270,7 @@
 				"id": 1110103,
 				"blockid": 11101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1126,6 +1278,7 @@
 				"id": 1110104,
 				"blockid": 11101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1133,6 +1286,7 @@
 				"id": 1110105,
 				"blockid": 11101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1145,6 +1299,7 @@
 				"id": 1120101,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1152,6 +1307,7 @@
 				"id": 1120102,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1159,6 +1315,7 @@
 				"id": 1120103,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1166,6 +1323,7 @@
 				"id": 1120104,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1173,6 +1331,7 @@
 				"id": 1120105,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1180,6 +1339,7 @@
 				"id": 1120106,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1187,6 +1347,7 @@
 				"id": 1120107,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1194,6 +1355,7 @@
 				"id": 1120108,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1201,6 +1363,7 @@
 				"id": 1120109,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1208,6 +1371,7 @@
 				"id": 1120110,
 				"blockid": 11201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1220,6 +1384,7 @@
 				"id": 1130101,
 				"blockid": 11301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1227,6 +1392,7 @@
 				"id": 1130102,
 				"blockid": 11301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1234,6 +1400,7 @@
 				"id": 1130103,
 				"blockid": 11301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Subungual exostosis"]
 			},
 			{
@@ -1241,6 +1408,7 @@
 				"id": 1130104,
 				"blockid": 11301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1248,6 +1416,7 @@
 				"id": 1130105,
 				"blockid": 11301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1260,6 +1429,7 @@
 				"id": 1140101,
 				"blockid": 11401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1272,6 +1442,7 @@
 				"id": 1150101,
 				"blockid": 11501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1279,6 +1450,7 @@
 				"id": 1150102,
 				"blockid": 11501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1286,6 +1458,7 @@
 				"id": 1150103,
 				"blockid": 11501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Urticaria pigmentosa"]
 			},
 			{
@@ -1293,6 +1466,7 @@
 				"id": 1150104,
 				"blockid": 11501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1300,6 +1474,7 @@
 				"id": 1150105,
 				"blockid": 11501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1312,6 +1487,7 @@
 				"id": 1160101,
 				"blockid": 11601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1319,6 +1495,7 @@
 				"id": 1160102,
 				"blockid": 11601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1326,6 +1503,7 @@
 				"id": 1160103,
 				"blockid": 11601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1333,6 +1511,7 @@
 				"id": 1160104,
 				"blockid": 11601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1340,6 +1519,7 @@
 				"id": 1160105,
 				"blockid": 11601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1347,6 +1527,7 @@
 				"id": 1160106,
 				"blockid": 11601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1354,6 +1535,7 @@
 				"id": 1160107,
 				"blockid": 11601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1366,6 +1548,7 @@
 				"id": 1170101,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1373,6 +1556,7 @@
 				"id": 1170102,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1380,6 +1564,7 @@
 				"id": 1170103,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1387,6 +1572,7 @@
 				"id": 1170104,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Epidermoid-includion / sebaceous / keratin cyst"]
 			},
 			{
@@ -1394,6 +1580,7 @@
 				"id": 1170105,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1401,6 +1588,7 @@
 				"id": 1170106,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Dilated port of Winer"]
 			},
 			{
@@ -1408,6 +1596,7 @@
 				"id": 1170107,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1415,6 +1604,7 @@
 				"id": 1170108,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Ganglion / digital myxoid cyst"]
 			},
 			{
@@ -1422,6 +1612,7 @@
 				"id": 1170109,
 				"blockid": 11701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1434,6 +1625,7 @@
 				"id": 1180101,
 				"blockid": 11801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1441,6 +1633,7 @@
 				"id": 1180102,
 				"blockid": 11801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1448,6 +1641,7 @@
 				"id": 1180103,
 				"blockid": 11801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1455,6 +1649,7 @@
 				"id": 1180201,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1462,6 +1657,7 @@
 				"id": 1180202,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1469,6 +1665,7 @@
 				"id": 1180203,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1476,6 +1673,7 @@
 				"id": 1180204,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1483,6 +1681,7 @@
 				"id": 1180205,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1490,6 +1689,7 @@
 				"id": 1180206,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1497,6 +1697,7 @@
 				"id": 1180207,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1504,6 +1705,7 @@
 				"id": 1180208,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Majocchi disease"]
 			},
 			{
@@ -1511,6 +1713,7 @@
 				"id": 1180209,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Doucas-Kapenatakis disease"]
 			},
 			{
@@ -1518,6 +1721,7 @@
 				"id": 1180210,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Gougerot-Blum disease"]
 			},
 			{
@@ -1525,6 +1729,7 @@
 				"id": 1180211,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1532,6 +1737,7 @@
 				"id": 1180212,
 				"blockid": 11802,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1544,6 +1750,7 @@
 				"id": 1190101,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1551,6 +1758,7 @@
 				"id": 1190102,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1558,6 +1766,7 @@
 				"id": 1190103,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1565,6 +1774,7 @@
 				"id": 1190104,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Common wart"]
 			},
 			{
@@ -1572,6 +1782,7 @@
 				"id": 1190105,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Palmo-plantar wart"]
 			},
 			{
@@ -1579,6 +1790,7 @@
 				"id": 1190106,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Flat wart"]
 			},
 			{
@@ -1586,6 +1798,7 @@
 				"id": 1190107,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1593,6 +1806,7 @@
 				"id": 1190108,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1600,6 +1814,7 @@
 				"id": 1190109,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1607,6 +1822,7 @@
 				"id": 1190110,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1614,6 +1830,7 @@
 				"id": 1190111,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1621,6 +1838,7 @@
 				"id": 1190112,
 				"blockid": 11901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1633,6 +1851,7 @@
 				"id": 1200101,
 				"blockid": 12001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1640,6 +1859,7 @@
 				"id": 1200102,
 				"blockid": 12001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1647,6 +1867,7 @@
 				"id": 1200103,
 				"blockid": 12001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1659,18 +1880,20 @@
 				"id": 1210101,
 				"blockid": 12101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
 		},
 		{
-			"name": "Benign - Other or not readily classifiable",
+			"name": "Benign - Other",
 			"id": 122,
 			"children": [{
-				"name": "Benign, other (to be specified)",
+				"name": "Benign, other (or not readily classifiable; to be specified)",
 				"id": 1220101,
 				"blockid": 12201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1688,6 +1911,7 @@
 				"id": 2010101,
 				"blockid": 20101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1695,6 +1919,7 @@
 				"id": 2010102,
 				"blockid": 20101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1702,6 +1927,7 @@
 				"id": 2010103,
 				"blockid": 20101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1709,6 +1935,7 @@
 				"id": 2010104,
 				"blockid": 20101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1716,6 +1943,7 @@
 				"id": 2010105,
 				"blockid": 20101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1723,6 +1951,7 @@
 				"id": 2010106,
 				"blockid": 20101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1730,6 +1959,7 @@
 				"id": 2010107,
 				"blockid": 20101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1737,6 +1967,7 @@
 				"id": 2010201,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1744,6 +1975,7 @@
 				"id": 2010202,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1751,6 +1983,7 @@
 				"id": 2010203,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1758,6 +1991,7 @@
 				"id": 2010204,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1765,6 +1999,7 @@
 				"id": 2010205,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1772,6 +2007,7 @@
 				"id": 2010206,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1779,6 +2015,7 @@
 				"id": 2010207,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1786,6 +2023,7 @@
 				"id": 2010208,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1793,6 +2031,7 @@
 				"id": 2010209,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1800,6 +2039,7 @@
 				"id": 2010210,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1807,6 +2047,7 @@
 				"id": 2010211,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1814,6 +2055,7 @@
 				"id": 2010212,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1821,6 +2063,7 @@
 				"id": 2010213,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1828,6 +2071,7 @@
 				"id": 2010214,
 				"blockid": 20102,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1835,6 +2079,7 @@
 				"id": 2010301,
 				"blockid": 20103,
 				"modifiers": [["Epidermotropic", "Non-epidermotropic"]],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -1847,6 +2092,7 @@
 				"id": 2020101,
 				"blockid": 20201,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -1854,6 +2100,7 @@
 				"id": 2020102,
 				"blockid": 20201,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
 				"synonyms": ["Hyperplastic solar keratosis"]
 			},
 			{
@@ -1861,6 +2108,7 @@
 				"id": 2020103,
 				"blockid": 20201,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -1868,6 +2116,7 @@
 				"id": 2020104,
 				"blockid": 20201,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -1875,6 +2124,7 @@
 				"id": 2020105,
 				"blockid": 20201,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -1882,6 +2132,7 @@
 				"id": 2020106,
 				"blockid": 20201,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -1889,6 +2140,7 @@
 				"id": 2020107,
 				"blockid": 20201,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
 				"synonyms": ["Solar keratosis of lip"]
 			},
 			{
@@ -1896,6 +2148,7 @@
 				"id": 2020201,
 				"blockid": 20202,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1903,6 +2156,7 @@
 				"id": 2020202,
 				"blockid": 20202,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1910,6 +2164,7 @@
 				"id": 2020301,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1917,6 +2172,7 @@
 				"id": 2020302,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1924,6 +2180,7 @@
 				"id": 2020303,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1931,6 +2188,7 @@
 				"id": 2020304,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1938,6 +2196,7 @@
 				"id": 2020305,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1945,6 +2204,7 @@
 				"id": 2020306,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1952,6 +2212,7 @@
 				"id": 2020307,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1959,6 +2220,7 @@
 				"id": 2020308,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": ["Buschke-Lowestein tumor"]
 			},
 			{
@@ -1966,6 +2228,7 @@
 				"id": 2020309,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1973,6 +2236,7 @@
 				"id": 2020310,
 				"blockid": 20203,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1980,6 +2244,7 @@
 				"id": 2020401,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1987,6 +2252,7 @@
 				"id": 2020402,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -1994,6 +2260,7 @@
 				"id": 2020403,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2001,6 +2268,7 @@
 				"id": 2020404,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2008,6 +2276,7 @@
 				"id": 2020405,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2015,6 +2284,7 @@
 				"id": 2020406,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2022,6 +2292,7 @@
 				"id": 2020407,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2029,6 +2300,7 @@
 				"id": 2020408,
 				"blockid": 20204,
 				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2041,6 +2313,7 @@
 				"id": 2030101,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2048,6 +2321,7 @@
 				"id": 2030102,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2055,6 +2329,7 @@
 				"id": 2030103,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2062,6 +2337,7 @@
 				"id": 2030104,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2069,6 +2345,7 @@
 				"id": 2030105,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2076,6 +2353,7 @@
 				"id": 2030106,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2083,6 +2361,7 @@
 				"id": 2030107,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2090,6 +2369,7 @@
 				"id": 2030108,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2097,6 +2377,7 @@
 				"id": 2030109,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2104,6 +2385,7 @@
 				"id": 2030110,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": ["Pinkus tumor"]
 			},
 			{
@@ -2111,6 +2393,7 @@
 				"id": 2030111,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2118,6 +2401,7 @@
 				"id": 2030112,
 				"blockid": 20301,
 				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2125,6 +2409,7 @@
 				"id": 2030201,
 				"blockid": 20302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2132,6 +2417,7 @@
 				"id": 2030202,
 				"blockid": 20302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Proliferating isthmic-catagen carcinoma"]
 			},
 			{
@@ -2139,6 +2425,7 @@
 				"id": 2030203,
 				"blockid": 20302,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2151,6 +2438,7 @@
 				"id": 2050101,
 				"blockid": 20501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2158,6 +2446,7 @@
 				"id": 2050102,
 				"blockid": 20501,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2170,6 +2459,7 @@
 				"id": 2040101,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2177,6 +2467,7 @@
 				"id": 2040102,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2184,6 +2475,7 @@
 				"id": 2040103,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2191,6 +2483,7 @@
 				"id": 2040104,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2198,6 +2491,7 @@
 				"id": 2040105,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2205,6 +2499,7 @@
 				"id": 2040106,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2212,6 +2507,7 @@
 				"id": 2040107,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2219,6 +2515,7 @@
 				"id": 2040108,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2226,6 +2523,7 @@
 				"id": 2040109,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2233,6 +2531,7 @@
 				"id": 2040110,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2240,6 +2539,7 @@
 				"id": 2040111,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2247,6 +2547,7 @@
 				"id": 2040112,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2254,6 +2555,7 @@
 				"id": 2040113,
 				"blockid": 20401,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			}
 			]
@@ -2266,6 +2568,7 @@
 				"id": 2060101,
 				"blockid": 20601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2273,6 +2576,7 @@
 				"id": 2060102,
 				"blockid": 20601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2280,6 +2584,7 @@
 				"id": 2060103,
 				"blockid": 20601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2287,6 +2592,7 @@
 				"id": 2060104,
 				"blockid": 20601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2294,6 +2600,7 @@
 				"id": 2060105,
 				"blockid": 20601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2301,6 +2608,7 @@
 				"id": 2060106,
 				"blockid": 20601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2308,6 +2616,7 @@
 				"id": 2060107,
 				"blockid": 20601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Glomangiosarcoma"]
 			},
 			{
@@ -2315,6 +2624,7 @@
 				"id": 2060201,
 				"blockid": 20602,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2322,6 +2632,7 @@
 				"id": 2060202,
 				"blockid": 20602,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2329,6 +2640,7 @@
 				"id": 2060203,
 				"blockid": 20602,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2336,6 +2648,7 @@
 				"id": 2060204,
 				"blockid": 20602,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2348,6 +2661,7 @@
 				"id": 2070101,
 				"blockid": 20701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2355,6 +2669,7 @@
 				"id": 2070102,
 				"blockid": 20701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Malignant fibrous histiocytoma"]
 			},
 			{
@@ -2362,6 +2677,7 @@
 				"id": 2070103,
 				"blockid": 20701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2369,6 +2685,7 @@
 				"id": 2070104,
 				"blockid": 20701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2376,6 +2693,7 @@
 				"id": 2070105,
 				"blockid": 20701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2383,6 +2701,7 @@
 				"id": 2070106,
 				"blockid": 20701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2395,6 +2714,7 @@
 				"id": 2080101,
 				"blockid": 20801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2402,6 +2722,7 @@
 				"id": 2080102,
 				"blockid": 20801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2409,6 +2730,7 @@
 				"id": 2080103,
 				"blockid": 20801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2421,6 +2743,7 @@
 				"id": 2100101,
 				"blockid": 21001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2428,6 +2751,7 @@
 				"id": 2100102,
 				"blockid": 21001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Atypical lipomatous tumor"]
 			},
 			{
@@ -2435,6 +2759,7 @@
 				"id": 2100103,
 				"blockid": 21001,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2447,6 +2772,7 @@
 				"id": 2090101,
 				"blockid": 20901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Peripheral nerve sheath sarcoma"]
 			},
 			{
@@ -2454,6 +2780,7 @@
 				"id": 2090102,
 				"blockid": 20901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": ["Granular cell sarcoma"]
 			},
 			{
@@ -2461,6 +2788,7 @@
 				"id": 2090103,
 				"blockid": 20901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2473,6 +2801,7 @@
 				"id": 2110101,
 				"blockid": 21101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2480,6 +2809,7 @@
 				"id": 2110102,
 				"blockid": 21101,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2492,6 +2822,7 @@
 				"id": 2120101,
 				"blockid": 21201,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2504,6 +2835,7 @@
 				"id": 2130101,
 				"blockid": 21301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2511,6 +2843,7 @@
 				"id": 2130102,
 				"blockid": 21301,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2523,6 +2856,7 @@
 				"id": 2140101,
 				"blockid": 21401,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2535,6 +2869,7 @@
 				"id": 2150101,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2542,6 +2877,7 @@
 				"id": 2150102,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2549,6 +2885,7 @@
 				"id": 2150103,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2556,6 +2893,7 @@
 				"id": 2150104,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2563,6 +2901,7 @@
 				"id": 2150105,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2570,6 +2909,7 @@
 				"id": 2150106,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2577,6 +2917,7 @@
 				"id": 2150107,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2584,6 +2925,7 @@
 				"id": 2150108,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2591,6 +2933,7 @@
 				"id": 2150109,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2598,6 +2941,7 @@
 				"id": 2150110,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2605,6 +2949,7 @@
 				"id": 2150111,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2612,6 +2957,7 @@
 				"id": 2150112,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2619,6 +2965,7 @@
 				"id": 2150113,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2626,6 +2973,7 @@
 				"id": 2150114,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2633,6 +2981,7 @@
 				"id": 2150115,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2640,6 +2989,7 @@
 				"id": 2150116,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			},
 			{
@@ -2647,6 +2997,7 @@
 				"id": 2150117,
 				"blockid": 21501,
 				"modifiers": [],
+				"status": "visible",
 				"synonyms": []
 			}
 			]
@@ -2659,6 +3010,7 @@
 				"id": 2160101,
 				"blockid": 21601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2666,6 +3018,7 @@
 				"id": 2160102,
 				"blockid": 21601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2673,6 +3026,7 @@
 				"id": 2160103,
 				"blockid": 21601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2680,6 +3034,7 @@
 				"id": 2160104,
 				"blockid": 21601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2687,6 +3042,7 @@
 				"id": 2160105,
 				"blockid": 21601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			},
 			{
@@ -2694,6 +3050,7 @@
 				"id": 2160106,
 				"blockid": 21601,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2706,6 +3063,7 @@
 				"id": 2170101,
 				"blockid": 21701,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
@@ -2718,18 +3076,20 @@
 				"id": 2180101,
 				"blockid": 21801,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
 		},
 		{
-			"name": "Malignant – Other (or not readily classifiable)",
+			"name": "Malignant – Other",
 			"id": 219,
 			"children": [{
 				"name": "Malignant, other (or not readily classifiable; to be specified)",
 				"id": 2190101,
 				"blockid": 21901,
 				"modifiers": [],
+				"status": "locked",
 				"synonyms": []
 			}
 			]
