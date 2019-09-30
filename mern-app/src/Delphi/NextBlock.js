@@ -45,11 +45,24 @@ export default class DelphiNextBlock extends Component {
         const newHistoryBlockId = [ ...historyCBlockId]
         newState[currentCBlockId].locked = true;
         newHistoryBlockId.push(currentCBlockId)
-        var bc;
+        var bc, blockLockedOrHidden;
         for (bc = 0; bc < global.DM_LEVELCBLOCKIDS.length; bc++) {
             if (global.DM_LEVELCBLOCKIDS[bc] === currentCBlockId) {
                 if (bc < (global.DM_LEVELCBLOCKIDS.length - 1)) {
-                    nextCBlockId = global.DM_LEVELCBLOCKIDS[bc+1];
+                    bc++;
+                    nextCBlockId = global.DM_LEVELCBLOCKIDS[bc];
+                    blockLockedOrHidden = global.DM_LEVELCBLOCKSHIDDEN[nextCBlockId] ||
+                        global.DM_LEVELCBLOCKSLOCKED[nextCBlockId];
+                    while (blockLockedOrHidden) {
+                        bc++;
+                        if (bc < (global.DM_LEVELCBLOCKIDS.length)) {
+                            nextCBlockId = global.DM_LEVELCBLOCKIDS[bc];
+                            blockLockedOrHidden = global.DM_LEVELCBLOCKSHIDDEN[nextCBlockId] ||
+                                global.DM_LEVELCBLOCKSLOCKED[nextCBlockId];
+                        } else {
+                            blockLockedOrHidden = false;
+                        }
+                    }
                 }
             }
         }

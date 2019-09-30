@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as d3 from 'd3';
-//import DiagnosisName from './func/DiagnosisName'
 
 // a lot of the code in this file was adapted from 
 // https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd
