@@ -12,13 +12,14 @@ export default class DelphiDisplayRow extends Component {
     
     render() {
 
-        const rowState = this.props.AppObj.state.blocks[this.props.CBlockId][this.props.CNodeId];
+        const { CNodeId, CBlockId } = { ...this.props };
+        const rowState = this.props.AppObj.state.blocks[CBlockId][CNodeId];
         var firstNodeClass = 'delphi-form-row';
-        if (this.props.CNodeId % 100 === 1) {
+        if (CNodeId % 100 === 1) {
             firstNodeClass = 'delphi-form-row-first';
         }
-
-        var rowDone = DiagnosisDone(rowState);
+        var nodeStatus = global.DM_LEVELCNODES[CNodeId].status;
+        var rowDone = (nodeStatus !== 'visible') ? nodeStatus : DiagnosisDone(rowState);
         return (
         
 <tr className={firstNodeClass}>
@@ -34,7 +35,9 @@ export default class DelphiDisplayRow extends Component {
                 <font color="red"><i><DelphiLinkSetState AppObj={this.props.AppObj}
                     stateProp="currentCBlockId" stateValue={this.props.CBlockId}
                     linkText={TABLE_CORRECT_NOT_YET} /></i></font> :
-                <b>{TABLE_CORRECTED}</b> }
+            (nodeStatus === 'visible') ?
+                <b>{TABLE_CORRECTED}</b> :
+                <b>{nodeStatus}</b> }
     </small></span></td>
     <td></td>
 </tr>
