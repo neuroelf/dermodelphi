@@ -4,6 +4,8 @@ const md5salt = require('./md5salt');
 
 // list of users
 const dm_users = [
+    'battlel@mskcc.org',
+    'koy@mskcc.org',
     'liopyrik@mskcc.org',
     'rotembev@mskcc.org',
     'scopea1@gmail.com',
