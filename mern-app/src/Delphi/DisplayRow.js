@@ -14,8 +14,12 @@ export default class DelphiDisplayRow extends Component {
 
         const { CNodeId, CBlockId } = { ...this.props };
         const rowState = this.props.AppObj.state.blocks[CBlockId][CNodeId];
+        var firstNode = false;
+        var blockNum = null;
         var firstNodeClass = 'delphi-form-row';
         if (CNodeId % 100 === 1) {
+            firstNode = true;
+            blockNum = (((CNodeId - 1) / 100) % 100).toString();
             firstNodeClass = 'delphi-form-row-first';
         }
         var nodeStatus = global.DM_LEVELCNODES[CNodeId].status;
@@ -23,8 +27,8 @@ export default class DelphiDisplayRow extends Component {
         return (
         
 <tr className={firstNodeClass}>
-    <td width="24"></td>
-    <td className="delphi-form-wide-name-cell">
+    <td width="60">{(firstNode) ? "Bl." + blockNum : null}</td>
+    <td className="delphi-form-wide-name-cell" width="85%">
         {DiagnosisName(this.props.CNodeId, this.props.CBlockId, this.props.AppObj)}
     </td>
     <td className="delphi-form-control-cell" align="right"><span><small>
