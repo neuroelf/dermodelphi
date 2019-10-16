@@ -3,7 +3,7 @@ import DelphiSelectCategory from './SelectCategory'
 import DelphiGoBack from './GoBack';
 import DelphiSubmit from './Submit';
 import DelphiDisplayRow from './DisplayRow.js';
-import { CATEGORY_FIRST, TABLE_CATEGORY, TABLE_NO_DIAGNOSES } from './Constants'
+import { CATEGORY_FIRST, TABLE_NO_DIAGNOSES } from './Constants'
 
 function categoryLabel(CatId) {
     return <span>{global.DM_LEVELBFULLNAMES[CatId]}</span>
@@ -20,6 +20,7 @@ export default class DelphiDisplayBlock extends Component {
 
         // get all nodes in that category
         var CatId = parseInt(this.props.CatId);
+        var SuperCatId = Math.floor(CatId / 100);
         const BCatCNodeIds = Object.keys(global.DM_LEVELCNODES)
             .filter(CNodeId => Math.floor(global.DM_LEVELCNODES[CNodeId].id / 10000) === CatId);
 
@@ -37,7 +38,9 @@ export default class DelphiDisplayBlock extends Component {
         return (
 
     <tbody>
-        <tr className="delphi-control-bar" height="48">
+        <tr className={
+            (SuperCatId === 1) ? "delphi-control-bar-benign" :
+            (SuperCatId === 2) ? "delphi-control-bar-malignant" : "delphi-control-bar"} height="48">
             <td></td>
             <td colSpan="2">{categoryLabel(CatId)}</td>
             <td className="delphi-controls-paragraph" align="right">

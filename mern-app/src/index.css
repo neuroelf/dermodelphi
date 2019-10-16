@@ -107,7 +107,19 @@ input[type=submit] {
   cursor: pointer;
 }
 .delphi-control-bar {
-  background-color: #064785;
+  background-color: #244898;
+  padding: 6px 24px 6px 24px;
+  color: white;
+  font: normal 18px bpreplaybold, sans-serif;
+}
+.delphi-control-bar-benign {
+  background-color: #246824;
+  padding: 6px 24px 6px 24px;
+  color: white;
+  font: normal 18px bpreplaybold, sans-serif;
+}
+.delphi-control-bar-malignant {
+  background-color: #882424;
   padding: 6px 24px 6px 24px;
   color: white;
   font: normal 18px bpreplaybold, sans-serif;
