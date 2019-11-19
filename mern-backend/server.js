@@ -23,7 +23,10 @@ app.use(bodyParser.json());
 
 // connect to database
 mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://127.0.0.1:27017/diagnosis_mapper', { useNewUrlParser: true });
+mongoose.connect('mongodb://127.0.0.1:27017/diagnosis_mapper', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 const DMDBConnection = mongoose.connection;
 DMDBConnection.once('open', function() {
     dm_log.dm_log('mongodb connection to diagnosis_mapper DB successful.');
