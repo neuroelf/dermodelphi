@@ -33,6 +33,8 @@ export default class DelphiWelcome extends Component {
     <p className="delphi-general-text-paragraph">
         We need your help to reach an agreement on
         the {DC.TITLE_TXT_MINI} working list!
+        Please <a href={process.env.PUBLIC_URL + DC.IMG_PDF_LIST}>download the list</a> if
+        you would like to have an printable version.
     </p>
     <p className="delphi-general-text-paragraph">
         Our overarching hope is that in generating this consensus list of

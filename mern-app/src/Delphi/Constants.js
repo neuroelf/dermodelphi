@@ -25,6 +25,7 @@ export const IMG_FORMATPAINT_SIZE = 24
 export const IMG_FORMATRESET = '/img/reset.png'
 export const IMG_FORMATRESET_ALT = 'Reset the settings for this IDDx term'
 export const IMG_FORMATRESET_SIZE = 24
+export const IMG_PDF_LIST = '/img/IDDX_full_list.pdf'
 
 // search results
 export const SEARCH_MAX_RESULTS = 30
