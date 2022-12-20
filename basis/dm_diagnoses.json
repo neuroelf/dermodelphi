@@ -1,0 +1,3262 @@
+{
+	"name": "",
+	"id": 0,
+	"children": [{
+		"name": "Benign",
+		"id": 1,
+		"children": [{
+			"name": "Melanocytic proliferations",
+			"id": 101,
+			"children": [{
+				"name": "Nevus, NOS, Junctional",
+				"id": 1010101,
+				"blockid": 10101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, NOS, Compound",
+				"id": 1010102,
+				"blockid": 10101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, NOS, Dermal (Intradermal)",
+				"id": 1010103,
+				"blockid": 10101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Atypical, NOS",
+				"id": 1010201,
+				"blockid": 10102,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"], ["Mild atypia (MPATH I)", "Moderate atypia (MPATH II)", "Severe atypia (MPATH III)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Clark",
+				"id": 1010202,
+				"blockid": 10102,
+				"modifiers": [["Junctional", "Compound"], ["Mild atypia (MPATH I)", "Moderate atypia (MPATH II)", "Severe atypia (MPATH III)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Dysplastic",
+				"id": 1010203,
+				"blockid": 10102,
+				"modifiers": [["Junctional", "Compound"], ["Mild atypia (MPATH I)", "Moderate atypia (MPATH II)", "Severe atypia (MPATH III)"]],
+				"status": "visible",
+				"synonyms": ["Nevus with architectural disorder and cytological atypia"]
+			},
+			{
+				"name": "Nevus, Lentiginous",
+				"id": 1010204,
+				"blockid": 10102,
+				"modifiers": [["Junctional", "Compound"], ["Mild atypia (MPATH I)", "Moderate atypia (MPATH II)", "Severe atypia (MPATH III)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lentiginous melanocytic proliferation",
+				"id": 1010205,
+				"blockid": 10102,
+				"modifiers": [["Junctional", "Compound"], ["Mild atypia (MPATH I)", "Moderate atypia (MPATH II)", "Severe atypia (MPATH III)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Spitz",
+				"id": 1010301,
+				"blockid": 10103,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": ["Spindle and epithelioid cell nevus"]
+			},
+			{
+				"name": "Nevus, Reed",
+				"id": 1010302,
+				"blockid": 10103,
+				"modifiers": [["Junctional", "Compound"]],
+				"status": "visible",
+				"synonyms": ["Pigmented spindle cell nevus"]
+			},
+			{
+				"name": "Nevus, Unna",
+				"id": 1010303,
+				"blockid": 10103,
+				"modifiers": [["Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Miescher",
+				"id": 1010304,
+				"blockid": 10103,
+				"modifiers": [["Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, BAP-1 deficient",
+				"id": 1010305,
+				"blockid": 10103,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": ["Wiesner nevus"]
+			},
+			{
+				"name": "Nevus, Congenital (per history - present at birth or within 1 year of infancy)",
+				"id": 1010401,
+				"blockid": 10104,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Congenital pattern (per histopathology)",
+				"id": 1010402,
+				"blockid": 10104,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"], ["Superficial (Ackerman nevus)", "Superficial and deep (Zitelli nevus)", "Deep (Mark nevus)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Proliferative nodule in congenital melanocytic nevi (Minimal or no atypia AND no mitotic activity (MPATH II))",
+				"id": 1010403,
+				"blockid": 10104,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Spilus",
+				"id": 1010501,
+				"blockid": 10105,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Agminated",
+				"id": 1010502,
+				"blockid": 10105,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Blue nevus, NOS",
+				"id": 1010601,
+				"blockid": 10106,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Blue nevus, Common",
+				"id": 1010602,
+				"blockid": 10106,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Tièche-Jadanssohn nevus"]
+			},
+			{
+				"name": "Blue nevus, Cellular",
+				"id": 1010603,
+				"blockid": 10106,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Masson blue neuronevus"]
+			},
+			{
+				"name": "Blue nevus, Epithelioid",
+				"id": 1010604,
+				"blockid": 10106,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Blue nevus, Deep penetrating",
+				"id": 1010605,
+				"blockid": 10106,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Seab nevus"]
+			},
+			{
+				"name": "Nevus, Combined (details of 2 components to be specified)",
+				"id": 1010701,
+				"blockid": 10107,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Combined, NOS",
+				"id": 1010702,
+				"blockid": 10107,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Acral",
+				"id": 1010801,
+				"blockid": 10108,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Of special anatomic site (e.g., genital, flexural, milkline and breast, other)",
+				"id": 1010802,
+				"blockid": 10108,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Recurrent / persistent",
+				"id": 1010803,
+				"blockid": 10108,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Halo",
+				"id": 1010804,
+				"blockid": 10108,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": ["Sutton nevus"]
+			},
+			{
+				"name": "Nevus, Balloon cell",
+				"id": 1010805,
+				"blockid": 10108,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus, Meyerson",
+				"id": 1010806,
+				"blockid": 10108,
+				"modifiers": [["Junctional", "Compound", "Dermal (intradermal)"]],
+				"status": "visible",
+				"synonyms": ["Nevus with spongiotic inflammation"]
+			},
+			{
+				"name": "Lentigo simplex",
+				"id": 1010901,
+				"blockid": 10109,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Simple lentigo"]
+			},
+			{
+				"name": "Mongolian spot",
+				"id": 1011001,
+				"blockid": 10110,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus of Ito",
+				"id": 1011002,
+				"blockid": 10110,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus of Ota",
+				"id": 1011003,
+				"blockid": 10110,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Pigmented epithelioid melanocytoma",
+				"id": 1011101,
+				"blockid": 10111,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign melanocytic proliferations, other (to be specified)",
+				"id": 1011201,
+				"blockid": 10112,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Flat melanotic pigmentations (not melanocytic nevus)",
+			"id": 102,
+			"children": [{
+				"name": "Ink-spot lentigo",
+				"id": 1020101,
+				"blockid": 10201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Reticulated lentigo"]
+			},
+			{
+				"name": "Mucosal melanotic macule",
+				"id": 1020102,
+				"blockid": 10201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Mucosal lentigo"]
+			},
+			{
+				"name": "Café au lait macule / patch",
+				"id": 1020103,
+				"blockid": 10201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Epidermal proliferations",
+			"id": 103,
+			"children": [{
+				"name": "Solar lentigo",
+				"id": 1030101,
+				"blockid": 10301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Seborrheic keratosis",
+				"id": 1030102,
+				"blockid": 10301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lichen planus like keratosis",
+				"id": 1030103,
+				"blockid": 10301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Lichenoid keratosis"]
+			},
+			{
+				"name": "Clear cell acanthoma",
+				"id": 1030201,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Pale cell acanthoma"]
+			},
+			{
+				"name": "Large cell acanthoma",
+				"id": 1030202,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Porokeratosis",
+				"id": 1030203,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Epidermal nevus",
+				"id": 1030204,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Epidermolytic acanthoma",
+				"id": 1030205,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Acantholytic acanthoma",
+				"id": 1030206,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoacanthoma",
+				"id": 1030207,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign epidermal proliferations, other (to be specified)",
+				"id": 1030208,
+				"blockid": 10302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Adnexal epithelial proliferations - Follicular",
+			"id": 104,
+			"children": [{
+				"name": "Trichoblastoma, NOS",
+				"id": 1040101,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Trichoepithelioma",
+				"id": 1040102,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Trichoblastoma, Cribriform"]
+			},
+			{
+				"name": "Trichoepithelioma, Desmoplastic",
+				"id": 1040103,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Tricholemmoma",
+				"id": 1040104,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Pilomatricoma",
+				"id": 1040105,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Trichofolliculoma",
+				"id": 1040106,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Pilar sheath acanthoma",
+				"id": 1040107,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus comedonicus",
+				"id": 1040108,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Warty dyskeratoma",
+				"id": 1040109,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Tumor of follicular infundibulum",
+				"id": 1040110,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Panfolliculoma",
+				"id": 1040111,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign adnexal epithelial proliferations, Follicular or Infundibular, other (to be specified)",
+				"id": 1040112,
+				"blockid": 10401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Adnexal epithelial proliferations - Sebaceous",
+			"id": 105,
+			"children": [{
+				"name": "Sebaceous hyperplasia",
+				"id": 1050101,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Sebaceous adenoma",
+				"id": 1050102,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Sebaceoma",
+				"id": 1050103,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus sebaceus",
+				"id": 1050104,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fordyce spots",
+				"id": 1050105,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Montgomery tubercles"]
+			},
+			{
+				"name": "Fibrofolliculoma",
+				"id": 1050106,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Trichodiscoma",
+				"id": 1050107,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign adnexal epithelial proliferations, Sebaceous, other (to be specified)",
+				"id": 1050108,
+				"blockid": 10501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Adnexal epithelial proliferations - Apocrine or Eccrine",
+			"id": 106,
+			"children": [{
+				"name": "Syringoma",
+				"id": 1060101,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Poroma",
+				"id": 1060102,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hidradenoma, Apocrine, NOS",
+				"id": 1060103,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hidradenoma, Apocrine, Predomnantly with clear cells",
+				"id": 1060104,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hidradenoma, Poroid",
+				"id": 1060105,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hidradenoma papilliferum",
+				"id": 1060106,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Spiradenoma",
+				"id": 1060107,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Cylindoma",
+				"id": 1060108,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mixed tumor, Apocrine type",
+				"id": 1060109,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Chondroid syringioma, Apocrine type"]
+			},
+			{
+				"name": "Mixed tumor, Eccrine type",
+				"id": 1060110,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Chondroid syringioma, Eccrine type"]
+			},
+			{
+				"name": "Syringocystadenoma papilliferum",
+				"id": 1060111,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Apocrine tubular adenoma",
+				"id": 1060112,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Syringofibroadenoma",
+				"id": 1060113,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Supernumerary nipple",
+				"id": 1060114,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fibroadenoma",
+				"id": 1060115,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Myoepithelioma",
+				"id": 1060116,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Cystadenoma",
+				"id": 1060117,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign adnexal epithelial proliferations, Apocrine or Eccrine, other (to be specified)",
+				"id": 1060118,
+				"blockid": 10601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Hemorrhagic lesions (extravasation of erythrocytes)",
+			"id": 107,
+			"children": [{
+				"name": "Hemorrhage, NOS",
+				"id": 1070101,
+				"blockid": 10701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemorrhage, Subcorneal and intracorneal",
+				"id": 1070102,
+				"blockid": 10701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemorrhage, Dermal and subcutaneous",
+				"id": 1070103,
+				"blockid": 10701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemorrhage, Subungual",
+				"id": 1070104,
+				"blockid": 10701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemorrhage, other (to be specified)",
+				"id": 1070105,
+				"blockid": 10701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Vascular",
+			"id": 108,
+			"children": [{
+				"name": "Hemangioma, NOS",
+				"id": 1080101,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemangioma, Cherry",
+				"id": 1080102,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Cherry angioma"]
+			},
+			{
+				"name": "Hemangioma, Infantile",
+				"id": 1080103,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Noninvoluting congenital hemangioma (RICH)",
+				"id": 1080104,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Rapidly involuting congenital hemangioma (NICH)",
+				"id": 1080105,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemangioma, Hobnail",
+				"id": 1080106,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemangioma, Tufted",
+				"id": 1080107,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Glomeruloid hemangioma",
+				"id": 1080108,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Acquired elastotic hemangioma",
+				"id": 1080109,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Verrucous hemangioma",
+				"id": 1080110,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemangioma, other (to be specified)",
+				"id": 1080111,
+				"blockid": 10801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiokeratoma",
+				"id": 1080201,
+				"blockid": 10802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Pyogenic granuloma",
+				"id": 1080202,
+				"blockid": 10802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Glomus tumor",
+				"id": 1080203,
+				"blockid": 10802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angioleiomyoma",
+				"id": 1080204,
+				"blockid": 10802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiolymphoid hyperplasia with eosinophilia",
+				"id": 1080205,
+				"blockid": 10802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nevus anemicus",
+				"id": 1080301,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Capillary vascular malformation",
+				"id": 1080302,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Port wine stain", "Nevus flammeus"]
+			},
+			{
+				"name": "Venous malformation",
+				"id": 1080303,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Arterio-venous malformation",
+				"id": 1080304,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lymphangioma (superficial lymphatic malformation)",
+				"id": 1080305,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Other vascular or lymphatic malformation / hamartoma (to be specified)",
+				"id": 1080306,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Vascular spider",
+				"id": 1080307,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Spider angioma"]
+			},
+			{
+				"name": "Venous lake",
+				"id": 1080308,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Telangiectasia",
+				"id": 1080309,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Acroangiodermatitis of Mali",
+				"id": 1080310,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign soft tissue proliferations, Vascular, other (to be specified)",
+				"id": 1080311,
+				"blockid": 10803,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Fibro-histiocytic",
+			"id": 109,
+			"children": [{
+				"name": "Dermatofibroma, NOS",
+				"id": 1090101,
+				"blockid": 10901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Fibrous histiocytoma NOS"]
+			},
+			{
+				"name": "Dermatofibroma, Aneurysmal",
+				"id": 1090102,
+				"blockid": 10901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatofibroma, Hemosiderotic",
+				"id": 1090103,
+				"blockid": 10901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatofibroma, Epithelioid",
+				"id": 1090104,
+				"blockid": 10901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatofibroma, Cellular",
+				"id": 1090105,
+				"blockid": 10901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatofibroma, other (to be specified)",
+				"id": 1090106,
+				"blockid": 10901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Non-Langerhabs histiocytosis, NOS",
+				"id": 1090201,
+				"blockid": 10902,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Juvenile xanthogranuloma",
+				"id": 1090202,
+				"blockid": 10902,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Rosai-Dorfman disease",
+				"id": 1090203,
+				"blockid": 10902,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Reticulohistiocytosis",
+				"id": 1090204,
+				"blockid": 10902,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Non-Langerhabs histiocytosis, other (to be specified)",
+				"id": 1090205,
+				"blockid": 10902,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fibroepithelial polyp",
+				"id": 1090301,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Skin tag", "Acrochordon"]
+			},
+			{
+				"name": "Angiofibroma, Facial",
+				"id": 1090302,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Fibrous papule"]
+			},
+			{
+				"name": "Angiofibroma, Penile",
+				"id": 1090303,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Pearly penile papule"]
+			},
+			{
+				"name": "Angiofibroma, Periungual",
+				"id": 1090304,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Koenen tumor"]
+			},
+			{
+				"name": "Myxoma, Cutaneous",
+				"id": 1090305,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fibroma, NOS",
+				"id": 1090306,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fibroma, Sclerotic",
+				"id": 1090307,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fibroma, Pleomorphic",
+				"id": 1090308,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fibroma, other (to be specified)",
+				"id": 1090309,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Giant cell tumor of the tendon sheath",
+				"id": 1090310,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Scar, NOS",
+				"id": 1090311,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Scar, Hypertrophic",
+				"id": 1090312,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Scar, Keloid",
+				"id": 1090313,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign soft tissue proliferations, Fibro-histiocytic, other (to be specified)",
+				"id": 1090314,
+				"blockid": 10903,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Muscle tissue or myofibroblastic",
+			"id": 110,
+			"children": [{
+				"name": "Dermatomyofibroma",
+				"id": 1100101,
+				"blockid": 11001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Plaque-like dermal fibromatosis"]
+			},
+			{
+				"name": "Smooth muscle hamartoma",
+				"id": 1100102,
+				"blockid": 11001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Piloleiomyoma",
+				"id": 1100103,
+				"blockid": 11001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angioleiomyoma",
+				"id": 1100104,
+				"blockid": 11001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dartoic muscle leiomyoma",
+				"id": 1100105,
+				"blockid": 11001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Nipple or external genital leiomyoma"]
+			},
+			{
+				"name": "Benign soft tissue proliferations, Myofibrobastic or muscle tissue, other (to be specified)",
+				"id": 1100106,
+				"blockid": 11001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Adipocytic",
+			"id": 111,
+			"children": [{
+				"name": "Lipoma, NOS",
+				"id": 1110101,
+				"blockid": 11101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lipoma, Spindle cell / pleomorphic",
+				"id": 1110102,
+				"blockid": 11101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiolipoma",
+				"id": 1110103,
+				"blockid": 11101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lipomatous nevus",
+				"id": 1110104,
+				"blockid": 11101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign soft tissue proliferations, Adipocytic, other (to be specified)",
+				"id": 1110105,
+				"blockid": 11101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Neural",
+			"id": 112,
+			"children": [{
+				"name": "Neuroma, NOS",
+				"id": 1120101,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Neuroma, Traumatic",
+				"id": 1120102,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Neuroma, Palisaded and encapsulated",
+				"id": 1120103,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Neurofibroma, NOS",
+				"id": 1120104,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Neurofibroma, Plexiform",
+				"id": 1120105,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Granular cell tumor",
+				"id": 1120106,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Schwannoma",
+				"id": 1120107,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Nerve sheath myxoma",
+				"id": 1120108,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Perineurioma",
+				"id": 1120109,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign soft tissue proliferations, Neural, other (to be specified)",
+				"id": 1120110,
+				"blockid": 11201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Cartilagenous and ossifying",
+			"id": 113,
+			"children": [{
+				"name": "Accessory tragus",
+				"id": 1130101,
+				"blockid": 11301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Extraskeletal chondroma",
+				"id": 1130102,
+				"blockid": 11301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Subungual osteochodroma",
+				"id": 1130103,
+				"blockid": 11301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Subungual exostosis"]
+			},
+			{
+				"name": "Osteoma cutis",
+				"id": 1130104,
+				"blockid": 11301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Benign soft tissue proliferations, Cartilagenous and ossifying, other (to be specified)",
+				"id": 1130105,
+				"blockid": 11301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Myoepithelial",
+			"id": 114,
+			"children": [{
+				"name": "Myoepithelioma",
+				"id": 1140101,
+				"blockid": 11401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Mast cell proliferations",
+			"id": 115,
+			"children": [{
+				"name": "Mastocytosis, NOS",
+				"id": 1150101,
+				"blockid": 11501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mastocytoma, Solitary / unifocal",
+				"id": 1150102,
+				"blockid": 11501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Maculopapular mastocytoma",
+				"id": 1150103,
+				"blockid": 11501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Urticaria pigmentosa"]
+			},
+			{
+				"name": "Mastocytosis, Diffuse / multifocal (subtype: Telangiectasia mcularis eruptiva perstans, Diffuse cutaenous, other; to be specified)",
+				"id": 1150104,
+				"blockid": 11501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mast cell proliferation, other (to be specified)",
+				"id": 1150105,
+				"blockid": 11501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Langerhans cell proliferations",
+			"id": 116,
+			"children": [{
+				"name": "Langerhans cell histiocytosis, NOS",
+				"id": 1160101,
+				"blockid": 11601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Langerhans cell histiocytosis, Solitary / unifocal",
+				"id": 1160102,
+				"blockid": 11601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Langerhans cell histiocytosis, Diffuse / multifocal",
+				"id": 1160103,
+				"blockid": 11601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Langerhans cell histiocytosis, other (to be specified)",
+				"id": 1160104,
+				"blockid": 11601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Indeterminate cell histiocytosis, NOS",
+				"id": 1160105,
+				"blockid": 11601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Erdheim Chester disease",
+				"id": 1160106,
+				"blockid": 11601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mixed Langerhans cell histiocytosis and Erdheim Chester disease",
+				"id": 1160107,
+				"blockid": 11601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Cysts",
+			"id": 117,
+			"children": [{
+				"name": "Cyst, NOS",
+				"id": 1170101,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Milium",
+				"id": 1170102,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Comedo",
+				"id": 1170103,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Infundibular / epidermal cyst",
+				"id": 1170104,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Epidermoid-includion / sebaceous / keratin cyst"]
+			},
+			{
+				"name": "Trichilemmal / isthmic-catagen / pilar cyst",
+				"id": 1170105,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dilated pore",
+				"id": 1170106,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Dilated port of Winer"]
+			},
+			{
+				"name": "Steatocystoma",
+				"id": 1170107,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Digital mucous cyst",
+				"id": 1170108,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Ganglion / digital myxoid cyst"]
+			},
+			{
+				"name": "Benign cyst, other (to be specified)",
+				"id": 1170109,
+				"blockid": 11701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Inflammatory diseases",
+			"id": 118,
+			"children": [{
+				"name": "Psoriasis",
+				"id": 1180101,
+				"blockid": 11801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lichen planus",
+				"id": 1180102,
+				"blockid": 11801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Folliculitis",
+				"id": 1180103,
+				"blockid": 11801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatitis, NOS",
+				"id": 1180201,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatitis, Atopic",
+				"id": 1180202,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatitis, Allergic contact",
+				"id": 1180203,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatitis, Irritant contact",
+				"id": 1180204,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatitis, Numular",
+				"id": 1180205,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Dermatitis, Dyshidrotic",
+				"id": 1180206,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Schamberg disease",
+				"id": 1180207,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Purpura annularis telangiectasia",
+				"id": 1180208,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Majocchi disease"]
+			},
+			{
+				"name": "Eczematoid purpura",
+				"id": 1180209,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Doucas-Kapenatakis disease"]
+			},
+			{
+				"name": "Lichenoid purpura",
+				"id": 1180210,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Gougerot-Blum disease"]
+			},
+			{
+				"name": "Lichen aureus",
+				"id": 1180211,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Inflammatory disease, other (to be specified)",
+				"id": 1180212,
+				"blockid": 11802,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Infectious diseases",
+			"id": 119,
+			"children": [{
+				"name": "Tinea corporis",
+				"id": 1190101,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Pityriasis versicolor",
+				"id": 1190102,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Verruca, NOS",
+				"id": 1190103,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Verruca vulgaris",
+				"id": 1190104,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Common wart"]
+			},
+			{
+				"name": "Verruca plantaris",
+				"id": 1190105,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Palmo-plantar wart"]
+			},
+			{
+				"name": "Verruca plana",
+				"id": 1190106,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Flat wart"]
+			},
+			{
+				"name": "Molluscum contagiosum",
+				"id": 1190107,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Tungiasis",
+				"id": 1190108,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Furuncular myiasis",
+				"id": 1190109,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Scabies",
+				"id": 1190110,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Larva migrans",
+				"id": 1190111,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Infectious disease, other (to be specified)",
+				"id": 1190112,
+				"blockid": 11901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Exogenous",
+			"id": 120,
+			"children": [{
+				"name": "Tattoo",
+				"id": 1200101,
+				"blockid": 12001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Foreign body granuloma",
+				"id": 1200102,
+				"blockid": 12001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Exogenous, other (to be specified)",
+				"id": 1200103,
+				"blockid": 12001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Collision - Only benign proliferations",
+			"id": 121,
+			"children": [{
+				"name": "Collision, Only benign proliferations (to be specified)",
+				"id": 1210101,
+				"blockid": 12101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Benign - Other",
+			"id": 122,
+			"children": [{
+				"name": "Benign, other (or not readily classifiable; to be specified)",
+				"id": 1220101,
+				"blockid": 12201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		}
+		]
+	},
+	{
+		"name": "Malignant",
+		"id": 2,
+		"children": [{
+			"name": "Melanocytic proliferations",
+			"id": 201,
+			"children": [{
+				"name": "Melanoma in situ, NOS",
+				"id": 2010101,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma in situ, Lentigo maligna type / melanoma in situ on chronically sun-exposed skin",
+				"id": 2010102,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma in situ, Acral / acral-lentiginous",
+				"id": 2010103,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma in situ, Mucosal (site to be specified: e.g. lip, oral mucosa, genital, other)",
+				"id": 2010104,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma in situ, Superficial spreading",
+				"id": 2010105,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma in situ, Pagetoid",
+				"id": 2010106,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma in situ, Recurrent / persistent",
+				"id": 2010107,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma in situ, other (to be specified)",
+				"id": 2010108,
+				"blockid": 20101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, NOS",
+				"id": 2010201,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Superficial spreading",
+				"id": 2010202,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, On chronically sun-exposed skin / lentigo maligna melanoma",
+				"id": 2010203,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Acral / Acral-lentiginous",
+				"id": 2010204,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Nodular",
+				"id": 2010205,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Desmoplastic (indicate if associated with lentigo maligna)",
+				"id": 2010206,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Neurotropic",
+				"id": 2010207,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Nevoid",
+				"id": 2010208,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Spitzoid (melanoma resembling Spitz nevus / tumor)",
+				"id": 2010209,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Pigmented spindle cell nevus like (melanoma resembling Reed nevus)",
+				"id": 2010210,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Blue nevus-like (melanoma resembling or originating from a blue nevus)",
+				"id": 2010211,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Recurrent / persistent",
+				"id": 2010212,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Mucosal (site to be specified: e.g, lip, oral mucosa, genital, other)",
+				"id": 2010213,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Heavily pigmented (resembling epithelioid blue nevus or melanoma developing in animals)",
+				"id": 2010214,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, Arising in a congenital nevus",
+				"id": 2010215,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma Invasive, other (to be specified)",
+				"id": 2010216,
+				"blockid": 20102,
+				"modifiers": [["Breslow depth __mm", "Depth unknown", "Melanoma transected at base, depth at least __mm"], ["Ulcerated", "Not ulcerated"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanoma metastasis",
+				"id": 2010301,
+				"blockid": 20103,
+				"modifiers": [["Epidermotropic", "Non-epidermotropic"]],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Epidermal proliferations",
+			"id": 202,
+			"children": [{
+				"name": "Solar (actinic) keratosis, NOS",
+				"id": 2020101,
+				"blockid": 20201,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Solar (actinic) keratosis, Hypertrophic",
+				"id": 2020102,
+				"blockid": 20201,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": ["Hyperplastic solar keratosis"]
+			},
+			{
+				"name": "Solar (actinic) keratosis, Atrophic",
+				"id": 2020103,
+				"blockid": 20201,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Solar (actinic) keratosis, Acantholytic",
+				"id": 2020104,
+				"blockid": 20201,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Solar (actinic) keratosis, Bowenoid",
+				"id": 2020105,
+				"blockid": 20201,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Solar (actinic) keratosis, other (to be specified)",
+				"id": 2020106,
+				"blockid": 20201,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Solar cheilitis",
+				"id": 2020107,
+				"blockid": 20201,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": ["Solar keratosis of lip"]
+			},
+			{
+				"name": "Puva-associated keratosis",
+				"id": 2020201,
+				"blockid": 20202,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Arsenical-associated keratosis",
+				"id": 2020202,
+				"blockid": 20202,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma in situ, NOS",
+				"id": 2020301,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma in situ, Solar keratotic type",
+				"id": 2020302,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma in situ, Bowens disease",
+				"id": 2020303,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Digitated squamous cell carcinoma in situ",
+				"id": 2020304,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma in situ, other (to be specified)",
+				"id": 2020305,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Verrucous carcinoma, Oral florid papilomatosis type",
+				"id": 2020306,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Verrucous carcinoma, Carcinoma cuniculatum type",
+				"id": 2020307,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Verrucous carcinoma, Giant condyloma type",
+				"id": 2020308,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": ["Buschke-Lowestein tumor"]
+			},
+			{
+				"name": "Bowenoid papulosis",
+				"id": 2020309,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Keratoacanthoma",
+				"id": 2020310,
+				"blockid": 20203,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, NOS",
+				"id": 2020401,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, Keratoacanthoma-type (syn: SCC with Keratoacanthoma-features)",
+				"id": 2020402,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, Acantholytic",
+				"id": 2020403,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, Spindle cell",
+				"id": 2020404,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, Verrucous",
+				"id": 2020405,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, Adeno-squamous",
+				"id": 2020406,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, Clear cell",
+				"id": 2020407,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Squamous cell carcinoma, Invasive, other (to be specified)",
+				"id": 2020408,
+				"blockid": 20204,
+				"modifiers": [["Well differentiated", "Moderately differentiated", "Poorly differentiated", "Differentiation not specified"]],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Adnexal epithelial proliferations - Follicular",
+			"id": 203,
+			"children": [{
+				"name": "Basal cell carcinoma, NOS",
+				"id": 2030101,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma, Superficial",
+				"id": 2030102,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma, Nodular",
+				"id": 2030103,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma, Micronodular",
+				"id": 2030104,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma, Infiltrating",
+				"id": 2030105,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma, Sclerosing / morpheaform (morphoeic)",
+				"id": 2030106,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Baso-squamous carcinoma",
+				"id": 2030107,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma with adnexal differentiation",
+				"id": 2030108,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma with sarcomatoid differentiation",
+				"id": 2030109,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma, Fibroeipthelial",
+				"id": 2030110,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": ["Pinkus tumor"]
+			},
+			{
+				"name": "Basal cell carcinoma, Combined subtypes (details of all components to be specified)",
+				"id": 2030111,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Basal cell carcinoma, other (to be specified)",
+				"id": 2030112,
+				"blockid": 20301,
+				"modifiers": [["Histopathologically pigmented", "Histophathologically non-pigmented"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Matrical / pilomatrical carcinoma",
+				"id": 2030201,
+				"blockid": 20302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Proliferating trichilemmal carcinoma",
+				"id": 2030202,
+				"blockid": 20302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Proliferating isthmic-catagen carcinoma"]
+			},
+			{
+				"name": "Malignant adnexal epithelial proliferations, Follicular, other (to be specified)",
+				"id": 2030203,
+				"blockid": 20302,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Adnexal epithelial proliferations - Sebaceous",
+			"id": 204,
+			"children": [{
+				"name": "Sebaceous carcinoma",
+				"id": 2040101,
+				"blockid": 20401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant adnexal epithelial proliferations, Sebaceous, other (to be specified)",
+				"id": 2040102,
+				"blockid": 20401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Adnexal epithelial proliferations - Apocrine or Eccrine",
+			"id": 205,
+			"children": [{
+				"name": "Paget disease, Mammary",
+				"id": 2050101,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Paget disease, Extra-mammary",
+				"id": 2050102,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Microcystic adnexal carcinoma",
+				"id": 2050103,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Apocrine carcinoma, NOS",
+				"id": 2050104,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Tubular carcinoma",
+				"id": 2050105,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant mixed tumor",
+				"id": 2050106,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Porocarcinoma",
+				"id": 2050107,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hidradenocarcinoma",
+				"id": 2050108,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mucinous carcinoma",
+				"id": 2050109,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Digital papillary carcinoma",
+				"id": 2050110,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Adenoid cystic carcinoma",
+				"id": 2050111,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Adnexal adenocarcinoma arising in association with spiradenoma / cylindroma / spiradenocylindroma",
+				"id": 2050112,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant adnexal epithelial proliferations, Apocrine or Eccrine, other (to be specified)",
+				"id": 2050113,
+				"blockid": 20501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Vascular",
+			"id": 206,
+			"children": [{
+				"name": "Kaposi sarcoma",
+				"id": 2060101,
+				"blockid": 20601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiosarcoma cutaneous, Face and scalp of elderly patients",
+				"id": 2060102,
+				"blockid": 20601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiosarcoma cutaneous, NOS",
+				"id": 2060103,
+				"blockid": 20601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiosarcoma cutaneous, With associated lymphedema",
+				"id": 2060104,
+				"blockid": 20601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiosarcoma cutaneous, Post-irradiation",
+				"id": 2060105,
+				"blockid": 20601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Angiosarcoma cutaneous, Epithelioid",
+				"id": 2060106,
+				"blockid": 20601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant glomus tumor",
+				"id": 2060107,
+				"blockid": 20601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Glomangiosarcoma"]
+			},
+			{
+				"name": "Hemangioendothelioma, NOS",
+				"id": 2060201,
+				"blockid": 20602,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemangioendothelioma, Kaposiform",
+				"id": 2060202,
+				"blockid": 20602,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Hemangioendothelioma, other (to be specified)",
+				"id": 2060203,
+				"blockid": 20602,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant soft tissue proliferations, Vascular, other (to be specified)",
+				"id": 2060204,
+				"blockid": 20602,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Fibro-histiocytic",
+			"id": 207,
+			"children": [{
+				"name": "Atypical fibroxanthoma",
+				"id": 2070101,
+				"blockid": 20701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Pleomorphic undifferntiated sarcoma",
+				"id": 2070102,
+				"blockid": 20701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Malignant fibrous histiocytoma"]
+			},
+			{
+				"name": "Dermatofibrosarcoma protuberans (DFSP)",
+				"id": 2070103,
+				"blockid": 20701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Fibrosarcoma",
+				"id": 2070104,
+				"blockid": 20701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Epithelioid sarcoma",
+				"id": 2070105,
+				"blockid": 20701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant Soft tissue proliferations, Fibro-histiocytic, other (to be specified)",
+				"id": 2070106,
+				"blockid": 20701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Muscle tissue or myofibroblastic",
+			"id": 208,
+			"children": [{
+				"name": "Leiomyosarcoma, Cutaneous",
+				"id": 2080101,
+				"blockid": 20801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Rhabdomyoscaroma, Cutaneous",
+				"id": 2080102,
+				"blockid": 20801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant Soft tissue proliferations, Muscle tissue, other (to be specified)",
+				"id": 2080103,
+				"blockid": 20801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Adipocytic",
+			"id": 209,
+			"children": [{
+				"name": "Liposarcoma, Well differentiated",
+				"id": 2090101,
+				"blockid": 20901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Liposarcoma, Undifferentiated",
+				"id": 2090102,
+				"blockid": 20901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Atypical lipomatous tumor"]
+			},
+			{
+				"name": "Malignant soft tissue proliferations, Adipocytic, other (to be specified)",
+				"id": 2090103,
+				"blockid": 20901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Neural",
+			"id": 210,
+			"children": [{
+				"name": "Malignant peripheral nerve sheath tumor",
+				"id": 2100101,
+				"blockid": 21001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Peripheral nerve sheath sarcoma"]
+			},
+			{
+				"name": "Malignant granular cell tumor",
+				"id": 2100102,
+				"blockid": 21001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": ["Granular cell sarcoma"]
+			},
+			{
+				"name": "Malignant soft tissue proliferations, Neural, other (to be specified)",
+				"id": 2100103,
+				"blockid": 21001,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Cartilagenous and ossifying",
+			"id": 211,
+			"children": [{
+				"name": "Extraskeletal osteosarcoma",
+				"id": 2110101,
+				"blockid": 21101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant soft tissue proliferations, Cartilagenous and ossifying, other (to be specified)",
+				"id": 2110102,
+				"blockid": 21101,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Myoepithelial",
+			"id": 212,
+			"children": [{
+				"name": "Myoepithelial sarcoma",
+				"id": 2120101,
+				"blockid": 21201,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Soft tissue proliferations - Unknown or other histiogenesis",
+			"id": 213,
+			"children": [{
+				"name": "Ewing sarcoma, Primary cutaenous",
+				"id": 2130101,
+				"blockid": 21301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Malignant soft tissue proliferations, Unknown or other histiogenesis, other (to be specified)",
+				"id": 2130102,
+				"blockid": 21301,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Merkel cell proliferation",
+			"id": 214,
+			"children": [{
+				"name": "Merkel cell carcinoma",
+				"id": 2140101,
+				"blockid": 21401,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Lymphocytic proliferations - T-Cell/NK",
+			"id": 215,
+			"children": [{
+				"name": "Mycosis fungoides, NOS",
+				"id": 2150101,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mycosis fungoides, Folliculotropic",
+				"id": 2150102,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mycosis fungoides, Pagetoid reticulosis",
+				"id": 2150103,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mycosis fungoides, Granulomatous slack skin",
+				"id": 2150104,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Mycosis fungoides, With large cell transformation",
+				"id": 2150105,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Sezary syndrome",
+				"id": 2150106,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Adult T-cell leukemia / lymphoma",
+				"id": 2150107,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous CD30+ lymphoproliferative disease, NOS",
+				"id": 2150108,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous CD30+ lymphoproliferative disease, Cutanous anaplatic large cell lymphoma",
+				"id": 2150109,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous CD30+ lymphoproliferative disease, Lymphomatoid papulosis",
+				"id": 2150110,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Subcutaneous panniculitis-like T-cell lymphoma",
+				"id": 2150111,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Extranodal NK/T-cell lymphoma, Nasal type",
+				"id": 2150112,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Chronic active EBV infection",
+				"id": 2150113,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous peripheral T-cell lymphoma, Rare subtype, NOS",
+				"id": 2150114,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous peripheral T-cell lymphoma, Rare subtype (to be specified)",
+				"id": 2150115,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous peripheral T-cell lymphoma, NOS",
+				"id": 2150116,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lymphocytic proliferation, T-Cell/NK, other (to be specified)",
+				"id": 2150117,
+				"blockid": 21501,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Lymphocytic proliferations - B-Cell",
+			"id": 216,
+			"children": [{
+				"name": "Primary cutaneous marginal zone lymphoma",
+				"id": 2160101,
+				"blockid": 21601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous follicle center lymphoma",
+				"id": 2160102,
+				"blockid": 21601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Primary cutaneous large B-Cell lymphoma",
+				"id": 2160103,
+				"blockid": 21601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "EBV1+ mucocutaneous ulcer (provisional)",
+				"id": 2160104,
+				"blockid": 21601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Intravascular large B-cell lymphoma",
+				"id": 2160105,
+				"blockid": 21601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Lymphocytic proliferation, B-Cell, other (to be specified)",
+				"id": 2160106,
+				"blockid": 21601,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Skin metastasis of internal solid (non-hematological) cancer",
+			"id": 217,
+			"children": [{
+				"name": "Skin metastasis of internal solid (non-hematological) cancer (to be specified)",
+				"id": 2170101,
+				"blockid": 21701,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Collision - At least one malignant proliferation",
+			"id": 218,
+			"children": [{
+				"name": "Collision, At least one malignant proliferation (to be specified)",
+				"id": 2180101,
+				"blockid": 21801,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		},
+		{
+			"name": "Malignant – Other",
+			"id": 219,
+			"children": [{
+				"name": "Malignant, other (or not readily classifiable; to be specified)",
+				"id": 2190101,
+				"blockid": 21901,
+				"modifiers": [],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		}
+		]
+	},
+	{
+		"name": "Uncertain",
+		"id": 3,
+		"children": [{
+			"name": "Melanocytic proliferations",
+			"id": 301,
+			"children": [{
+				"name": "Pagetoid intraderpidermal melanocytic proliferation (PIMP)",
+				"id": 3010101,
+				"blockid": 30101,
+				"modifiers": [["MPATH II", "MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma in situ", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical intraepithelial melanocytic proliferation (AIMP)",
+				"id": 3010102,
+				"blockid": 30101,
+				"modifiers": [["MPATH II", "MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma in situ", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical melanocytic neoplasm, Junctional",
+				"id": 3010103,
+				"blockid": 30101,
+				"modifiers": [["MPATH II", "MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma in situ", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical Spitz tumor, Junctional",
+				"id": 3010201,
+				"blockid": 30102,
+				"modifiers": [["MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical Spitz tumor, Compound",
+				"id": 3010202,
+				"blockid": 30102,
+				"modifiers": [["MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical Spitz tumor, Dermal (intradermal)",
+				"id": 3010203,
+				"blockid": 30102,
+				"modifiers": [["MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical pigmented spindle cell tumor, Junctional",
+				"id": 3010204,
+				"blockid": 30102,
+				"modifiers": [["MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical pigmented spindle cell tumor, Compound",
+				"id": 3010205,
+				"blockid": 30102,
+				"modifiers": [["MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical proliferative nodules in congenital melanocytic (Moderate or severe atypia OR mitotic activity)",
+				"id": 3010206,
+				"blockid": 30102,
+				"modifiers": [["MPATH III"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Superficial atypical melanocytic proliferation of uncertain significance (SAMPUS)",
+				"id": 3010301,
+				"blockid": 30103,
+				"modifiers": [["MPATH II", "MPATH III", "MPATH IV"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Melanocytic tumor of uncertain malignant potential (MELTUMP)",
+				"id": 3010302,
+				"blockid": 30103,
+				"modifiers": [["MPATH IV", "MPATH V"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Atypical melanocytic neoplasm, Compound",
+				"id": 3010303,
+				"blockid": 30103,
+				"modifiers": [["MPATH III", "MPATH IV", "MPATH V"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			},
+			{
+				"name": "Indeterminate melanocyic proliferation, other (to be specified)",
+				"id": 3010304,
+				"blockid": 30103,
+				"modifiers": [["MPATH II", "MPATH III", "MPATH IV", "", "MPATH V"], ["Histopathological report favors nevus", "Histopathological report favors melanoma", "Histopathological report undecided"]],
+				"status": "visible",
+				"synonyms": []
+			}
+			]
+		}
+		]
+	}
+	]
+}
