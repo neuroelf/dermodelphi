@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.21.1",
-    "d3": "^5.9.7",
+    "d3": "^7.6.1",
     "eslint-utils": ">=1.4.1",
     "fs": "0.0.1-security",
     "react": "^16.8.6",
